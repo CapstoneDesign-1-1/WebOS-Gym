@@ -84,6 +84,9 @@ export class VirtualFile extends VirtualBase<VirtualFileEvents> {
 		name: string;
 		extension: OptionalStringProperty;
 	} {
+		if (id.startsWith(".") && !id.slice(1).includes("."))
+			return { name: id, extension: "" };
+
 		if (!id.includes("."))
 			return { name: id, extension: "" };
 

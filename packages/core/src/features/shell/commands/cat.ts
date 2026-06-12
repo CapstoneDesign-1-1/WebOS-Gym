@@ -1,4 +1,7 @@
+import { EXIT_CODE } from "../../../constants";
+import { VirtualFile } from "../../virtual-drive";
 import { Command } from "../command";
+import { Shell } from "../shell";
 
 export const cat = new Command()
 	.setManual({
@@ -21,17 +24,63 @@ export const cat = new Command()
 			return content.endsWith("\n") ? joined : joined + "$";
 		};
 
-		return await shell.readFiles({
-			paths: args,
-			workingDirectory,
-			stdin,
-			stderr,
-			commandName: this.name,
-			onContent: async (content: string) => {
-				await stdout.write(formatContent(content));
-			},
-			onStdinData: async (data: string) => {
+		if (!args.length) {
+			await shell.readRawInput(stdin, async (data) => {
 				await stdout.write(options.includes("e") ? data.replace(/\n/g, "$\n") : data);
-			},
-		});
+			});
+			return EXIT_CODE.success;
+		}
+
+		let exitCode: number = EXIT_CODE.success;
+
+		for (const path of args) {
+			if (path === "-") {
+				await shell.readRawInput(stdin, async (data) => {
+					await stdout.write(options.includes("e") ? data.replace(/\n/g, "$\n") : data);
+				});
+				continue;
+			}
+
+			const target = workingDirectory.navigate(path);
+			if (!target) {
+				exitCode = await Shell.writeError(stderr, this.name, `${path}: ${Shell.INVALID_PATH_ERROR}`);
+				continue;
+			}
+
+			if (target.isFolder()) {
+				exitCode = await Shell.writeError(stderr, this.name, `${path}: Is a directory`);
+				continue;
+			}
+
+			let content = await target.read();
+			if (content == null)
+				content = await readTextFallback(target);
+
+			if (content == null) {
+				exitCode = await Shell.writeError(stderr, this.name, `${path}: Cannot read file`);
+				continue;
+			}
+
+			await stdout.write(formatContent(content));
+		}
+
+		return exitCode;
 	});
+
+async function readTextFallback(file: VirtualFile): Promise<string | null> {
+	if (file.content != null)
+		return file.content;
+
+	if (!file.source)
+		return null;
+
+	if (file.source.startsWith("http") || file.source.startsWith("/")) {
+		try {
+			return await fetch(file.source).then((response) => response.text());
+		} catch {
+			return null;
+		}
+	}
+
+	return null;
+}

@@ -118,6 +118,7 @@ export class VirtualFolder<E extends VirtualBaseEvents = VirtualBaseEvents> exte
 		callback?.(newFile);
 
 		newFile.confirmChanges();
+		this.emit(VirtualBase.UPDATE_EVENT);
 		return this;
 	}
 
@@ -195,6 +196,7 @@ export class VirtualFolder<E extends VirtualBaseEvents = VirtualBaseEvents> exte
 		callback?.(newFolder);
 		
 		newFolder.confirmChanges();
+		this.emit(VirtualBase.UPDATE_EVENT);
 		return this;
 	}
 
@@ -315,6 +317,11 @@ export class VirtualFolder<E extends VirtualBaseEvents = VirtualBaseEvents> exte
 			const folder = currentDirectory.findSubFolder(lastSegment);
 
 			if (folder != null) return folder;
+
+			const directFile = currentDirectory.getFiles(true)
+				.find((existingFile) => existingFile.id === lastSegment || existingFile.name === lastSegment);
+			if (directFile != null)
+				return directFile;
 
 			const { name, extension } = VirtualFile.splitId(lastSegment);
 			let file = currentDirectory.findFile(name, extension);

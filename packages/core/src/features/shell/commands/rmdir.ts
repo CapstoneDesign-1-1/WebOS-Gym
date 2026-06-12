@@ -1,3 +1,4 @@
+import { EXIT_CODE } from "../../../constants";
 import { Shell } from "../shell";
 import { Command } from "../command";
 
@@ -6,12 +7,24 @@ export const rmdir = new Command()
 	.setManual({
 		purpose: "Remove a directory",
 	})
-	.setExecute(function(this: Command, args, { workingDirectory, stderr }) {
-		const folderName = args[0];
-		
-		const folder = workingDirectory.findSubFolder(folderName);
-		if (!folder)
-			return Shell.writeError(stderr, this.name, `${folderName}: No such directory`);
-		
-		folder.delete();
+	.setExecute(async function(this: Command, args, { workingDirectory, stderr }) {
+		let exitCode: number = EXIT_CODE.success;
+
+		for (const folderPath of args) {
+			const target = workingDirectory.navigate(folderPath);
+
+			if (!target) {
+				exitCode = await Shell.writeError(stderr, this.name, `${folderPath}: No such directory`);
+				continue;
+			}
+
+			if (target.isFile()) {
+				exitCode = await Shell.writeError(stderr, this.name, `${folderPath}: Not a directory`);
+				continue;
+			}
+
+			target.delete();
+		}
+
+		return exitCode;
 	});

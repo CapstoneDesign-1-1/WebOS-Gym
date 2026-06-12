@@ -477,7 +477,7 @@ export class Shell {
 			this.env.set(ShellEnvironment.WORKING_DIRECTORY, path);
 		}
 
-		this.state.workingDirectory = directory;
+		this.state.workingDirectory = ref(directory);
 	}
 
 	/**

@@ -1,6 +1,6 @@
 import { ref } from "valtio";
 import { EXIT_CODE, HOSTNAME, USERNAME } from "../../constants";
-import { VirtualFile } from "../virtual-drive";
+import { VirtualFile, VirtualFolder } from "../virtual-drive";
 import { Process, ProcessIO, Shell } from "./shell";
 import { Stream, StreamSignal } from "./streams/stream";
 import { ShellParser } from "./shellParser";
@@ -371,6 +371,7 @@ export class ShellInterpreter {
 
 	private async executeRedirections(redirections: ShellAST.RedirectionNode[], io: ProcessIO) {
 		const streamMap: Record<number, Stream> = { 0: io.stdin, 1: io.stdout, 2: io.stderr };
+		const workingDirectory = this.getWorkingDirectory();
 
 		for (const redirection of redirections) {
 			const targetPath = await this.evaluateArgument(redirection.target, io.env);
@@ -388,7 +389,7 @@ export class ShellInterpreter {
 			}
 
 			const isOutput = redirection.operator === ">" || redirection.operator === ">>";
-			const target = this.shell.state.workingDirectory.navigate(targetPath, isOutput);
+			const target = workingDirectory.navigate(targetPath, isOutput);
 
 			if (!target || !target.isFile())
 				continue;
@@ -423,6 +424,7 @@ export class ShellInterpreter {
 	private async spawn(process: Process, redirections: ShellAST.RedirectionNode[] = []): Promise<number> {
 		const { stdin, stdout, stderr, commandName, args, env: parentEnv } = process;
 		const io: ProcessIO = { stdin, stdout, stderr, env: parentEnv };
+		const workingDirectory = this.getWorkingDirectory();
 		
 		const timestamp = Date.now();
 
@@ -430,11 +432,12 @@ export class ShellInterpreter {
 			if (!args.length)
 				return EXIT_CODE.generalError;
 
-			const result = await ExecutableResolver.resolve(commandName, parentEnv, this.shell.state.workingDirectory);
+			const result = await ExecutableResolver.resolve(commandName, parentEnv, workingDirectory);
 			if (result.isError())
 				return Shell.writeError(stderr, commandName, result.error, EXIT_CODE.commandNotFound);
 
-			const commandArgs = args.slice(1);
+			const commandArgsStartIndex = args[0] === Shell.SUDO_COMMAND ? 2 : 1;
+			const commandArgs = args.slice(commandArgsStartIndex);
 			io.env = parentEnv.fork();
 			io.env.setCommandArguments(commandName, commandArgs);
 
@@ -457,7 +460,7 @@ export class ShellInterpreter {
 				stdout: io.stdout,
 				stderr: io.stderr,
 				shell: this.shell,
-				workingDirectory: this.shell.state.workingDirectory,
+				workingDirectory,
 				username: io.env.get("USER") ?? USERNAME,
 				hostname: io.env.get("HOSTNAME") ?? HOSTNAME,
 				rawLine: commandArgs.join(" "),
@@ -486,6 +489,11 @@ export class ShellInterpreter {
 			if (io.stderr !== stderr)
 				io.stderr.end();
 		}
+	}
+
+	private getWorkingDirectory(): VirtualFolder {
+		return this.shell.config.virtualRoot.navigateToFolder(this.shell.state.workingDirectory.absolutePath)
+			?? this.shell.config.virtualRoot;
 	}
 
 	/**
