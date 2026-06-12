@@ -8,7 +8,7 @@ export const rmdir = new Command()
 		purpose: "Remove a directory",
 	})
 	.setExecute(async function(this: Command, args, { workingDirectory, stderr }) {
-		let exitCode = EXIT_CODE.success;
+		let exitCode: number = EXIT_CODE.success;
 
 		for (const folderPath of args) {
 			const target = workingDirectory.navigate(folderPath);

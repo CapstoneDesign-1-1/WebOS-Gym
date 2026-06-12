@@ -8,7 +8,7 @@ export const rm = new Command()
 		purpose: "Remove a file",
 	})
 	.setExecute(async function(this: Command, args, { workingDirectory, stderr }) {
-		let exitCode = EXIT_CODE.success;
+		let exitCode: number = EXIT_CODE.success;
 
 		for (const path of args) {
 			const target = workingDirectory.navigate(path);

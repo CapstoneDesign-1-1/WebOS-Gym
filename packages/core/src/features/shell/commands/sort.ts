@@ -60,7 +60,7 @@ export const sort = new Command()
 	.addOption({ short: "f", long: "ignore-case" })
 	.setExecute(async function(this: Command, args, { workingDirectory, options, stdout, stderr, stdin }) {
 		const lines: string[] = [];
-		let exitCode = EXIT_CODE.success;
+		let exitCode: number = EXIT_CODE.success;
 
 		const consume = (content: string) => {
 			const parsed = content.split(/\r?\n/);

@@ -218,12 +218,12 @@ describe("Shell", () => {
 
 		await shell.run("sort -nru ~/Documents/sort_numbers.txt");
 
-		const output = shell.state.history.map((entry) => entry.displayText).filter(Boolean).join("\n");
-		expect(output).toContain("10");
-		expect(output).toContain("2");
-		expect(output).toContain("1");
-		expect(output.indexOf("10")).toBeLessThan(output.indexOf("2"));
-		expect(output.indexOf("2")).toBeLessThan(output.indexOf("1"));
+		const outputLines = shell.state.history
+			.filter((entry) => entry.input == null)
+			.slice(-3)
+			.map((entry) => entry.displayText)
+			.filter(Boolean);
+		expect(outputLines).toEqual(["10", "2", "1"]);
 	});
 
 	it("prints an error when sorting a directory", async () => {
@@ -236,18 +236,18 @@ describe("Shell", () => {
 	it("prints a tree for a directory", async () => {
 		await shell.run("cd ~/Documents && mkdir work && touch work/note.txt && tree .");
 
-		const output = shell.state.history.map((entry) => entry.displayText).filter(Boolean).join("\n");
+		const output = shell.state.history.filter((entry) => entry.input == null).slice(-8).map((entry) => entry.displayText).filter(Boolean).join("\n");
 		expect(output).toContain("Documents");
 		expect(output).toContain("work");
 		expect(output).toContain("note.txt");
-		expect(output).toContain("directories");
+		expect(output).toMatch(/director(?:y|ies)/);
 		expect(output).toContain("files");
 	});
 
 	it("limits tree depth with -L", async () => {
 		await shell.run("cd ~/Documents && mkdir deep && mkdir deep/inner && touch deep/inner/file.txt && tree -L 1 .");
 
-		const output = shell.state.history.map((entry) => entry.displayText).filter(Boolean).join("\n");
+		const output = shell.state.history.filter((entry) => entry.input == null).slice(-8).map((entry) => entry.displayText).filter(Boolean).join("\n");
 		expect(output).toContain("deep");
 		expect(output).not.toContain("inner");
 		expect(output).not.toContain("file.txt");

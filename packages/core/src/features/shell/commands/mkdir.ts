@@ -16,7 +16,7 @@ export const mkdir = new Command()
 	.setRequireArgs(true)
 	.setExecute(async function(this: Command, args, { workingDirectory, stderr, options }) {
 		const createParents = options.includes("p");
-		let exitCode = EXIT_CODE.success;
+		let exitCode: number = EXIT_CODE.success;
 
 		for (const rawPath of args) {
 			if (createParents) {

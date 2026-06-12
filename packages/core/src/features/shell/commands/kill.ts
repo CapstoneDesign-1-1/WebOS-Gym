@@ -25,7 +25,7 @@ export const kill = new Command()
 		if (!pidArgs.length)
 			return Shell.writeError(stderr, this.name, Shell.USAGE_ERROR);
 
-		let exitCode = EXIT_CODE.success;
+		let exitCode: number = EXIT_CODE.success;
 
 		for (const pidArg of pidArgs) {
 			const pid = parsePid(pidArg);

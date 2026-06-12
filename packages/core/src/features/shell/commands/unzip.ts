@@ -121,7 +121,7 @@ export const unzip = new Command()
 		if (!destinationRoot)
 			return Shell.writeError(stderr, this.name, `${outputDirectory}: ${Shell.INVALID_PATH_ERROR}`);
 
-		let exitCode = EXIT_CODE.success;
+		let exitCode: number = EXIT_CODE.success;
 
 		for (const entry of parsed.entries) {
 			if (!entry.path || entry.path.startsWith("/") || entry.path.startsWith("~")) {

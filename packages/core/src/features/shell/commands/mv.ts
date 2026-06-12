@@ -31,10 +31,8 @@ export const mv = new Command()
 		} else {
 			const { parentPath, name } = splitDestinationPath(destPath);
 			destinationDirectory = parentPath === "."
-				? resolvePath(virtualRoot, workingDirectory.absolutePath, workingDirectory.absolutePath)
-				: resolvePath(virtualRoot, workingDirectory.absolutePath, parentPath);
-			if (destinationDirectory?.isFile())
-				destinationDirectory = null;
+				? workingDirectory
+				: resolveFolderPath(virtualRoot, workingDirectory.absolutePath, parentPath);
 			destinationName = name;
 		}
 
@@ -124,4 +122,9 @@ function resolvePath(virtualRoot: VirtualFolder, currentPath: string, path: stri
 		: `${currentPath}/${path}`;
 
 	return virtualRoot.navigate(absolutePath);
+}
+
+function resolveFolderPath(virtualRoot: VirtualFolder, currentPath: string, path: string): VirtualFolder | null {
+	const target = resolvePath(virtualRoot, currentPath, path);
+	return target?.isFolder() ? target : null;
 }

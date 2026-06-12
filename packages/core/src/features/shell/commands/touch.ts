@@ -12,7 +12,7 @@ export const touch = new Command()
             + "A file argument that does not exist is created empty.",
 	})
 	.setExecute(async function(this: Command, args, { workingDirectory, stderr }) {
-		let exitCode = EXIT_CODE.success;
+		let exitCode: number = EXIT_CODE.success;
 
 		for (const filePath of args) {
 			const existingTarget = workingDirectory.navigate(filePath);

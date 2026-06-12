@@ -70,7 +70,7 @@ export const wc = new Command()
 		const metrics = selectMetrics(options);
 		const totals: WcStats = { lines: 0, words: 0, bytes: 0, chars: 0 };
 		let processed = 0;
-		let exitCode = EXIT_CODE.success;
+		let exitCode: number = EXIT_CODE.success;
 
 		async function output(content: string, label?: string) {
 			const stats = countStats(content);

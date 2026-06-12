@@ -14,7 +14,7 @@ export const chmod = new Command()
 			return Shell.writeError(stderr, this.name, Shell.USAGE_ERROR);
 
 		const [, ...paths] = args;
-		let exitCode = EXIT_CODE.success;
+		let exitCode: number = EXIT_CODE.success;
 
 		for (const path of paths) {
 			const target = workingDirectory.navigate(path);

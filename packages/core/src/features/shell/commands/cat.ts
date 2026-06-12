@@ -31,7 +31,7 @@ export const cat = new Command()
 			return EXIT_CODE.success;
 		}
 
-		let exitCode = EXIT_CODE.success;
+		let exitCode: number = EXIT_CODE.success;
 
 		for (const path of args) {
 			if (path === "-") {
