@@ -43,6 +43,26 @@
 	word-wrap: break-word;
 }
 
+.FileButton input,
+.FolderButton input {
+	width: 100%;
+	max-width: 100%;
+	padding: 0.125rem 0.25rem;
+	border: 1px solid color-mix(in srgb, var(--foreground-color-0) 45%, transparent);
+	border-radius: var(--border-radius-0);
+	background-color: color-mix(in srgb, var(--background-color-2) 92%, black);
+	color: var(--foreground-color-0);
+	font: inherit;
+	text-align: center;
+	outline: none;
+}
+
+.FileButton input:focus-visible,
+.FolderButton input:focus-visible {
+	border-color: var(--blue-1);
+	box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue-1) 35%, transparent);
+}
+
 .FileIcon, .FolderIcon {
 	max-height: calc(100% - 1rem - var(--gap));
 	border-radius: inherit;

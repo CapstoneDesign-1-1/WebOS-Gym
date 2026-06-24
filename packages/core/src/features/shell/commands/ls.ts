@@ -10,18 +10,35 @@ export const ls = new Command()
 		description: "List information about directories or files (the current directory by default).",
 	})
 	.setExecute(async function(this: Command, args, { workingDirectory, stdout, stderr }) {
-		let directory: VirtualFolder | null = workingDirectory;
-		if (args.length)
-			directory = workingDirectory.navigateToFolder(args[0]);
-	
-		if (!directory)
-			return Shell.writeError(stderr, this.name, `Cannot access '${args[0]}': No such file or directory`);
-	
-		const folderNames = directory.subFolders.map((folder) => `${ANSI.fg.blue}${folder.id}${ANSI.reset}`);
-		const fileNames = directory.files.map((file) => file.id);
-	
-		const contents = folderNames.concat(fileNames);
-	
-		if (contents.length)
-			await Shell.printLn(stdout, contents.sort().join("  "));
+		const listDirectory = (directory: VirtualFolder) => {
+			const folderNames = directory.subFolders.map((folder) => `${ANSI.fg.blue}${folder.id}${ANSI.reset}`);
+			const fileNames = directory.files.map((file) => file.id);
+			return folderNames.concat(fileNames).sort();
+		};
+
+		if (args.length === 0) {
+			const contents = listDirectory(workingDirectory);
+			if (contents.length)
+				await Shell.printLn(stdout, contents.join("  "));
+			return;
+		}
+
+		const output: string[] = [];
+
+		for (const path of args) {
+			const target = workingDirectory.navigate(path);
+			if (target == null) {
+				await Shell.writeError(stderr, this.name, `Cannot access '${path}': No such file or directory`);
+				continue;
+			}
+
+			if (target.isFolder()) {
+				output.push(...listDirectory(target));
+			} else if (target.isFile()) {
+				output.push(target.id);
+			}
+		}
+
+		if (output.length)
+			await Shell.printLn(stdout, output.join("  "));
 	});
