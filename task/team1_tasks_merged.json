@@ -1,0 +1,2922 @@
+[
+  {
+    "task_id": "web_task_adoptapet_01",
+    "instruction": "On the Golden Retriever breed page on Adopt a Pet, find and check the life expectancy of the breed.",
+    "website": "https://www.adoptapet.com/dog-breeds/golden-retriever",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "text",
+          "value": "10-12 years",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_allrecipes_01",
+    "instruction": "On the Absolutely the Best Chocolate Chip Cookies recipe page, check the calorie value listed in the Nutrition Facts (per serving) section.",
+    "website": "https://www.allrecipes.com/recipe/17209/absolutely-the-best-chocolate-chip-cookies/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "td.mm-recipes-nutrition-facts-summary__table-cell.text-body-100-prominent",
+          "target": "text",
+          "value": "241",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_allrecipes_02",
+    "instruction": "On the Alabama Fire Crackers recipe page, check the Total Time listed.",
+    "website": "https://www.allrecipes.com/recipe/214184/alabama-fire-crackers/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "text",
+          "value": "9 hrs 15 mins",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_allrecipes_03",
+    "instruction": "On the Allrecipes website, search for 'banana bread' and check the title of the first result.",
+    "website": "https://www.allrecipes.com/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "span.card__title-text",
+          "target": "text",
+          "value": "Janet's Rich Banana Bread",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_allrecipes_04",
+    "instruction": "On the Easy Chocolate Chip Pound Cake recipe page, scale the recipe to 2x and check the number of eggs listed in the ingredients.",
+    "website": "https://www.allrecipes.com/recipe/17572/easy-chocolate-chip-pound-cake/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "span[data-ingredient-quantity='true'][data-original-quantity='4']",
+          "target": "text",
+          "value": "8",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_allrecipes_05",
+    "instruction": "On the Easy Chocolate Chip Pound Cake recipe page, check the star rating displayed for the recipe.",
+    "website": "https://www.allrecipes.com/recipe/17572/easy-chocolate-chip-pound-cake/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "#mm-recipes-review-bar__rating_1-0",
+          "target": "text",
+          "value": "4.7",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_01",
+    "instruction": "On the Apple Store iPhone 17 Pro page, configure the purchase options as follows: select the White (Silver) color, choose 1TB storage, set the payment option to Buy (not monthly installments), select AT&T as the carrier, do not add a trade-in, and do not add AppleCare. Then check the displayed price.",
+    "website": "https://www.apple.com/shop/buy-iphone/iphone-17-pro",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "span.as-price-currentprice[data-autom=\"price-MFXN4\"]",
+          "target": "text",
+          "value": "$1,599",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_02",
+    "instruction": "On the Apple Mac Studio purchase page, configure the options as follows: select the M4 Max chip with 16-core CPU and 40-core GPU, choose 64GB memory, choose 1TB storage, add a Final Cut Pro license, add a Logic Pro license, do not add a trade-in, and select Buy as the payment option. Then check the displayed total price.",
+    "website": "https://www.apple.com/shop/buy-mac/mac-studio",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div.as-price-currentprice[data-autom=\"summaryPrice\"]",
+          "target": "text",
+          "value": "$3,398.98",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_03",
+    "instruction": "On the Apple iPad 11-inch purchase page, configure the options as follows: select the White (Silver) color, choose 256GB storage, select Wi-Fi + Cellular connectivity, skip engraving, add an Apple Pencil (USB-C), add a Magic Keyboard Folio (US English), do not add a trade-in, select Buy as the payment option (no financing), and do not add AppleCare. Then check the displayed total price.",
+    "website": "https://www.apple.com/shop/buy-ipad/ipad",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div.as-price-currentprice[data-autom=\"summaryPrice\"]",
+          "target": "text",
+          "value": "$927.00",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_04",
+    "instruction": "Starting from the Apple homepage, navigate to the Apple Music page and find the monthly price of the Individual plan.",
+    "website": "https://www.apple.com/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p.tile-headline.typography-eyebrow-elevated",
+          "target": "text",
+          "value": "$10.99/month",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_05",
+    "instruction": "Starting from the Apple iPad Accessories page, navigate to the Apple Pencil Pro product page and find its price.",
+    "website": "https://www.apple.com/shop/ipad/accessories",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div.rc-prices-fullprice[data-autom=\"full-price\"]",
+          "target": "text",
+          "value": "$129.00",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_arxiv_01",
+    "instruction": "On the arXiv website, search for 'attention is all you need' and check the title of the first result.",
+    "website": "https://arxiv.org/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p.title.is-5.mathjax",
+          "target": "text",
+          "value": "Attention Is Not All You Need for Diffraction",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_arxiv_02",
+    "instruction": "On the arXiv website, search for the paper with ID '1408.4969' and check the list of authors on the paper's page.",
+    "website": "https://arxiv.org/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": ".authors",
+          "target": "text",
+          "value": "Takaaki Miyajima",
+          "match": "contains",
+          "normalize_space": true
+        },
+        {
+          "selector": ".authors",
+          "target": "text",
+          "value": "David Thomas",
+          "match": "contains",
+          "normalize_space": true
+        },
+        {
+          "selector": ".authors",
+          "target": "text",
+          "value": "Hideharu Amano",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_arxiv_03",
+    "instruction": "On the arXiv website, search for the paper with ID '2605.10702' and check the submission date on the paper's page.",
+    "website": "https://arxiv.org/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div.dateline",
+          "target": "text",
+          "value": "11 May 2026",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_arxiv_04",
+    "instruction": "On the arXiv page for paper 2605.10912, open the paper using the 'HTML (experimental)' option and verify that a 'Related Work' section exists in the paper.",
+    "website": "https://arxiv.org/abs/2605.10912",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "#S2",
+          "target": "text",
+          "value": "Related Work",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_1_WO_01",
+    "instruction": "Find the exact postal code for the address '서울특별시 종로구 세종대로 175' on the Road Address System (juso.go.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Postal Code: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000/prozilla"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Postal Code: 03172",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_1_WO_02",
+    "instruction": "Lookup the postal code for the address '제주특별자치도 제주시 첨단로 242' on the Road Address System (juso.go.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Postal Code: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000/prozilla"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Postal Code: 63309",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_1_WO_03",
+    "instruction": "Find the postal code of '경기도 성남시 분당구 판교역로 166' on the Road Address System (juso.go.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Postal Code: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000/prozilla"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Postal Code: 13529",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_1_WO_04",
+    "instruction": "Find the toll fee for a Class 1 vehicle traveling from Seoul Tollgate to Busan Tollgate on the HiPass website (hipass.co.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Toll Fee: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000/prozilla"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Toll Fee:\\s*[\\d,]+",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_1_WO_05",
+    "instruction": "Check the toll fee for a Class 1 vehicle traveling from Busan Tollgate to Seoul Tollgate on the HiPass website (hipass.co.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Toll Fee: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000/prozilla"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Toll Fee:\\s*[\\d,]+",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_1_WO_06",
+    "instruction": "Find the toll fee for a Class 1 vehicle traveling from Seoul Tollgate to Jeonju Tollgate on the HiPass website (hipass.co.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Toll Fee: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000/prozilla"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Toll Fee:\\s*[\\d,]+",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_1_OW_01",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the Korean road address '서울특별시 종로구 세종대로 175'. Copy that address and look it up on the Road Address System (juso.go.kr) to verify its postal code.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000/prozilla"
+      },
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": ".zipNo, .number",
+          "target": "text",
+          "value": "03172",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_1_OW_02",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the Korean road address '경기도 성남시 분당구 판교역로 166'. Copy that address and look it up on the Road Address System (juso.go.kr) to verify its postal code.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000/prozilla"
+      },
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": ".zipNo, .number",
+          "target": "text",
+          "value": "13529",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_1_OW_03",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the departure IC name '서울' and the destination IC name '부산'. Use those names to look up the toll fee for a Class 1 vehicle on the HiPass website (hipass.co.kr) and verify the result.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000/prozilla"
+      },
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "서울",
+          "match": "contains"
+        },
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "부산",
+          "match": "contains"
+        },
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "1종",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_word_01",
+    "instruction": "In ProzillaOS (http://localhost:3100/), open '~/Documents/text.txt' using the Notes app. The file contains the line 'Meeting Notes: Project Kickoff'. Copy that line, then switch to the Univer Word editor (http://localhost:3000/word). Click inside the document, paste the copied text, select the entire pasted line using Ctrl+A, and apply bold formatting using Ctrl+B (Bold shortcut per Univer docs-ui, requires editor focus). Keep the Word editor tab active with the formatted text visible.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "web",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Meeting Notes: Project Kickoff'; (2) that text is rendered in bold (font-weight bold or equivalent bold styling applied via Ctrl+B)."
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_word_02",
+    "instruction": "In ProzillaOS (http://localhost:3100/), open '~/Documents/text.txt' using the Notes app. The file contains two lines: line 1 is 'Summary:' and line 2 is 'Quarterly results exceeded expectations.' Copy line 2, then switch to the Univer Word editor (http://localhost:3000/word). Paste the text into the document. Select the pasted text and apply italic formatting using Ctrl+I, then without deselecting apply underline formatting using Ctrl+U (both are Univer docs-ui shortcuts requiring editor focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "web",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Quarterly results exceeded expectations.'; (2) that text has italic styling (Ctrl+I applied); (3) that text also has underline styling (Ctrl+U applied)."
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_word_03",
+    "instruction": "In ProzillaOS (http://localhost:3100/), open '~/Documents/text.txt' using the Notes app. The file contains the line 'Old Policy: Deprecated as of 2024.' Copy that line, then switch to the Univer Word editor (http://localhost:3000/word). Paste the text into the document. Select only the word 'Deprecated' within the pasted text, then apply strikethrough formatting using Ctrl+Shift+X (Strikethrough shortcut per Univer docs-ui). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "web",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Old Policy: Deprecated as of 2024.'; (2) the word 'Deprecated' has strikethrough styling applied (Ctrl+Shift+X)."
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_word_04",
+    "instruction": "In ProzillaOS (http://localhost:3100/), open '~/Documents/text.txt' using the Notes app. The file contains two items: 'Item A' and 'Item B'. Copy 'Item A', then switch to the Univer Word editor (http://localhost:3000/word). Using the toolbar, insert a 2x2 table (Insert > Table menu; no keyboard shortcut is available for table insertion in this version). Click the first cell of the inserted table and paste 'Item A' into it. Type 'Item B' into the second cell of the first row. Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "web",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) a table exists in the document with at least 2 columns and 2 rows; (2) the first cell of the table contains the text 'Item A'; (3) the second cell of the first row contains the text 'Item B'."
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_word_05",
+    "instruction": "In ProzillaOS (http://localhost:3100/), open '~/Documents/text.txt' using the Notes app. The file contains the heading text 'Annual Report 2025'. Copy that text, then switch to the Univer Word editor (http://localhost:3000/word). Paste the text into the document. Select the pasted text, then use the font size control in the toolbar to increase the font size to 24 (no keyboard shortcut is available for font size increase in this version — use the toolbar input or the increase-size button). Keep the Word editor tab active with the resized text visible.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "web",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Annual Report 2025'; (2) that text is rendered at a font size visibly larger than the default body text (font size set to 24 or greater via the toolbar)."
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_juso_01",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the Korean road address '서울특별시 종로구 세종대로 175'. Copy that address and look it up on the Road Address System (juso.go.kr) to verify its postal code.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": ".zipNo, .number",
+          "target": "text",
+          "value": "03172",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_juso_02",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the Korean road address '경기도 성남시 분당구 판교역로 166'. Copy that address and look it up on the Road Address System (juso.go.kr) to verify its postal code.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": ".zipNo, .number",
+          "target": "text",
+          "value": "13529",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_juso_03",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the Korean road address '부산광역시 해운대구 우동 1466-2 영상산업센터'. Copy that address and look it up on the Road Address System (juso.go.kr) to verify its postal code.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": ".zipNo, .number",
+          "target": "text",
+          "value": "48058",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_juso_04",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the Korean road address '제주특별자치도 제주시 첨단로 242'. Copy that address and look it up on the Road Address System (juso.go.kr) to verify its postal code.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": ".zipNo, .number",
+          "target": "text",
+          "value": "63309",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_juso_05",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the Korean road address '대전광역시 서구 월평동 291'. Copy that address and look it up on the Road Address System (juso.go.kr) to verify its postal code.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": ".zipNo, .number",
+          "target": "text",
+          "value": "35220",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_hipass_01",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the departure IC name '서울' and the destination IC name '부산'. Use those names to look up the toll fee for a Class 1 vehicle on the HiPass website (hipass.co.kr) and verify the result.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "서울",
+          "match": "contains"
+        },
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "부산",
+          "match": "contains"
+        },
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "1종",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_hipass_02",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the departure IC name '동서울' and the destination IC name '광주'. Use those names to look up the toll fee for a Class 1 vehicle on the HiPass website (hipass.co.kr) and verify the result.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "동서울",
+          "match": "contains"
+        },
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "광주",
+          "match": "contains"
+        },
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "1종",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_hipass_03",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the departure IC name '서울' and the destination IC name '전주'. Use those names to look up the toll fee for a Class 1 vehicle on the HiPass website (hipass.co.kr) and verify the result.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "서울",
+          "match": "contains"
+        },
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "전주",
+          "match": "contains"
+        },
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "1종",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_hipass_04",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the departure IC name '부산' and the destination IC name '서울'. Use those names to look up the toll fee for a Class 1 vehicle on the HiPass website (hipass.co.kr) and verify the result.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "부산",
+          "match": "contains"
+        },
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "서울",
+          "match": "contains"
+        },
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "1종",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_apple_01",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the note 'Apple Music, Individual plan'. Starting from the Apple homepage (apple.com), navigate to the Apple Music page and verify the monthly price of the Individual plan.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.apple.com/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": "p.tile-headline.typography-eyebrow-elevated",
+          "target": "text",
+          "value": "$10.99/month",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_allrecipes_01",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the search term 'banana bread'. Copy that term and search for it on Allrecipes (allrecipes.com), then verify the title of the first result.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.allrecipes.com/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": "span.card__title-text",
+          "target": "text",
+          "value": "Janet's Rich Banana Bread",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_allrecipes_02",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the search term 'Alabama Fire Crackers'. Copy that term and search for it on Allrecipes (allrecipes.com), then navigate to the recipe page and verify the Total Time listed.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.allrecipes.com/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "Alabama Fire Crackers",
+          "match": "contains",
+          "normalize_space": true
+        },
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "9 hrs 15 mins",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_arxiv_01",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the arXiv paper ID '2605.10702'. Use that ID to search for the paper on arXiv (arxiv.org) and verify the submission date shown on the paper's page.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://arxiv.org/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": "div.dateline",
+          "target": "text",
+          "value": "11 May 2026",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_arxiv_02",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the arXiv paper ID '1408.4969'. Use that ID to search for the paper on arXiv (arxiv.org) and verify the list of authors shown on the paper's page.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://arxiv.org/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": ".authors",
+          "target": "text",
+          "value": "Takaaki Miyajima",
+          "match": "contains",
+          "normalize_space": true
+        },
+        {
+          "website_id": "web",
+          "selector": ".authors",
+          "target": "text",
+          "value": "David Thomas",
+          "match": "contains",
+          "normalize_space": true
+        },
+        {
+          "website_id": "web",
+          "selector": ".authors",
+          "target": "text",
+          "value": "Hideharu Amano",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_labor_01",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the following retirement calculation details: Employment Date: 2022-01-01, Retirement Date: 2023-01-01, Monthly Base Salary: 3,000,000 KRW, Other Allowances: 0 KRW, Annual Bonus: 0 KRW, Annual Leave Allowance: 0 KRW. Enter these values into the Retirement Pay Calculator on the Ministry of Employment and Labor website (labor.moel.go.kr) and verify the computed retirement pay.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": "#dd_pay3",
+          "target": "attr",
+          "attr": "value",
+          "value": "2,934,78",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_labor_02",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the following retirement calculation details: Employment Date: 2020-01-01, Retirement Date: 2023-01-01, Monthly Base Salary: 4,000,000 KRW, Other Allowances: 0 KRW, Annual Bonus: 0 KRW, Annual Leave Allowance: 0 KRW. Enter these values into the Retirement Pay Calculator on the Ministry of Employment and Labor website (labor.moel.go.kr) and verify the computed retirement pay.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": "#dd_pay3",
+          "target": "attr",
+          "attr": "value",
+          "value": "11,749,85",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_nhis_01",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the following details: Monthly Remuneration (보수월액): 3,000,000 KRW, Annual Business Income (사업소득): 25,000,000 KRW. Enter these values into the Health Insurance Premium Calculator on the NHIS website (nhis.or.kr) and verify the computed insurance premium.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": "em[name='spanSum']",
+          "target": "text",
+          "value": "155,90",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_nhis_02",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the following details: Monthly Remuneration (보수월액): 5,000,000 KRW, Annual Separately Taxed Housing Rental Income (분리과세 주택임대소득): 15,000,000 KRW. Enter these values into the Health Insurance Premium Calculator on the NHIS website (nhis.or.kr) and verify the computed insurance premium.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": "em[name='spanSum']",
+          "target": "text",
+          "value": "203,37",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_dol_01",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the following work details: Employee Type: Tipped employee, Total Hours Worked: 45 hours (9 hours/day on weekdays, No Additional Compensation), Hourly Rate: $20.00. Enter these values into the Overtime Calculator on the U.S. Department of Labor website (webapps.dol.gov/elaws/otcalculator.htm) and verify the total weekly pay.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "950",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_dol_02",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the following work details: Employee Type: Fire fighter, Total Hours Worked: 41 hours (9 hours on Monday, 8 hours on other weekdays), Hourly Rate: $30.00. Enter these values into the Overtime Calculator on the U.S. Department of Labor website (webapps.dol.gov/elaws/otcalculator.htm) and verify the total weekly pay.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "target": "text",
+          "value": "1,245.00",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_bmi_adult_01",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the following measurements: Height: 180 cm, Weight: 70 kg. Use the Metric unit option on the CDC Adult BMI Calculator (cdc.gov/bmi/adult-calculator) to calculate the BMI and verify the result.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": "#calc_results > div.section.px-0 > div > div:nth-child(1) > p.h3.m-0 > span",
+          "target": "text",
+          "value": "21.6",
+          "match": "exact"
+        },
+        {
+          "website_id": "web",
+          "selector": "#calc_results > div.section.px-0 > div > div:nth-child(2) > p.h3.m-0 > span",
+          "target": "text",
+          "value": "Healthy Weight",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_bmi_adult_02",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the following measurements: Height: 6 feet 1 inch, Weight: 160 pounds. Use the US Customary unit option on the CDC Adult BMI Calculator (cdc.gov/bmi/adult-calculator) to calculate the BMI and verify the result.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": "#calc_results > div.section.px-0 > div > div:nth-child(1) > p.h3.m-0 > span",
+          "target": "text",
+          "value": "21.1",
+          "match": "exact"
+        },
+        {
+          "website_id": "web",
+          "selector": "#calc_results > div.section.px-0 > div > div:nth-child(2) > p.h3.m-0 > span",
+          "target": "text",
+          "value": "Healthy Weight",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_bmi_child_01",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the following measurements: Sex: Boy, Age: 2 Years 0 Months, Height: 2 feet 8 inches, Weight: 24 pounds. Use the US Customary unit option on the CDC Child & Teen BMI Calculator (cdc.gov/bmi/child-teen-calculator) to calculate the BMI and verify the result.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": "#calc_results > div.section.px-0 > div > div:nth-child(1) > p.h3.m-0 > span",
+          "target": "text",
+          "value": "16.5",
+          "match": "exact"
+        },
+        {
+          "website_id": "web",
+          "selector": "#calc_results > div.section.px-0 > div > div:nth-child(2) > p.h3.m-0 > span",
+          "target": "text",
+          "value": "Healthy Weight",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_OW_bmi_child_02",
+    "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the following measurements: Sex: Girl, Age: 8 Years 1 Month, Height: 3 feet 11 and 1/2 inches, Weight: 58 pounds. Use the US Customary unit option on the CDC Child & Teen BMI Calculator (cdc.gov/bmi/child-teen-calculator) to calculate the BMI and verify the result.",
+    "website": [
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      },
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "web",
+          "selector": "#calc_results > div.section.px-0 > div > div:nth-child(1) > p.h3.m-0 > span",
+          "target": "text",
+          "value": "18.1",
+          "match": "exact"
+        },
+        {
+          "website_id": "web",
+          "selector": "#calc_results > div.section.px-0 > div > div:nth-child(2) > p.h3.m-0 > span",
+          "target": "text",
+          "value": "Healthy Weight",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_juso_01",
+    "instruction": "Find the exact postal code for the address 'ì„œìš¸íŠ¹ë³„ì‹œ ì¢…ë¡œêµ¬ ì„¸ì¢…ëŒ€ë¡œ 175' on the Road Address System (juso.go.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Postal Code: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Postal Code: 03172",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_juso_02",
+    "instruction": "Lookup the postal code for the address '제주특별자치도 제주시 첨단로 242' on the Road Address System (juso.go.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Postal Code: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Postal Code: 63309",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_juso_03",
+    "instruction": "Find the postal code of '경기도 성남시 분당구 판교역로 166' on the Road Address System (juso.go.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Postal Code: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Postal Code: 13529",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_juso_04",
+    "instruction": "Find the postal code for the address '부산광역시 해운대구 우동 1466-2 영상산업센터' on the Road Address System (juso.go.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Postal Code: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Postal Code: 48058",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_juso_05",
+    "instruction": "Look up the postal code for '대전광역시 서구 월평동 291' on the Road Address System (juso.go.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Postal Code: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Postal Code: 35220",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_juso_06",
+    "instruction": "Find the postal code for '광주광역시 서구 쌍촌동 1268 5.18 기념문화관' on the Road Address System (juso.go.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Postal Code: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Postal Code: 61965",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_juso_07",
+    "instruction": "Look up the postal code for '대구광역시 중구 동인동2가 101 경북대학교 의과대학' on the Road Address System (juso.go.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Postal Code: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Postal Code: 41944",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_hipass_01",
+    "instruction": "Find the toll fee for a Class 1 vehicle traveling from Seoul Tollgate (서울) to Busan Tollgate (부산) on the HiPass website (hipass.co.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Toll Fee: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Toll Fee:\\s*[\\d,]+",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_hipass_02",
+    "instruction": "Check the toll fee for a Class 1 vehicle traveling from Busan Tollgate (부산) to Seoul Tollgate (서울) on the HiPass website (hipass.co.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Toll Fee: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Toll Fee:\\s*[\\d,]+",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_hipass_03",
+    "instruction": "Find the toll fee for a Class 1 vehicle traveling from Seoul Tollgate (서울) to Jeonju Tollgate (전주) on the HiPass website (hipass.co.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Toll Fee: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Toll Fee:\\s*[\\d,]+",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_hipass_04",
+    "instruction": "Find the toll fee for a Class 1 vehicle traveling from Dongseoul Tollgate (동서울) to Gwangju Tollgate (광주) on the HiPass website (hipass.co.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Toll Fee: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Toll Fee:\\s*[\\d,]+",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_hipass_05",
+    "instruction": "Find the toll fee for a Class 1 vehicle traveling from Seoul Tollgate (서울) to Busan Tollgate (부산) via Daegu (대구) on the HiPass website (hipass.co.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Toll Fee: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Toll Fee: 29,400",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_hipass_06",
+    "instruction": "Look up the driving distance from Dongseoul Tollgate (동서울) to Gwangju Tollgate (광주) on the HiPass website (hipass.co.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Distance: [value]km'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Distance: 299.65km",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_apple_01",
+    "instruction": "On the Apple Store iPhone 17 Pro page, configure the purchase options as follows: select the White (Silver) color, choose 1TB storage, set the payment option to Buy, select AT&T as the carrier, do not add a trade-in, and do not add AppleCare. Note the displayed price. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Price: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.apple.com/shop/buy-iphone/iphone-17-pro"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Price: $1,599",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_apple_02",
+    "instruction": "On the Apple Mac Studio purchase page, configure the options as follows: select the M4 Max chip with 16-core CPU and 40-core GPU, choose 64GB memory, choose 1TB storage, add a Final Cut Pro license, add a Logic Pro license, do not add a trade-in, and select Buy as the payment option. Note the displayed total price. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Price: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.apple.com/shop/buy-mac/mac-studio"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Price: $3,398.98",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_apple_03",
+    "instruction": "On the Apple iPad 11-inch purchase page, configure the options as follows: select the White (Silver) color, choose 256GB storage, select Wi-Fi + Cellular connectivity, skip engraving, add an Apple Pencil (USB-C), add a Magic Keyboard Folio (US English), do not add a trade-in, select Buy as the payment option, and do not add AppleCare. Note the displayed total price. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Price: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.apple.com/shop/buy-ipad/ipad"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => {\n  const has = [...document.querySelectorAll(\"p[class*='ProzillaOS-WindowTitle']\")].find((el) => el.textContent.includes(\"text.txt\"));\n  return has?.textContent.includes(\"text.txt\") ? \"text.txt\" : \"\";\n})();\n",
+          "value": "text.txt",
+          "match": "exact"
+        },
+        {
+          "mode": "console",
+          "script": "(() => {\n  const text = document.querySelector(\"textarea[class*='_View_']\")?.value ?? \"\";\n  return text.includes(\"Price: $927.00\") ? \"Price: $927.00\" : \"\";\n})();\n",
+          "value": "Price: $927.00",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_apple_04",
+    "instruction": "Starting from the Apple homepage (apple.com), navigate to the Apple Music page and find the monthly price of the Individual plan. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Price: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.apple.com/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Price: $10.99/month",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_allrecipes_01",
+    "instruction": "On the 'Absolutely the Best Chocolate Chip Cookies' recipe page on Allrecipes, find the calorie value listed in the Nutrition Facts (per serving) section. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Calories: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.allrecipes.com/recipe/17209/absolutely-the-best-chocolate-chip-cookies/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Calories: 241",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_allrecipes_02",
+    "instruction": "On the 'Alabama Fire Crackers' recipe page on Allrecipes, find the Total Time listed for the recipe. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Total Time: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.allrecipes.com/recipe/214184/alabama-fire-crackers/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Total Time: 9 hrs 15 mins",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_allrecipes_03",
+    "instruction": "On the 'Easy Chocolate Chip Pound Cake' recipe page on Allrecipes, find the star rating displayed for the recipe. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Rating: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.allrecipes.com/recipe/17572/easy-chocolate-chip-pound-cake/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Rating: 4.7",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_arxiv_01",
+    "instruction": "On the arXiv website, search for the paper with ID '2605.10702' and find its submission date on the paper's page. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Submission Date: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://arxiv.org/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Submission Date: 11 May 2026",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_arxiv_02",
+    "instruction": "On the arXiv website, search for the paper with ID '1408.4969' and find the name of the first listed author on the paper's page. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'First Author: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://arxiv.org/"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "First Author: Takaaki Miyajima",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_labor_01",
+    "instruction": "Calculate the expected retirement pay on the Ministry of Employment and Labor website (labor.moel.go.kr) using the following details: Employment Date: 2022-01-01, Retirement Date: 2023-01-01, Monthly Base Salary: 3,000,000 KRW, Other Allowances: 0 KRW, Annual Bonus: 0 KRW, Annual Leave Allowance: 0 KRW. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Retirement Pay: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Retirement Pay: 2,934,78",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_labor_02",
+    "instruction": "Calculate the expected retirement pay on the Ministry of Employment and Labor website (labor.moel.go.kr) using the following details: Employment Date: 2020-01-01, Retirement Date: 2023-01-01, Monthly Base Salary: 4,000,000 KRW, Other Allowances: 0 KRW, Annual Bonus: 0 KRW, Annual Leave Allowance: 0 KRW. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Retirement Pay: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Retirement Pay: 11,749,85",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_labor_03",
+    "instruction": "Calculate the expected retirement pay on the Ministry of Employment and Labor website (labor.moel.go.kr) using the following details: Employment Date: 2020-01-01, Retirement Date: 2023-01-01, Monthly Base Salary: 5,000,000 KRW, Other Allowances: 0 KRW, Annual Bonus: 0 KRW, Annual Leave Allowance: 0 KRW. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Retirement Pay: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Retirement Pay: 14,687,31",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_nhis_01",
+    "instruction": "Calculate the estimated monthly health insurance premium on the NHIS website (nhis.or.kr) for a workplace subscriber with the following details: Reported Monthly Remuneration (보수월액): 3,000,000 KRW, Annual Business Income (사업소득): 25,000,000 KRW. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Insurance Premium: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Insurance Premium: 155,90",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_nhis_02",
+    "instruction": "Calculate the estimated monthly health insurance premium on the NHIS website (nhis.or.kr) for a workplace subscriber with the following details: Reported Monthly Remuneration (보수월액): 5,000,000 KRW, Annual Separately Taxed Housing Rental Income (분리과세 주택임대소득): 15,000,000 KRW. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Insurance Premium: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Insurance Premium: 203,37",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_nhis_03",
+    "instruction": "Calculate the estimated monthly health insurance premium on the NHIS website (nhis.or.kr) for a workplace subscriber with the following details: Reported Monthly Remuneration (보수월액): 3,500,000 KRW, Annual Business Income (사업소득): 8,000,000 KRW, Annual Pension Income (연금소득): 12,000,000 KRW, Annual Separately Taxed Housing Rental Income (분리과세 주택임대소득): 10,000,000 KRW. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Insurance Premium: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Insurance Premium: 196,57",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_dol_01",
+    "instruction": "Calculate the total weekly pay for a tipped employee on the U.S. Department of Labor Overtime Calculator (webapps.dol.gov/elaws/otcalculator.htm) using the following details: Employee type: Tipped employee, Total hours worked: 45 hours (9 hours/day on weekdays, No Additional Compensation), Hourly rate: $20.00. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Weekly Pay: $[value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Weekly Pay: $950",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_dol_02",
+    "instruction": "Calculate the total weekly pay for a fire fighter on the U.S. Department of Labor Overtime Calculator (webapps.dol.gov/elaws/otcalculator.htm) using the following details: Employee type: Fire fighter, Total hours worked: 41 hours (9 hours on Monday, 8 hours on other weekdays), Hourly rate: $30.00. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Weekly Pay: $[value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Weekly Pay: $1,245.00",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_dol_03",
+    "instruction": "Calculate the total weekly pay for a teacher on the U.S. Department of Labor Overtime Calculator (webapps.dol.gov/elaws/otcalculator.htm) using the following details: Employee type: None of the above, Total hours worked: 42 hours (7 hours/day except Sunday), Hourly rate: $28.00, with only a holiday bonus gift as additional compensation. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Weekly Pay: $[value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Weekly Pay: $1,204",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_bmi_adult_01",
+    "instruction": "Calculate the BMI using the CDC Adult BMI Calculator (cdc.gov/bmi/adult-calculator) with Metric units: Height 180 cm, Weight 70 kg. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'BMI: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "BMI: 21.6",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_bmi_adult_02",
+    "instruction": "Calculate the BMI using the CDC Adult BMI Calculator (cdc.gov/bmi/adult-calculator) with US Customary units: Height 6 feet 1 inch, Weight 160 pounds. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'BMI: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "BMI: 21.1",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_bmi_child_01",
+    "instruction": "Calculate the BMI using the CDC Child & Teen BMI Calculator (cdc.gov/bmi/child-teen-calculator) with US Customary units for a Boy, Age 2 Years 0 Months, Height 2 feet 8 inches, Weight 24 pounds. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'BMI: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "BMI: 16.5",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_bmi_child_02",
+    "instruction": "Calculate the BMI using the CDC Child & Teen BMI Calculator (cdc.gov/bmi/child-teen-calculator) with US Customary units for a Girl, Age 8 Years 1 Month, Height 3 feet 11 and 1/2 inches, Weight 58 pounds. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'BMI: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "BMI: 18.1",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WO_bmi_child_03",
+    "instruction": "Calculate the BMI using the CDC Child & Teen BMI Calculator (cdc.gov/bmi/child-teen-calculator) with Metric units for a Boy, Age 200 months, Height 172 cm, Weight 77 kg. Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'BMI: [value]'. Keep the file open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "BMI: 26.0",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_apple_01",
+    "instruction": "On the Apple Store iPhone 17 Pro page (https://www.apple.com/shop/buy-iphone/iphone-17-pro), configure the purchase options as follows: select the White (Silver) color, choose 1TB storage, set the payment option to Buy, select AT&T as the carrier, do not add a trade-in, and do not add AppleCare. Note the displayed price. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the text in the format 'iPhone 17 Pro 1TB (White, AT&T): [price]' using the price you found. Select all the typed text using Ctrl+A, then apply Bold formatting using Ctrl+B (Bold shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.apple.com/shop/buy-iphone/iphone-17-pro"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'iPhone 17 Pro 1TB (White, AT&T): $1,599'; (2) that text is rendered in bold (Bold applied via Ctrl+B)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_apple_02",
+    "instruction": "Starting from the Apple homepage (https://www.apple.com/), navigate to the Apple Music page and find the monthly price of the Individual plan. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the text in the format 'Apple Music Individual Plan: [price]/month' using the price you found. Select all the typed text using Ctrl+A, apply Italic formatting using Ctrl+I (Italic shortcut per Univer docs-ui), then without deselecting apply Underline formatting using Ctrl+U (Underline shortcut per Univer docs-ui). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.apple.com/"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Apple Music Individual Plan: $10.99/month'; (2) that text has italic styling (Ctrl+I applied); (3) that text also has underline styling (Ctrl+U applied)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_allrecipes_01",
+    "instruction": "On the 'Absolutely the Best Chocolate Chip Cookies' recipe page on Allrecipes (https://www.allrecipes.com/recipe/17209/absolutely-the-best-chocolate-chip-cookies/), find the calorie value listed in the Nutrition Facts (per serving) section. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the text in the format 'Calories per serving: [calories]' using the value you found. Select all the typed text using Ctrl+A, then use the font size control in the toolbar to increase the font size to 24 (no keyboard shortcut is available for font size change in this version — use the toolbar input or size button). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.allrecipes.com/recipe/17209/absolutely-the-best-chocolate-chip-cookies/"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Calories per serving: 241'; (2) that text is displayed at a font size visibly larger than default body text (font size set to 24 or greater via the toolbar)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_allrecipes_02",
+    "instruction": "On the 'Alabama Fire Crackers' recipe page on Allrecipes (https://www.allrecipes.com/recipe/214184/alabama-fire-crackers/), find the Total Time listed for the recipe. Then, switch to the Univer Word editor (http://localhost:3000/word) and insert a 2-column by 2-row table using the Insert Table option in the toolbar (no keyboard shortcut is available for table insertion in this version). Fill the first row with the headers: cell 1 — 'Recipe', cell 2 — 'Total Time'. Fill the second row with the data: cell 1 — 'Alabama Fire Crackers', cell 2 — the total time value you found. Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.allrecipes.com/recipe/214184/alabama-fire-crackers/"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) a table with 2 columns and 2 rows exists in the document; (2) the first row contains 'Recipe' and 'Total Time' as headers; (3) the second row contains 'Alabama Fire Crackers' and '9 hrs 15 mins'."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_arxiv_01",
+    "instruction": "On the arXiv website (https://arxiv.org/), search for the paper with ID '2605.10702' and find its submission date shown on the paper's abstract page. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the text in the format 'Submission Date: [date]' using the submission date you found. Select only the date portion and apply Strikethrough formatting using Ctrl+Shift+X (Strikethrough shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://arxiv.org/"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Submission Date: 11 May 2026'; (2) the date text '11 May 2026' has strikethrough styling applied (Ctrl+Shift+X)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_arxiv_02",
+    "instruction": "On the arXiv website (https://arxiv.org/), search for the paper with ID '1408.4969' and find the name of the first listed author on the paper's abstract page. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the text in the format 'Lead Author: [name]' using the author name you found. Select only the author name portion and apply Bold formatting using Ctrl+B (Bold shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://arxiv.org/"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Lead Author: Takaaki Miyajima'; (2) the name 'Takaaki Miyajima' is rendered in bold (Ctrl+B applied)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_hipass_01",
+    "instruction": "Find the toll fee for a Class 1 vehicle traveling from Seoul Tollgate (서울) to Busan Tollgate (부산) on the HiPass website (https://www.hipass.co.kr/board/TollPaySearchList.do). Note the toll fee value. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the result in the format 'Toll Fee: [value]'. Select all the typed text using Ctrl+A, then apply Bold formatting using Ctrl+B (Bold shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains text matching the format 'Toll Fee: [numeric value]' for the Seoul-to-Busan Class 1 route; (2) that text is rendered in bold (Ctrl+B applied)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_labor_01",
+    "instruction": "Calculate the expected retirement pay on the Ministry of Employment and Labor website (https://labor.moel.go.kr/cmmt/calRtrmnt.do) using the following details: Employment Date: 2022-01-01, Retirement Date: 2023-01-01, Monthly Base Salary: 3,000,000 KRW, Other Allowances: 0 KRW, Annual Bonus: 0 KRW, Annual Leave Allowance: 0 KRW. Note the computed retirement pay value. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the result in the format 'Retirement Pay: [value]'. Select all the typed text using Ctrl+A, then apply Underline formatting using Ctrl+U (Underline shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains text matching the format 'Retirement Pay: [value]' where the value corresponds to the retirement pay calculated with the given inputs (employment 2022-01-01, retirement 2023-01-01, salary 3,000,000 KRW); (2) that text has underline styling applied (Ctrl+U)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_nhis_01",
+    "instruction": "Calculate the estimated monthly health insurance premium on the NHIS website (https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do) for a workplace subscriber with the following details: Reported Monthly Remuneration (보수월액): 3,000,000 KRW, Annual Business Income (사업소득): 25,000,000 KRW. Note the computed insurance premium value. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the result in the format 'Insurance Premium: [value]'. Select all the typed text using Ctrl+A, then apply Italic formatting using Ctrl+I (Italic shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains text matching the format 'Insurance Premium: [value]' where the value corresponds to the NHIS premium calculated with remuneration 3,000,000 KRW and business income 25,000,000 KRW; (2) that text has italic styling applied (Ctrl+I)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_dol_01",
+    "instruction": "Calculate the total weekly pay for a tipped employee on the U.S. Department of Labor Overtime Calculator (https://webapps.dol.gov/elaws/otcalculator.htm) using the following details: Employee type: Tipped employee, Total hours worked: 45 hours (9 hours/day on weekdays, No Additional Compensation), Hourly rate: $20.00. Note the computed weekly pay. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the result in the format 'Weekly Pay: $[value]' using the value you found. Select only the dollar value portion and apply Strikethrough formatting using Ctrl+Shift+X (Strikethrough shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Weekly Pay: $950'; (2) the value '$950' has strikethrough styling applied (Ctrl+Shift+X)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_bmi_adult_01",
+    "instruction": "Calculate the BMI using the CDC Adult BMI Calculator (https://www.cdc.gov/bmi/adult-calculator/index.html) with Metric units: Height 180 cm, Weight 70 kg. Note the computed BMI value. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the result in the format 'BMI: [value]' using the value you found. Select all the typed text using Ctrl+A, then use the font size control in the toolbar to increase the font size to 24 (no keyboard shortcut is available for font size change in this version — use the toolbar input or size button). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'BMI: 21.6'; (2) that text is displayed at a font size visibly larger than default body text (font size set to 24 or greater via the toolbar)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_juso_01",
+    "instruction": "Find the exact postal code for the address '서울특별시 종로구 세종대로 175' on the Road Address System (https://www.juso.go.kr/). Note the postal code. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the text in the format 'Postal Code: [value]' using the postal code you found. Select all the typed text using Ctrl+A, then click the Font Color button (the 'A' with a color bar) in the toolbar, choose 'More Colors', enter the hex value '0C41DF' in the # field, and click OK to apply the color. Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains text matching the format 'Postal Code: 03172'; (2) that text is rendered in the color #0C41DF (applied via More Colors picker)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_juso_02",
+    "instruction": "Look up the postal code for the address '제주특별자치도 제주시 첨단로 242' on the Road Address System (https://www.juso.go.kr/). Note the postal code. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the text in the format 'Postal Code: [value]' using the postal code you found. Select all the typed text using Ctrl+A, then click the Font Color button (the 'A' with a color bar) in the toolbar, choose 'More Colors', enter the hex value 'E84C3D' in the # field, and click OK to apply the color. Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains text matching the format 'Postal Code: 63309'; (2) that text is rendered in the color #E84C3D (applied via More Colors picker)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_bmi_child_01",
+    "instruction": "Calculate the BMI using the CDC Child & Teen BMI Calculator (https://www.cdc.gov/bmi/child-teen-calculator/index.html) with US Customary units for a Boy, Age 2 Years 0 Months, Height 2 feet 8 inches, Weight 24 pounds. Note the computed BMI value and weight status shown in the result. Then, switch to the Univer Word editor (http://localhost:3000/word) and insert a 2-column by 2-row table using the Insert Table option in the toolbar (no keyboard shortcut is available for table insertion in this version). Fill the first row with the headers: cell 1 — 'BMI', cell 2 — 'Weight Status'. Fill the second row with the data: cell 1 — the BMI value you found, cell 2 — the weight status shown. Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) a table with 2 columns and 2 rows exists in the document; (2) the first row contains 'BMI' and 'Weight Status' as headers; (3) the second row contains '16.5' and 'Healthy Weight'."
+    }
+  }
+]
