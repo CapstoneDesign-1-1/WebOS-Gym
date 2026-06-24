@@ -1,0 +1,331 @@
+[
+  {
+    "task_id": "MULTI-NHIS-ARREARS-001",
+    "instruction": "I am a local resident (내국인) and missed my health insurance (건강보험) premium payment of 150,000 won, which was originally due on March, 2024. If I plan to pay it on May 10, 2024, how much will the late fee and the total payment be? Please use the NHIS late fee calculator (연체금 계산하기) to find the 'Late Fee' and 'Total Amount'. Save the results in the spreadsheet starting at A1 with headers 'Category' and 'Amount'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "sheet",
+          "cell": "A1",
+          "value": "(?i).*Category.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B1",
+          "value": "(?i).*Amount.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A2",
+          "value": "(?i).*Late\\s*Fee.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B2",
+          "value": ".*2,900.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A3",
+          "value": "(?i).*Total\\s*Amount.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B3",
+          "value": ".152,900.*",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  //1. Web에서 연체금 계산하기 버튼이 나올때까지 스크롤 다운
+  //2. Web에서 '연체금 계산하기' or '계산하기' 왼쪽 클릭
+  //3. Web에서 연체금 모의 계산기 보일 때까지 스크롤 다운
+  //4. Web에서 보험료 입력 칸에 왼쪽 클릭
+  //5. Web에서 '150000' 입력
+  //6. Web에서 가입자 구분 내국인 칸 왼쪽 클릭
+  //7. Web에서 보험 구분 건강 칸 왼쪽 클릭
+  //8. Web에서 고지년월 입력칸에 왼쪽 클릭
+  //9. Web에서 '202403' 입력
+  //10. Web에서 납부예정일 입력칸에 왼쪽 클릭
+  //11. Web에서 '20240510' 입력
+  //12. Web에서 계산하기 버튼 클릭
+  //13. Web에서 스크롤 다운해 연체금 모의 계산 결과 확인
+  //14. Sheet의 A1 왼쪽 클릭
+  //15. Sheet에서 'Category' 입력
+  //16. Sheet의 B1 왼쪽 클릭
+  //17. Sheet에서 'Amount' 입력
+  //18. Sheet의 A2 왼쪽 클릭
+  //19. Sheet에서 'Late Fee' 입력
+  //20. Sheet의 B2 왼쪽 클릭
+  //21. Sheet에서 '2,900' 입력
+  //22. Sheet의 A3 왼쪽 클릭
+  //23. Sheet에서 'Total Amount' 입력
+  //24. Sheet의 B3 왼쪽 클릭
+  //25. Sheet에서 '152,900' 입력
+  {
+    "task_id": "MULTI-NHIS-ARREARS-ALL-001",
+    "instruction": "I am a local resident (내국인) and I missed the payments for all four of my major insurances. I need to calculate the late fee and total amount for each one using the NHIS late fee calculator (연체금 계산하기). \nHere are the details for each:\n1. Health Insurance (건강보험): 150,000 won, Billing Month (고지년월): 2024-02, Expected Payment Date (납부예정일): 2024-05-10.\n2. National Pension (국민연금): 200,000 won, Billing Month: 2024-02, Expected Payment Date: 2024-05-10.\n3. Employment Insurance (고용보험): 50,000 won, Billing Month: 2024-02, Expected Payment Date: 2024-05-10.\n4. Industrial Accident Insurance (산재보험): 30,000 won, Billing Month: 2024-02, Expected Payment Date: 2024-05-10.\n\nPlease calculate them sequentially and save the results in the spreadsheet starting at A1 with headers 'Insurance Type', 'Late Fee', and 'Total Amount'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "sheet",
+          "cell": "A1",
+          "value": "(?i).*Insurance\\s*Type.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B1",
+          "value": "(?i).*Late\\s*Fee.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C1",
+          "value": "(?i).*Total\\s*Amount.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A2",
+          "value": "(?i).*Health.*|.*건강.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B2",
+          "value": ".*2,900.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C2",
+          "value": ".*152,900.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A3",
+          "value": "(?i).*Pension.*|.*연금.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B3",
+          "value": ".*4,990.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C3",
+          "value": ".*204,990.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A4",
+          "value": "(?i).*Employment.*|.*고용.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B4",
+          "value": ".*1,250.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C4",
+          "value": ".*51,250.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A5",
+          "value": "(?i).*Industrial.*|(?i).*Accident.*|.*산재.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B5",
+          "value": ".*750.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C5",
+          "value": ".*30,750.*",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  //1. Sheet의 A1 왼쪽 클릭
+  //2. Sheet에서 'Insurance Type' 입력
+  //3. Sheet의 B1 왼쪽 클릭
+  //4. Sheet에서 'Late Fee' 입력
+  //5. Sheet의 C1 왼쪽 클릭
+  //6. Sheet에서 'Total Amount' 입력
+  //7. Web에서 연체금 계산하기 버튼이 나올때까지 스크롤 다운
+  //8. Web에서 '연체금 계산하기' 왼쪽 클릭
+  //9. Web에서 연체금 모의 계산기 폼이 보일 때까지 스크롤 다운
+  //10. Web에서 가입자 구분 '내국인' 라디오 버튼 왼쪽 클릭
+  //11. Web에서 보험 구분 '건강' 라디오 버튼 왼쪽 클릭
+  //12. Web에서 고지년월 입력칸 왼쪽 클릭
+  //13. Web에서 '202402' 입력
+  //14. Web에서 납부예정일 입력칸 왼쪽 클릭
+  //15. Web에서 '20240510' 입력
+  //16. Web에서 미납 보험료 입력칸 왼쪽 클릭
+  //17. Web에서 '150000' 입력
+  //18. Web에서 '계산하기' 버튼 왼쪽 클릭
+  //19. Web에서 계산 결과 표가 보일 때까지 스크롤 다운
+  //20. Sheet의 A2 왼쪽 클릭
+  //21. Sheet에서 'Health' 입력
+  //22. Sheet의 B2 왼쪽 클릭
+  //23. Sheet에서 '2,900' 입력
+  //24. Sheet의 C2 왼쪽 클릭
+  //25. Sheet에서 '152,900' 입력
+  //26. Web에서 연체금 입력 폼이 보일 때까지 스크롤 업
+  //27. Web에서 보험 구분 '연금' 라디오 버튼 왼쪽 클릭
+  //28. Web에서 미납 보험료 입력칸 왼쪽 더블클릭
+  //29. Web에서 '200000' 입력
+  //30. Web에서 '계산하기' 버튼 왼쪽 클릭
+  //31. Web에서 계산 결과 표가 보일 때까지 스크롤 다운
+  //32. Sheet의 A3 왼쪽 클릭
+  //33. Sheet에서 'Pension' 입력
+  //34. Sheet의 B3 왼쪽 클릭
+  //35. Sheet에서 '4,990' 입력
+  //36. Sheet의 C3 왼쪽 클릭
+  //37. Sheet에서 '204,990' 입력
+  //38. Web에서 연체금 입력 폼이 보일 때까지 스크롤 업
+  //39. Web에서 보험 구분 '고용' 라디오 버튼 왼쪽 클릭
+  //40. Web에서 미납 보험료 입력칸 왼쪽 더블클릭
+  //41. Web에서 '50000' 입력
+  //42. Web에서 '계산하기' 버튼 왼쪽 클릭
+  //43. Web에서 계산 결과 표가 보일 때까지 스크롤 다운
+  //44. Sheet의 A4 왼쪽 클릭
+  //45. Sheet에서 'Employment' 입력
+  //46. Sheet의 B4 왼쪽 클릭
+  //47. Sheet에서 '1,250' 입력
+  //48. Sheet의 C4 왼쪽 클릭
+  //49. Sheet에서 '51,250' 입력
+  //50. Web에서 연체금 입력 폼이 보일 때까지 스크롤 업
+  //51. Web에서 보험 구분 '산재' 라디오 버튼 왼쪽 클릭
+  //52. Web에서 미납 보험료 입력칸 왼쪽 더블클릭
+  //53. Web에서 '30000' 입력
+  //54. Web에서 '계산하기' 버튼 왼쪽 클릭
+  //55. Web에서 계산 결과 표가 보일 때까지 스크롤 다운
+  //56. Sheet의 A5 왼쪽 클릭
+  //57. Sheet에서 'Industrial Accident' 입력
+  //58. Sheet의 B5 왼쪽 클릭
+  //59. Sheet에서 '750' 입력
+  //60. Sheet의 C5 왼쪽 클릭
+  //61. Sheet에서 '30,750' 입력
+  {
+    "task_id": "MULTI-NHIS-OVERSEAS-001",
+    "instruction": "I traveled abroad and need to check if I qualify for the NHIS premium exemption. Please navigate to the '해외 출국자 보험료감면 여부 조회' (Overseas traveler premium exemption inquiry) menu on the website to verify the rules. Then, save my travel record and whether it is exempted into the spreadsheet starting at A1 with headers 'Departure Date (출국일)', 'Return Date (입국일)', and 'Exemption Status (면제 여부)'. For the exemption status, please answer strictly with 'Yes' or 'No'.\nDepart: 2023-05-01, Return: 2023-07-15.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "sheet",
+          "cell": "A1",
+          "value": "(?i).*Departure.*|.*출국.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B1",
+          "value": "(?i).*Return.*|.*입국.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C1",
+          "value": "(?i).*Exemption.*|.*Status.*|.*면제.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A2",
+          "value": ".*2023-05-01.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B2",
+          "value": ".*2023-07-15.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C2",
+          "value": "(?i).*Not.*|.*No.*|.*비면제.*|.*대상\\s*아님.*|.*X.*",
+          "match": "regex"
+        }
+      ]
+    }
+  }
+  //1. Web에서 '해외 출국자 보험료 감면 여부 조회'가 보일 때까지 스크롤 다운
+  //2. Web에서 '해외 출국자 보험료 감면 여부 조회' or '계산하기' 마우스 왼쪽 클릭
+  //3. Web에서 '조회정보'를 입력할 수 있는 칸이 나올 때까지 스크롤 다운
+  //4. Web에서 출국일 입력 칸에 마우스 왼쪽 클릭
+  //5. Web에서 '20230501' 입력
+  //6. Web에서 입국일 입력 칸에 마우스 왼쪽 클릭
+  //7. Web에서 '20230715' 입력
+  //8. Web에서 조회 버튼 클릭
+  //9. Sheet의 A1 왼쪽 클릭
+  //10. Sheet에서 'Departure Date (출국일)' 입력
+  //11. Sheet의 B1 왼쪽 클릭
+  //12. Sheet에서 'Return Date (입국일)' 입력
+  //13. Sheet의 C1 왼쪽 클릭
+  //14. Sheet에서 'Exemption Status (면제 여부)' 입력
+  //15. Sheet의 A2 왼쪽 클릭
+  //16. Sheet에서 '2023-05-01' 입력
+  //17. Sheet의 B2 왼쪽 클릭
+  //18. Sheet에서 '2023-07-15' 입력
+  //19. Sheet의 C2 왼쪽 클릭
+  //20. Sheet에서 'No' 입력
+
+]

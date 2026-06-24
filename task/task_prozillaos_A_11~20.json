@@ -1,0 +1,200 @@
+[
+  {
+    "task_id": "prozilla_task_A_11",
+    "instruction": "I want to hide all my desktop icons to keep my workspace clean. Please disable the desktop icons visibility option in the system settings.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div:has(p:has-text('Show icons')) button[class*='Checkbox']",
+          "target": "class",
+          "value": "^(?!.*Checked).*$",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_12",
+    "instruction": "I want to change the overall look of my system. Go to the appearance settings and switch the system theme to Cherry.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "select[aria-label='theme']",
+          "target": "attr",
+          "attr": "value",
+          "value": "Cherry",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_13",
+    "instruction": "Use the system settings to configure the Minesweeper game to launch automatically upon system startup.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "button:has-text('Minesweeper') div[class*='Checkbox']",
+          "target": "class",
+          "value": "Checked",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_14",
+    "instruction": "Please make sure the Wordle game is pinned to the taskbar.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "button[title='Wordle']",
+          "target": "class",
+          "value": "^(?!.*Hidden).*$",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_15",
+    "instruction": "Please remove the Terminal application from the taskbar.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "button[title='Terminal']",
+          "target": "class",
+          "value": "Hidden",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_16",
+    "instruction": "Use the App Center search bar to search for the Calculator app.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "input[placeholder='Search...']",
+          "target": "attr",
+          "attr": "value",
+          "value": "Calculator",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_17",
+    "instruction": "I want to browse educational apps only. Please filter the App Center applications to display only the Education category.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "select[aria-label='category']",
+          "target": "attr",
+          "attr": "value",
+          "value": "Education",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_18",
+    "instruction": "Update my desktop wallpaper to the last option in the settings, then reveal the clean desktop so I can see it clearly.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "img[alt='Desktop wallpaper']",
+          "target": "attr",
+          "attr": "src",
+          "value": "abstract-wallpaper-gradient-red",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='WindowView']:has(p:has-text('Settings'))",
+          "target": "class",
+          "value": "Minimized",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_19",
+    "instruction": "I use the Melodix music app all the time. Please pin it to the taskbar and configure it to launch automatically upon system startup.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "button[title='Melodix']",
+          "target": "class",
+          "value": "^(?!.*Hidden).*$",
+          "match": "regex"
+        },
+        {
+          "selector": "button:has-text('Melodix') div[class*='Checkbox']",
+          "target": "class",
+          "value": "Checked",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_20",
+    "instruction": "Navigate to the Crumbling City directory under Pictures, delete the unneeded 'Japan.png' file, and open the properties of 'Farms.png'. Move the properties window so that it doesn't overlap with the file explorer.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div[class*='_DirectoryList_']",
+          "target": "text",
+          "value": "^(?!.*Japan\\.png).*$",
+          "match": "regex"
+        },
+        {
+          "selector": "p:has-text('Farms.png - Properties')",
+          "target": "text",
+          "value": "Farms.png - Properties",
+          "match": "contains"
+        },
+        {
+          "selector": "div:has(p:has-text('Farms.png - Properties'))",
+          "target": "class",
+          "value": "react-draggable-dragged",
+          "match": "contains"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,208 @@
+[
+  {
+    "task_id": "prozilla_task_011",
+    "task_name": "Create nested files and print their tree.",
+    "instruction": "Open Terminal and run `cd ~/Documents && mkdir -p project/src && touch project/src/main.txt && tree -L 3 project`. Leave the output visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "main.txt",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_012",
+    "task_name": "Use sort to order lines alphabetically.",
+    "instruction": "Open Terminal and run `cd ~/Documents && touch sort_case.txt && echo pear > sort_case.txt && echo apple >> sort_case.txt && echo banana >> sort_case.txt && sort sort_case.txt`. Leave the sorted result visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "apple",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "banana",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "pear",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_013",
+    "task_name": "Archive and extract a text file with zip and unzip.",
+    "instruction": "Open Terminal and run `cd ~/Documents && echo benchmark > memo.txt && zip memo.zip memo.txt && unzip memo.zip -d out_zip && cat out_zip/memo.txt`. Leave the final output visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "benchmark",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_014",
+    "task_name": "Create a tar archive file.",
+    "instruction": "Open Terminal and run `cd ~/Documents && echo tarcheck > tar_note.txt && tar -cf packed.tar tar_note.txt && ls`. Keep the output visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "packed.tar",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_015",
+    "task_name": "Create a file and verify it appears in du output.",
+    "instruction": "Open Terminal and run `cd ~/Documents && echo usage-check > usage_check.txt && du -a .`. Leave the output visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "usage_check.txt",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_016",
+    "task_name": "Collect identity and kernel info into a note file.",
+    "instruction": "Open Terminal, run `cd ~/Documents && id > sysinfo.txt && uname -a >> sysinfo.txt && cat sysinfo.txt`, and leave the output visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "uid=1000(user)",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "ProzillaOS",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "sysinfo.txt",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_017",
+    "task_name": "Resolve and compare script paths with two commands.",
+    "instruction": "Open Terminal, run `whereis ~/Scripts/fizzbuzz.sh > path_check.txt && which ~/Scripts/fizzbuzz.sh >> path_check.txt && cat path_check.txt`, and leave the result visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "~/Scripts/fizzbuzz.sh: /home/prozilla-os/Scripts/fizzbuzz.sh",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "/home/prozilla-os/Scripts/fizzbuzz.sh",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "path_check.txt",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_018",
+    "task_name": "Create and sort a three-line note in Terminal.",
+    "instruction": "Open Terminal and run `cd ~/Documents && echo alpha > notes.txt && echo beta >> notes.txt && echo gamma >> notes.txt && sort -r notes.txt > notes_sorted.txt && cat notes_sorted.txt`. Leave the sorted output visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "gamma",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "beta",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "alpha",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_019",
+    "task_name": "Create and verify a phrase file in Terminal.",
+    "instruction": "Open Terminal and run `cd ~/Documents && echo terminal benchmark pass > phrase.txt && cat phrase.txt`. Leave the output visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "terminal benchmark pass",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_020",
+    "task_name": "Create a file in Terminal and copy its content into Text Editor.",
+    "instruction": "Open Terminal and run `cd ~/Documents && echo sync-check > sync_note.txt && cat sync_note.txt`. Then open Text Editor and type exactly `sync-check`.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "sync-check",
+          "match": "contains"
+        },
+        {
+          "selector": "textarea",
+          "attr": "value",
+          "value": "sync-check",
+          "match": "exact"
+        }
+      ]
+    }
+  }
+]

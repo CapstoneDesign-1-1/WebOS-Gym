@@ -1,0 +1,213 @@
+[
+    {
+        "task_id": "prozilla_calc_01",
+        "instruction": "I need to multiply 15 by 8. Use the calculator to find the result.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "p[class*='Preview']",
+                    "target": "text",
+                    "value": "120",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_calc_02",
+        "instruction": "Find out the sum of 125 and 131 using the calculator.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "p[class*='Preview']",
+                    "target": "text",
+                    "value": "256",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_terminal_03",
+        "instruction": "Check what built-in commands are supported in the terminal shell by listing them.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "[class*='Terminal'] [class*='Output']",
+                    "target": "text",
+                    "value": "clear",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_terminal_04",
+        "instruction": "List the contents of the current home directory using the terminal.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "[class*='Terminal'] [class*='Output']",
+                    "target": "text",
+                    "value": "Documents",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_terminal_05",
+        "instruction": "Use the terminal to navigate to the Desktop directory and list its files.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "[class*='Terminal'] [class*='Output']",
+                    "target": "text",
+                    "value": "Info.md",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_settings_07",
+        "instruction": "Check the current virtual drive storage status in the system settings.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "target": "text",
+                    "value": "Virtual Drive.*",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_explorer_08",
+        "instruction": "Open the Files application and navigate to the Desktop folder using the sidebar.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "input[class*='PathInput']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "~/Desktop",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_explorer_09",
+        "instruction": "Open the Files application, locate the text file inside Documents, open it, insert the text 'prozillaos' between 'Hello' and 'world!', and save the file.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea[class*='View']",
+                    "target": "text",
+                    "value": "[Hh]ello\\s+prozillaos\\s+world",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_explorer_10",
+        "instruction": "Navigate to the Documents directory in the file explorer.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "input[class*='PathInput']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "~/Documents",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_explorer_11",
+        "instruction": "Locate the image file named 'Farms.png' under your Pictures/crumbling city directory and delete it.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "target": "text",
+                    "value": "(?s)^(?!.*Farms)",
+                    "match": "regex",
+                    "case_sensitive": false
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_terminal_12",
+        "instruction": "Navigate into your Documents folder in the terminal, create a new subfolder called 'work', enter it, and create a text file named 'deep_file.txt' to verify.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "[class*='Terminal'] [class*='Output']",
+                    "target": "text",
+                    "value": "deep_file.txt",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_scripts_14",
+        "instruction": "Use the terminal to navigate to the Scripts directory, list its files, and display the source code of the helloworld script.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "[class*='Terminal'] [class*='Output']",
+                    "target": "text",
+                    "value": "echo \"Hello, World!\"",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_explorer_15",
+        "instruction": "Open the Files application and jump to the Documents directory.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "input[class*='PathInput']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "~/Documents",
+                    "match": "exact"
+                }
+            ]
+        }
+    }
+]

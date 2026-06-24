@@ -1,0 +1,234 @@
+[
+    {
+        "task_id": "MULTI-CHILD-BMI-NB-METRIC-001",
+        "instruction": "I'm giving you data in the format (name, sex, age, height, weight). Use this site to get the BMI and BMI category for each person, then save the name, BMI, BMI category, and BMI percentile to the sheet. Columns start at A1: Name, BMI, BMI Category, BMI Percentile. (Sam, boy, 8 years 0 months, 130 cm, 26 kg), (Emma, girl, 12 years 0 months, 152 cm, 65 kg), (Liam, boy, 6 years 6 months, 120 cm, 21 kg)",
+        "website": [
+            {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+            },
+            {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+            }
+        ],
+        "evaluation": {
+            "mode": "spreadsheet",
+            "operator": "and",
+            "rules": [
+                {
+                    "website_id": "sheet",
+                    "cell": "A1",
+                    "value": "Name",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B1",
+                    "value": "BMI",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C1",
+                    "value": "BMI Category",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D1",
+                    "value": "BMI Percentile",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A2",
+                    "value": "Sam",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B2",
+                    "value": "15.4",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C2",
+                    "value": "Healthy Weight",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D2",
+                    "value": "40",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A3",
+                    "value": "Emma",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B3",
+                    "value": "28.1",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C3",
+                    "value": "Obesity",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D3",
+                    "value": "97.1",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A4",
+                    "value": "Liam",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B4",
+                    "value": "14.6",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C4",
+                    "value": "Healthy Weight",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D4",
+                    "value": "24",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "MULTI-CHILD-BMI-NB-US-001",
+        "instruction": "I'm providing data in the format (name, sex, age, height, weight). Using this site, obtain the BMI and BMI category and write the name, BMI, BMI category, and BMI percentile to the sheet. Columns start at A1: Name, BMI, BMI Category, BMI Percentile. (Sam, boy, 8 years 0 months, 4 feet 3 inches, 57 pounds), (Emma, girl, 12 years 0 months, 5 feet 0 inches, 143 pounds), (Liam, boy, 6 years 6 months, 3 feet 11 inches, 46 pounds)",
+        "website": [
+            {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+            },
+            {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+            }
+        ],
+        "evaluation": {
+            "mode": "spreadsheet",
+            "operator": "and",
+            "rules": [
+                {
+                    "website_id": "sheet",
+                    "cell": "A1",
+                    "value": "Name",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B1",
+                    "value": "BMI",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C1",
+                    "value": "BMI Category",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D1",
+                    "value": "BMI Percentile",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A2",
+                    "value": "Sam",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B2",
+                    "value": "15.4",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C2",
+                    "value": "Healthy Weight",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D2",
+                    "value": "40",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A3",
+                    "value": "Emma",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B3",
+                    "value": "27.9",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C3",
+                    "value": "Obesity",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D3",
+                    "value": "96.9",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A4",
+                    "value": "Liam",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B4",
+                    "value": "14.6",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C4",
+                    "value": "Healthy Weight",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D4",
+                    "value": "26",
+                    "match": "regex"
+                }
+            ]
+        }
+    }
+]

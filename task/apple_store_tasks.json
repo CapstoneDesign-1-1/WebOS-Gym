@@ -1,0 +1,92 @@
+[
+  {
+    "task_id": "web_task_apple_01",
+    "instruction": "On the Apple Store iPhone 17 Pro page, configure the purchase options as follows: select the White (Silver) color, choose 1TB storage, set the payment option to Buy (not monthly installments), select AT&T as the carrier, do not add a trade-in, and do not add AppleCare. Then check the displayed price.",
+    "website": "https://www.apple.com/shop/buy-iphone/iphone-17-pro",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "span.as-price-currentprice[data-autom=\"price-MFXN4\"]",
+          "target": "text",
+          "value": "$1,599",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_02",
+    "instruction": "On the Apple Mac Studio purchase page, configure the options as follows: select the M4 Max chip with 16-core CPU and 40-core GPU, choose 64GB memory, choose 1TB storage, add a Final Cut Pro license, add a Logic Pro license, do not add a trade-in, and select Buy as the payment option. Then check the displayed total price.",
+    "website": "https://www.apple.com/shop/buy-mac/mac-studio",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div.as-price-currentprice[data-autom=\"summaryPrice\"]",
+          "target": "text",
+          "value": "$3,398.98",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_03",
+    "instruction": "On the Apple iPad 11-inch purchase page, configure the options as follows: select the White (Silver) color, choose 256GB storage, select Wi-Fi + Cellular connectivity, skip engraving, add an Apple Pencil (USB-C), add a Magic Keyboard Folio (US English), do not add a trade-in, select Buy as the payment option (no financing), and do not add AppleCare. Then check the displayed total price.",
+    "website": "https://www.apple.com/shop/buy-ipad/ipad",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div.as-price-currentprice[data-autom=\"summaryPrice\"]",
+          "target": "text",
+          "value": "$927.00",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_04",
+    "instruction": "Starting from the Apple homepage, navigate to the Apple Music page and find the monthly price of the Individual plan.",
+    "website": "https://www.apple.com/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p.tile-headline.typography-eyebrow-elevated",
+          "target": "text",
+          "value": "$10.99/month",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_05",
+    "instruction": "Starting from the Apple iPad Accessories page, navigate to the Apple Pencil Pro product page and find its price.",
+    "website": "https://www.apple.com/shop/ipad/accessories",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div.rc-prices-fullprice[data-autom=\"full-price\"]",
+          "target": "text",
+          "value": "$129.00",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  }
+]

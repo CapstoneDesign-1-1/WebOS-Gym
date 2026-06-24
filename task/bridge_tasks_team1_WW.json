@@ -1,0 +1,230 @@
+[
+  {
+    "task_id": "bridge_task_WW_apple_01",
+    "instruction": "On the Apple Store iPhone 17 Pro page (https://www.apple.com/shop/buy-iphone/iphone-17-pro), configure the purchase options as follows: select the White (Silver) color, choose 1TB storage, set the payment option to Buy, select AT&T as the carrier, do not add a trade-in, and do not add AppleCare. Note the displayed price. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the text in the format 'iPhone 17 Pro 1TB (White, AT&T): [price]' using the price you found. Select all the typed text using Ctrl+A, then apply Bold formatting using Ctrl+B (Bold shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.apple.com/shop/buy-iphone/iphone-17-pro"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'iPhone 17 Pro 1TB (White, AT&T): $1,599'; (2) that text is rendered in bold (Bold applied via Ctrl+B)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_apple_02",
+    "instruction": "Starting from the Apple homepage (https://www.apple.com/), navigate to the Apple Music page and find the monthly price of the Individual plan. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the text in the format 'Apple Music Individual Plan: [price]/month' using the price you found. Select all the typed text using Ctrl+A, apply Italic formatting using Ctrl+I (Italic shortcut per Univer docs-ui), then without deselecting apply Underline formatting using Ctrl+U (Underline shortcut per Univer docs-ui). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.apple.com/"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Apple Music Individual Plan: $10.99/month'; (2) that text has italic styling (Ctrl+I applied); (3) that text also has underline styling (Ctrl+U applied)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_allrecipes_01",
+    "instruction": "On the 'Absolutely the Best Chocolate Chip Cookies' recipe page on Allrecipes (https://www.allrecipes.com/recipe/17209/absolutely-the-best-chocolate-chip-cookies/), find the calorie value listed in the Nutrition Facts (per serving) section. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the text in the format 'Calories per serving: [calories]' using the value you found. Select all the typed text using Ctrl+A, then use the font size control in the toolbar to increase the font size to 24 (no keyboard shortcut is available for font size change in this version — use the toolbar input or size button). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.allrecipes.com/recipe/17209/absolutely-the-best-chocolate-chip-cookies/"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Calories per serving: 241'; (2) that text is displayed at a font size visibly larger than default body text (font size set to 24 or greater via the toolbar)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_allrecipes_02",
+    "instruction": "On the 'Alabama Fire Crackers' recipe page on Allrecipes (https://www.allrecipes.com/recipe/214184/alabama-fire-crackers/), find the Total Time listed for the recipe. Then, switch to the Univer Word editor (http://localhost:3000/word) and insert a 2-column by 2-row table using the Insert Table option in the toolbar (no keyboard shortcut is available for table insertion in this version). Fill the first row with the headers: cell 1 — 'Recipe', cell 2 — 'Total Time'. Fill the second row with the data: cell 1 — 'Alabama Fire Crackers', cell 2 — the total time value you found. Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.allrecipes.com/recipe/214184/alabama-fire-crackers/"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) a table with 2 columns and 2 rows exists in the document; (2) the first row contains 'Recipe' and 'Total Time' as headers; (3) the second row contains 'Alabama Fire Crackers' and '9 hrs 15 mins'."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_arxiv_01",
+    "instruction": "On the arXiv website (https://arxiv.org/), search for the paper with ID '2605.10702' and find its submission date shown on the paper's abstract page. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the text in the format 'Submission Date: [date]' using the submission date you found. Select only the date portion and apply Strikethrough formatting using Ctrl+Shift+X (Strikethrough shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://arxiv.org/"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Submission Date: 11 May 2026'; (2) the date text '11 May 2026' has strikethrough styling applied (Ctrl+Shift+X)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_arxiv_02",
+    "instruction": "On the arXiv website (https://arxiv.org/), search for the paper with ID '1408.4969' and find the name of the first listed author on the paper's abstract page. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the text in the format 'Lead Author: [name]' using the author name you found. Select only the author name portion and apply Bold formatting using Ctrl+B (Bold shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://arxiv.org/"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Lead Author: Takaaki Miyajima'; (2) the name 'Takaaki Miyajima' is rendered in bold (Ctrl+B applied)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_hipass_01",
+    "instruction": "Find the toll fee for a Class 1 vehicle traveling from Seoul Tollgate (서울) to Busan Tollgate (부산) on the HiPass website (https://www.hipass.co.kr/board/TollPaySearchList.do). Note the toll fee value. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the result in the format 'Toll Fee: [value]'. Select all the typed text using Ctrl+A, then apply Bold formatting using Ctrl+B (Bold shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains text matching the format 'Toll Fee: [numeric value]' for the Seoul-to-Busan Class 1 route; (2) that text is rendered in bold (Ctrl+B applied)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_labor_01",
+    "instruction": "Calculate the expected retirement pay on the Ministry of Employment and Labor website (https://labor.moel.go.kr/cmmt/calRtrmnt.do) using the following details: Employment Date: 2022-01-01, Retirement Date: 2023-01-01, Monthly Base Salary: 3,000,000 KRW, Other Allowances: 0 KRW, Annual Bonus: 0 KRW, Annual Leave Allowance: 0 KRW. Note the computed retirement pay value. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the result in the format 'Retirement Pay: [value]'. Select all the typed text using Ctrl+A, then apply Underline formatting using Ctrl+U (Underline shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains text matching the format 'Retirement Pay: [value]' where the value corresponds to the retirement pay calculated with the given inputs (employment 2022-01-01, retirement 2023-01-01, salary 3,000,000 KRW); (2) that text has underline styling applied (Ctrl+U)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_nhis_01",
+    "instruction": "Calculate the estimated monthly health insurance premium on the NHIS website (https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do) for a workplace subscriber with the following details: Reported Monthly Remuneration (보수월액): 3,000,000 KRW, Annual Business Income (사업소득): 25,000,000 KRW. Note the computed insurance premium value. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the result in the format 'Insurance Premium: [value]'. Select all the typed text using Ctrl+A, then apply Italic formatting using Ctrl+I (Italic shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains text matching the format 'Insurance Premium: [value]' where the value corresponds to the NHIS premium calculated with remuneration 3,000,000 KRW and business income 25,000,000 KRW; (2) that text has italic styling applied (Ctrl+I)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_dol_01",
+    "instruction": "Calculate the total weekly pay for a tipped employee on the U.S. Department of Labor Overtime Calculator (https://webapps.dol.gov/elaws/otcalculator.htm) using the following details: Employee type: Tipped employee, Total hours worked: 45 hours (9 hours/day on weekdays, No Additional Compensation), Hourly rate: $20.00. Note the computed weekly pay. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the result in the format 'Weekly Pay: $[value]' using the value you found. Select only the dollar value portion and apply Strikethrough formatting using Ctrl+Shift+X (Strikethrough shortcut per Univer docs-ui; editor must have focus). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'Weekly Pay: $950'; (2) the value '$950' has strikethrough styling applied (Ctrl+Shift+X)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_bmi_adult_01",
+    "instruction": "Calculate the BMI using the CDC Adult BMI Calculator (https://www.cdc.gov/bmi/adult-calculator/index.html) with Metric units: Height 180 cm, Weight 70 kg. Note the computed BMI value. Then, switch to the Univer Word editor (http://localhost:3000/word), click inside the document, and type the result in the format 'BMI: [value]' using the value you found. Select all the typed text using Ctrl+A, then use the font size control in the toolbar to increase the font size to 24 (no keyboard shortcut is available for font size change in this version — use the toolbar input or size button). Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) the document contains the text 'BMI: 21.6'; (2) that text is displayed at a font size visibly larger than default body text (font size set to 24 or greater via the toolbar)."
+    }
+  },
+  {
+    "task_id": "bridge_task_WW_bmi_child_01",
+    "instruction": "Calculate the BMI using the CDC Child & Teen BMI Calculator (https://www.cdc.gov/bmi/child-teen-calculator/index.html) with US Customary units for a Boy, Age 2 Years 0 Months, Height 2 feet 8 inches, Weight 24 pounds. Note the computed BMI value and weight status shown in the result. Then, switch to the Univer Word editor (http://localhost:3000/word) and insert a 2-column by 2-row table using the Insert Table option in the toolbar (no keyboard shortcut is available for table insertion in this version). Fill the first row with the headers: cell 1 — 'BMI', cell 2 — 'Weight Status'. Fill the second row with the data: cell 1 — the BMI value you found, cell 2 — the weight status shown. Keep the Word editor tab active.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "mode": "manual",
+      "operator": "and",
+      "rubric_en": "Verify on http://localhost:3000/word that: (1) a table with 2 columns and 2 rows exists in the document; (2) the first row contains 'BMI' and 'Weight Status' as headers; (3) the second row contains '16.5' and 'Healthy Weight'."
+    }
+  }
+]

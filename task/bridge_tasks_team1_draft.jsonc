@@ -1,0 +1,303 @@
+[
+    // WO tasks -> Web_Os_tasks.jsonc
+    {
+      "task_id": "bridge_task_1_WO_01",
+      "instruction": "Find the exact postal code for the address '서울특별시 종로구 세종대로 175' on the Road Address System (juso.go.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Postal Code: [value]'. Keep the file open.",
+      "website": [
+        {
+          "id": "web",
+          "url": "https://www.juso.go.kr/"
+        },
+        {
+          "id": "os",
+          "url": "http://localhost:3000/prozilla"
+        }
+      ],
+      "evaluation": {
+        "mode": "dom",
+        "operator": "and",
+        "rules": [
+          {
+            "website_id": "os",
+            "selector": "p[class*='ProzillaOS-WindowTitle']",
+            "target": "text",
+            "value": "text.txt",
+            "match": "contains"
+          },
+          {
+            "website_id": "os",
+            "selector": "textarea[class*='_View_']",
+            "target": "text",
+            "value": "Postal Code: 03172",
+            "match": "contains"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "bridge_task_1_WO_02",
+      "instruction": "Lookup the postal code for the address '제주특별자치도 제주시 첨단로 242' on the Road Address System (juso.go.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Postal Code: [value]'. Keep the file open.",
+      "website": [
+        {
+          "id": "web",
+          "url": "https://www.juso.go.kr/"
+        },
+        {
+          "id": "os",
+          "url": "http://localhost:3000/prozilla"
+        }
+      ],
+      "evaluation": {
+        "mode": "dom",
+        "operator": "and",
+        "rules": [
+          {
+            "website_id": "os",
+            "selector": "p[class*='ProzillaOS-WindowTitle']",
+            "target": "text",
+            "value": "text.txt",
+            "match": "contains"
+          },
+          {
+            "website_id": "os",
+            "selector": "textarea[class*='_View_']",
+            "target": "text",
+            "value": "Postal Code: 63309",
+            "match": "contains"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "bridge_task_1_WO_03",
+      "instruction": "Find the postal code of '경기도 성남시 분당구 판교역로 166' on the Road Address System (juso.go.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Postal Code: [value]'. Keep the file open.",
+      "website": [
+        {
+          "id": "web",
+          "url": "https://www.juso.go.kr/"
+        },
+        {
+          "id": "os",
+          "url": "http://localhost:3000/prozilla"
+        }
+      ],
+      "evaluation": {
+        "mode": "dom",
+        "operator": "and",
+        "rules": [
+          {
+            "website_id": "os",
+            "selector": "p[class*='ProzillaOS-WindowTitle']",
+            "target": "text",
+            "value": "text.txt",
+            "match": "contains"
+          },
+          {
+            "website_id": "os",
+            "selector": "textarea[class*='_View_']",
+            "target": "text",
+            "value": "Postal Code: 13529",
+            "match": "contains"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "bridge_task_1_WO_04",
+      "instruction": "Find the toll fee for a Class 1 vehicle traveling from Seoul Tollgate to Busan Tollgate on the HiPass website (hipass.co.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Toll Fee: [value]'. Keep the file open.",
+      "website": [
+        {
+          "id": "web",
+          "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+        },
+        {
+          "id": "os",
+          "url": "http://localhost:3000/prozilla"
+        }
+      ],
+      "evaluation": {
+        "mode": "dom",
+        "operator": "and",
+        "rules": [
+          {
+            "website_id": "os",
+            "selector": "p[class*='ProzillaOS-WindowTitle']",
+            "target": "text",
+            "value": "text.txt",
+            "match": "contains"
+          },
+          {
+            "website_id": "os",
+            "selector": "textarea[class*='_View_']",
+            "target": "text",
+            "value": "Toll Fee:\\s*[\\d,]+",
+            "match": "regex"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "bridge_task_1_WO_05",
+      "instruction": "Check the toll fee for a Class 1 vehicle traveling from Busan Tollgate to Seoul Tollgate on the HiPass website (hipass.co.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Toll Fee: [value]'. Keep the file open.",
+      "website": [
+        {
+          "id": "web",
+          "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+        },
+        {
+          "id": "os",
+          "url": "http://localhost:3000/prozilla"
+        }
+      ],
+      "evaluation": {
+        "mode": "dom",
+        "operator": "and",
+        "rules": [
+          {
+            "website_id": "os",
+            "selector": "p[class*='ProzillaOS-WindowTitle']",
+            "target": "text",
+            "value": "text.txt",
+            "match": "contains"
+          },
+          {
+            "website_id": "os",
+            "selector": "textarea[class*='_View_']",
+            "target": "text",
+            "value": "Toll Fee:\\s*[\\d,]+",
+            "match": "regex"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "bridge_task_1_WO_06",
+      "instruction": "Find the toll fee for a Class 1 vehicle traveling from Seoul Tollgate to Jeonju Tollgate on the HiPass website (hipass.co.kr). Then, in ProzillaOS, open '~/Documents/text.txt' using the Notes app and write the result in the format 'Toll Fee: [value]'. Keep the file open.",
+      "website": [
+        {
+          "id": "web",
+          "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+        },
+        {
+          "id": "os",
+          "url": "http://localhost:3000/prozilla"
+        }
+      ],
+      "evaluation": {
+        "mode": "dom",
+        "operator": "and",
+        "rules": [
+          {
+            "website_id": "os",
+            "selector": "p[class*='ProzillaOS-WindowTitle']",
+            "target": "text",
+            "value": "text.txt",
+            "match": "contains"
+          },
+          {
+            "website_id": "os",
+            "selector": "textarea[class*='_View_']",
+            "target": "text",
+            "value": "Toll Fee:\\s*[\\d,]+",
+            "match": "regex"
+          }
+        ]
+      }
+    },
+    // OW tasks -> need initialize ProzillaOS state
+    {
+      "task_id": "bridge_task_1_OW_01",
+      "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the Korean road address '서울특별시 종로구 세종대로 175'. Copy that address and look it up on the Road Address System (juso.go.kr) to verify its postal code.",
+      "website": [
+        {
+          "id": "os",
+          "url": "http://localhost:3000/prozilla"
+        },
+        {
+          "id": "web",
+          "url": "https://www.juso.go.kr/"
+        }
+      ],
+      "evaluation": {
+        "mode": "dom",
+        "operator": "and",
+        "rules": [
+          {
+            "website_id": "web",
+            "selector": ".zipNo, .number",
+            "target": "text",
+            "value": "03172",
+            "match": "contains",
+            "normalize_space": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "bridge_task_1_OW_02",
+      "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the Korean road address '경기도 성남시 분당구 판교역로 166'. Copy that address and look it up on the Road Address System (juso.go.kr) to verify its postal code.",
+      "website": [
+        {
+          "id": "os",
+          "url": "http://localhost:3000/prozilla"
+        },
+        {
+          "id": "web",
+          "url": "https://www.juso.go.kr/"
+        }
+      ],
+      "evaluation": {
+        "mode": "dom",
+        "operator": "and",
+        "rules": [
+          {
+            "website_id": "web",
+            "selector": ".zipNo, .number",
+            "target": "text",
+            "value": "13529",
+            "match": "contains",
+            "normalize_space": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "bridge_task_1_OW_03",
+      "instruction": "In ProzillaOS, open '~/Documents/text.txt' using the Notes app. The file contains the departure IC name '서울' and the destination IC name '부산'. Use those names to look up the toll fee for a Class 1 vehicle on the HiPass website (hipass.co.kr) and verify the result.",
+      "website": [
+        {
+          "id": "os",
+          "url": "http://localhost:3000/prozilla"
+        },
+        {
+          "id": "web",
+          "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+        }
+      ],
+      "evaluation": {
+        "mode": "dom",
+        "operator": "and",
+        "rules": [
+          {
+            "website_id": "web",
+            "target": "text",
+            "value": "서울",
+            "match": "contains"
+          },
+          {
+            "website_id": "web",
+            "target": "text",
+            "value": "부산",
+            "match": "contains"
+          },
+          {
+            "website_id": "web",
+            "target": "text",
+            "value": "1종",
+            "match": "contains"
+          }
+        ]
+      }
+    }
+  ]
+  

@@ -1,0 +1,660 @@
+[
+  // =================================================================
+  // 1. ARXIV TASKS
+  // counts: 4
+  // =================================================================
+
+  {
+    "task_id": "web_sheet_word_arxiv_01",
+    "instruction": "I need to catalog the NLP paper 'Attention Is All You Need' for my research library. Could you find it on arXiv, fill cells A2–D2 with its ArXiv ID, First Author, Submitted Year, and Primary Category, put the first 4 characters of the ArXiv ID as ID Prefix in E2 and map the primary category to an Area Flag (cs.CL→NLP / cs.CV→VISION / cs.LG→ML / other→OTHER) in F2, then record all fields in the Word document in the format 'ArXiv ID: [value] | First Author: [value] | Year: [value] | Category: [value] | ID Prefix: [value] | Area Flag: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://arxiv.org"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "ArXiv ID: 1706.03762", "match": "contains"},
+        {"website_id": "word", "value": "First Author: Ashish Vaswani", "match": "contains"},
+        {"website_id": "word", "value": "Year: 2017", "match": "contains"},
+        {"website_id": "word", "value": "Category: cs.CL", "match": "contains"},
+        {"website_id": "sheet", "mode": "spreadsheet", "cell": "E2", "value": "1706"},
+        {"website_id": "sheet", "mode": "spreadsheet", "cell": "F2", "value": "NLP"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_arxiv_04",
+    "instruction": "I'm building a reference catalog of landmark CV papers and need to log 'Deep Residual Learning for Image Recognition'. Could you search for it on arXiv, fill cells A2–D2 with its ArXiv ID, First Author, Submitted Year, and Primary Category, put the first 4 characters of the ArXiv ID as ID Prefix in E2 and map the primary category to an Area Flag (cs.CL→NLP / cs.CV→VISION / cs.LG→ML / other→OTHER) in F2, then record all fields in Word in the format 'ArXiv ID: [value] | First Author: [value] | Year: [value] | Category: [value] | ID Prefix: [value] | Area Flag: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://arxiv.org"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "ArXiv ID: 1512.03385", "match": "contains"},
+        {"website_id": "word", "value": "First Author: Kaiming He", "match": "contains"},
+        {"website_id": "word", "value": "Year: 2015", "match": "contains"},
+        {"website_id": "word", "value": "Category: cs.CV", "match": "contains"},
+        {"website_id": "sheet", "mode": "spreadsheet", "cell": "E2", "value": "1512"},
+        {"website_id": "sheet", "mode": "spreadsheet", "cell": "F2", "value": "VISION"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_arxiv_07",
+    "instruction": "I want to log the optimizer paper 'Adam: A Method for Stochastic Optimization' in my arXiv catalog. Could you search for it on arXiv, fill cells A2–D2 with its ArXiv ID, First Author, Submitted Year, and Primary Category, put the first 4 characters of the ArXiv ID as ID Prefix in E2 and map the primary category to an Area Flag (cs.CL→NLP / cs.CV→VISION / cs.LG→ML / other→OTHER) in F2, then record all fields in Word in the format 'ArXiv ID: [value] | First Author: [value] | Year: [value] | Category: [value] | ID Prefix: [value] | Area Flag: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://arxiv.org"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "ArXiv ID: 1412.6980", "match": "contains"},
+        {"website_id": "word", "value": "First Author: Diederik P. Kingma", "match": "contains"},
+        {"website_id": "word", "value": "Year: 2014", "match": "contains"},
+        {"website_id": "word", "value": "Category: cs.LG", "match": "contains"},
+        {"website_id": "sheet", "mode": "spreadsheet", "cell": "E2", "value": "1412"},
+        {"website_id": "sheet", "mode": "spreadsheet", "cell": "F2", "value": "ML"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_arxiv_10",
+    "instruction": "I'd like to add the distributed RL paper 'IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures' to my research catalog. Could you search for it on arXiv, fill cells A2–D2 with its ArXiv ID, First Author, Submitted Year, and Primary Category, put the first 4 characters of the ArXiv ID as ID Prefix in E2 and map the primary category to an Area Flag (cs.CL→NLP / cs.CV→VISION / cs.LG→ML / other→OTHER) in F2, then record all fields in Word in the format 'ArXiv ID: [value] | First Author: [value] | Year: [value] | Category: [value] | ID Prefix: [value] | Area Flag: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://arxiv.org"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "ArXiv ID: 1802.01561", "match": "contains"},
+        {"website_id": "word", "value": "First Author: Lasse Espeholt", "match": "contains"},
+        {"website_id": "word", "value": "Year: 2018", "match": "contains"},
+        {"website_id": "word", "value": "Category: cs.LG", "match": "contains"},
+        {"website_id": "sheet", "mode": "spreadsheet", "cell": "E2", "value": "1802"},
+        {"website_id": "sheet", "mode": "spreadsheet", "cell": "F2", "value": "ML"}
+      ]
+    }
+  },
+
+  // =================================================================
+  // 2. CDC CHILD & TEEN BMI TASKS (8개)
+  // =================================================================
+
+  {
+    "task_id": "web_sheet_word_cdc_child_bmi_10",
+    "instruction": "I want to check the CDC BMI category for a 12-year-old girl at 5 ft 0 in and 120 lbs. Could you use the CDC Child and Teen BMI Calculator (US Customary), copy the BMI, percentile, and category into cells B2–B4 in the spreadsheet, round the BMI to the nearest whole number as Rounded BMI in B5 and map the category to a Category Flag (Underweight→LOW / Healthy Weight→OK / Overweight→WATCH / Obesity→HIGH / other→SEVERE) in B6, then save to Word in the format 'Scenario: Girl age 12 years 0 months, 5 ft 0 in, 120 lbs | BMI: [value] | BMI Percentile: [value] | Category: [value] | Rounded BMI: [value] | Category Flag: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Girl age 12 years 0 months, 5 ft 0 in, 120 lbs", "match": "contains"},
+        {"website_id": "word", "value": "BMI: 23.4", "match": "contains"},
+        {"website_id": "word", "value": "BMI Percentile:\\s*.+", "match": "regex"},
+        {"website_id": "word", "value": "Category: Overweight", "match": "contains"},
+        {"website_id": "word", "value": "Rounded BMI: 23", "match": "contains"},
+        {"website_id": "word", "value": "Category Flag: WATCH", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_cdc_child_bmi_14",
+    "instruction": "I want to check the CDC BMI category for a 12-year-old girl at 5 ft 0 in and 136 lbs. Could you use the CDC Child and Teen BMI Calculator (US Customary), copy the BMI, percentile (copy displayed value exactly), and category into cells B2–B4, round the BMI to the nearest whole number as Rounded BMI in B5 and map the category to a Category Flag (Underweight→LOW / Healthy Weight→OK / Overweight→WATCH / Obesity→HIGH / other→SEVERE) in B6, then save to Word in the format 'Scenario: Girl age 12 years 0 months, 5 ft 0 in, 136 lbs | BMI: [value] | BMI Percentile: [value] | Category: [value] | Rounded BMI: [value] | Category Flag: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Girl age 12 years 0 months, 5 ft 0 in, 136 lbs", "match": "contains"},
+        {"website_id": "word", "value": "BMI: 26.6", "match": "contains"},
+        {"website_id": "word", "value": "BMI Percentile: 96th", "match": "contains"},
+        {"website_id": "word", "value": "Category: Obesity", "match": "contains"},
+        {"website_id": "word", "value": "Rounded BMI: 27", "match": "contains"},
+        {"website_id": "word", "value": "Category Flag: HIGH", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_cdc_child_bmi_18",
+    "instruction": "I want to check the CDC BMI category for a 13-year-old girl at 5 ft 2 in and 210 lbs. Could you use the CDC Child and Teen BMI Calculator (US Customary), copy the BMI, percentile, and category into cells B2–B4, round the BMI to the nearest whole number as Rounded BMI in B5 and map the category to a Category Flag (Underweight→LOW / Healthy Weight→OK / Overweight→WATCH / Obesity→HIGH / other→SEVERE) in B6, then save to Word in the format 'Scenario: Girl age 13 years 0 months, 5 ft 2 in, 210 lbs | BMI: [value] | BMI Percentile: [value] | Category: [value] | Rounded BMI: [value] | Category Flag: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Girl age 13 years 0 months, 5 ft 2 in, 210 lbs", "match": "contains"},
+        {"website_id": "word", "value": "BMI: 38.4", "match": "contains"},
+        {"website_id": "word", "value": "BMI Percentile:\\s*.+", "match": "regex"},
+        {"website_id": "word", "value": "Category: Severe Obesity", "match": "contains"},
+        {"website_id": "word", "value": "Rounded BMI: 38", "match": "contains"},
+        {"website_id": "word", "value": "Category Flag: SEVERE", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_cdc_child_bmi_21",
+    "instruction": "I want to check the CDC BMI category for a 7-year-old boy at 4 ft 0 in and 50 lbs. Could you use the CDC Child and Teen BMI Calculator (US Customary), copy the BMI, percentile, and category into cells B2–B4, label the BMI as Status Flag in B5 — 'LT18.5' if the BMI is below 18.5, otherwise 'GTE18.5' — then save to Word in the format 'Scenario: Boy age 7 years 0 months, 4 ft 0 in, 50 lbs | BMI: [value] | BMI Percentile: [value] | Category: [value] | Status Flag: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Boy age 7 years 0 months, 4 ft 0 in, 50 lbs", "match": "contains"},
+        {"website_id": "word", "value": "BMI: 15.3", "match": "contains"},
+        {"website_id": "word", "value": "BMI Percentile:\\s*.+", "match": "regex"},
+        {"website_id": "word", "value": "Category: Healthy Weight", "match": "contains"},
+        {"website_id": "word", "value": "Status Flag: LT18.5", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_cdc_child_bmi_22",
+    "instruction": "I want to check the CDC BMI for a 12-year-old girl at 5 ft 0 in and 120 lbs and measure how far her BMI is from 20. Could you use the CDC Child and Teen BMI Calculator (US Customary), copy the BMI, percentile, and category into cells B2–B4, calculate the absolute difference between the BMI and 20 as Distance from 20 in B5, then save to Word in the format 'Scenario: Girl age 12 years 0 months, 5 ft 0 in, 120 lbs | BMI: [value] | BMI Percentile: [value] | Category: [value] | Distance from 20: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Girl age 12 years 0 months, 5 ft 0 in, 120 lbs", "match": "contains"},
+        {"website_id": "word", "value": "BMI: 23.4", "match": "contains"},
+        {"website_id": "word", "value": "BMI Percentile:\\s*.+", "match": "regex"},
+        {"website_id": "word", "value": "Category: Overweight", "match": "contains"},
+        {"website_id": "word", "value": "Distance from 20: 3.4", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_cdc_child_bmi_25",
+    "instruction": "I want to check the CDC BMI for a 15-year-old boy at 5 ft 6 in and 230 lbs and find the character length of his category label. Could you use the CDC Child and Teen BMI Calculator (US Customary), copy the BMI, percentile, and category into cells B2–B4, count the number of characters in the category label and put it as Category Length in B5, then save to Word in the format 'Scenario: Boy age 15 years 0 months, 5 ft 6 in, 230 lbs | BMI: [value] | BMI Percentile: [value] | Category: [value] | Category Length: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Boy age 15 years 0 months, 5 ft 6 in, 230 lbs", "match": "contains"},
+        {"website_id": "word", "value": "BMI: 37.1", "match": "contains"},
+        {"website_id": "word", "value": "BMI Percentile:\\s*.+", "match": "regex"},
+        {"website_id": "word", "value": "Category: Severe Obesity", "match": "contains"},
+        {"website_id": "word", "value": "Category Length: 15", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_cdc_child_bmi_28",
+    "instruction": "I want to check the CDC BMI for a 13-year-old girl at 5 ft 2 in and 210 lbs and create a combined summary label. Could you use the CDC Child and Teen BMI Calculator (US Customary), copy the BMI, percentile, and category into cells B2–B4, build a Summary label in B5 by joining the category with a hyphen and '35PLUS' if the BMI is 35 or above, otherwise 'UNDER35', then save to Word in the format 'Scenario: Girl age 13 years 0 months, 5 ft 2 in, 210 lbs | BMI: [value] | BMI Percentile: [value] | Category: [value] | Summary: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Girl age 13 years 0 months, 5 ft 2 in, 210 lbs", "match": "contains"},
+        {"website_id": "word", "value": "BMI: 38.4", "match": "contains"},
+        {"website_id": "word", "value": "BMI Percentile:\\s*.+", "match": "regex"},
+        {"website_id": "word", "value": "Category: Severe Obesity", "match": "contains"},
+        {"website_id": "word", "value": "Summary: Severe Obesity-35PLUS", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_cdc_child_bmi_30",
+    "instruction": "I want to check the CDC BMI for an 18-year-old girl at 5 ft 5 in and 235 lbs and display the category label in uppercase. Could you use the CDC Child and Teen BMI Calculator (US Customary), copy the BMI, percentile, and category into cells B2–B4, convert the category label to all uppercase and put it as Upper Category in B5, then save to Word in the format 'Scenario: Girl age 18 years 0 months, 5 ft 5 in, 235 lbs | BMI: [value] | BMI Percentile: [value] | Category: [value] | Upper Category: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Girl age 18 years 0 months, 5 ft 5 in, 235 lbs", "match": "contains"},
+        {"website_id": "word", "value": "BMI: 39.1", "match": "contains"},
+        {"website_id": "word", "value": "BMI Percentile:\\s*.+", "match": "regex"},
+        {"website_id": "word", "value": "Category: Severe Obesity", "match": "contains"},
+        {"website_id": "word", "value": "Upper Category: SEVERE OBESITY", "match": "contains"}
+      ]
+    }
+  },
+
+  // =================================================================
+  // 3. DOL OVERTIME TASKS (6개)
+  // =================================================================
+
+  {
+    "task_id": "web_sheet_word_dol_ot_01",
+    "instruction": "I need to calculate overtime pay for a nonexempt employee earning $20.00/hr who worked 45.00 hours with no bonuses. Could you use the DOL FLSA Overtime Calculator, copy the result into a spreadsheet to compute Overtime Hours, Overtime Pay, and Total FLSA Pay, then save to Word in the format 'Scenario: Single hourly rate $20.00 for 45.00 hours | Regular Rate: [value] | Overtime Hours: [value] | Overtime Pay: [value] | Total FLSA Pay: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://webapps.dol.gov/elaws/otcalculator.htm"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Single hourly rate $20.00 for 45.00 hours", "match": "contains"},
+        {"website_id": "word", "value": "Regular Rate: $20.00", "match": "contains"},
+        {"website_id": "word", "value": "Overtime Hours: 5.00", "match": "contains"},
+        {"website_id": "word", "value": "Overtime Pay: $150.00", "match": "contains"},
+        {"website_id": "word", "value": "Total FLSA Pay: $950.00", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_dol_ot_04",
+    "instruction": "I need to calculate overtime pay for a nonexempt employee earning $22.25/hr who worked 47.50 hours with no bonuses. Could you use the DOL FLSA Overtime Calculator, copy the result into a spreadsheet to compute Overtime Hours, Overtime Pay, and Total FLSA Pay, then save to Word in the format 'Scenario: Single hourly rate $22.25 for 47.50 hours | Regular Rate: [value] | Overtime Hours: [value] | Overtime Pay: [value] | Total FLSA Pay: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://webapps.dol.gov/elaws/otcalculator.htm"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Single hourly rate $22.25 for 47.50 hours", "match": "contains"},
+        {"website_id": "word", "value": "Regular Rate: $22.25", "match": "contains"},
+        {"website_id": "word", "value": "Overtime Hours: 7.50", "match": "contains"},
+        {"website_id": "word", "value": "Overtime Pay: $250.31", "match": "contains"},
+        {"website_id": "word", "value": "Total FLSA Pay: $1,140.31", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_dol_ot_09",
+    "instruction": "I need to calculate overtime pay for an employee earning $16.00/hr who worked 45.00 hours and received a $90.00 nondiscretionary bonus. Could you use the DOL FLSA Overtime Calculator, copy the result into a spreadsheet to compute Regular Rate, Overtime Hours, Additional Overtime Premium, and Total FLSA Pay, then save to Word in the format 'Scenario: Hourly rate $16.00, 45.00 hours, nondiscretionary bonus $90.00 | Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://webapps.dol.gov/elaws/otcalculator.htm"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Hourly rate $16.00, 45.00 hours, nondiscretionary bonus $90.00", "match": "contains"},
+        {"website_id": "word", "value": "Regular Rate: $18.00", "match": "contains"},
+        {"website_id": "word", "value": "Overtime Hours: 5.00", "match": "contains"},
+        {"website_id": "word", "value": "Additional Overtime Premium: $45.00", "match": "contains"},
+        {"website_id": "word", "value": "Total FLSA Pay: $855.00", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_dol_ot_14",
+    "instruction": "I need to calculate overtime pay for a nonexempt employee with a fixed weekly salary of $405.00 intended to cover all 45.00 hours worked. Could you use the DOL FLSA Overtime Calculator, copy the result into a spreadsheet to compute Regular Rate, Overtime Hours, Additional Overtime Premium, and Total FLSA Pay, then save to Word in the format 'Scenario: Fixed weekly salary $405.00 covering 45.00 hours | Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://webapps.dol.gov/elaws/otcalculator.htm"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Fixed weekly salary $405.00 covering 45.00 hours", "match": "contains"},
+        {"website_id": "word", "value": "Regular Rate: $9.00", "match": "contains"},
+        {"website_id": "word", "value": "Overtime Hours: 5.00", "match": "contains"},
+        {"website_id": "word", "value": "Additional Overtime Premium: $22.50", "match": "contains"},
+        {"website_id": "word", "value": "Total FLSA Pay: $427.50", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_dol_ot_18",
+    "instruction": "I need to calculate overtime pay for an employee who worked 30.00 hours at $18.00 and 15.00 hours at $24.00 in the same workweek. Could you use the DOL FLSA Overtime Calculator, copy the weighted rate and result into a spreadsheet to compute Weighted Regular Rate, Overtime Hours, Additional Overtime Premium, and Total FLSA Pay, then save to Word in the format 'Scenario: Multiple rates 30.00 hours at $18.00 and 15.00 hours at $24.00 | Weighted Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://webapps.dol.gov/elaws/otcalculator.htm"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Multiple rates 30.00 hours at $18.00 and 15.00 hours at $24.00", "match": "contains"},
+        {"website_id": "word", "value": "Weighted Regular Rate: $20.00", "match": "contains"},
+        {"website_id": "word", "value": "Overtime Hours: 5.00", "match": "contains"},
+        {"website_id": "word", "value": "Additional Overtime Premium: $50.00", "match": "contains"},
+        {"website_id": "word", "value": "Total FLSA Pay: $950.00", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_dol_ot_20",
+    "instruction": "I need to calculate overtime pay for an employee who worked 32.00 hours at $17.50 and 14.00 hours at $26.00 in the same workweek. Could you use the DOL FLSA Overtime Calculator, copy the weighted rate and result into a spreadsheet to compute Weighted Regular Rate, Overtime Hours, Additional Overtime Premium, and Total FLSA Pay, then save to Word in the format 'Scenario: Multiple rates 32.00 hours at $17.50 and 14.00 hours at $26.00 | Weighted Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://webapps.dol.gov/elaws/otcalculator.htm"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: Multiple rates 32.00 hours at $17.50 and 14.00 hours at $26.00", "match": "contains"},
+        {"website_id": "word", "value": "Weighted Regular Rate: $20.09", "match": "contains"},
+        {"website_id": "word", "value": "Overtime Hours: 6.00", "match": "contains"},
+        {"website_id": "word", "value": "Additional Overtime Premium: $60.26", "match": "contains"},
+        {"website_id": "word", "value": "Total FLSA Pay: $984.26", "match": "contains"}
+      ]
+    }
+  },
+
+  // =================================================================
+  // 4. HI-PASS TOLL TASKS (8개)
+  // =================================================================
+
+  {
+    "task_id": "web_sheet_word_hipass_toll_01",
+    "instruction": "I want to check the Hi-Pass highway toll from 서울 to 부산 with no waypoints. Could you search the Hi-Pass 통행요금 조회 page for the route, copy the first result's toll amounts (1종~5종 and 1종(경차)) into a spreadsheet to compute Light Car Difference (1종 minus 1종(경차)), Highest Toll (MAX of all classes), and Light Car Ratio (1종(경차) ÷ 1종), then save to Word in the format 'Scenario: 서울 to 부산 | Via: None | Route: [value] | Class 1 Toll: [value] | Class 2 Toll: [value] | Class 3 Toll: [value] | Class 4 Toll: [value] | Class 5 Toll: [value] | Light Car Toll: [value] | Light Car Difference: [value] | Highest Toll: [value] | Light Car Ratio: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: 서울 to 부산", "match": "contains"},
+        {"website_id": "word", "value": "Via: None", "match": "contains"},
+        {"website_id": "word", "value": "Route:\\s*.+", "match": "regex"},
+        {"website_id": "word", "value": "Class 1 Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Class 2 Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Class 3 Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Class 4 Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Class 5 Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Light Car Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Light Car Difference:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Highest Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Light Car Ratio:\\s*0?\\.\\d+|Light Car Ratio:\\s*1\\.00", "match": "regex"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_hipass_toll_11",
+    "instruction": "I want to check the Hi-Pass highway toll from 서울 to 부산 via 대전. Could you search the Hi-Pass 통행요금 조회 page for the route with 대전 as a waypoint, copy the first result's toll amounts (1종~5종 and 1종(경차)) into a spreadsheet to compute Light Car Difference, Highest Toll (MAX), and Light Car Ratio (1종(경차) ÷ 1종), then save to Word in the format 'Scenario: 서울 to 부산 via 대전 | Via: 대전 | Route: [value] | Class 1 Toll: [value] | Class 2 Toll: [value] | Class 3 Toll: [value] | Class 4 Toll: [value] | Class 5 Toll: [value] | Light Car Toll: [value] | Light Car Difference: [value] | Highest Toll: [value] | Light Car Ratio: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: 서울 to 부산 via 대전", "match": "contains"},
+        {"website_id": "word", "value": "Via: 대전", "match": "contains"},
+        {"website_id": "word", "value": "Route:\\s*.+", "match": "regex"},
+        {"website_id": "word", "value": "Class 1 Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Class 2 Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Class 3 Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Class 4 Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Class 5 Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Light Car Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Light Car Difference:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Highest Toll:\\s*[0-9,]+", "match": "regex"},
+        {"website_id": "word", "value": "Light Car Ratio:\\s*0?\\.\\d+|Light Car Ratio:\\s*1\\.00", "match": "regex"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_hipass_toll_13",
+    "instruction": "I need the vehicle classification details for 1종(소형차) from the Hi-Pass site. Could you find the 차종구분 table on the Hi-Pass 통행요금 조회 page, copy the row for 1종(소형차) into a spreadsheet and extract Class, Criteria A, Criteria B, and Examples, then save to Word in the format 'Class: [value] | Source Criteria A: [value] | Source Criteria B: [value] | Source Examples: [value] | Axis Count: [value] | Width Rule: [value] | Example Vehicles: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Class: 1종(소형차)", "match": "contains"},
+        {"website_id": "word", "value": "Source Criteria A: 2축 차량", "match": "contains"},
+        {"website_id": "word", "value": "Source Criteria B: 윤폭 279.4mm 이하", "match": "contains"},
+        {"website_id": "word", "value": "Source Examples: 승용차, 소형승합차, 소형화물차", "match": "contains"},
+        {"website_id": "word", "value": "Axis Count: 2", "match": "contains"},
+        {"website_id": "word", "value": "Width Rule: 윤폭 279.4mm 이하", "match": "contains"},
+        {"website_id": "word", "value": "Example Vehicles: 승용차, 소형승합차, 소형화물차", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_hipass_toll_15",
+    "instruction": "I need the vehicle classification details for 3종(대형차) from the Hi-Pass site. Could you find the 차종구분 table on the Hi-Pass 통행요금 조회 page, copy the row for 3종(대형차) into a spreadsheet and extract Class, Criteria A, Criteria B, and Examples, then save to Word in the format 'Class: [value] | Source Criteria A: [value] | Source Criteria B: [value] | Source Examples: [value] | Axis Count: [value] | Width Rule: [value] | Example Vehicles: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Class: 3종(대형차)", "match": "contains"},
+        {"website_id": "word", "value": "Source Criteria A: 2축 차량", "match": "contains"},
+        {"website_id": "word", "value": "Source Criteria B: 윤폭 279.4mm 초과, 윤거 1,800mm 초과", "match": "contains"},
+        {"website_id": "word", "value": "Source Examples: 대형승합차, 2축 대형화물차", "match": "contains"},
+        {"website_id": "word", "value": "Axis Count: 2", "match": "contains"},
+        {"website_id": "word", "value": "Width Rule: 윤폭 279.4mm 초과, 윤거 1,800mm 초과", "match": "contains"},
+        {"website_id": "word", "value": "Example Vehicles: 대형승합차, 2축 대형화물차", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_hipass_toll_18",
+    "instruction": "I need the vehicle classification details for 6종(경형자동차) from the Hi-Pass site. Could you find the 차종구분 table on the Hi-Pass 통행요금 조회 page, copy the row for 6종(경형자동차) into a spreadsheet and extract the class, displacement criteria, size criteria, and examples, then save to Word in the format 'Class: [value] | Source Criteria A: [value] | Source Criteria B: [value] | Source Examples: [value] | Displacement Rule: [value] | Size Rule: [value] | Category Flag: LIGHT_CAR'?",
+    "website": [
+      {"id": "web", "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Class: 6종(경형자동차)", "match": "contains"},
+        {"website_id": "word", "value": "Source Criteria A: 배기량 1,000cc 미만", "match": "contains"},
+        {"website_id": "word", "value": "Source Criteria B: 길이 3.6m, 너비 1.6m, 높이 2.0m 이하", "match": "contains"},
+        {"website_id": "word", "value": "Source Examples: 경형자동차", "match": "contains"},
+        {"website_id": "word", "value": "Displacement Rule: 배기량 1,000cc 미만", "match": "contains"},
+        {"website_id": "word", "value": "Size Rule: 길이 3.6m, 너비 1.6m, 높이 2.0m 이하", "match": "contains"},
+        {"website_id": "word", "value": "Category Flag: LIGHT_CAR", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_hipass_toll_19",
+    "instruction": "I want to compare the classification rules for 1종(소형차) and 6종(경형자동차) on the Hi-Pass site. Could you find the 차종구분 table, copy both rows into a spreadsheet, extract the key rules for each class, and save to Word in the format 'Comparison: [value] | Class 1 Key Rule: [value] | Light Car Key Rule: [value] | Light Car Size Rule: [value] | Word Flag: LIGHT_CAR_HAS_SIZE_LIMIT'?",
+    "website": [
+      {"id": "web", "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Comparison: 1종(소형차) vs 6종(경형자동차)", "match": "contains"},
+        {"website_id": "word", "value": "Class 1 Key Rule: 2축 차량, 윤폭 279.4mm 이하", "match": "contains"},
+        {"website_id": "word", "value": "Light Car Key Rule: 배기량 1,000cc 미만", "match": "contains"},
+        {"website_id": "word", "value": "Light Car Size Rule: 길이 3.6m, 너비 1.6m, 높이 2.0m 이하", "match": "contains"},
+        {"website_id": "word", "value": "Word Flag: LIGHT_CAR_HAS_SIZE_LIMIT", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_hipass_toll_20",
+    "instruction": "I want to count how many vehicle toll classes appear in the Hi-Pass toll result header and how many classification rows exist in the 차종구분 table. Could you find both tables on the Hi-Pass 통행요금 조회 page, copy the data into a spreadsheet, count the columns and rows, compute Word Check (PASS if toll column count equals classification rows, else FAIL), then save to Word in the format 'Header Columns: [value] | Vehicle Toll Column Count: [value] | Classification Rows: [value] | Word Check: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Header Columns: 1종, 2종, 3종, 4종, 5종, 1종(경차)", "match": "contains"},
+        {"website_id": "word", "value": "Vehicle Toll Column Count: 6", "match": "contains"},
+        {"website_id": "word", "value": "Classification Rows: 6", "match": "contains"},
+        {"website_id": "word", "value": "Word Check: PASS", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_hipass_toll_29",
+    "instruction": "I'd like a complete list of all Hi-Pass vehicle class names. Could you find the 차종구분 table on the Hi-Pass 통행요금 조회 page, copy all six class names into a spreadsheet, compute whether a light-car class exists (YES/NO), and save to Word in the format 'Class Names: [value] | Has Light Car: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Class Names: 1종(소형차), 2종(중형차), 3종(대형차), 4종(대형화물차), 5종(특수화물차), 6종(경형자동차)", "match": "contains"},
+        {"website_id": "word", "value": "Has Light Car: YES", "match": "contains"}
+      ]
+    }
+  },
+
+  // =================================================================
+  // 5. JUSO ADDRESS TASKS (4개)
+  // =================================================================
+
+  {
+    "task_id": "web_sheet_word_juso_01",
+    "instruction": "I need to look up the official address for Seoul City Hall. Could you search `서울특별시 중구 세종대로 110` on https://www.juso.go.kr/, copy the postal code (B2), road address (C2), and jibun address (D2) into a spreadsheet, put the first two digits of the postal code as Zip Prefix in E2, write Road Keyword (세종대로) in F2, and verify the road address contains 서울특별시, 세종대로, and 110 — write 'MATCH' if all three are present, otherwise 'CHECK' — as Address Check in G2, then save to Word in the format 'Scenario: 서울시청 address lookup | Search Query: 서울특별시 중구 세종대로 110 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: [value] | Address Check: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.juso.go.kr/"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: 서울시청 address lookup", "match": "contains"},
+        {"website_id": "word", "value": "Search Query: 서울특별시 중구 세종대로 110", "match": "contains"},
+        {"website_id": "word", "value": "Postal Code:\\s*\\d{5}", "match": "regex"},
+        {"website_id": "word", "value": "Road Address:.*서울특별시.*세종대로.*110", "match": "regex"},
+        {"website_id": "word", "value": "Road Address:.*중구.*", "match": "regex"},
+        {"website_id": "word", "value": "Jibun Address:\\s*.+", "match": "regex"},
+        {"website_id": "word", "value": "Zip Prefix:\\s*\\d{2}", "match": "regex"},
+        {"website_id": "word", "value": "Road Keyword: 세종대로", "match": "contains"},
+        {"website_id": "word", "value": "Address Check: MATCH", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_juso_02",
+    "instruction": "I need to look up the official address for the Ministry of the Interior and Safety Juso Help Center in Sejong. Could you search `세종특별자치시 도움6로 42` on https://www.juso.go.kr/, copy the postal code (B2), road address (C2), and jibun address (D2) into a spreadsheet, put the first two digits of the postal code as Zip Prefix in E2, write Road Keyword (도움6로) in F2, and verify the road address contains 세종특별자치시, 도움6로, and 42 — write 'MATCH' if all three are present, otherwise 'CHECK' — as Address Check in G2, then save to Word in the format 'Scenario: 행정안전부 주소정보 도움센터 address lookup | Search Query: 세종특별자치시 도움6로 42 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: [value] | Address Check: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.juso.go.kr/"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: 행정안전부 주소정보 도움센터 address lookup", "match": "contains"},
+        {"website_id": "word", "value": "Search Query: 세종특별자치시 도움6로 42", "match": "contains"},
+        {"website_id": "word", "value": "Postal Code:\\s*\\d{5}", "match": "regex"},
+        {"website_id": "word", "value": "Road Address:.*세종특별자치시.*도움6로.*42", "match": "regex"},
+        {"website_id": "word", "value": "Jibun Address:\\s*.+", "match": "regex"},
+        {"website_id": "word", "value": "Zip Prefix:\\s*\\d{2}", "match": "regex"},
+        {"website_id": "word", "value": "Road Keyword: 도움6로", "match": "contains"},
+        {"website_id": "word", "value": "Address Check: MATCH", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_juso_06",
+    "instruction": "I need to look up the official address for Daegu City Hall. Could you search `대구광역시 중구 공평로 88` on https://www.juso.go.kr/, copy the postal code (B2), road address (C2), and jibun address (D2) into a spreadsheet, put the first two digits of the postal code as Zip Prefix in E2, write Road Keyword (공평로) in F2, and verify the road address contains 대구광역시, 공평로, and 88 — write 'MATCH' if all three are present, otherwise 'CHECK' — as Address Check in G2, then save to Word in the format 'Scenario: 대구광역시청 address lookup | Search Query: 대구광역시 중구 공평로 88 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: [value] | Address Check: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.juso.go.kr/"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: 대구광역시청 address lookup", "match": "contains"},
+        {"website_id": "word", "value": "Search Query: 대구광역시 중구 공평로 88", "match": "contains"},
+        {"website_id": "word", "value": "Postal Code:\\s*\\d{5}", "match": "regex"},
+        {"website_id": "word", "value": "Road Address:.*대구광역시.*공평로.*88", "match": "regex"},
+        {"website_id": "word", "value": "Road Address:.*중구.*", "match": "regex"},
+        {"website_id": "word", "value": "Jibun Address:\\s*.+", "match": "regex"},
+        {"website_id": "word", "value": "Zip Prefix:\\s*\\d{2}", "match": "regex"},
+        {"website_id": "word", "value": "Road Keyword: 공평로", "match": "contains"},
+        {"website_id": "word", "value": "Address Check: MATCH", "match": "contains"}
+      ]
+    }
+  },
+
+  {
+    "task_id": "web_sheet_word_juso_09",
+    "instruction": "I need to look up the official address for Ulsan City Hall. Could you search `울산광역시 남구 중앙로 201` on https://www.juso.go.kr/, copy the postal code (B2), road address (C2), and jibun address (D2) into a spreadsheet, put the first two digits of the postal code as Zip Prefix in E2, write Road Keyword (중앙로) in F2, and verify the road address contains 울산광역시, 중앙로, and 201 — write 'MATCH' if all three are present, otherwise 'CHECK' — as Address Check in G2, then save to Word in the format 'Scenario: 울산광역시청 address lookup | Search Query: 울산광역시 남구 중앙로 201 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: [value] | Address Check: [value]'?",
+    "website": [
+      {"id": "web", "url": "https://www.juso.go.kr/"},
+      {"id": "sheet", "url": "http://localhost:3000/spreadsheet"},
+      {"id": "word", "url": "http://localhost:3000/word"}
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {"website_id": "word", "value": "Scenario: 울산광역시청 address lookup", "match": "contains"},
+        {"website_id": "word", "value": "Search Query: 울산광역시 남구 중앙로 201", "match": "contains"},
+        {"website_id": "word", "value": "Postal Code:\\s*\\d{5}", "match": "regex"},
+        {"website_id": "word", "value": "Road Address:.*울산광역시.*중앙로.*201", "match": "regex"},
+        {"website_id": "word", "value": "Road Address:.*남구.*", "match": "regex"},
+        {"website_id": "word", "value": "Jibun Address:\\s*.+", "match": "regex"},
+        {"website_id": "word", "value": "Zip Prefix:\\s*\\d{2}", "match": "regex"},
+        {"website_id": "word", "value": "Road Keyword: 중앙로", "match": "contains"},
+        {"website_id": "word", "value": "Address Check: MATCH", "match": "contains"}
+      ]
+    }
+  }
+]

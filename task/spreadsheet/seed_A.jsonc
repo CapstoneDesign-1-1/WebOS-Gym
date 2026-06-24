@@ -1,0 +1,240 @@
+[
+  {
+    "task_id": "task_spreadsheet_01",
+    "instruction": "In the spreadsheet, click on cell A1 and enter the formula =AVERAGE(12,45,23,67) to calculate the average of those four numbers.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 36.75 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_01_v2",
+    "instruction": "In the spreadsheet, click on cell B1 and calculate the average of the four numbers: 12, 45, 23, and 67.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": 36.75 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_02",
+    "instruction": "In the spreadsheet, click on cell B2 and enter the formula =MAX(8,15,3,22,11)-MIN(8,15,3,22,11) to calculate the range of those five values.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 19 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_02_v2",
+    "instruction": "In the spreadsheet, click on cell C2 and calculate the difference between the maximum and minimum values among the five numbers: 8, 15, 3, 22, and 11.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C2", "property": ["cell", "v"], "value": 19 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_03",
+    "instruction": "In the spreadsheet, click on cell C3 and enter the formula =IF(AVERAGE(5,15,20,8)>10,SUM(5,15,20,8),COUNT(5,15,20,8)) which returns the sum if the average exceeds 10, otherwise returns the count.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C3", "property": ["cell", "v"], "value": 48 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_03_v2",
+    "instruction": "In the spreadsheet, click on cell D3. If the average of the numbers 5, 15, 20, and 8 is greater than 10, enter their total sum; otherwise, enter how many numbers there are.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "D3", "property": ["cell", "v"], "value": 48 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_04",
+    "instruction": "In the spreadsheet, click on cell D1 and enter the formula =UPPER(\"spreadsheet\") to convert the text to uppercase.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "D1", "property": ["cell", "v"], "value": "SPREADSHEET" }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_04_v2",
+    "instruction": "In the spreadsheet, click on cell E1 and convert the word 'spreadsheet' to all uppercase letters.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "E1", "property": ["cell", "v"], "value": "SPREADSHEET" }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_05",
+    "instruction": "In the spreadsheet, click on cell E3 and enter the formula =LEN(CONCATENATE(\"Hello\",\"World\")) to get the total character count of the two words combined.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "E3", "property": ["cell", "v"], "value": 10 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_05_v2",
+    "instruction": "In the spreadsheet, click on cell F3 and find the total number of characters when the words 'Hello' and 'World' are joined together without a space.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "F3", "property": ["cell", "v"], "value": 10 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_06",
+    "instruction": "In the spreadsheet, click on cell F2 and enter the formula =IF(LEN(\"hello\")>4,\"LONG\",\"SHORT\") to label the text as LONG or SHORT based on its character length.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "F2", "property": ["cell", "v"], "value": "LONG" }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_06_v2",
+    "instruction": "In the spreadsheet, click on cell G2 and enter LONG if the word 'hello' has more than 4 characters, or SHORT if it does not.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "G2", "property": ["cell", "v"], "value": "LONG" }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_07",
+    "instruction": "In the spreadsheet, enter 6 in cell A1 and 4 in cell A2. Then click on cell C1 and enter the formula =PRODUCT(A1:A2) to calculate the product of the two numbers.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 6 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 4 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C1", "property": ["cell", "v"], "value": 24 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_07_v2",
+    "instruction": "In the spreadsheet, enter 6 in cell A1 and 4 in cell A2. Then click on cell D1 and multiply those two numbers together.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 6 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 4 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "D1", "property": ["cell", "v"], "value": 24 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_08",
+    "instruction": "In the spreadsheet, enter 7 in cell A1, 2 in cell A2, and 9 in cell A3. Then click on cell C2 and enter the formula =ROUND(AVERAGE(A1:A3),1) to calculate the average rounded to one decimal place.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 7 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 2 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": 9 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C2", "property": ["cell", "v"], "value": 6 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_08_v2",
+    "instruction": "In the spreadsheet, enter 7 in cell A1, 2 in cell A2, and 9 in cell A3. Then click on cell D2 and calculate the average of those three numbers, rounded to one decimal place.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 7 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 2 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": 9 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "D2", "property": ["cell", "v"], "value": 6 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_09",
+    "instruction": "In the spreadsheet, enter 10 in A1, 20 in B1, 30 in A2, and 40 in B2. Then in C1 enter =SUM(A1:B1), in C2 enter =SUM(A2:B2), in A3 enter =SUM(A1:A2), and in B3 enter =SUM(B1:B2) to calculate the row and column totals.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 10 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": 20 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 30 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 40 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C1", "property": ["cell", "v"], "value": 30 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C2", "property": ["cell", "v"], "value": 70 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": 40 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B3", "property": ["cell", "v"], "value": 60 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_09_v2",
+    "instruction": "In the spreadsheet, enter 10 in A1, 20 in B1, 30 in A2, and 40 in B2. Then in C1 enter the sum of row 1, in C2 enter the sum of row 2, in A3 enter the sum of column A, and in B3 enter the sum of column B.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 10 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": 20 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 30 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 40 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C1", "property": ["cell", "v"], "value": 30 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C2", "property": ["cell", "v"], "value": 70 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": 40 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B3", "property": ["cell", "v"], "value": 60 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_10",
+    "instruction": "In the spreadsheet, enter 8 in A1, 3 in B1, 5 in A2, and 12 in B2. Then in C1 enter =MAX(A1:B1), in C2 enter =MAX(A2:B2), in A3 enter =MIN(A1:A2), and in B3 enter =MIN(B1:B2) to find the maximum value in each row and the minimum value in each column.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 8 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": 3 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 5 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 12 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C1", "property": ["cell", "v"], "value": 8 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C2", "property": ["cell", "v"], "value": 12 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": 5 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B3", "property": ["cell", "v"], "value": 3 }
+      ]
+    ]
+  },
+  {
+    "task_id": "task_spreadsheet_10_v2",
+    "instruction": "In the spreadsheet, enter 8 in A1, 3 in B1, 5 in A2, and 12 in B2. Then in C1 enter the largest number in row 1, in C2 enter the largest number in row 2, in A3 enter the smallest number in column A, and in B3 enter the smallest number in column B.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 8 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": 3 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 5 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 12 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C1", "property": ["cell", "v"], "value": 8 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C2", "property": ["cell", "v"], "value": 12 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": 5 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B3", "property": ["cell", "v"], "value": 3 }
+      ]
+    ]
+  }
+]

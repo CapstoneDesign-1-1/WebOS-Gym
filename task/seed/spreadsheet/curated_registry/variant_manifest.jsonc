@@ -1,0 +1,79 @@
+[
+  {
+    "registry_id": "sheet_a_001_prozilla_mult_sum_01",
+    "task_id": "prozilla_mult_sum_01",
+    "source_task_id": "prozilla_mult_sum_01",
+    "source_path": "tasks/seed/spreadsheet/seed.jsonc",
+    "group": "A"
+  },
+  {
+    "registry_id": "sheet_a_002_prozilla_mult_sum_and_multiply",
+    "task_id": "prozilla_mult_sum_and_multiply",
+    "source_task_id": "prozilla_mult_sum_and_multiply",
+    "source_path": "tasks/seed/spreadsheet/seed.jsonc",
+    "group": "A"
+  },
+  {
+    "registry_id": "sheet_a_003_spreadsheet_bgcolor_red",
+    "task_id": "spreadsheet_bgcolor_red",
+    "source_task_id": "spreadsheet_bgcolor_red",
+    "source_path": "tasks/seed/spreadsheet/seed.jsonc",
+    "group": "A"
+  },
+  {
+    "registry_id": "sheet_a_004_spreadsheet_bgcolor_yellow",
+    "task_id": "spreadsheet_bgcolor_yellow",
+    "source_task_id": "spreadsheet_bgcolor_yellow",
+    "source_path": "tasks/seed/spreadsheet/seed.jsonc",
+    "group": "A"
+  },
+  {
+    "registry_id": "sheet_a_005_spreadsheet_bold_header",
+    "task_id": "spreadsheet_bold_header",
+    "source_task_id": "spreadsheet_bold_header",
+    "source_path": "tasks/seed/spreadsheet/seed.jsonc",
+    "group": "A"
+  },
+  {
+    "registry_id": "sheet_a_006_spreadsheet_conditional_formattion",
+    "task_id": "spreadsheet_conditional_formattion",
+    "source_task_id": "spreadsheet_conditional_formattion",
+    "source_path": "tasks/seed/spreadsheet/seed.jsonc",
+    "group": "A"
+  },
+  {
+    "registry_id": "sheet_a_007_spreadsheet_format_currency",
+    "task_id": "spreadsheet_format_currency",
+    "source_task_id": "spreadsheet_format_currency",
+    "source_path": "tasks/seed/spreadsheet/seed.jsonc",
+    "group": "A"
+  },
+  {
+    "registry_id": "sheet_a_008_spreadsheet_format_date",
+    "task_id": "spreadsheet_format_date",
+    "source_task_id": "spreadsheet_format_date",
+    "source_path": "tasks/seed/spreadsheet/seed.jsonc",
+    "group": "A"
+  },
+  {
+    "registry_id": "sheet_a_009_spreadsheet_grounding",
+    "task_id": "spreadsheet_grounding",
+    "source_task_id": "spreadsheet_grounding",
+    "source_path": "tasks/seed/spreadsheet/seed.jsonc",
+    "group": "A"
+  },
+  {
+    "registry_id": "sheet_a_010_spreadsheet_name_split",
+    "task_id": "spreadsheet_name_split",
+    "source_task_id": "spreadsheet_name_split",
+    "source_path": "tasks/seed/spreadsheet/seed.jsonc",
+    "group": "A"
+  },
+  {
+    "registry_id": "sheet_a_011_spreadsheet_phonenumber",
+    "task_id": "spreadsheet_phonenumber",
+    "source_task_id": "spreadsheet_phonenumber",
+    "source_path": "tasks/seed/spreadsheet/seed.jsonc",
+    "group": "A"
+  }
+]

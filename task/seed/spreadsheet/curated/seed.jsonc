@@ -1,0 +1,1820 @@
+[
+  {
+    "task_id": "curated_bmi_outputs_flag_01",
+    "instruction": "The sheet already contains CDC BMI output for three children. Add a Rounded BMI row and a Category Flag row. Round each BMI to the nearest whole number. Map Overweight to WATCH, Obesity to HIGH, and Severe Obesity to SEVERE.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Metric"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Case 1"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Case 2"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Case 3"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "BMI"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 23.4
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 26.6
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 38.4
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "BMI Percentile"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "91st"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "96th"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "99.8th"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Category"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Overweight"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Obesity"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Severe Obesity"
+        }
+      ],
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Rounded BMI"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 23
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 27
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 38
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A6",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Category Flag"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B6",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "WATCH"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C6",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "HIGH"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D6",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "SEVERE"
+        }
+      ]
+    ]
+  },
+  {
+    "task_id": "curated_bmi_outputs_derived_01",
+    "instruction": "The sheet already contains CDC BMI outputs. Add the requested derived values: distance from 20 for Case 1, category length for Case 2, and category-plus-threshold summary for Case 3.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Metric"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Case 1"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Case 2"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Case 3"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "BMI"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 23.4
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 37.1
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 38.4
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Percentile"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "91st"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "99.5th"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "99.8th"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Category"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Overweight"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Severe Obesity"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Severe Obesity"
+        }
+      ],
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Derived Value"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 3.4
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 15
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Severe Obesity-35PLUS"
+        }
+      ]
+    ]
+  },
+  {
+    "task_id": "curated_invoice_error_fix_01",
+    "instruction": "The invoice table is already filled, but the Tax Amount and Final Amount columns contain mistakes. Correct Tax Amount as Amount times Tax Rate, then correct Final Amount as Amount plus Tax Amount.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Item"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Desk"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Chair"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Lamp"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Amount"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 200
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 75
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 40
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Tax Rate"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 0.08
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 0.08
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 0.05
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Tax Amount"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 17
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 7
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 3
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "E1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Final Amount"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "E2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 217
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "E3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 82
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "E4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 43
+        }
+      ],
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 16
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 6
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 2
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "E2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 216
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "E3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 81
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "E4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 42
+        }
+      ]
+    ]
+  },
+  {
+    "task_id": "curated_sales_line_total_complete_01",
+    "instruction": "The sales table is partially completed and row 2 shows the intended line-total calculation. Fill the remaining Line Total cells and add the grand total in D6.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Product"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Pen"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Notebook"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Folder"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Tape"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Quantity"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 4
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 3
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 6
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 2
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Unit Price"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 1.5
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 4.25
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 2.1
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 3.75
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Line Total"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 6
+        }
+      ],
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 12.75
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 12.6
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 7.5
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D6",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 38.85
+        }
+      ]
+    ]
+  },
+  {
+    "task_id": "curated_inventory_conditional_style_01",
+    "instruction": "The inventory table is already filled. Bold the header row and highlight every product row where Inventory is less than Reorder Level using yellow background.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Product"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Inventory"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Reorder Level"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Pencil"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 25
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 20
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Marker"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 8
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 15
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Notebook"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 12
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 10
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Eraser"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 4
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 8
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A6",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Folder"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B6",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 30
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C6",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 25
+        }
+      ],
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A1",
+          "property": [
+            "style",
+            "bl"
+          ],
+          "value": 1
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B1",
+          "property": [
+            "style",
+            "bl"
+          ],
+          "value": 1
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C1",
+          "property": [
+            "style",
+            "bl"
+          ],
+          "value": 1
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A3",
+          "property": [
+            "style",
+            "bg",
+            "rgb"
+          ],
+          "value": "rgb(250, 200, 21)"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B3",
+          "property": [
+            "style",
+            "bg",
+            "rgb"
+          ],
+          "value": "rgb(250, 200, 21)"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C3",
+          "property": [
+            "style",
+            "bg",
+            "rgb"
+          ],
+          "value": "rgb(250, 200, 21)"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A5",
+          "property": [
+            "style",
+            "bg",
+            "rgb"
+          ],
+          "value": "rgb(250, 200, 21)"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B5",
+          "property": [
+            "style",
+            "bg",
+            "rgb"
+          ],
+          "value": "rgb(250, 200, 21)"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C5",
+          "property": [
+            "style",
+            "bg",
+            "rgb"
+          ],
+          "value": "rgb(250, 200, 21)"
+        }
+      ]
+    ]
+  },
+  {
+    "task_id": "curated_expense_currency_format_01",
+    "instruction": "The expense table values are already entered. Format all Amount values as currency with exactly two decimal places.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Category"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Rent"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Meals"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Transport"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Supplies"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Amount"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 1200.123
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 45.789
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 32.323
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": 89.999
+        }
+      ],
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B2",
+          "property": [
+            "style",
+            "n",
+            "pattern"
+          ],
+          "value": "0,##0.00"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B3",
+          "property": [
+            "style",
+            "n",
+            "pattern"
+          ],
+          "value": "0,##0.00"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B4",
+          "property": [
+            "style",
+            "n",
+            "pattern"
+          ],
+          "value": "0,##0.00"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B5",
+          "property": [
+            "style",
+            "n",
+            "pattern"
+          ],
+          "value": "0,##0.00"
+        }
+      ]
+    ]
+  },
+  {
+    "task_id": "curated_phone_normalize_audit_01",
+    "instruction": "The sheet contains names and phone numbers in mixed formats. Normalize each phone number to ###-###-#### in column C and mark each normalized row as MATCH in column D.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Name"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Alice"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Brian"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Chloe"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Daniel"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Phone Number"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "(415) 555 0182"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "212.555.0198"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "6175550134"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "305-555-0177"
+        }
+      ],
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Normalized Phone"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "415-555-0182"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "212-555-0198"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "617-555-0134"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "305-555-0177"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Audit"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "MATCH"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "MATCH"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "MATCH"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "MATCH"
+        }
+      ]
+    ]
+  },
+  {
+    "task_id": "curated_name_split_complete_01",
+    "instruction": "The sheet contains full names. Split each full name into First Name, Middle Initial, and Last Name columns.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Full Name"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Alice M Carter"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Brian T Lee"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Chloe R Kim"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "A5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "David P Jones"
+        }
+      ],
+      [
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "First Name"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Alice"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Brian"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Chloe"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "B5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "David"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Middle Initial"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "M"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "T"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "R"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "C5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "P"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D1",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Last Name"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D2",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Carter"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D3",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Lee"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D4",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Kim"
+        },
+        {
+          "match": "exact",
+          "f": "getCellMeta",
+          "param": "D5",
+          "property": [
+            "cell",
+            "v"
+          ],
+          "value": "Jones"
+        }
+      ]
+    ]
+  }
+]

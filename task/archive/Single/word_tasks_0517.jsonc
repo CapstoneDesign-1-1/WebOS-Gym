@@ -1,0 +1,1352 @@
+[
+  {
+    "task_id": "word_onepointfive_spacing_first_paragraph_01",
+    "instruction": "Type two paragraphs exactly as follows: \"overview line\" and \"follow-up line\". Then change only the first paragraph to 1.5 line spacing.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n').toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "overview line\nfollow-up line",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const ps = univerAPI.getActiveDocument().getSnapshot().body.paragraphs || []; const firstOk = Math.abs((ps[0]?.paragraphStyle?.lineSpacing ?? -99) - 1.5) < 1e-6; const secondClean = Math.abs((ps[1]?.paragraphStyle?.lineSpacing ?? -99) - 1.5) >= 1e-6; return firstOk && secondClean ? 'line-spacing-15-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "line-spacing-15-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_justify_align_paragraph_02",
+    "instruction": "Please type \"balanced report note\" on a single line and justify-align that paragraph.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "balanced report note",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const ps = univerAPI.getActiveDocument().getSnapshot().body.paragraphs || []; return ps[0]?.paragraphStyle?.horizontalAlign === 4 ? 'justify-align-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "justify-align-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_subscript_nh3_03",
+    "instruction": "Please type \"NH3\" and make only the number 3 a subscript.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim(); } catch (e) { return ''; } })()",
+          "value": "NH3",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasSub = (idx) => runs.some((r) => (r.st ?? 1e9) <= idx && (r.ed ?? -1) >= idx && r.ts?.va === 2); const idx3 = text.indexOf(\"3\"); const idxN = text.indexOf(\"N\"); const idxH = text.indexOf(\"H\"); return idx3 >= 0 && hasSub(idx3) && !hasSub(idxN) && !hasSub(idxH) ? \"subscript-ok\" : \"\"; } catch (e) { return \"\"; } })()",
+          "value": "subscript-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_font_size_18_line_04",
+    "instruction": "Please type \"priority marker\" and change the whole line to font size 18.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "priority marker",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream.toLowerCase(); const runs = doc.getSnapshot().body.textRuns || []; const target = 'priority marker'; const st = text.indexOf(target); const ed = st + target.length - 1; const ok = st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.fs === 18); return ok ? 'font-size-18-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "font-size-18-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_verdana_text_05",
+    "instruction": "Please type \"status memo\" and apply Verdana to the whole line.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "status memo",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const snap = doc.getSnapshot(); const text = doc._documentDataModel.getBody().dataStream; const runs = snap.body.textRuns || []; const target = 'status memo'; const st = text.indexOf(target); const ed = st + target.length - 1; const styleOk = snap.documentStyle?.textStyle?.ff === 'Verdana' || (st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.ff === 'Verdana')); return styleOk ? 'font-family-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "font-family-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_insert_table_3x2_06",
+    "instruction": "Insert a blank table with 3 columns and 2 rows into the document.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const snap = univerAPI.getActiveDocument().getSnapshot(); const body = snap.body; const ref = body.tables?.[0]; const table = ref && snap.tableSource?.[ref.tableId]; return table && table.tableColumns?.length === 3 && table.tableRows?.length === 2 ? 'table-3x2-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "table-3x2-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_blue_highlight_keyword_07",
+    "instruction": "Please type \"marker active\" and apply a blue text background only to the word \"marker\".",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "marker active",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream.toLowerCase(); const runs = doc.getSnapshot().body.textRuns || []; const palette = { blue: ['#e1effe', '#a4cafe', '#3f83f8', '#1a56db', '#233876', '#0000ff'] }; const normalize = (rgb) => { const v = (rgb || '').toLowerCase().replace(/\\s+/g, ''); if (v.startsWith('#')) return v; const nums = v.match(/\\d+/g)?.slice(0, 3).map(Number); return nums?.length === 3 ? '#' + nums.map((n) => n.toString(16).padStart(2, '0')).join('') : v; }; const isColor = (rgb, name) => (palette[name] || []).includes(normalize(rgb)); const hasBlueBg = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && isColor(r.ts?.bg?.rgb, 'blue')); }; const markerOk = hasBlueBg('marker'); const activeClean = !hasBlueBg('active'); return markerOk && activeClean ? 'highlight-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "highlight-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_strikethrough_second_line_08",
+    "instruction": "Create two lines with \"carry forward\" on the first line and \"retire this entry\" on the second line. Apply strikethrough only to the second line.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n').toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "carry forward\nretire this entry",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream.toLowerCase(); const runs = doc.getSnapshot().body.textRuns || []; const hasStrike = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.st?.s === 1); }; return hasStrike('retire this entry') && !hasStrike('carry forward') ? 'strikethrough-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "strikethrough-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_green_orange_color_split_09",
+    "instruction": "Please write \"moss amber\" and make \"moss\" green while making \"amber\" orange.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "moss amber",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const palette = { green: ['#def7ec', '#84e1bc', '#0da471', '#046c4e', '#014737', '#00ff00'], orange: ['#feecdc', '#fdba8c', '#ff5a1f', '#b43403', '#8a2c0d', '#ffa500'] }; const normalize = (rgb) => { const v = (rgb || '').toLowerCase().replace(/\\s+/g, ''); if (v.startsWith('#')) return v; const nums = v.match(/\\d+/g)?.slice(0, 3).map(Number); return nums?.length === 3 ? '#' + nums.map((n) => n.toString(16).padStart(2, '0')).join('') : v; }; const hasColor = (target, name) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && (palette[name] || []).includes(normalize(r.ts?.cl?.rgb))); }; const ok = hasColor('moss', 'green') && hasColor('amber', 'orange'); return ok ? 'color-split-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "color-split-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_lowercase_cleanup_10",
+    "instruction": "Enter this line and make sure it ends up fully lowercase: \"REGIONAL STATUS SHOULD STAY QUIET\".",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim(); } catch (e) { return ''; } })()",
+          "value": "regional status should stay quiet",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_title_case_11",
+    "instruction": "Please write the phrase \"river audit memo\" so that every word starts with a capital letter.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim(); } catch (e) { return ''; } })()",
+          "value": "River Audit Memo",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_sentence_gap_12",
+    "instruction": "Please write these three entries with one empty line between each entry: \"North entry\", \"West entry\", and \"South entry\".",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n'); } catch (e) { return ''; } })()",
+          "value": "North entry\n\nWest entry\n\nSouth entry",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_unique_code_list_13",
+    "instruction": "Use these lab sample codes to make a clean unique list with one code per line, keeping the first appearance order only: R18, M02, R18, K77, M02, P31, K77.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n'); } catch (e) { return ''; } })()",
+          "value": "R18\nM02\nK77\nP31",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_page_break_between_lines_14",
+    "instruction": "Create one page break between two lines so the document shows \"Page one text\" before the break and \"Page two text\" after it.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const text = univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream; const stripped = text.replace(/\\f/g, ''); return text.includes('\\f') && stripped.includes('Page one text') && stripped.includes('Page two text') ? 'page-break-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "page-break-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_bold_heading_15",
+    "instruction": "Please type \"Signal Ledger\" on a single line and make that text bold.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim(); } catch (e) { return ''; } })()",
+          "value": "Signal Ledger",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const target = 'Signal Ledger'; const st = text.indexOf(target); const ed = st + target.length - 1; const ok = st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.bl === 1); return ok ? 'bold-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "bold-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_italic_phrase_16",
+    "instruction": "Write the sentence \"The draft needs revision.\" and italicize only the words \"needs revision\".",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim(); } catch (e) { return ''; } })()",
+          "value": "The draft needs revision.",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasItalic = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.it === 1); }; const ok = hasItalic('needs revision') && !hasItalic('The draft') ; return ok ? 'italic-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "italic-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_underlined_keyword_17",
+    "instruction": "Please write \"Deadline confirmed\" and underline only the word \"Deadline\".",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim(); } catch (e) { return ''; } })()",
+          "value": "Deadline confirmed",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasUnderline = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.ul?.s === 1); }; const ok = hasUnderline('Deadline') && !hasUnderline('confirmed'); return ok ? 'underline-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "underline-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_bold_underlined_title_18",
+    "instruction": "Create a two-line note with \"Field Notes\" on the first line and \"draft copy\" on the second line. Make the text on the first line both bold and underlined.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n'); } catch (e) { return ''; } })()",
+          "value": "Field Notes\ndraft copy",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasBoth = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.bl === 1 && r.ts?.ul?.s === 1); }; const hasBoldOrUnderline = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && (r.ts?.bl === 1 || r.ts?.ul?.s === 1)); }; const ok = hasBoth('Field Notes') && !hasBoldOrUnderline('draft copy'); return ok ? 'bold-underline-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "bold-underline-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_italic_font_size_16_19",
+    "instruction": "Write the sentence \"check the summary now\". Make only the word \"summary\" italic and change that same word to font size 16.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "check the summary now",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasItalicSize = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.it === 1 && r.ts?.fs === 16); }; const hasItalicOrSize = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && (r.ts?.it === 1 || r.ts?.fs === 16)); }; const ok = hasItalicSize('summary') && !hasItalicOrSize('check the') && !hasItalicOrSize('now'); return ok ? 'italic-size-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "italic-size-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_superscript_digits_20",
+    "instruction": "Please type \"a2 + b2\" and make both number 2 characters superscript.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim(); } catch (e) { return ''; } })()",
+          "value": "a2 + b2",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasSuper = (idx) => runs.some((r) => (r.st ?? 1e9) <= idx && (r.ed ?? -1) >= idx && r.ts?.va === 3); const idxs = [...text].map((ch, i) => ch === '2' ? i : -1).filter((i) => i >= 0); const ok = idxs.length === 2 && idxs.every(hasSuper) && !hasSuper(text.indexOf('a')) && !hasSuper(text.indexOf('b')); return ok ? 'superscript-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "superscript-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_underline_two_words_21",
+    "instruction": "Write \"Check budget and timeline\" and underline the words \"budget\" and \"timeline\".",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim(); } catch (e) { return ''; } })()",
+          "value": "Check budget and timeline",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasUnderline = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.ul?.s === 1); }; const ok = ['budget', 'timeline'].every(hasUnderline) && !hasUnderline('Check') && !hasUnderline('and'); return ok ? 'two-underlines-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "two-underlines-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_bold_italic_phrase_22",
+    "instruction": "Please write \"Status is nearly complete\" and make the phrase \"nearly complete\" both bold and italic.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim(); } catch (e) { return ''; } })()",
+          "value": "Status is nearly complete",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasBoth = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.bl === 1 && r.ts?.it === 1); }; const hasBoldOrItalic = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && (r.ts?.bl === 1 || r.ts?.it === 1)); }; const ok = hasBoth('nearly complete') && !hasBoldOrItalic('Status is'); return ok ? 'bold-italic-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "bold-italic-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_three_line_style_mix_23",
+    "instruction": "Create a three-line note with \"Weekly Plan\", \"editing in progress\", and \"ready tomorrow\". Make the first line bold and the second line italic.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n'); } catch (e) { return ''; } })()",
+          "value": "Weekly Plan\nediting in progress\nready tomorrow",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const has = (target, pred) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && pred(r.ts || {})); }; const hasBold = (target) => has(target, (ts) => ts.bl === 1); const hasItalic = (target) => has(target, (ts) => ts.it === 1); const hasUnexpectedStyle = (target, allowedKeys) => { const st = text.indexOf(target); const ed = st + target.length - 1; const styleKeys = ['bl', 'it', 'ul', 'st', 'fs', 'ff', 'cl', 'bg', 'va']; return st >= 0 && runs.some((r) => { if ((r.st ?? 1e9) > st || (r.ed ?? -1) < ed) return false; const ts = r.ts || {}; return styleKeys.some((key) => { if (allowedKeys.includes(key)) return false; if (key === 'ul') return ts.ul?.s === 1; if (key === 'st') return ts.st?.s === 1; if (key === 'cl') return !!ts.cl?.rgb; if (key === 'bg') return !!ts.bg?.rgb; return ts[key] !== undefined; }); }); }; const firstOk = hasBold('Weekly Plan') && !hasUnexpectedStyle('Weekly Plan', ['bl']); const secondOk = hasItalic('editing in progress') && !hasUnexpectedStyle('editing in progress', ['it']); const thirdOk = !hasUnexpectedStyle('ready tomorrow', []); return firstOk && secondOk && thirdOk ? 'mixed-style-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "mixed-style-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_bold_labels_report_24",
+    "instruction": "Write exactly three lines: \"Owner: Mina\", \"Stage: Review\", and \"Flag: Active\". Make only the labels before the colon bold.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n'); } catch (e) { return ''; } })()",
+          "value": "Owner: Mina\nStage: Review\nFlag: Active",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasBold = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.bl === 1); }; const ok = ['Owner', 'Stage', 'Flag'].every(hasBold) && !hasBold('Mina') && !hasBold('Review') && !hasBold('Active'); return ok ? 'label-bold-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "label-bold-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_italic_book_title_25",
+    "instruction": "Write the sentence \"We discussed The Silent Harbor yesterday.\" and italicize only the phrase \"The Silent Harbor\".",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim(); } catch (e) { return ''; } })()",
+          "value": "We discussed The Silent Harbor yesterday.",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasItalic = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.it === 1); }; const ok = hasItalic('The Silent Harbor') && !hasItalic('We discussed') && !hasItalic('yesterday'); return ok ? 'book-italic-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "book-italic-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_underline_deadline_date_26",
+    "instruction": "Please write \"Submit by 2026-08-14\" and underline only the date.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim(); } catch (e) { return ''; } })()",
+          "value": "Submit by 2026-08-14",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasUnderline = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.ul?.s === 1); }; const ok = hasUnderline('2026-08-14') && !hasUnderline('Submit by'); return ok ? 'date-underlined-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "date-underlined-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_bold_and_underline_split_27",
+    "instruction": "Write \"ALERT update required\" and make \"ALERT\" bold while underlining \"required\".",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim(); } catch (e) { return ''; } })()",
+          "value": "ALERT update required",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasBold = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.bl === 1); }; const hasUnderline = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.ul?.s === 1); }; const ok = hasBold('ALERT') && !hasUnderline('ALERT') && hasUnderline('required') && !hasBold('required') && !hasBold('update') && !hasUnderline('update'); return ok ? 'split-style-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "split-style-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_right_align_paragraph_28",
+    "instruction": "Please type \"shift this memo\" on a single line and right-align that paragraph.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "shift this memo",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const ps = univerAPI.getActiveDocument().getSnapshot().body.paragraphs || []; return ps[0]?.paragraphStyle?.horizontalAlign === 3 ? 'right-align-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "right-align-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_center_second_paragraph_29",
+    "instruction": "Create two paragraphs: \"plain note remains left\" and \"focus line moves inward\". Then center-align only the second paragraph.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n').toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "plain note remains left\nfocus line moves inward",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const ps = univerAPI.getActiveDocument().getSnapshot().body.paragraphs || []; return ps[1]?.paragraphStyle?.horizontalAlign === 2 && ps[0]?.paragraphStyle?.horizontalAlign !== 2 ? 'second-center-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "second-center-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_mixed_line_spacing_30",
+    "instruction": "Create three paragraphs in this order: \"alpha note\", \"beta note\", and \"gamma note\". Set their line spacing to 1.15, 1.5, and 2 respectively.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n').toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "alpha note\nbeta note\ngamma note",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const ps = univerAPI.getActiveDocument().getSnapshot().body.paragraphs || []; const vals = [1.15, 1.5, 2]; const ok = vals.every((v, i) => Math.abs((ps[i]?.paragraphStyle?.lineSpacing ?? -99) - v) < 1e-6); return ok ? 'mixed-spacing-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "mixed-spacing-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_tahoma_size_15_31",
+    "instruction": "Please type \"schedule ready\" and format the whole line in Tahoma with font size 15.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "schedule ready",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const snap = doc.getSnapshot(); const text = doc._documentDataModel.getBody().dataStream; const runs = snap.body.textRuns || []; const target = 'schedule ready'; const st = text.indexOf(target); const ed = st + target.length - 1; const ok = st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.ff === 'Tahoma' && r.ts?.fs === 15); return ok ? 'font-family-size-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "font-family-size-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_footer_text_32",
+    "instruction": "Add a footer to this document and put exactly \"Archive note\" in it.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const snap = univerAPI.getActiveDocument().getSnapshot(); const id = snap.documentStyle?.defaultFooterId; return id && snap.footers?.[id]?.body?.dataStream?.trim() === 'Archive note' ? 'footer-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "footer-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_sentence_split_note_33",
+    "instruction": "Write these short notes on separate lines in the same order: \"Log sample.\" \"Flag anomaly.\" \"Close review.\"",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n'); } catch (e) { return ''; } })()",
+          "value": "Log sample.\nFlag anomaly.\nClose review.",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_strikethrough_middle_paragraph_34",
+    "instruction": "Create three paragraphs: \"reference note\", \"archive this note\", and \"closing note\". Apply strikethrough only to the entire middle paragraph.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n').toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "reference note\narchive this note\nclosing note",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasStrike = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.st?.s === 1); }; const ok = hasStrike('archive this note') && !hasStrike('reference note') && !hasStrike('closing note'); return ok ? 'middle-paragraph-strike-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "middle-paragraph-strike-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_box_border_paragraph_35",
+    "instruction": "Please type \"boxed paragraph\" and give that paragraph a simple box border on all four sides.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "boxed paragraph",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const p = univerAPI.getActiveDocument().getSnapshot().body.paragraphs?.[0]?.paragraphStyle; return p?.borderTop && p?.borderBottom && p?.borderLeft && p?.borderRight ? 'box-border-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "box-border-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_bold_first_line_36",
+    "instruction": "Create a two-line note with \"Checkpoint Log\" on the first line and \"notes pending\" on the second line. Make the first line bold.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n'); } catch (e) { return ''; } })()",
+          "value": "Checkpoint Log\nnotes pending",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const hasBold = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.bl === 1); }; const ok = hasBold('Checkpoint Log') && !hasBold('notes pending'); return ok ? 'first-line-bold-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "first-line-bold-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_italic_middle_line_37",
+    "instruction": "Create three lines with \"phase one\", \"phase two review\", and \"phase three\". Make only the middle line italic.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n').toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "phase one\nphase two review\nphase three",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream.toLowerCase(); const runs = doc.getSnapshot().body.textRuns || []; const hasItalic = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.it === 1); }; const ok = hasItalic('phase two review') && !hasItalic('phase one') && !hasItalic('phase three'); return ok ? 'middle-line-italic-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "middle-line-italic-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_green_phrase_sentence_38",
+    "instruction": "Write the sentence \"please review the green section\" and make only the word \"green\" green.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "please review the green section",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream; const runs = doc.getSnapshot().body.textRuns || []; const palette = { green: ['#def7ec', '#84e1bc', '#0da471', '#046c4e', '#014737', '#00ff00'] }; const normalize = (rgb) => { const v = (rgb || '').toLowerCase().replace(/\\s+/g, ''); if (v.startsWith('#')) return v; const nums = v.match(/\\d+/g)?.slice(0, 3).map(Number); return nums?.length === 3 ? '#' + nums.map((n) => n.toString(16).padStart(2, '0')).join('') : v; }; const isColor = (rgb, name) => (palette[name] || []).includes(normalize(rgb)); const hasGreen = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => { const rgb = r.ts?.cl?.rgb; return (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && isColor(rgb, 'green'); }); }; const ok = hasGreen('green') && !hasGreen('please review the') && !hasGreen('section'); return ok ? 'green-phrase-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "green-phrase-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_set_heading2_style_39",
+    "instruction": "Type \"Internal Memo\" on a single line and set that line to Heading 2 style.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim(); } catch (e) { return ''; } })()",
+          "value": "Internal Memo",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const p = univerAPI.getActiveDocument().getSnapshot().body.paragraphs?.[0]?.paragraphStyle; return p?.namedStyleType === 5 ? 'heading2-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "heading2-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_password_protection_40",
+    "instruction": "Please password-protect this document so it cannot be opened without a password, using only the word fixture's built-in controls.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "func": "infeasible"
+    }
+  },
+  {
+    "task_id": "word_find_replace_term_41",
+    "instruction": "Create the line \"temp report temp checklist\". Then replace every occurrence of \"temp\" with \"final\".",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "final report final checklist",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_sort_lines_alpha_42",
+    "instruction": "Create four separate lines with \"delta\", \"alpha\", \"charlie\", and \"bravo\". Then reorder the lines alphabetically.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n').toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "alpha\nbravo\ncharlie\ndelta",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_remove_blank_lines_43",
+    "instruction": "Create this draft with extra blank lines between the entries: \"north\", \"south\", and \"east\". Then remove the blank lines so only one line break remains between entries.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n'); } catch (e) { return ''; } })()",
+          "value": "north\nsouth\neast",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_split_comma_items_44",
+    "instruction": "Create the comma-separated text \"redwood, cedar, maple\". Then split it into three separate lines without commas.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n').toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "redwood\ncedar\nmaple",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_target_font_size_45",
+    "instruction": "Write \"small note big note plain note\" on one line. Then change only \"big note\" to font size 18.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "small note big note plain note",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const text = doc._documentDataModel.getBody().dataStream.toLowerCase(); const runs = doc.getSnapshot().body.textRuns || []; const hasSize18 = (target) => { const st = text.indexOf(target); const ed = st + target.length - 1; return st >= 0 && runs.some((r) => (r.st ?? 1e9) <= st && (r.ed ?? -1) >= ed && r.ts?.fs === 18); }; return hasSize18('big note') && !hasSize18('small note') && !hasSize18('plain note') ? 'target-size-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "target-size-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_second_paragraph_spacing_46",
+    "instruction": "Create two paragraphs: \"compact note\" and \"spaced note\". Then set only the second paragraph to double line spacing.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, '\\n').replace(/\\n+/g, '\\n').toLowerCase(); } catch (e) { return ''; } })()",
+          "value": "compact note\nspaced note",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const ps = univerAPI.getActiveDocument().getSnapshot().body.paragraphs || []; const first = ps[0]?.paragraphStyle?.lineSpacing ?? -99; const second = ps[1]?.paragraphStyle?.lineSpacing ?? -99; return Math.abs(second - 2) < 1e-6 && Math.abs(first - 2) >= 1e-6 ? 'second-spacing-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "second-spacing-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_insert_table_4x2_47",
+    "instruction": "Insert a blank table with 4 columns and 2 rows into the document.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const snap = univerAPI.getActiveDocument().getSnapshot(); const body = snap.body; const ref = body.tables?.[0]; const table = ref && snap.tableSource?.[ref.tableId]; return table && table.tableColumns?.length === 4 && table.tableRows?.length === 2 ? 'table-4x2-ok' : ''; } catch (e) { return ''; } })()",
+          "value": "table-4x2-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_reference_number_marker_48",
+    "instruction": "Create four paragraphs in this order: \"Source queue\", \"Park, Ji. \"Harbor Sampling Log.\" Field Archive Review, 2021.\", \"Nolan, Avery. \"Bridge Sensor Memo.\" Urban Systems Notes, 2022.\", and \"Add the latest calibration note [REF]\". Then change only the [REF] marker in the fourth paragraph to [1], and add a reference list entry: [1] Rao, Lina. \"Calibration Trace.\" Applied Sensor Letters, 2025.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, \"\\n\").replace(/\\n+/g, \"\\n\"); } catch (e) { return \"\"; } })()",
+          "value": "Source queue\nPark, Ji. \"Harbor Sampling Log.\" Field Archive Review, 2021.\nNolan, Avery. \"Bridge Sensor Memo.\" Urban Systems Notes, 2022.\nAdd the latest calibration note [1]\n[1] Rao, Lina. \"Calibration Trace.\" Applied Sensor Letters, 2025.",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const text = univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream; return text.includes(\"[1] Rao, Lina. \\\"Calibration Trace.\\\" Applied Sensor Letters, 2025.\") && !text.includes(\"[REF]\") ? \"reference-marker-ok\" : \"\"; } catch (e) { return \"\"; } })()",
+          "value": "reference-marker-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_section_spacing_font12_49",
+    "instruction": "Create three paragraphs exactly as follows: \"Opening frame: scope and context\", \"Evidence block: signals and details\", and \"Decision note: action and owner\". Apply single spacing to the opening paragraph, double spacing to the evidence paragraph, and 1.5 spacing to the decision paragraph. Make sure all document text is font size 12 and no other font size is used.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { return univerAPI.getActiveDocument()._documentDataModel.getBody().dataStream.trim().replace(/\\r/g, \"\\n\").replace(/\\n+/g, \"\\n\"); } catch (e) { return \"\"; } })()",
+          "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const ps = univerAPI.getActiveDocument().getSnapshot().body.paragraphs || []; const vals = [1, 2, 1.5]; const ok = vals.every((v, i) => Math.abs((ps[i]?.paragraphStyle?.lineSpacing ?? -99) - v) < 1e-6); return ok ? \"section-spacing-ok\" : \"\"; } catch (e) { return \"\"; } })()",
+          "value": "section-spacing-ok",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const snap = doc.getSnapshot(); const text = doc._documentDataModel.getBody().dataStream; const bodyLen = text.trimEnd().length; const runs = snap.body.textRuns || []; const defaultFs = snap.documentStyle?.textStyle?.fs; const explicitRuns = runs.filter((r) => (r.ed ?? -1) >= 0 && (r.st ?? 1e9) < bodyLen && r.ts && Object.prototype.hasOwnProperty.call(r.ts, \"fs\")); const noOther = explicitRuns.every((r) => r.ts.fs === 12) && (defaultFs === undefined || defaultFs === 12); const has12 = defaultFs === 12 || explicitRuns.some((r) => r.ts.fs === 12); return has12 && noOther ? \"font-size-12-only-ok\" : \"\"; } catch (e) { return \"\"; } })()",
+          "value": "font-size-12-only-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "word_comma_to_table_cells_50",
+    "instruction": "Create the comma-separated text \"Name, Score, Ilya, 87, Noor, 91\". Then convert it into a table with 2 columns and 3 rows so the first row is Name, Score, the second row is Ilya, 87, and the third row is Noor, 91.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      }
+    ],
+    "evaluation": {
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const snap = univerAPI.getActiveDocument().getSnapshot(); const ref = snap.body.tables?.[0]; const table = ref && snap.tableSource?.[ref.tableId]; return table && table.tableColumns?.length === 2 && table.tableRows?.length === 3 ? \"table-2x3-ok\" : \"\"; } catch (e) { return \"\"; } })()",
+          "value": "table-2x3-ok",
+          "match": "exact"
+        },
+        {
+          "website_id": "word",
+          "mode": "console",
+          "script": "(() => { try { const doc = univerAPI.getActiveDocument(); const snap = doc.getSnapshot(); const bodyText = doc._documentDataModel.getBody().dataStream; const expected = [\"Name\", \"Score\", \"Ilya\", \"87\", \"Noor\", \"91\"]; const ref = snap.body.tables?.[0]; const table = ref && snap.tableSource?.[ref.tableId]; const visibleCells = bodyText.replace(/[\\u000e-\\u001f\\r\\n]+/g, \"\\n\").split(\"\\n\").map((s) => s.trim()).filter(Boolean); const sameCells = expected.length === visibleCells.length && expected.every((value, index) => visibleCells[index] === value); return table && table.tableColumns?.length === 2 && table.tableRows?.length === 3 && sameCells ? \"table-cells-ok\" : \"\"; } catch (e) { return \"\"; } })()",
+          "value": "table-cells-ok",
+          "match": "exact"
+        }
+      ]
+    }
+  }
+]

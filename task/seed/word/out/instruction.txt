@@ -1,0 +1,2675 @@
+================================================================================
+HASH : hoare:v1:01885e1ca93aa139e1f440c0c5ed47352a6dab6286ee01e223808c2bcd7fcdd8
+COMPLEXITY : 3
+INSTRUCTION : Please write "Status is nearly complete" and make the phrase "nearly complete" both bold and italic.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Status is nearly complete", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "nearly complete", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "nearly complete", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:0218d4fcf2cb0e2517a05443690507e739855d013d31ccb0bc5f4d4403695e0b
+COMPLEXITY : 2
+INSTRUCTION : Write the sentence "please review the green section" and make only the word "green" green.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "please review the green section", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "green", "color"], "value": "green", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "please review the", "color"], "value": "normal", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "section", "color"], "value": "normal", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:0384a7f69f11854eb7ffe4f5aac39fea2395ad92481992b1a0525a6887399a6a
+COMPLEXITY : 1
+INSTRUCTION : Type status memo in the document.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "status memo", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:06b66ff48cee13981e3d236df88963a6f269d752921fc4f3ba5e9fab30015724
+COMPLEXITY : 1
+INSTRUCTION : Apply strikethrough only to “archive this note.”
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "reference note\narchive this note\nclosing note", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "reference note\narchive this note\nclosing note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "archive this note", "strikethrough"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "reference note", "strikethrough"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "closing note", "strikethrough"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:08cb4eda97020916db3d41f3c38f99c45e2c0502fdf0164fa1dc754e19736ff6
+COMPLEXITY : 1
+INSTRUCTION : Please write these three entries with one empty line between each entry: "North entry", "West entry", and "South entry".
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "North entry\n\nWest entry\n\nSouth entry", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:09907c08991d5d05c9c834b66db19331167a2eaf76f7b2242a3d1d0ac9f19257
+COMPLEXITY : 1
+INSTRUCTION : Make Flag bold.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Owner", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Stage", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Mina", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Review", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Active", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Owner", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Stage", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Flag", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Mina", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Review", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Active", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:0a2836f8604070c54433d890b343e439d1f64d56579b2682776f976bc24ccc15
+COMPLEXITY : 1
+INSTRUCTION : Type moss amber in the document.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "moss amber", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:0c9fd4b0f0dbc68c17101b56678c04861f642cbe627c4f11aeaf8df05e063558
+COMPLEXITY : 3
+INSTRUCTION : Create a three-line note with "Weekly Plan", "editing in progress", and "ready tomorrow". Make the first line bold and the second line italic.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Weekly Plan\nediting in progress\nready tomorrow", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Weekly Plan", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "editing in progress", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:0e0659d7eccc4f6f77a49413e3ea68ba449ac609f17c96fb90a543d59bec2f3e
+COMPLEXITY : 2
+INSTRUCTION : Underline the words “budget” and “timeline.”
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Check budget and timeline", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Check budget and timeline", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "budget", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "timeline", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:0e82819885b5f341ee80d129a111e4338b405a066164341c042289e934a223de
+COMPLEXITY : 1
+INSTRUCTION : Make “ALERT” bold, and ensure “update” and “required” are not bold or underlined.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "ALERT update required", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "ALERT update required", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "ALERT", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "ALERT", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "required", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "update", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "update", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:0f3d1ffdf17b32d7cd12b742365e393c6531c66257a0894c476081a689ee86b5
+COMPLEXITY : 3
+INSTRUCTION : Create the document text exactly as “alpha note”, “beta note”, and “gamma note” on separate lines, and set the first paragraph’s line spacing to 1.15 and the second paragraph’s line spacing to 1.5.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.15", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:0fd924b2e484cc7758a64e41feca8c863f6fa8d561b9aeadc7dae7b98bf91622
+COMPLEXITY : 1
+INSTRUCTION : Enter the three paragraphs alpha note, beta note, and gamma note in that order.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:1154b686d0550c6fcbca262c3337a8739146e6668772431fb0b7f03011d9d317
+COMPLEXITY : 1
+INSTRUCTION : Make Stage bold.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Owner", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Mina", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Review", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Active", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Owner", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Stage", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Mina", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Review", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Active", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:117ef317f9997c253fbf0043bf87f0387776d69d5a1f2d8963f1a3fe600410d4
+COMPLEXITY : 1
+INSTRUCTION : Create the comma-separated text "redwood, cedar, maple". Then split it into three separate lines without commas.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "redwood\ncedar\nmaple", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:11c0b537960e044cdc1e3d8eb2095f09853e987097b3aeb3201c40165e8fe58b
+COMPLEXITY : 1
+INSTRUCTION : Insert a blank table with 2 rows and 3 columns into the document.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["tables", "0", "shape"], "value": "2x3", "return_type": "obj", "f": "word-table"}
+      ]
+================================================================================
+HASH : hoare:v1:16566a4411670ee4e41cc4d89bab67e8aa24f5c193e0af0fddcef0a3f873330e
+COMPLEXITY : 2
+INSTRUCTION : Set paragraph 2 to double spacing and paragraph 3 to 1.5 spacing.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:17545fd57a9510f7bcdb7c272ddbe85adec232c526698d2d6291ae18c79c6027
+COMPLEXITY : 1
+INSTRUCTION : Write exactly three lines: “Owner: Mina”, “Stage: Review”, and “Flag: Active”.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:17a1dcce6ddb80ee8b01e95861c8a0403661e930141a6bed0873b6d6a76484e8
+COMPLEXITY : 2
+INSTRUCTION : Please type "priority marker" and change the whole line to font size 18.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "priority marker", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "priority marker", "fontSize"], "value": "18", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:17e1b6dfca0150b569dff7b765a85f917ebaeb0f510348fbd48478232b028274
+COMPLEXITY : 2
+INSTRUCTION : Write exactly three lines: Owner: Mina, Stage: Review, and Flag: Active, and make only Owner bold.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Owner", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Mina", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Review", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Active", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:192bf9b805f7de8663fb91206ae3581afc249a1b45d2081bb0199bfc692b812b
+COMPLEXITY : 3
+INSTRUCTION : Write the sentence "check the summary now". Make only the word "summary" italic and change that same word to font size 16.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "check the summary now", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "summary", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "summary", "fontSize"], "value": "16", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "check the", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "check the", "fontSizeNot"], "value": "16", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "now", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "now", "fontSizeNot"], "value": "16", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:19a8ef64e7d914f6792aeadbf025ba6120ede235267e6ae799f56e25544e365f
+COMPLEXITY : 2
+INSTRUCTION : Please type "NH3" and make only the number 3 a subscript.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "NH3", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "3", "verticalAlign"], "value": "subscript", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "N", "verticalAlign"], "value": "normal", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "H", "verticalAlign"], "value": "normal", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:1a0bbc5dedbe9f446933e66e57a9c5cc94d58bb4f952e0a9aeccd36784477fa7
+COMPLEXITY : 1
+INSTRUCTION : Create three lines with phase one, phase two review, and phase three.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "phase one\nphase two review\nphase three", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:1a784f3dde1da41637e1a0273446a6032f5a75a66b22aa408f080ccbe6075b1d
+COMPLEXITY : 1
+INSTRUCTION : Write ALERT update required in the document body.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "ALERT update required", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:1afc2518f77843d064ef29e1e084e158afd403511d285da65ed3950be8b5ee7e
+COMPLEXITY : 3
+INSTRUCTION : Set the line spacing of paragraph 1 to single, paragraph 2 to double, and paragraph 3 to 1.5 spacing.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:1b2b9af1d1e04697b767b8c912ac27e9820245b13205575591a9ea4efb4d35d8
+COMPLEXITY : 1
+INSTRUCTION : Change only the first paragraph to 1.5 line spacing.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "overview line\nfollow-up line", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "overview line\nfollow-up line", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacingNot"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:1bb522d62f3abb3bb855705c0f5ba02d6ae8369f30f9d3d90b3478f0edea5737
+COMPLEXITY : 1
+INSTRUCTION : Write Submit by 2026-08-14.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Submit by 2026-08-14", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:22d1e9167876cbe17852d41a55fafd19826a37fd8bccd36fe09a963516d035f0
+COMPLEXITY : 1
+INSTRUCTION : Make only “Owner” bold.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Owner", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Mina", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Review", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Active", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:22d8db0479455ce8a204c3abb24f00e18b75dcce1a3e4faec8b7ff8573187743
+COMPLEXITY : 1
+INSTRUCTION : Make “nearly complete” italic.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Status is nearly complete", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "nearly complete", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Status is nearly complete", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "nearly complete", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "nearly complete", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:25b92003823572373327f858f50958a0daa47d56a8f345502a532e7cb611406f
+COMPLEXITY : 4
+INSTRUCTION : Create the three paragraphs exactly as “Opening frame: scope and context”, “Evidence block: signals and details”, and “Decision note: action and owner”, with line spacing 1 for the first paragraph, 2 for the second, and 1.5 for the third.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:2647f26bc7028290ee81ddb83d74a357d507625006d5273f2c723f84c2c902c1
+COMPLEXITY : 2
+INSTRUCTION : Make “Field Notes” bold and underlined, and leave “draft copy” unbolded and ununderlined.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Field Notes\ndraft copy", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Field Notes\ndraft copy", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Field Notes", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Field Notes", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "draft copy", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "draft copy", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:288c9a580dc8019f3f0a71379f10d268ac5e283487960b51c18e58444c98f631
+COMPLEXITY : 1
+INSTRUCTION : Type exactly these two paragraphs: “overview line” and “follow-up line”.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "overview line\nfollow-up line", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:2d172728cea77f20b7a013296c1c4e73d3480c4fd8fd7a2f5173b718accbab18
+COMPLEXITY : 1
+INSTRUCTION : Italicize only “needs revision” in the sentence.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "The draft needs revision.", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "The draft needs revision.", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "needs revision", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "The draft", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:2f18be20e3cf446fcb9f8ede1d3058341d7bc4c259aed174539555a5540ecf9c
+COMPLEXITY : 3
+INSTRUCTION : Write "ALERT update required" and make "ALERT" bold while underlining "required".
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "ALERT update required", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "ALERT", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "required", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "ALERT", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "required", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "update", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "update", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:30170f82753b8ade34ecec89429400d2218488bc9c8cfbe3a4f1815f0401a53f
+COMPLEXITY : 2
+INSTRUCTION : Please type "Signal Ledger" on a single line and make that text bold.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Signal Ledger", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Signal Ledger", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:336490ec48530aa54ea39e9bb7e0135a28c5322b90ea86347f79752efc646153
+COMPLEXITY : 2
+INSTRUCTION : Write the sentence "The draft needs revision." and italicize only the words "needs revision".
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "The draft needs revision.", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "needs revision", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "The draft", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:362ca639d9f51a735e8e2aa4c15177ed3b8ba01d2dbd081c2f354d422a81031b
+COMPLEXITY : 1
+INSTRUCTION : Type balanced report note on a single line.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "balanced report note", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:3715980d230ee5c4bb72e19c4a148e3b48ca76ccec9d93ca303d3db750f4cf37
+COMPLEXITY : 2
+INSTRUCTION : Create two paragraphs: "plain note remains left" and "focus line moves inward". Then center-align only the second paragraph.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "plain note remains left\nfocus line moves inward", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "horizontalAlign"], "value": "center", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "horizontalAlignNot"], "value": "center", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:3a2a7ba9272b90a44375e75202cccaca1b513d871f779c52747e11d0f89a44e1
+COMPLEXITY : 1
+INSTRUCTION : Set the first paragraph to single spacing.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:3bbb51931338fb77b398f3a7bf713e22ca17d55f92e82f0bd50ff6716ba1bcfa
+COMPLEXITY : 1
+INSTRUCTION : Write the sentence “We discussed The Silent Harbor yesterday.”
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "We discussed The Silent Harbor yesterday.", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:3d9dd30de49bd2ca39034babdde172eeab65104c4b5afc1eaf46b0acca77eb7f
+COMPLEXITY : 2
+INSTRUCTION : Type two paragraphs exactly as follows: "overview line" and "follow-up line". Then change only the first paragraph to 1.5 line spacing.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "overview line\nfollow-up line", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacingNot"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:3de2bfd9205157f5fa2d7b7b976c88c5c1a202d5bff72f01238c73ab5df7f58c
+COMPLEXITY : 1
+INSTRUCTION : Enter this line and make sure it ends up fully lowercase: "REGIONAL STATUS SHOULD STAY QUIET".
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "regional status should stay quiet", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:3df3a208c22b97205b1d6fd728f567c62008ceec3cb5bb4cd8c31170a19ef30d
+COMPLEXITY : 2
+INSTRUCTION : Set paragraph 2 line spacing to 1.5 and paragraph 3 line spacing to 2.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.15", "return_type": "obj", "f": "word-paragraph"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.15", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:430e73787226810f0ec2824e6d340491d01c7f2d30b26b97ee0a429f177e8e12
+COMPLEXITY : 2
+INSTRUCTION : Please type "status memo" and apply Verdana to the whole line.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "status memo", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "status memo", "fontFamily"], "value": "Verdana", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:46d49972bf2495fdce2fc2537ea35eaaf84db531243aa2f05ac0b3a006fb7e32
+COMPLEXITY : 2
+INSTRUCTION : Make only “Owner” and “Stage” bold, leaving “Mina,” “Review,” and “Active” unbolded.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Owner", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Stage", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Mina", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Review", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Active", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:474d5b06862efcf7a157c9bf5ca16818c6240a6113071f525680e3129112f69d
+COMPLEXITY : 1
+INSTRUCTION : Apply strikethrough to “retire this entry” only, and leave “carry forward” without strikethrough.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "carry forward\nretire this entry", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "carry forward\nretire this entry", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "retire this entry", "strikethrough"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "carry forward", "strikethrough"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:4af8b07cda04a434e7e1c3fbcaff21e2151d9f85c3de758865d4005049c48a4e
+COMPLEXITY : 2
+INSTRUCTION : Make “ALERT” bold and underline “required” in the text “ALERT update required.”
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "ALERT update required", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "ALERT update required", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "ALERT", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "required", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "ALERT", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "required", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "update", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "update", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:4c368a11e5f5755512f294ebb37f1fcce2f193a81092044b33133e71a6ab260c
+COMPLEXITY : 2
+INSTRUCTION : Make “nearly complete” bold and italic.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Status is nearly complete", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Status is nearly complete", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "nearly complete", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "nearly complete", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:4e22d115780998cf0e33680d4563bde59099e53b404fbe80299373ddada76b6f
+COMPLEXITY : 1
+INSTRUCTION : Set paragraph 3 to 1.5 line spacing.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:4f531cad63f4a851e7b61d32e7e80a8c109262d6bcc889349f4ddf7d0a28ae43
+COMPLEXITY : 1
+INSTRUCTION : Underline “required”.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "ALERT update required", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "ALERT", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "ALERT", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "required", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "update", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "update", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "ALERT update required", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "ALERT", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "required", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "ALERT", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "required", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "update", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "update", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:50760653f8b9aa3831f5f3674653057aaa9620e079dbd770fd72c465a221d7a0
+COMPLEXITY : 2
+INSTRUCTION : Write the sentence "We discussed The Silent Harbor yesterday." and italicize only the phrase "The Silent Harbor".
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "We discussed The Silent Harbor yesterday.", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "The Silent Harbor", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "We discussed", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "yesterday", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:512740969888ccdac590ee37697e8954730904b0770ad6c035623b031a2bbe4f
+COMPLEXITY : 1
+INSTRUCTION : Type carry forward on the first line and retire this entry on the second line.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "carry forward\nretire this entry", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:55018da2a40a54d2a7abf99f9bb9d3f315c447f014aa6491f0b272cc58bb4d6a
+COMPLEXITY : 2
+INSTRUCTION : Make both 2 characters superscript in a2 + b2.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "a2 + b2", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "a2 + b2", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "2#0", "verticalAlign"], "value": "superscript", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "2#1", "verticalAlign"], "value": "superscript", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:568b2b0850c0a7cd235b37c193890e5224b3c2a4aa0dc339bc4772a073ff4087
+COMPLEXITY : 1
+INSTRUCTION : Create two paragraphs with the text compact note and spaced note.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "compact note\nspaced note", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:576badbf805110253c431977c70256ca142d197af5e0f40e16a27ee7f7d74160
+COMPLEXITY : 5
+INSTRUCTION : Create three paragraphs exactly as follows: "Opening frame: scope and context", "Evidence block: signals and details", and "Decision note: action and owner". Apply single spacing to the opening paragraph, double spacing to the evidence paragraph, and 1.5 spacing to the decision paragraph. Make sure all document text is font size 12 and no other font size is used.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["style", "fontSizeOnly"], "value": "12", "return_type": "obj", "f": "word-document"}
+      ]
+================================================================================
+HASH : hoare:v1:58406b9efdea04f643d16a41305e5ca09536a8a747c60ecbca2ea8fe2b50e3c9
+COMPLEXITY : 1
+INSTRUCTION : Make “Checkpoint Log” bold and leave “notes pending” unbolded.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Checkpoint Log\nnotes pending", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Checkpoint Log\nnotes pending", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Checkpoint Log", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "notes pending", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:59dff18e0f377665b894876e82e26e7ad1649e4056321e7e8265c0d0630c4c31
+COMPLEXITY : 1
+INSTRUCTION : Apply a blue text background to “marker” only, leaving “active” unformatted.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "marker active", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "marker active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "marker", "backgroundColor"], "value": "blue", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "active", "backgroundColor"], "value": "normal", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:5cff049d1a115c2cb7e170e36c3fa7edbc44c04dd61312e12259adf5ac140b44
+COMPLEXITY : 1
+INSTRUCTION : Insert a blank table with 2 rows and 4 columns into the document.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["tables", "0", "shape"], "value": "2x4", "return_type": "obj", "f": "word-table"}
+      ]
+================================================================================
+HASH : hoare:v1:62c3428c84c7217f7fb0ff76f98ee4a85020024ed6592bf18137f8e30b6be8fa
+COMPLEXITY : 1
+INSTRUCTION : Make “Weekly Plan” bold.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Weekly Plan\nediting in progress\nready tomorrow", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Weekly Plan\nediting in progress\nready tomorrow", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Weekly Plan", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:64ef717ba7b50792beac035689e18c02ef8096c2ed14d0adb0f83b407570e4be
+COMPLEXITY : 1
+INSTRUCTION : Set the third paragraph’s line spacing to 2.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.15", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.15", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:651dbac54dc7de85f01d4da13e8ceadc0c4d6c76a55710e05769982c41918224
+COMPLEXITY : 1
+INSTRUCTION : Make the first 2 in a2 + b2 superscript.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "a2 + b2", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "a2 + b2", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "2#0", "verticalAlign"], "value": "superscript", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:655ce1ff5f1584ffeb6a90fc42c048283fa269082bdcccbc66467222a9bd95d0
+COMPLEXITY : 2
+INSTRUCTION : Make “moss” green and “amber” orange.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "moss amber", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "moss amber", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "moss", "color"], "value": "green", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "amber", "color"], "value": "orange", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:672a7ecea14e851e49cbfb30a0bdda7527cc8ab412050648f5beac5ce4042132
+COMPLEXITY : 1
+INSTRUCTION : Use these lab sample codes to make a clean unique list with one code per line, keeping the first appearance order only: R18, M02, R18, K77, M02, P31, K77.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "R18\nM02\nK77\nP31", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:67391eb748a913aeb4ac97b04dd11a08d7c1df6c6fc8112b379f5165e7ffe4a2
+COMPLEXITY : 1
+INSTRUCTION : Type small note big note plain note on one line.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "small note big note plain note", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:67d1941489767665030c955560405b75dce855d3d03df13739a38d9495f7bed0
+COMPLEXITY : 2
+INSTRUCTION : Create two lines with "carry forward" on the first line and "retire this entry" on the second line. Apply strikethrough only to the second line.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "carry forward\nretire this entry", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "retire this entry", "strikethrough"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "carry forward", "strikethrough"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:6851082eae2b99de2fbefc911585ed4fbbd546a3021e29594144b073010bdc17
+COMPLEXITY : 3
+INSTRUCTION : Create a two-line note with "Field Notes" on the first line and "draft copy" on the second line. Make the text on the first line both bold and underlined.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Field Notes\ndraft copy", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Field Notes", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Field Notes", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "draft copy", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "draft copy", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:68db595a2da144ec1e37bec7d1b4882c8f07b39f488677c713114fbc625609e2
+COMPLEXITY : 2
+INSTRUCTION : Make Stage and Flag bold.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Owner", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Mina", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Review", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Active", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Owner", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Stage", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Flag", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Mina", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Review", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Active", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:6a48454b2d411a24ed5412c3afd4cec4f3a768f1ed6e57682e9d0da9c768b470
+COMPLEXITY : 1
+INSTRUCTION : Create a two-line note with Checkpoint Log on the first line and notes pending on the second line.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Checkpoint Log\nnotes pending", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:6bf91dcba8a64dcd8c1b83f35c3098e6bdced6053f31f6389996918f942cc45d
+COMPLEXITY : 3
+INSTRUCTION : Create three paragraphs exactly as follows: "Opening frame: scope and context", "Evidence block: signals and details", and "Decision note: action and owner", then set the first paragraph to single spacing and the second paragraph to double spacing.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:6c3096bd7a24946c10ed172004555f061e5cb1aa93984f2798fa6ec65b871b0a
+COMPLEXITY : 1
+INSTRUCTION : Change the word “summary” to font size 16.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "check the summary now", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "summary", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "check the", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "check the", "fontSizeNot"], "value": "16", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "now", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "now", "fontSizeNot"], "value": "16", "return_type": "obj", "f": "word-text-style"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "check the summary now", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "summary", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "summary", "fontSize"], "value": "16", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "check the", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "check the", "fontSizeNot"], "value": "16", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "now", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "now", "fontSizeNot"], "value": "16", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:6ca9604f1dfe863c25e341daef963a650ee2434582b743bf956cbcdac53e38d1
+COMPLEXITY : 2
+INSTRUCTION : Set paragraph 1 to single spacing and paragraph 2 to double spacing.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:6d342447b42f5a64284e2208011325caf725e090de1ff27db9b87c63cd1211f8
+COMPLEXITY : 1
+INSTRUCTION : Write "Check budget and timeline".
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Check budget and timeline", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:6d364c2256952223caad8bd233d3dee26aa74ae86eb5f6b8eba800ce789ab81d
+COMPLEXITY : 1
+INSTRUCTION : Create four paragraphs in this order: "Source queue", "Park, Ji. "Harbor Sampling Log." Field Archive Review, 2021.", "Nolan, Avery. "Bridge Sensor Memo." Urban Systems Notes, 2022.", and "Add the latest calibration note [REF]". Then change only the [REF] marker in the fourth paragraph to [1], and add a reference list entry: [1] Rao, Lina. "Calibration Trace." Applied Sensor Letters, 2025.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Source queue\nPark, Ji. \"Harbor Sampling Log.\" Field Archive Review, 2021.\nNolan, Avery. \"Bridge Sensor Memo.\" Urban Systems Notes, 2022.\nAdd the latest calibration note [1]\n[1] Rao, Lina. \"Calibration Trace.\" Applied Sensor Letters, 2025.", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["notContains"], "value": "[REF]", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:707fa510a2db3d89f3829fabb0c531db506fa35fbd36aaa105399e5ab9a78633
+COMPLEXITY : 1
+INSTRUCTION : Type NH3 in the document.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "NH3", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:71a5ee49593052c915fe6743f7ff30e0f5c71b7ee80766b88bbdd0092c84ac5b
+COMPLEXITY : 2
+INSTRUCTION : Type ALERT update required, then make ALERT bold without underlining it, and ensure update and required are not bold or underlined.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "ALERT update required", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "ALERT", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "ALERT", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "required", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "update", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "update", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:7230c53362f731745d3b42a81ac0876348e5ffcbe5b2b7abbc4078f9ab17c65c
+COMPLEXITY : 1
+INSTRUCTION : Make “Field Notes” bold.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Field Notes\ndraft copy", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Field Notes\ndraft copy", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Field Notes", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "draft copy", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "draft copy", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:72aacb74e688dad0757c871b9324a05d4c3b3df2b65f2a2694a0519f1215b6dd
+COMPLEXITY : 2
+INSTRUCTION : Make “Weekly Plan” bold and “editing in progress” italic.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Weekly Plan\nediting in progress\nready tomorrow", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Weekly Plan\nediting in progress\nready tomorrow", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Weekly Plan", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "editing in progress", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:740f7816110084016392711da6a3cfa22d2b7ea1b8c89b7ac51a23646552c232
+COMPLEXITY : 1
+INSTRUCTION : Make only the word green green in the sentence please review the green section.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "please review the green section", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "please review the green section", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "green", "color"], "value": "green", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "please review the", "color"], "value": "normal", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "section", "color"], "value": "normal", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:74460123c888de53151bc354b609d43b0f828bb89ec746810c8e48b0153ee7fd
+COMPLEXITY : 1
+INSTRUCTION : Create a two-line note with “Field Notes” on the first line and “draft copy” on the second line.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Field Notes\ndraft copy", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:77f573419c017f0422837be49b4e1feb13056517b579e819224fd17ba07f03f2
+COMPLEXITY : 3
+INSTRUCTION : Please type "a2 + b2" and make both number 2 characters superscript.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "a2 + b2", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "2#0", "verticalAlign"], "value": "superscript", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "2#1", "verticalAlign"], "value": "superscript", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:7dd9d65e4ba3158df15c0f64f524a259a5d3b2883057d6acebe67c2048212c5c
+COMPLEXITY : 3
+INSTRUCTION : Write "Check budget and timeline" and underline the words "budget" and "timeline".
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Check budget and timeline", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "budget", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "timeline", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:7e6e23db2a7aaffe5510c063ee389ef7b491fcc89616e5fe03c91d5b0207ce3d
+COMPLEXITY : 1
+INSTRUCTION : Set all document text to font size 12 only.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["style", "fontSizeOnly"], "value": "12", "return_type": "obj", "f": "word-document"}
+      ]
+================================================================================
+HASH : hoare:v1:7e947c8832b66d3bd778c7ead9a70f061208158ee4881d6893d818bc7816c947
+COMPLEXITY : 2
+INSTRUCTION : Create a three-line note with “Weekly Plan”, “editing in progress”, and “ready tomorrow”, and make “Weekly Plan” bold.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Weekly Plan\nediting in progress\nready tomorrow", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Weekly Plan", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:81b93e74fb3db23c4a65fc769312251b056c1f94ace1d55083f6ef12940730df
+COMPLEXITY : 2
+INSTRUCTION : Please type "marker active" and apply a blue text background only to the word "marker".
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "marker active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "marker", "backgroundColor"], "value": "blue", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "active", "backgroundColor"], "value": "normal", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:8539adaaf4019ad64845110e6b724cb83336fae3fa7bc1a91e7547099943fcd5
+COMPLEXITY : 3
+INSTRUCTION : Please type "schedule ready" and format the whole line in Tahoma with font size 15.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "schedule ready", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "schedule ready", "fontFamily"], "value": "Tahoma", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "schedule ready", "fontSize"], "value": "15", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:8608b2f0f3d8ff5e1a111801cdc470dfe14a9d5c9395d88fc31fcb45444a0808
+COMPLEXITY : 1
+INSTRUCTION : Set the first paragraph to Heading 2 style.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Internal Memo", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Internal Memo", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "namedStyleType"], "value": "heading2", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:899f8173eb227b6bb0d71996d327cde63ef3b04b0bf3107878066ca586c27e1d
+COMPLEXITY : 4
+INSTRUCTION : Write exactly three lines: "Owner: Mina", "Stage: Review", and "Flag: Active". Make only the labels before the colon bold.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Owner", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Stage", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Flag", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Mina", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Review", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Active", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:89f69fe177deeb81aea3b5d71d744c088544d7df06054e9cc05edc3ad06cdc6a
+COMPLEXITY : 2
+INSTRUCTION : Set the first paragraph’s line spacing to 1.15 and the second paragraph’s line spacing to 1.5.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.15", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:8af2dbe1529f05054a9362e2ddfa87d8f83b37543fbc9de0c9d3511ab6793603
+COMPLEXITY : 1
+INSTRUCTION : Make the second 2 in a2 + b2 superscript.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "a2 + b2", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "2#0", "verticalAlign"], "value": "superscript", "return_type": "obj", "f": "word-text-style"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "a2 + b2", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "2#0", "verticalAlign"], "value": "superscript", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "2#1", "verticalAlign"], "value": "superscript", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:8b3202bba6586e08e655af48aa83eb2e2b1f89b64fffdc647496c6d45848e078
+COMPLEXITY : 2
+INSTRUCTION : Type check the summary now, then make only summary italic and set it to font size 16.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "check the summary now", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "summary", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "check the", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "check the", "fontSizeNot"], "value": "16", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "now", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "now", "fontSizeNot"], "value": "16", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:8c4c13906e4bbc81dc6e9615ec80895e468e367496c72f5e883dfda7d18b1960
+COMPLEXITY : 1
+INSTRUCTION : Create four separate lines with "delta", "alpha", "charlie", and "bravo". Then reorder the lines alphabetically.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha\nbravo\ncharlie\ndelta", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:8d0054d2547a5940a1cd0c12653b999da809e94a6fbad1db70765e076e8c1462
+COMPLEXITY : 1
+INSTRUCTION : Make “Signal Ledger” bold.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Signal Ledger", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Signal Ledger", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Signal Ledger", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:8ddf1904bb6c20b953cba78e1972b315c5781d102771ce20b9ce0fb9c0a02c86
+COMPLEXITY : 1
+INSTRUCTION : Select “big note” and change its font size to 18, leaving “small note” and “plain note” unchanged.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "small note big note plain note", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "small note big note plain note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "big note", "fontSize"], "value": "18", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "small note", "fontSizeNot"], "value": "18", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "plain note", "fontSizeNot"], "value": "18", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:8df90f42604cde1484b35b954f7ea48103f660f2782018b4df64aea50c21f7e4
+COMPLEXITY : 2
+INSTRUCTION : Please type "shift this memo" on a single line and right-align that paragraph.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "shift this memo", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "horizontalAlign"], "value": "right", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:8e55616e7542b0739b4b22ede4565a8d778181e84aee23c775f714034e1be946
+COMPLEXITY : 3
+INSTRUCTION : Write exactly three lines: "Owner: Mina", "Stage: Review", and "Flag: Active", and make only Owner, Stage, and Flag bold.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Owner", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Stage", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Mina", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Review", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Active", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:8ff8b80586377f9313414b13e33e225d4526eee22ff0b2434fdeafef9bb86d0e
+COMPLEXITY : 1
+INSTRUCTION : Underline the word “budget.”
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Check budget and timeline", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Check budget and timeline", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "budget", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:92148307f5309fb5527b1c6c1fb3ff7afcb7938a8d7c6007a2619dee0e0ee926
+COMPLEXITY : 1
+INSTRUCTION : Make “amber” orange.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "moss amber", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "moss", "color"], "value": "green", "return_type": "obj", "f": "word-text-style"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "moss amber", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "moss", "color"], "value": "green", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "amber", "color"], "value": "orange", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:93578b57964efff0d08eef82de1e50cbb13e840846ec6705a15f4f6c2b772ed9
+COMPLEXITY : 1
+INSTRUCTION : Type a2 + b2 in the document.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "a2 + b2", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:94d91488f3f9caa36e5818f5ee77a63ed1f2a5319611c197b37d24a2ab0d1a1a
+COMPLEXITY : 1
+INSTRUCTION : Set the line spacing of the first paragraph to 1.15.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.15", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:99f4c9d450a6ea505a2797cb02ce5f65d0b2fccc93cfd1957ea3bf6ecbb14a33
+COMPLEXITY : 1
+INSTRUCTION : Please write the phrase "river audit memo" so that every word starts with a capital letter.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "River Audit Memo", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:9a38f4cb929be0720ec93fee3bd1340168fb9a74ba08277e8369ac07016391fc
+COMPLEXITY : 4
+INSTRUCTION : Set paragraph 1 to single spacing, paragraph 2 to double spacing, paragraph 3 to 1.5 spacing, and set all document text to font size 12.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["style", "fontSizeOnly"], "value": "12", "return_type": "obj", "f": "word-document"}
+      ]
+================================================================================
+HASH : hoare:v1:9bd31891886b3988ea0be5fd63df6a13ff8061b736c95b3887480baafee3f554
+COMPLEXITY : 1
+INSTRUCTION : Center-align only the second paragraph.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "plain note remains left\nfocus line moves inward", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "plain note remains left\nfocus line moves inward", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "horizontalAlign"], "value": "center", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "horizontalAlignNot"], "value": "center", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:a23304ceae51301a11048562d9486cf2763ea981fb58d36be87534c9fdb451f7
+COMPLEXITY : 1
+INSTRUCTION : Make “nearly complete” bold.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Status is nearly complete", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Status is nearly complete", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "nearly complete", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:a350e68829a8cecb60384cae2383c3343f685a5a00a52e3a37d61aa2c9a8f388
+COMPLEXITY : 2
+INSTRUCTION : Create three paragraphs: "reference note", "archive this note", and "closing note". Apply strikethrough only to the entire middle paragraph.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "reference note\narchive this note\nclosing note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "archive this note", "strikethrough"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "reference note", "strikethrough"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "closing note", "strikethrough"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:a4c956588a7ab962dd0e57b30769a7b8f834c35717dfcee1a8e78660dc8fd271
+COMPLEXITY : 1
+INSTRUCTION : Create the document body text exactly as: “Opening frame: scope and context”, “Evidence block: signals and details”, and “Decision note: action and owner”.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:a65e9eb9988e14c8dbc0c3acba88534ac1a28f860183d7a09107adfaad72bf54
+COMPLEXITY : 1
+INSTRUCTION : Create the line "temp report temp checklist". Then replace every occurrence of "temp" with "final".
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "final report final checklist", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:ab06483c0bf4a1dc53cd86fe24467af2d9f22e071431422498b2d65f8ea47815
+COMPLEXITY : 1
+INSTRUCTION : Write the sentence “The draft needs revision.”
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "The draft needs revision.", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:ab342244c9c8eb1fce425a5762fd0b59ae0be4dadb1e21b5d6251d060d799bf4
+COMPLEXITY : 1
+INSTRUCTION : Write these short notes on separate lines in the same order: "Log sample." "Flag anomaly." "Close review."
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Log sample.\nFlag anomaly.\nClose review.", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:abee6c30a673815b4c13159e3cdbe803f8c040f1b83875c2755a7b9343a69911
+COMPLEXITY : 1
+INSTRUCTION : Set only the second paragraph to double line spacing.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "compact note\nspaced note", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "compact note\nspaced note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacingNot"], "value": "2", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:ac75db623e10da7536a31e3c111bc3ddc933b385f4e4f1e09477b113701fd23b
+COMPLEXITY : 2
+INSTRUCTION : Type Status is nearly complete and make nearly complete bold.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Status is nearly complete", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "nearly complete", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:ae574f2d39335cd5e74b09547f69e7453619dd58cc4c1672011c450708201794
+COMPLEXITY : 1
+INSTRUCTION : Make “editing in progress” italic.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Weekly Plan\nediting in progress\nready tomorrow", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Weekly Plan", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Weekly Plan\nediting in progress\nready tomorrow", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Weekly Plan", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "editing in progress", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:afcdf1a4456defb06a8131f159b28bdc24e7deaeab2fab0262fd7b1b828feb03
+COMPLEXITY : 2
+INSTRUCTION : Please write "Submit by 2026-08-14" and underline only the date.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Submit by 2026-08-14", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "2026-08-14", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Submit by", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:afeaa6b03c442ac66825bb041ada8de03e9ac311245ff1f6bd7709c554df1b2b
+COMPLEXITY : 2
+INSTRUCTION : Set the third paragraph to 1.5 line spacing and make all document text font size 12.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["style", "fontSizeOnly"], "value": "12", "return_type": "obj", "f": "word-document"}
+      ]
+================================================================================
+HASH : hoare:v1:b49003ca6e3751e6e361ea62acaf28ff725bbd642927fd74c58c60f927d9cf46
+COMPLEXITY : 1
+INSTRUCTION : Create a three-line note with “Weekly Plan”, “editing in progress”, and “ready tomorrow”.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Weekly Plan\nediting in progress\nready tomorrow", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:b6a8577caca23613b3546dd842f26f63ca2d199a0709876115c745b8b966c0a6
+COMPLEXITY : 1
+INSTRUCTION : Make only the word “summary” italic.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "check the summary now", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "check the summary now", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "summary", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "check the", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "check the", "fontSizeNot"], "value": "16", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "now", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "now", "fontSizeNot"], "value": "16", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:b837dbebf270c8e3b385781a20419b443725db3bb3c7ab0be1a11a136ee162ee
+COMPLEXITY : 1
+INSTRUCTION : Type marker active in the document.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "marker active", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:b8a648d357bf7b83f731e8fdcba4d316806fe2606d611c9c62fb669330ee0651
+COMPLEXITY : 2
+INSTRUCTION : Type "Internal Memo" on a single line and set that line to Heading 2 style.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Internal Memo", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "namedStyleType"], "value": "heading2", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:b8f652ff9f90002565ba36097e2014e57e79241644ab2672c80cb4ef353929ae
+COMPLEXITY : 1
+INSTRUCTION : Type check the summary now.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "check the summary now", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:bbdb92ba6e1245a39a8a3a90c6cb027442a35822ca54ec49f2ccfee7fc43ebe4
+COMPLEXITY : 1
+INSTRUCTION : Type Deadline confirmed in the document.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Deadline confirmed", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:be0f9a1969ecc622c54e5f2d36e9b861f9a07120ccf7b835409376f1fd21cf34
+COMPLEXITY : 1
+INSTRUCTION : Create this draft with extra blank lines between the entries: "north", "south", and "east". Then remove the blank lines so only one line break remains between entries.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "north\nsouth\neast", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:be8518fd3b0f075d83b4b9ec85154b977a014c5ae707786285b57778c9ba8027
+COMPLEXITY : 1
+INSTRUCTION : Type Internal Memo on a single line.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Internal Memo", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:bf1c9145f8a9a9943c4f595eaa697b26cdac2d24213934a7c061455a85fa30b9
+COMPLEXITY : 1
+INSTRUCTION : Write please review the green section.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "please review the green section", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:bf3609fc36b5eb8fc2473736203abfa8039e6af1c3d7cbb323967cde74afb5c8
+COMPLEXITY : 2
+INSTRUCTION : Create two paragraphs: "compact note" and "spaced note". Then set only the second paragraph to double line spacing.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "compact note\nspaced note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacingNot"], "value": "2", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:bf7ba3fc5af2efc53213c584a456dea7aed05d18bf2be7c5bb92760d77d104a1
+COMPLEXITY : 3
+INSTRUCTION : Please write "moss amber" and make "moss" green while making "amber" orange.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "moss amber", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "moss", "color"], "value": "green", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "amber", "color"], "value": "orange", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:c41443401278fdaceddd6e124aa92e18a79be1e903ecb81c230fe712fa72486d
+COMPLEXITY : 2
+INSTRUCTION : Create the comma-separated text "Name, Score, Ilya, 87, Noor, 91". Then convert it into a table with 3 rows and 2 columns so the first row is Name, Score, the second row is Ilya, 87, and the third row is Noor, 91.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["tables", "0", "shape"], "value": "3x2", "return_type": "obj", "f": "word-table"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["tables", "0", "cellsText"], "value": "Name|Score|Ilya|87|Noor|91", "return_type": "obj", "f": "word-table"}
+      ]
+================================================================================
+HASH : hoare:v1:c5059483d2e68a80ea934df8722c3ff6004dda62dde865462d936c078e9affe5
+COMPLEXITY : 1
+INSTRUCTION : Underline the word “timeline”.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Check budget and timeline", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "budget", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Check budget and timeline", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "budget", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "timeline", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:c50cd4f303c0ed00f4bfae2dd908c2be07edbcadb076eef204921e6759fb2d7f
+COMPLEXITY : 2
+INSTRUCTION : Create a two-line note with "Checkpoint Log" on the first line and "notes pending" on the second line. Make the first line bold.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Checkpoint Log\nnotes pending", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Checkpoint Log", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "notes pending", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:c5fe3258ec313527dfd4195ccf90c87069a1279d01066ad06e34ef4f5a8cbd79
+COMPLEXITY : 1
+INSTRUCTION : Underline “Field Notes”.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Field Notes\ndraft copy", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Field Notes", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "draft copy", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "draft copy", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Field Notes\ndraft copy", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Field Notes", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Field Notes", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "draft copy", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "draft copy", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:c6bf0b602abbdf2bbf8396a9f1b4f6049429e2f056d8b55d7eda3d8ecbe67a5f
+COMPLEXITY : 2
+INSTRUCTION : Write moss amber and make moss green.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "moss amber", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "moss", "color"], "value": "green", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:c7402a637d18e2b0680b726685a37d0122263d0892c83e48fc65b0341ca9e2c4
+COMPLEXITY : 2
+INSTRUCTION : Create the document with exactly these three paragraphs: “Opening frame: scope and context”, “Evidence block: signals and details”, and “Decision note: action and owner”, and set the first paragraph to single spacing.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:c78b94da80308a808a28a76d91b68d84d17ed995d279b3106b534a7376992b06
+COMPLEXITY : 1
+INSTRUCTION : Type NH3 and format only the 3 as subscript.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "NH3", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "NH3", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "3", "verticalAlign"], "value": "subscript", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "N", "verticalAlign"], "value": "normal", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "H", "verticalAlign"], "value": "normal", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:c89238a38e3d20027072edbcb454abc6f0842004c6d03600c648e3ae185def11
+COMPLEXITY : 1
+INSTRUCTION : Create the document body text exactly as Name, Score, Ilya, 87, Noor, 91.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Name, Score, Ilya, 87, Noor, 91", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:ca43b43bc71ebe461b8f1941436d133ff247a7318ebfa800467c35dc8548a86f
+COMPLEXITY : 1
+INSTRUCTION : Select “priority marker” and change its font size to 18.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "priority marker", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "priority marker", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "priority marker", "fontSize"], "value": "18", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:cbd7f8743ad8d0fb4fd67fc11276e1ff90bd4dd159997ff414da8ff10ba2aab0
+COMPLEXITY : 2
+INSTRUCTION : Type schedule ready and set it in Tahoma.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "schedule ready", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "schedule ready", "fontFamily"], "value": "Tahoma", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:ccdde142b38bbc052b090d563a608d905e22954a80bc437072bf41a1171aa909
+COMPLEXITY : 2
+INSTRUCTION : Please write "Deadline confirmed" and underline only the word "Deadline".
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Deadline confirmed", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Deadline", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "confirmed", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:d19759b21923d529d357693146dd152c1392e8f9d88c2c4077579d1c6993770a
+COMPLEXITY : 1
+INSTRUCTION : Write Status is nearly complete in the document body.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Status is nearly complete", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:d29cc603cc9730dd66e6bfdae6ec183ff272ca673191c18400f6cb384da76fb1
+COMPLEXITY : 2
+INSTRUCTION : Write "small note big note plain note" on one line. Then change only "big note" to font size 18.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "small note big note plain note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "big note", "fontSize"], "value": "18", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "small note", "fontSizeNot"], "value": "18", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "plain note", "fontSizeNot"], "value": "18", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:d42e2a9d8ac815f1d58de20154f755ef1e03f9832d28399372fe7a4e4c82a811
+COMPLEXITY : 1
+INSTRUCTION : Set the second paragraph to double spacing.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:d5440e0c2339b8c15f7d30496e4bd4c0cd1fd57bddadf758d5f4fbd30df15d49
+COMPLEXITY : 1
+INSTRUCTION : Type schedule ready in the document.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "schedule ready", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:d67c2c2d0a25b889bdd0707305bdbbb9cdff1fe04a04314f53702e5aa055302f
+COMPLEXITY : 3
+INSTRUCTION : Set paragraph 2 to double spacing, paragraph 3 to 1.5 spacing, and make all document text font size 12.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Opening frame: scope and context\nEvidence block: signals and details\nDecision note: action and owner", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["style", "fontSizeOnly"], "value": "12", "return_type": "obj", "f": "word-document"}
+      ]
+================================================================================
+HASH : hoare:v1:d75f201c881beb3b327e84f03444c890549ad7fbfeba085df6f97a34b81fd950
+COMPLEXITY : 1
+INSTRUCTION : Convert the comma-separated text into a 3x2 table with Name and Score in the first row, Ilya and 87 in the second row, and Noor and 91 in the third row.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Name, Score, Ilya, 87, Noor, 91", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["tables", "0", "shape"], "value": "3x2", "return_type": "obj", "f": "word-table"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["tables", "0", "cellsText"], "value": "Name|Score|Ilya|87|Noor|91", "return_type": "obj", "f": "word-table"}
+      ]
+================================================================================
+HASH : hoare:v1:d87032737ed45ee94bb68a699c3a61302a232bc3f677c92a0fb3fe14c95c9603
+COMPLEXITY : 1
+INSTRUCTION : Italicize only “phase two review.”
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "phase one\nphase two review\nphase three", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "phase one\nphase two review\nphase three", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "phase two review", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "phase one", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "phase three", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:d88caed5bdb10833c8d585c0063f9a67c389ba170d72d11d6cd24e901e09fe5a
+COMPLEXITY : 2
+INSTRUCTION : Create three paragraphs in this order: alpha note, beta note, and gamma note, and set the first paragraph’s line spacing to 1.15.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.15", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:d9254632da51b2e1f3c30fe2c688517a12e9b0b79189c24dd68519e97f59054e
+COMPLEXITY : 1
+INSTRUCTION : Underline only the word “Deadline”.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Deadline confirmed", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Deadline confirmed", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Deadline", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "confirmed", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:dadd841484c49f71a707f0c1d3941cf2b470851602a8b018fba82bcfa9e48135
+COMPLEXITY : 1
+INSTRUCTION : Underline only 2026-08-14 in “Submit by 2026-08-14”.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Submit by 2026-08-14", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Submit by 2026-08-14", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "2026-08-14", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Submit by", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:dba37e95b2e224faa0800fe639f1a5f4ef237a25dded1f8a9c117c184410c4bb
+COMPLEXITY : 1
+INSTRUCTION : Type shift this memo on a single line.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "shift this memo", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:df242512398cd107b605c99a98f31379ac4cb27ea716b6db321e2bf5a061550e
+COMPLEXITY : 1
+INSTRUCTION : Italicize only “The Silent Harbor” in the sentence.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "We discussed The Silent Harbor yesterday.", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "We discussed The Silent Harbor yesterday.", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "The Silent Harbor", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "We discussed", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "yesterday", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:e1f1db3df050b81c6d619d3d4f14b1aa12d6325e804a8b0319b2b759a91e732e
+COMPLEXITY : 1
+INSTRUCTION : Type Signal Ledger on a single line.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Signal Ledger", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:e6031d1c4436c3410361f93c2a3239d44b7227b19fee062ccc55dd6302ef40f2
+COMPLEXITY : 2
+INSTRUCTION : Create three lines with "phase one", "phase two review", and "phase three". Make only the middle line italic.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "phase one\nphase two review\nphase three", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "phase two review", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "phase one", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "phase three", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:e713760eced115b0511679cfa3f07d8cac5f93b94c306341feb1022e87a31b37
+COMPLEXITY : 1
+INSTRUCTION : Select “schedule ready” and change its font to Tahoma.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "schedule ready", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "schedule ready", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "schedule ready", "fontFamily"], "value": "Tahoma", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:e725d5e25f24fbb385afd5bcdef2f4f8294b4f960be9c6a5fcbd8a1071d419d4
+COMPLEXITY : 1
+INSTRUCTION : Right-align the paragraph.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "shift this memo", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "shift this memo", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "horizontalAlign"], "value": "right", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:e9258b30129c1aa49e97d949a5af1a1843ea4c6f075d96cd15f71f5d253dba77
+COMPLEXITY : 2
+INSTRUCTION : Format “schedule ready” in Tahoma with font size 15.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "schedule ready", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "schedule ready", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "schedule ready", "fontFamily"], "value": "Tahoma", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "schedule ready", "fontSize"], "value": "15", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:ecc38fccf097aa83479115705a648b77fcba3c40a57c50e483dd1f965fcac22e
+COMPLEXITY : 1
+INSTRUCTION : Change the font size of “schedule ready” to 15.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "schedule ready", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "schedule ready", "fontFamily"], "value": "Tahoma", "return_type": "obj", "f": "word-text-style"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "schedule ready", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "schedule ready", "fontFamily"], "value": "Tahoma", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "schedule ready", "fontSize"], "value": "15", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:ed24363466d056993cced8134ac02afc6ad0ca7d1f7ef3acb66ec4a126707e4c
+COMPLEXITY : 2
+INSTRUCTION : Please type "balanced report note" on a single line and justify-align that paragraph.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "balanced report note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "horizontalAlign"], "value": "justify", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:ed8429d9a33e3c00710b65414813819993be6cea3b045ad73b2f534352b62b25
+COMPLEXITY : 1
+INSTRUCTION : Justify-align the paragraph.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "balanced report note", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "balanced report note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "horizontalAlign"], "value": "justify", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:ed93cac0d04faaceae5f208647f845f2ef7672b184586fefabedb8de61d8f378
+COMPLEXITY : 2
+INSTRUCTION : Type a2 + b2 and format the first 2 as superscript.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "a2 + b2", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "2#0", "verticalAlign"], "value": "superscript", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:ede34c3adfaf8cfffc83652f65ce6bc1ff1d2c0aa36b07afdd336812af197437
+COMPLEXITY : 1
+INSTRUCTION : Create the document with exactly two paragraphs: plain note remains left and focus line moves inward.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "plain note remains left\nfocus line moves inward", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:ee79c8f1717a726497ebfb050ce013e2a0ed0b8172a7808001d4fcb65028e199
+COMPLEXITY : 2
+INSTRUCTION : Make only “summary” italic and set it to font size 16.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "check the summary now", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "check the summary now", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "summary", "italic"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "summary", "fontSize"], "value": "16", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "check the", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "check the", "fontSizeNot"], "value": "16", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "now", "italic"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "now", "fontSizeNot"], "value": "16", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:f0b4ef259044404d9feb1080bc9d80c052be96726a15cd68069eef3232dacc23
+COMPLEXITY : 1
+INSTRUCTION : Apply Verdana to the text “status memo”.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "status memo", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "status memo", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "status memo", "fontFamily"], "value": "Verdana", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:f163a6d904cda92895af71f284287102b1eec45119cac42860486a5e6b5937f3
+COMPLEXITY : 4
+INSTRUCTION : Create three paragraphs in this order: "alpha note", "beta note", and "gamma note". Set their line spacing to 1.15, 1.5, and 2 respectively.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.15", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:f219a0990b0dcd79dc71e299302705b5b601163cc2c1e9311f47876b2d6eb2d5
+COMPLEXITY : 3
+INSTRUCTION : Set the line spacing of the three paragraphs to 1.15, 1.5, and 2 respectively.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.15", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "2", "lineSpacing"], "value": "2", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:f68c5553073a45f7506abeebc1ed6990a84dad1b1e424e2650e58830d4ae5223
+COMPLEXITY : 1
+INSTRUCTION : Create three paragraphs: “reference note”, “archive this note”, and “closing note”.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "reference note\narchive this note\nclosing note", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:f6b84118873ea634449f5b52dbfa2d4103dcda8dc8462445c5cf6aa1c433d907
+COMPLEXITY : 2
+INSTRUCTION : Create a two-line note with Field Notes on the first line and draft copy on the second line, and make Field Notes bold.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Field Notes\ndraft copy", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Field Notes", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "draft copy", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "draft copy", "underline"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:f84f4940520e9780063f972c5a50906f8361ec14c9f9ae458e945b26d78b320d
+COMPLEXITY : 1
+INSTRUCTION : Set the second paragraph’s line spacing to 1.5.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.15", "return_type": "obj", "f": "word-paragraph"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "alpha note\nbeta note\ngamma note", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "0", "lineSpacing"], "value": "1.15", "return_type": "obj", "f": "word-paragraph"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["paragraphs", "1", "lineSpacing"], "value": "1.5", "return_type": "obj", "f": "word-paragraph"}
+      ]
+================================================================================
+HASH : hoare:v1:f9a70badf42df566da7f8c62eac37e105470558bfd5df25428b1472638810bf3
+COMPLEXITY : 1
+INSTRUCTION : Make “moss” green.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "moss amber", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "moss amber", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "moss", "color"], "value": "green", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:fb957e4d4bec575f64879c0845443ee47db6116cd5ad2e5f8a6a3a945135cde0
+COMPLEXITY : 1
+INSTRUCTION : Type priority marker in the document.
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "priority marker", "return_type": "obj", "f": "word-body"}
+      ]
+================================================================================
+HASH : hoare:v1:fc7a21ee280a626f2865b21d33a90ca96f4694dd767911773cd179210091c701
+COMPLEXITY : 2
+INSTRUCTION : Write “Check budget and timeline” and underline the word “budget.”
+================================================================================
+
+null
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Check budget and timeline", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "budget", "underline"], "value": "true", "return_type": "obj", "f": "word-text-style"}
+      ]
+================================================================================
+HASH : hoare:v1:ffabd2bd6b954f58156d37612bfa216a88619f8fb1f08dfdfeed0121bbfbf50a
+COMPLEXITY : 3
+INSTRUCTION : Make only the labels Owner, Stage, and Flag bold.
+================================================================================
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"}
+      ]
+
+⬇
+
+[
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["text"], "value": "Owner: Mina\nStage: Review\nFlag: Active", "return_type": "obj", "f": "word-body"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Owner", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Stage", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Flag", "bold"], "value": "true", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Mina", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Review", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"},
+        {"match": "exact", "normalize_space": false, "case_sensitive": true, "param": null, "property": ["targets", "Active", "bold"], "value": "false", "return_type": "obj", "f": "word-text-style"}
+      ]

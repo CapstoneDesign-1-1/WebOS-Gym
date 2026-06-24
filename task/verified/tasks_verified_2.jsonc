@@ -1,0 +1,815 @@
+// Total counts: 20
+[
+  {
+    "task_id": "prozilla_file_find_01",
+    "instruction": "Find and open 'desktop.xml' under the .config folder.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => {\n  const title = [\n    ...document.querySelectorAll(\"p[class*='ProzillaOS-WindowTitle']\")\n  ].find((el) => el.textContent.trim() === \"desktop.xml (preview) - Notes\");\n  return title?.innerText ?? \"\";\n})();",
+          "value": "desktop.xml (preview) - Notes",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_file_find_02",
+    "instruction": "Find and open file 'Wallpaper10.png'.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => {\n  const title = [\n    ...document.querySelectorAll(\"p[class*='ProzillaOS-WindowTitle']\")\n  ].find((el) => el.textContent.trim() === \"Wallpaper10.png\");\n  return title?.innerText ?? \"\";\n})();",
+          "value": "Wallpaper10.png",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_setting_appearance_01",
+    "instruction": "I want to change the overall look of my system. Go to the appearance settings and switch the system theme to \"Mango\"",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => {\n    const has = document.querySelector(\".Mango-theme\")\n    return has?.className ?? \"\"\n})()",
+          "value": "Mango-theme",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_setting_appearance_02",
+    "instruction": "I want to change the appearance of my system to \"Aqua\"",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => {\n    const has = document.querySelector(\".Aqua-theme\")\n    return has?.className ?? \"\"\n})()",
+          "value": "Aqua-theme",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_setting_taskbar_01",
+    "instruction": "Please pin the \"Wordle\" application to the taskbar.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(()=>{\n    const has = [...document.querySelectorAll('.ProzillaOS-Taskbar__AppIcon:not([class*=\"_Hidden\"])')].find(el => el.title === \"Wordle\")\n    return has?.title ?? \"\"\n})()",
+          "value": "Wordle",
+          "match": "exact"
+        },
+        {
+          "mode": "console",
+          "script": "(()=>{\n    const has = [...document.querySelectorAll('.ProzillaOS-Taskbar__AppIcon[class*=\"_Hidden\"]')].find(el => el.title === \"Wordle\")\n    return has?.title ?? \"\"\n})()",
+          "value": "",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_setting_taskbar_02",
+    "instruction": "Please unpin the \"Commands\" application from the taskbar.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(()=>{\n    const has = [...document.querySelectorAll('.ProzillaOS-Taskbar__AppIcon:not([class*=\"_Hidden\"])')].find(el => el.title === \"Commands\")\n    return has?.title ?? \"\"\n})()",
+          "value": "",
+          "match": "exact"
+        },
+        {
+          "mode": "console",
+          "script": "(()=>{\n    const has = [...document.querySelectorAll('.ProzillaOS-Taskbar__AppIcon[class*=\"_Hidden\"]')].find(el => el.title === \"Commands\")\n    return has?.title ?? \"\"\n})()",
+          "value": "Commands",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_search_01",
+    "instruction": "Search and open the \"Bliss Radio\" application.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => {\n  const title = [\n    ...document.querySelectorAll(\"p[class*='ProzillaOS-WindowTitle']\")\n  ].find((el) => el.textContent.trim() === \"Bliss Radio\");\n  return title?.innerText ?? \"\";\n})();\n",
+          "value": "Bliss Radio",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_file_delete_01",
+    "instruction": "Delete 'ProzillaOS.png' from the Pictures folder.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => { const buttons = [...document.querySelectorAll(\"button.ProzillaOS-DirectoryList__File\")]; const found = buttons.find((el) => el.textContent.trim() === \"ProzillaOS.png\"); return found?.textContent.trim() ?? \"\"; })();",
+          "value": "",
+          "match": "exact"
+        },
+        {
+          "mode": "console",
+          "script": "(() => {\n  const input = document.querySelector(\"input[class*='_PathInput']\");\n  return input?.value ?? \"\";\n})();\n",
+          "value": "~/Pictures",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_file_edit_01",
+    "instruction": "Modify 'fizzbuzz.sh' inside the Scripts folder so that 'Buzz' is output when 'i' is divisible by 7. And let me know it is done.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => {\n  const has = [...document.querySelectorAll(\"p[class*='ProzillaOS-WindowTitle']\")].find((el) => el.textContent.includes(\"fizzbuzz.sh\"));\n  return has?.textContent.trim() ?? \"\";\n})();\n",
+          "value": "fizzbuzz.sh",
+          "match": "exact"
+        },
+        {
+          "mode": "console",
+          "script": "(() => {\n  const text = document.querySelector(\"textarea[class*='_View_']\")?.value ?? \"\";\n  return text.includes(\"i % 7 == 0\") ? \"i % 7 == 0\" : \"\";\n})();\n",
+          "value": "i % 7 == 0",
+          "match": "exact"
+        },
+        {
+          "mode": "console",
+          "script": "(() => {\n  const text = document.querySelector(\"textarea[class*='_View_']\")?.value ?? \"\";\n  return text.includes('OUTPUT+=\"Buzz\"') ? 'OUTPUT+=\"Buzz\"' : \"\";\n})();\n",
+          "value": "OUTPUT+=\"Buzz\"",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_properties_01",
+    "instruction": "Open the properties window of 'City Center.png' inside the Pictures/Crumbling City folder.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => { const has = [...document.querySelectorAll(\"p\")].find(el => el.textContent.includes(\"City Center.png - Properties\")); return has?.textContent.trim() ?? \"\";})();",
+          "value": "City Center.png - Properties",
+          "match": "exact"
+        },
+        {
+          "mode": "console",
+          "script": "(() => { const input = document.querySelector(\"input[class*='_PathInput']\"); return input?.value ?? \"\" ;})();",
+          "value": "~/Pictures",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_setting_desktop_01",
+    "instruction": "I want to hide all my desktop icons to keep my workspace clean. Please disable the desktop icons visibility option in the system settings.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => { const el = document.querySelector(\".ProzillaOS-Desktop .ProzillaOS-DirectoryList\"); return el?.className ?? \"\"; })();",
+          "value": "",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_appfilter_01",
+    "instruction": "I want to browse educational apps only. Please filter the App Center applications to display only the Education category.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => [...document.querySelectorAll(\"p[class*='_AppName_']\")].map(el => el.textContent.trim()).join(\",\"))();",
+          "value": "Logic Sim (WIP)",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_setting_appearance_03",
+    "instruction": "Please update my desktop wallpaper to the last option in the settings, then reveal the clean desktop so I can see it clearly.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => { const img = document.querySelector(\"img[alt='Desktop wallpaper']\"); return img?.getAttribute(\"src\") ?? \"\"; })();",
+          "value": "/assets/wallpapers/abstract-wallpaper-gradient-red.png",
+          "match": "exact"
+        },
+        {
+          "mode": "console",
+          "script": "(() => { const windows = document.querySelectorAll(\"div[class*='WindowView']\"); const unminimized = [...windows].filter(win => !win.className.includes(\"Minimized\")); return unminimized.map(win => win.querySelector(\"p\")?.textContent.trim() ?? \"Unknown\").join(\",\"); })();",
+          "value": "",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_file_delete&properties_01",
+    "instruction": "I want to delete japan.png and view properties of Farms.png.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => { const buttons = [...document.querySelectorAll(\"button.ProzillaOS-DirectoryList__File\")]; const found = buttons.find((el) => el.textContent.trim() === \"Japan.png\"); return found?.textContent.trim() ?? \"\"; })();",
+          "value": "",
+          "match": "exact"
+        },
+        {
+          "mode": "console",
+          "script": "(() => { const has = [...document.querySelectorAll(\"p\")].find(el => el.textContent.includes(\"Farms.png - Properties\")); return has?.textContent.trim() ?? \"\";})();",
+          "value": "Farms.png - Properties",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_taskbar&desktop_icon_01",
+    "instruction": "Unpin 'Terminal' from the taskbar, then disable 'Show icons' in Desktop.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => { const has = [...document.querySelectorAll('.ProzillaOS-Taskbar__AppIcon:not([class*=\"_Hidden\"])')].find(el => el.title === \"Commands\"); return has?.title ?? \"\"; })();",
+          "value": "",
+          "match": "exact"
+        },
+        {
+          "mode": "console",
+          "script": "(() => { const has = [...document.querySelectorAll('.ProzillaOS-Taskbar__AppIcon[class*=\"_Hidden\"]')].find(el => el.title === \"Commands\"); return has?.title ?? \"\"; })();",
+          "value": "Commands",
+          "match": "exact"
+        },
+        {
+          "mode": "console",
+          "script": "(() => { const el = document.querySelector(\".ProzillaOS-Desktop .ProzillaOS-DirectoryList\"); return el?.className ?? \"\"; })();",
+          "value": "",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_appearance&window_01",
+    "instruction": "Change the theme to 'Grape', update the wallpaper to 'Wallpaper6', and minimize all windows.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "(() => { const has = document.querySelector(\".Grape-theme\"); return has?.className ?? \"\"; })();",
+          "value": "Grape-theme",
+          "match": "exact"
+        },
+        {
+          "mode": "console",
+          "script": "(() => { const img = document.querySelector(\"img[alt='Desktop wallpaper']\"); return img?.getAttribute(\"src\") ?? \"\"; })();",
+          "value": "/assets/wallpapers/mesh-gradient-wallpaper-red-purple.png",
+          "match": "exact"
+        },
+        {
+          "mode": "console",
+          "script": "(() => { const windows = document.querySelectorAll(\"div[class*='WindowView']\"); const unminimized = [...windows].filter(win => !win.className.includes(\"Minimized\")); return unminimized.map(win => win.querySelector(\"p\")?.textContent.trim() ?? \"Unknown\").join(\",\"); })();",
+          "value": "",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_sheet_bmi_record_03",
+    "instruction": "I am organizing health assessment data for five team members and need to calculate their BMI metrics for our company wellness initiative. Could you please use the CDC BMI calculator to compute the BMI and categories for five individuals (Names: Alice, Bob, Charlie, Diana, Edward) with their respective heights and weights (Alice: 165 cm, 65 kg; Bob: 178 cm, 90 kg; Charlie: 170 cm, 70 kg; Diana: 158 cm, 75 kg; Edward: 185 cm, 85 kg), then save all their names, calculated BMI values, and BMI categories in the spreadsheet starting at A1 with appropriate headers?",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "sheet",
+          "cell": "A1",
+          "value": "Name",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B1",
+          "value": "BMI",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C1",
+          "value": "BMI Category",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A2",
+          "value": "Alice",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B2",
+          "value": "23.9",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C2",
+          "value": "Healthy Weight",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A3",
+          "value": "Bob",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B3",
+          "value": "28.4",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C3",
+          "value": "Overweight",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A4",
+          "value": "Charlie",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B4",
+          "value": "24.2",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C4",
+          "value": "Healthy Weight",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A5",
+          "value": "Diana",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B5",
+          "value": "30",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C5",
+          "value": "Obesity",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A6",
+          "value": "Edward",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B6",
+          "value": "24.8",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C6",
+          "value": "Healthy Weight",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_sheet_bmi_record_us_03",
+    "instruction": "I am compiling fitness assessment data for five team members and need their BMI calculated using US measurements. Could you please use the CDC BMI calculator to compute the BMI and categories for five individuals (Names: Alex, Brian, Carol, David, Emily) with their heights and weights in US units (Alex: 5 feet 8 inches, 170 pounds; Brian: 6 feet, 195 pounds; Carol: 5 feet 4 inches, 145 pounds; David: 5 feet 10 inches, 220 pounds; Emily: 5 feet 6 inches, 130 pounds), then record their names, calculated BMI values, and BMI categories in the spreadsheet starting at A1 with appropriate headers?",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "sheet",
+          "cell": "A1",
+          "value": "Name",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B1",
+          "value": "BMI",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C1",
+          "value": "BMI Category",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A2",
+          "value": "Alex",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B2",
+          "value": "25.8",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C2",
+          "value": "Overweight",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A3",
+          "value": "Brian",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B3",
+          "value": "26.4",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C3",
+          "value": "Overweight",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A4",
+          "value": "Carol",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B4",
+          "value": "24.9",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C4",
+          "value": "Healthy Weight",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A5",
+          "value": "David",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B5",
+          "value": "31.6",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C5",
+          "value": "Obesity",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A6",
+          "value": "Emily",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B6",
+          "value": "21",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C6",
+          "value": "Healthy Weight",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_sheet_bmi_filter_obesity_01",
+    "instruction": "I am conducting a health risk assessment for our organization and need to identify individuals whose BMI falls into a specific health category for targeted wellness interventions. Could you please use the CDC BMI calculator to check each person's BMI and category for three individuals (Names: Steve, James, John) with their measurements (Steve: 174 cm, 96 kg; James: 183 cm, 108 kg; John: 168 cm, 58 kg), then save only those matching the obesity criteria to the sheet in the format Name, BMI, and BMI Category starting at A1?",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "sheet",
+          "cell": "A1",
+          "value": "Name",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B1",
+          "value": "BMI",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C1",
+          "value": "BMI Category",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A2",
+          "value": "Alex",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B2",
+          "value": "25.8",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C2",
+          "value": "Overweight",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A3",
+          "value": "Brian",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B3",
+          "value": "26.4",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C3",
+          "value": "Overweight",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A4",
+          "value": "Carol",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B4",
+          "value": "24.9",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C4",
+          "value": "Healthy Weight",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A5",
+          "value": "David",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B5",
+          "value": "31.6",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C5",
+          "value": "Obesity",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A6",
+          "value": "Emily",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B6",
+          "value": "21",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C6",
+          "value": "Healthy Weight",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_sheet_bmi_reference_adult_01",
+    "instruction": "I am creating a health education resource for our employees and need to compile the official BMI classification system. Could you please visit the CDC BMI calculator site, find the complete adult BMI categories along with their corresponding BMI ranges, and save this reference information in the spreadsheet starting at A1 with column headers 'BMI Category' and 'BMI Range (kg/m2)'?",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "sheet",
+          "cell": "A1",
+          "value": "(?i).*BMI\\x*Category.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B1",
+          "value": "(?i).*BMI\\s*Range.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A2",
+          "value": "Underweight",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B2",
+          "value": ".*18\\.5.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A3",
+          "value": "Healthy Weight",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B3",
+          "value": ".*18\\.5.*25.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A4",
+          "value": "Overweight",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B4",
+          "value": ".*25.*30.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A5",
+          "value": "Obesity",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B5",
+          "value": ".*30.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A6",
+          "value": "(?i).*Class\\s*1\\s*Obesity.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B6",
+          "value": "30.*35",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A7",
+          "value": "(?i).*Class\\s*2\\s*Obesity.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B7",
+          "value": "35.*40",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A8",
+          "value": "(?i).*Class\\s*3\\s*Obesity.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B8",
+          "value": ".*40.*",
+          "match": "regex"
+        }
+      ]
+    }
+  }
+]

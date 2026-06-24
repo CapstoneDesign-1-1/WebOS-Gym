@@ -1,0 +1,164 @@
+[
+  {
+    "task_id": "prozilla_task_001",
+    "task_name": "Open Terminal and run pwd. Leave the output visible.",
+    "instruction": "Open Terminal and run `pwd`. Leave the output visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "/home/prozilla-os",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_002",
+    "task_name": "Open Terminal, run cd ~/Desktop && pwd, and keep the result on screen.",
+    "instruction": "Open Terminal, run `cd ~/Desktop && pwd`, and keep the result on screen.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "/home/prozilla-os/Desktop",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_003",
+    "task_name": "Use which to resolve a script path.",
+    "instruction": "Open Terminal and run `which ~/Scripts/fizzbuzz.sh`. Leave the output visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "/home/prozilla-os/Scripts/fizzbuzz.sh",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_004",
+    "task_name": "Use whereis to locate a script path.",
+    "instruction": "Open Terminal and run `whereis ~/Scripts/fizzbuzz.sh`. Leave the output visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "~/Scripts/fizzbuzz.sh: /home/prozilla-os/Scripts/fizzbuzz.sh",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_005",
+    "task_name": "Count words in a sentence with wc.",
+    "instruction": "In Terminal, run `echo hello world from prozilla | wc -w` and leave the output visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "4",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_006",
+    "task_name": "Create a file in Documents using touch.",
+    "instruction": "In Terminal, run `cd ~/Documents && touch benchmark_note.txt && ls`, and keep the output visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "benchmark_note.txt",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_007",
+    "task_name": "Create nested folders and verify with tree.",
+    "instruction": "In Terminal, run `cd ~/Documents && mkdir -p logs/2026 && tree -L 2 logs`, and leave the result visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "2026",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_008",
+    "task_name": "Print identity details with id.",
+    "instruction": "Open Terminal and run `id`. Leave the identity line visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "div[class*='Terminal']",
+          "text": "uid=1000(user)",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_009",
+    "task_name": "Write a single word in Text Editor.",
+    "instruction": "Open the Text Editor, clear the current content, type `fizzbuzz`, and keep it visible.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "textarea",
+          "attr": "value",
+          "value": "fizzbuzz",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_010",
+    "task_name": "Write two lines in Text Editor.",
+    "instruction": "Open the Text Editor and enter exactly two lines: first `hello`, second `prozilla benchmark`.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "all",
+      "rules": [
+        {
+          "selector": "textarea",
+          "attr": "value",
+          "value": "hello\nprozilla benchmark",
+          "match": "exact"
+        }
+      ]
+    }
+  }
+]

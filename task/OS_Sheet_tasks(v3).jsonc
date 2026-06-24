@@ -1,0 +1,252 @@
+[
+  {
+    "task_id": "prozilla_sheet_maths_calc_01",
+    "instruction": "Could you use the Maths app in Prozilla to calculate 50 + 50 and record the result in cell A1 of the spreadsheet?",
+    "website": [
+      {
+        "id": "prozilla",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:3000/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "spreadsheet",
+          "cell": "A1",
+          "value": "100"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_sheet_settings_theme_01",
+    "instruction": "I'd like to know Prozilla's current theme. Could you check it in Settings and record the theme name in cell B1 of the spreadsheet?",
+    "website": [
+      {
+        "id": "prozilla",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:3000/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "spreadsheet",
+          "cell": "B1",
+          "value": "default"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_sheet_photos_png_count_01",
+    "instruction": "Could you count how many PNG files are in Pictures/Wallpapers in the Prozilla Photos app and record the count in cell C1 of the spreadsheet?",
+    "website": [
+      {
+        "id": "prozilla",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:3000/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "spreadsheet",
+          "cell": "C1",
+          "value": "11"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_sheet_maths_calc_02",
+    "instruction": "Could you use the Maths app in Prozilla to calculate 75 × 4 and record the result in cell D1 of the spreadsheet?",
+    "website": [
+      {
+        "id": "prozilla",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:3000/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "spreadsheet",
+          "cell": "D1",
+          "value": "300"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_sheet_file_size_01",
+    "instruction": "Could you check the file size of the SVG file in the Pictures folder of Prozilla's Photos app and record it in cell E1 of the spreadsheet?",
+    "website": [
+      {
+        "id": "prozilla",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:3000/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "spreadsheet",
+          "cell": "E1",
+          "value": "9"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_sheet_maths_calc_03",
+    "instruction": "Could you use the Maths app in Prozilla to divide 1000 by 10 and record the result in cell F1 of the spreadsheet?",
+    "website": [
+      {
+        "id": "prozilla",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:3000/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "spreadsheet",
+          "cell": "F1",
+          "value": "100"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_sheet_image_count_01",
+    "instruction": "I want to know how many image files are in the Pictures/Crumbling City folder in Prozilla. Could you check and record the count in cell G1 of the spreadsheet?",
+    "website": [
+      {
+        "id": "prozilla",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:3000/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "spreadsheet",
+          "cell": "G1",
+          "value": "3"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_sheet_notif_status_01",
+    "instruction": "Could you check whether notifications are enabled or disabled in Prozilla Settings and record the status in cell H1 of the spreadsheet?",
+    "website": [
+      {
+        "id": "prozilla",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:3000/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "spreadsheet",
+          "cell": "H1",
+          "value": "enabled"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_sheet_maths_calc_04",
+    "instruction": "Could you use the Maths app in Prozilla to calculate 12 × 12 and record the result in cell I1 of the spreadsheet?",
+    "website": [
+      {
+        "id": "prozilla",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:3000/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "spreadsheet",
+          "cell": "I1",
+          "value": "144"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_sheet_file_prop_01",
+    "instruction": "Could you check which app opens Wallpaper1.png in Pictures/Wallpapers in Prozilla and record that app name in cell J1 of the spreadsheet?",
+    "website": [
+      {
+        "id": "prozilla",
+        "url": "http://localhost:3100/"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:3000/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "spreadsheet",
+          "cell": "J1",
+          "value": "Photos"
+        }
+      ]
+    }
+  }
+]

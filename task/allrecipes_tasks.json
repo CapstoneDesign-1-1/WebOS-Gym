@@ -1,0 +1,91 @@
+[
+  {
+    "task_id": "web_task_allrecipes_01",
+    "instruction": "On the Absolutely the Best Chocolate Chip Cookies recipe page, check the calorie value listed in the Nutrition Facts (per serving) section.",
+    "website": "https://www.allrecipes.com/recipe/17209/absolutely-the-best-chocolate-chip-cookies/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "td.mm-recipes-nutrition-facts-summary__table-cell.text-body-100-prominent",
+          "target": "text",
+          "value": "241",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_allrecipes_02",
+    "instruction": "On the Alabama Fire Crackers recipe page, check the Total Time listed.",
+    "website": "https://www.allrecipes.com/recipe/214184/alabama-fire-crackers/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "text",
+          "value": "9 hrs 15 mins",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_allrecipes_03",
+    "instruction": "On the Allrecipes website, search for 'banana bread' and check the title of the first result.",
+    "website": "https://www.allrecipes.com/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "span.card__title-text",
+          "target": "text",
+          "value": "Janet's Rich Banana Bread",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_allrecipes_04",
+    "instruction": "On the Easy Chocolate Chip Pound Cake recipe page, scale the recipe to 2x and check the number of eggs listed in the ingredients.",
+    "website": "https://www.allrecipes.com/recipe/17572/easy-chocolate-chip-pound-cake/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "span[data-ingredient-quantity='true'][data-original-quantity='4']",
+          "target": "text",
+          "value": "8",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_allrecipes_05",
+    "instruction": "On the Easy Chocolate Chip Pound Cake recipe page, check the star rating displayed for the recipe.",
+    "website": "https://www.allrecipes.com/recipe/17572/easy-chocolate-chip-pound-cake/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "#mm-recipes-review-bar__rating_1-0",
+          "target": "text",
+          "value": "4.7",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  }
+]

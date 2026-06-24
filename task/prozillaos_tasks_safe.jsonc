@@ -1,0 +1,2230 @@
+[
+    {
+        "task_id": "prozilla_task_A_01",
+        "instruction": "Find and open the desktop configuration file 'desktop.xml' inside the config folder. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "pre[class*='_Code_']",
+                    "target": "text",
+                    "value": "/assets/wallpapers/abstract-mesh-gradient-orange-red-purple.png",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_02", // rules 수정
+        "instruction": "Open and view the wallpaper file 'Wallpaper10.png' inside the Pictures/Wallpapers folder. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "img[alt='Wallpaper10.png']",
+                    "target": "attr",
+                    "attr": "src",
+                    "value": "abstract-wallpaper-gradient-blue-dark",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_03", // rules 수정
+        "instruction": "Copy the entire content of 'apps.xml' inside the config folder into a new Note document. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "text",
+                    "value": "<options>\\s*<startup></startup>\\s*</options>",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_04", // :has-text로 수정
+        "instruction": "Read 'Prozilla.md' inside the Documents folder to find the VR game created by Sieben De Beule, then save its name inside 'text.txt'. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "text",
+                    "value": "Crumbling City",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_05",
+        "instruction": "Read 'Prozilla.md' inside the Documents folder, find the final sentence under the 'About me' section, and save it inside 'text.txt'. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "text",
+                    "value": "If you have any suggestions, bug reports on ProzillaOS or if you've made your own version of ProzillaOS, don't hesitate to contact me!",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_06",
+        "instruction": "Read 'info.md' inside the Documents folder to find the donation link, then save it inside 'text.txt'. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "text",
+                    "value": "ko-fi.com/prozilla",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_07",
+        "instruction": "Read 'info.md' inside the Documents folder to find the sentence about technologies used to build the website, then save that sentence inside 'text.txt'. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "text",
+                    "value": "This website was made using React, Vite and TypeScript.",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_08", // rules 수정
+        "instruction": "Delete 'ProzillaOS.png' inside the Pictures folder. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "Pictures",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div[class*='_DirectoryList_']",
+                    "target": "text",
+                    "value": "^(?![\\s\\S]*ProzillaOS\\.png)[\\s\\S]*$",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_09",
+        "instruction": "Modify 'fizzbuzz.sh' inside the Scripts folder so that 'Buzz' is output when 'i' is divisible by 7. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "fizzbuzz.sh",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "text",
+                    "value": "i % 7 == 0",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "text",
+                    "value": "OUTPUT+=\"Buzz\"",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_10", // :has-text로 수정
+        "instruction": "Open the properties window of 'City Center.png' inside the Pictures/Crumbling City folder. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "div[class*='WindowedModal'] p",
+                    "target": "text",
+                    "value": "City Center.png - Properties",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div[class*='FileProperties']",
+                    "target": "text",
+                    "value": "Location: ~/Pictures/Crumbling City/City Center.png",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_11",
+        "instruction": "I want to hide all my desktop icons to keep my workspace clean. Please disable the desktop icons visibility option in the system settings. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "div[class*='Option'] button[class*='Checkbox']",
+                    "target": "class",
+                    "value": "^(?!.*Checked).*$",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_12", // option:checked로 수정
+        "instruction": "I want to change the overall look of my system. Go to the appearance settings and switch the system theme to Cherry. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "select[aria-label='theme'] option:checked",
+                    "target": "text",
+                    "value": "Cherry",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_13",
+        "instruction": "Use the system settings to configure the Minesweeper game to launch automatically upon system startup. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "button[title='Minesweeper'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_14",
+        "instruction": "Please make sure the Wordle game is pinned to the taskbar.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "button[title='Wordle']",
+                    "target": "class",
+                    "value": "^(?!.*Hidden).*$",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_15", // 셀렉터 우회 및 target 수정
+        "instruction": "Please remove the Terminal application from the taskbar.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "button.ProzillaOS-Taskbar__AppIcon[title='Commands'][class*='Hidden']",
+                    "target": "html",
+                    "attr": "title",
+                    "value": "Commands",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_16", // 앱 이름 검사로 수정 
+        "instruction": "Use the App Center search bar to search for the calculator app. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='AppName']",
+                    "target": "text",
+                    "value": "Maths",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_17",
+        "instruction": "I want to browse educational apps only. Please filter the App Center applications to display only the Education category. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "select[aria-label='category']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "Education",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_18",
+        "instruction": "Update my desktop wallpaper to the last option in the settings, then reveal the clean desktop so I can see it clearly. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "img[alt='Desktop wallpaper']",
+                    "target": "attr",
+                    "attr": "src",
+                    "value": "abstract-wallpaper-gradient-red",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div[class*='WindowView']",
+                    "target": "class",
+                    "value": "Minimized",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_19",
+        "instruction": "I use the Melodix music app all the time. Please pin it to the taskbar and configure it to launch automatically upon system startup. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "button[title='Melodix']",
+                    "target": "class",
+                    "value": "^(?!.*Hidden).*$",
+                    "match": "regex"
+                },
+                {
+                    "selector": "button[title='Melodix'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_20", // regex 수정 및 Modal 셀렉터 교체
+        "instruction": "Navigate to the Crumbling City directory under Pictures, delete the unneeded 'Japan.png' file, and open the properties of 'Farms.png'. Move the properties window so that it doesn't overlap with the file explorer. Leave the applications open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "div[class*='_DirectoryList_']",
+                    "target": "text",
+                    "value": "^(?![\\s\\S]*Japan\\.png)[\\s\\S]*$",
+                    "match": "regex"
+                },
+                {
+                    "selector": "div[class*='WindowedModal'] p",
+                    "target": "text",
+                    "value": "Farms.png - Properties",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div[class*='WindowedModal']",
+                    "target": "class",
+                    "value": "react-draggable-dragged",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_21", // 정답 텍스트 수정 및 has-text 적용
+        "instruction": "Open the App Center, browse apps with the 'Personalization' filter. And change the content of text.txt file to 'Presonalization' filtered app name and save the file. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "text",
+                    "value": "Settings",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_22", // Commands 앱이름 수정 및 CSS 우회
+        "instruction": "Unpin 'Terminal' from the taskbar, then disable 'Show icons' in Desktop. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "button.ProzillaOS-Taskbar__AppIcon[title='Commands'][class*='Hidden']",
+                    "target": "html",
+                    "attr": "title",
+                    "value": "Commands",
+                    "match": "exact"
+                },
+                {
+                    "selector": "div[class*='Option'] button[class*='Checkbox']:not([class*='Checked'])",
+                    "target": "class",
+                    "value": "Checkbox",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_23", // option:checked로 수정
+        "instruction": "Change the theme to 'Grape', update the wallpaper to 'Wallpaper6', and minimize all windows. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "select[aria-label='theme'] option:checked",
+                    "target": "text",
+                    "value": "Grape",
+                    "match": "exact"
+                },
+                {
+                    "selector": "img[alt='Desktop wallpaper']",
+                    "target": "attr",
+                    "attr": "src",
+                    "value": "mesh-gradient-wallpaper-red-purple",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div[class*='WindowView']",
+                    "target": "class",
+                    "value": "Minimized",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_24",
+        "instruction": "Pin 'Wordle' to the taskbar, and enable it to launch automatically upon system startup. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "button[title='Wordle']",
+                    "target": "class",
+                    "value": "^(?!.*Hidden).*$",
+                    "match": "regex"
+                },
+                {
+                    "selector": "button[title='Wordle'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_25", // textarea target:attr 수정, :has-text로 제목 충돌 방지
+        "instruction": "Check the currently used virtual drive space size (in KB) in Storage. Overwrite text.txt with this numeric value and save it. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "^\\d+(\\.\\d+)?$",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_26", // 글로벌 .Aqua-theme(target:attr) 검사로 최소화 모순 해결, 바탕화면 직접 검증, Wallpaper URL 정정
+        "instruction": "Change the system theme to 'Aqua', update the wallpaper to 'Wallpaper4', disable the desktop icons visibility, and minimize all active windows. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": ".Aqua-theme",
+                    "target": "attr",
+                    "attr": "class",
+                    "value": "Aqua-theme",
+                    "match": "contains"
+                },
+                {
+                    "selector": "img[alt='Desktop wallpaper']",
+                    "target": "attr",
+                    "attr": "src",
+                    "value": "abstract-wallpaper-mesh-gradient-cyan",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div.ProzillaOS-Desktop",
+                    "target": "text",
+                    "value": "^\\s*$",
+                    "match": "regex"
+                },
+                {
+                    "selector": "div[class*='WindowView']",
+                    "target": "class",
+                    "value": "Minimized",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_27", // 앱 이름 'Photos'로 정정 및 체크박스 검증 완료
+        "instruction": "In the App Center, filter apps by the 'Photo & video' category to find the application. Then enable that app to launch automatically upon system startup. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "button[title='Photos'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_28", // :has-text 적용, textarea target:attr 지정 및 앱 전체 리스트 순서 매칭으로 교정
+        "instruction": "Filter applications in the App Center by 'Utilities & tools', and note all displayed application names. Write these names joined by a comma and a space into text.txt and save the file. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "Apps, Browser, Commands, Files, Maths, Notes",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_29", // :has-text 적용, textarea target:attr 지정 및 역순 리스트 정합성 유지
+        "instruction": "Filter applications in the App Center by 'Utilities & tools', sort all displayed app names in reverse alphabetical order, then write them joined by a comma and a space into text.txt and save. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "Notes, Maths, Files, Commands, Browser, Apps",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_30", // :has-text 및 textarea target:attr 적용
+        "instruction": "Open the Properties window of 'City Center.png' in Pictures Folder. Overwrite text.txt with the file size (in bytes) and its full path, and save. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "79",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "City Center.png",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_31",
+        "instruction": "Configure all applications belonging to the 'Utilities & tools' category to launch automatically upon system startup. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "button[title='Apps'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                },
+                {
+                    "selector": "button[title='Browser'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                },
+                {
+                    "selector": "button[title='Commands'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                },
+                {
+                    "selector": "button[title='Files'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                },
+                {
+                    "selector": "button[title='Maths'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                },
+                {
+                    "selector": "button[title='Notes'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_32", // :has-text 표준 셀렉터 및 textarea target:attr
+        "instruction": "Read the developer's business email from 'prozilla.md' and the donation link from 'info.md' inside the Documents folder. Change the content of 'text.txt' to 'email: [email], donate: [donation_link]' format and save the file. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "email: business@prozilla.dev, donate: Ko-fi page",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_33", // 모호한 부정 정규식을 텅 빈 폴더(Empty) 검사 정규식으로 안정화
+        "instruction": "Delete all images inside 'Pictures/Crumbling City'. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "target": "text",
+                    "value": "^\\s*$",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_34", // :has-text 충돌 방지 및 textarea target:attr
+        "instruction": "In the App Center, filter applications by 'Personalization' and 'Education' categories separately, and count the number of apps displayed in each category. Write a report inside 'text.txt' in the format 'Personalization: [count], Education: [count]' and save the file. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "Personalization:\\s*1,\\s*Education:\\s*1",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_35", // :has-text 충돌 방지 및 textarea target:attr 세트 장착 완료
+        "instruction": "Read the developer's name, email, and portfolio address from 'prozilla.md' inside the Documents folder. Change the content of 'text.txt' to organize this information in the format 'Name: [name], Email: [email], Portfolio: [portfolio]' and save the file. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "Name:\\s*Sieben De Beule,\\s*Email:\\s*business@prozilla\\.dev,\\s*Portfolio:\\s*prozilla\\.dev",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_36", // :has-text 충돌 방지 및 textarea target:attr 세트 장착 완료
+        "instruction": "Find the name of the virtual market/platform where the developer's game was released in 'prozilla.md', and find the core framework/tech stack mentioned in 'info.md'. Combine these findings and record them on the first line of 'text.txt' in the format 'Platform: [platform], Tech: [tech_stack]' and save the file. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "Platform:\\s*Steam,\\s*Tech:\\s*React,\\s*Vite\\s+and\\s+TypeScript",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_37", // :has-text 충돌 방지
+        "instruction": "Configure all applications starting with the letters 'B', 'M', or 'W' to launch automatically upon system startup. Afterwards, open the 'apps.xml' configuration file with the Notes application to view its contents. Leave the applications open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "apps.xml",
+                    "match": "contains"
+                },
+                {
+                    "selector": "button[title='Ball Maze'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                },
+                {
+                    "selector": "button[title='Bliss Radio'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                },
+                {
+                    "selector": "button[title='Browser'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                },
+                {
+                    "selector": "button[title='Melodix'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                },
+                {
+                    "selector": "button[title='Minesweeper'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                },
+                {
+                    "selector": "button[title='Maths'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                },
+                {
+                    "selector": "button[title='Wordle'] div[class*='Checkbox']",
+                    "target": "class",
+                    "value": "Checked",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_38",
+        "instruction": "Go to the 'Pictures' folder, check the file sizes of 'Wallpaper1.png' through 'Wallpaper5.png'. Clear any existing content in 'text.txt' inside the Documents folder, write down their sizes in the format 'Wallpaper[n]: [number] bytes' on separate lines, and save the file. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "text.txt",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "text",
+                    "value": "Wallpaper1:\\s*56\\s*bytes\\s*\\n\\s*Wallpaper2:\\s*63\\s*bytes\\s*\\n\\s*Wallpaper3:\\s*54\\s*bytes\\s*\\n\\s*Wallpaper4:\\s*60\\s*bytes\\s*\\n\\s*Wallpaper5:\\s*65\\s*bytes",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_39",
+        "instruction": "Open 'fizzbuzz.sh' inside the 'Scripts' folder using the Text Editor, modify the default iteration range (COUNT) from its original value to 50, and save the file. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "p[class*='ProzillaOS-WindowTitle']",
+                    "target": "text",
+                    "value": "fizzbuzz.sh",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea[class*='_View_']",
+                    "target": "text",
+                    "value": "COUNT=\\$\\{1:-50\\}",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_A_40",
+        "instruction": "Open the Files application, compare the total file sizes inside the 'Videos' and 'Audio' folders. Delete the folder that has the larger total file size, and then navigate back to the home directory in the Files application. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "target": "text",
+                    "value": "^(?!([\\s\\S]*Audio))",
+                    "match": "regex"
+                },
+                {
+                    "selector": "input[class*='PathInput']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "~",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_C_01",
+        "instruction": "Open the Maths app and calculate 42 + 18. Write the result in Documents/text.txt. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea[class*='View']",
+                    "target": "text",
+                    "value": "60",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_C_02",
+        "instruction": "Use the Maths app to calculate 25 * 4. Write the result in Documents/text.txt. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea[class*='View']",
+                    "target": "text",
+                    "value": "100",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_C_03",
+        "instruction": "Open the Maths app and calculate 256 / 16. Write the result in Documents/text.txt. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea[class*='View']",
+                    "target": "text",
+                    "value": "16",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_C_04",
+        "instruction": "Open Photos app and navigate to Pictures/Crumbling City. Open Japan.png, view its file properties, and copy the location path to Documents/text.txt. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea[class*='View']",
+                    "target": "text",
+                    "value": "Pictures.*Crumbling City.*Japan",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_C_05",
+        "instruction": "Find the Weezer_Buddy-Holly video in the Videos folder using Photos app. View its file properties and write the file type in Documents/text.txt. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea[class*='View']",
+                    "target": "text",
+                    "value": "(?i)yt",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_C_06",
+        "instruction": "Open Photos app and navigate to Pictures/Crumbling City. Open Japan.png, view its file properties, and copy the file size to Documents/text.txt. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea[class*='View']",
+                    "target": "text",
+                    "value": "76",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_C_07",
+        "instruction": "Open Photos app and find Andrew-Applepie_Im-So.ogg file. View its properties and write the file type in Documents/text.txt. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea[class*='View']",
+                    "target": "text",
+                    "value": "(?i)ogg",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_C_08",
+        "instruction": "Open Logic Sim app and create an AND gate with both inputs connected to HIGH. Connect the output to an indicator. If the light is on, write 'on' in Documents/text.txt. If the light is off, write 'off'. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea[class*='View']",
+                    "target": "text",
+                    "value": "(?i)on",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_C_09",
+        "instruction": "Open Logic Sim app and create an OR gate with one input connected to HIGH and one to LOW. Connect the output to an indicator. If the light is on, write 'on' in Documents/text.txt. If the light is off, write 'off'. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea[class*='View']",
+                    "target": "text",
+                    "value": "(?i)on",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_C_10",
+        "instruction": "Open Logic Sim app and create a NOT gate with input connected to HIGH. Connect the output to an indicator. If the light is on, write 'on' in Documents/text.txt. If the light is off, write 'off'. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea[class*='View']",
+                    "target": "text",
+                    "value": "(?i)off",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_01",
+        "instruction": "Open Terminal and display your current working directory. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "/home/prozilla-os",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_02",
+        "instruction": "Open Terminal, navigate to the Desktop directory, and display the current path to confirm the location. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "/home/prozilla-os/Desktop",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_03",
+        "instruction": "Use Terminal to locate the fizzbuzz script under the Scripts directory and display its resolved path. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "/home/prozilla-os/Scripts/fizzbuzz.sh",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_04",
+        "instruction": "Use Terminal to query location info for the fizzbuzz script in Scripts and keep the result visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "~/Scripts/fizzbuzz.sh: /home/prozilla-os/Scripts/fizzbuzz.sh",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_05",
+        "instruction": "In Terminal, count how many words are in the phrase \"hello world from prozilla\" using a word-count workflow. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "4",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_06",
+        "instruction": "In Terminal, go to Documents, create a file named benchmark_note.txt, and list the directory contents so the new file appears. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "benchmark_note.txt",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_07",
+        "instruction": "In Terminal, create the nested folder path logs/2026 under Documents and display the folder tree up to depth 2. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "2026",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_08",
+        "instruction": "Open Terminal and display the current user identity details. Leave the identity line visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "uid=1000(user)",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_09",
+        "instruction": "Open Text Editor, clear any existing content, type exactly \"fizzbuzz\", and keep the editor open with the text visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "fizzbuzz",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_10",
+        "instruction": "Open Text Editor and enter exactly two lines: first \"hello\", then \"prozilla benchmark\". Keep the content visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "hello\nprozilla benchmark",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_11",
+        "instruction": "In Terminal, create a project/src folder structure inside Documents, add main.txt under src, and display the project tree to depth 3. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "main.txt",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_12",
+        "instruction": "In Terminal, prepare sort_case.txt in Documents with the values pear, apple, and banana, create a sorted output file sort_case_sorted.txt, and display the sorted result. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "apple",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "banana",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "pear",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_13",
+        "instruction": "In Terminal, create memo.txt in Documents, compress it into memo.zip, extract it into out_zip, and display the restored content. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "benchmark",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_14",
+        "instruction": "In Terminal, create tar_note.txt in Documents, archive it into packed.tar, and list files so the archive is visible. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "packed.tar",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_15",
+        "instruction": "In Terminal, create usage_check.txt in Documents and show recursive disk-usage output for the current directory. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "usage_check.txt",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_16",
+        "instruction": "In Terminal, collect identity and system info into Documents/sysinfo.txt, then display that file content. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "uid=1000(user)",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "ProzillaOS",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "sysinfo.txt",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_17",
+        "instruction": "Use Terminal to collect both whereis and which results for the fizzbuzz script into path_check.txt, then display that file. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "~/Scripts/fizzbuzz.sh: /home/prozilla-os/Scripts/fizzbuzz.sh",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "/home/prozilla-os/Scripts/fizzbuzz.sh",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "path_check.txt",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_18",
+        "instruction": "In Terminal, create notes.txt in Documents with three lines alpha, beta, and gamma, then sort it into notes_sorted.txt and display the result. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "gamma",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "beta",
+                    "match": "contains"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "alpha",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_19",
+        "instruction": "In Terminal, create phrase.txt in Documents containing \"terminal benchmark pass\" and display the file content. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "terminal benchmark pass",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_20",
+        "instruction": "In Terminal, create sync_note.txt in Documents with the text \"sync-check\", then open Text Editor and type exactly the same text to match it. Keep both outputs visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "operator": "and",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "target": "text",
+                    "value": "sync-check",
+                    "match": "contains"
+                },
+                {
+                    "selector": "textarea",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "sync-check",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_21",
+        "instruction": "I need to multiply 15 by 8. Use the calculator to find the result. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "p[class*='Preview']",
+                    "target": "text",
+                    "value": "120",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_22",
+        "instruction": "Find out the sum of 125 and 131 using the calculator. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "p[class*='Preview']",
+                    "target": "text",
+                    "value": "256",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_23",
+        "instruction": "Check what built-in commands are supported in the terminal shell by listing them. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "[class*='Terminal'] [class*='Output']",
+                    "target": "text",
+                    "value": "clear",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_24",
+        "instruction": "List the contents of the current home directory using the terminal. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "[class*='Terminal'] [class*='Output']",
+                    "target": "text",
+                    "value": "Documents",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_25",
+        "instruction": "Use the terminal to navigate to the Desktop directory and list its files. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "[class*='Terminal'] [class*='Output']",
+                    "target": "text",
+                    "value": "Info.md",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_26",
+        "instruction": "Check the current virtual drive storage status in the system settings. Keep the Settings window open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "target": "text",
+                    "value": "Virtual Drive.*",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_27",
+        "instruction": "Open the Files application and navigate to the Desktop folder using the sidebar. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "input[class*='PathInput']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "~/Desktop",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_28",
+        "instruction": "Open the Files application, locate the text file inside Documents, open it, insert the text 'prozillaos' between 'Hello' and 'world!', and save the file. Keep the file open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "textarea[class*='View']",
+                    "target": "text",
+                    "value": "[Hh]ello\\s+prozillaos\\s+world",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_29",
+        "instruction": "Navigate to the Documents directory in the file explorer. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "input[class*='PathInput']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "~/Documents",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_30",
+        "instruction": "Locate the image file named 'Farms.png' under your Pictures/crumbling city directory and delete it. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "target": "text",
+                    "value": "(?s)^(?!.*Farms)",
+                    "match": "regex",
+                    "case_sensitive": false
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_31",
+        "instruction": "Navigate into your Documents folder in the terminal, create a new subfolder called 'work', enter it, and create a text file named 'deep_file.txt' to verify. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "[class*='Terminal'] [class*='Output']",
+                    "target": "text",
+                    "value": "deep_file.txt",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_32",
+        "instruction": "Use the terminal to navigate to the Scripts directory, list its files, and display the source code of the helloworld script. Leave the output visible.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "[class*='Terminal'] [class*='Output']",
+                    "target": "text",
+                    "value": "echo \"Hello, World!\"",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_33",
+        "instruction": "Open the Files application and jump to the Documents directory. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "input[class*='PathInput']",
+                    "target": "attr",
+                    "attr": "value",
+                    "value": "~/Documents",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_34",
+        "instruction": "Use Terminal to go into Documents and create an incident_a workspace with logs and notes folders, then create app.log and todo.txt and list the structure. After that, open File Explorer, navigate to Documents/incident_a, and make sure both logs and notes are visible. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "incident_a"
+                },
+                {
+                    "selector": "input[class*='PathInput']",
+                    "attr": "value",
+                    "value": "~/Documents/incident_a",
+                    "match": "exact",
+                    "target": "attr"
+                },
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "logs"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_35",
+        "instruction": "In Terminal, move to Documents, prepare pack032 with a.txt and b.txt, compress them into pack032.zip, extract into unpack032, and show the extracted tree. Then open File Explorer at Documents/unpack032/pack032 and confirm a.txt and b.txt are there. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "unpack032"
+                },
+                {
+                    "selector": "input[class*='PathInput']",
+                    "attr": "value",
+                    "value": "~/Documents/unpack032/pack032",
+                    "match": "exact",
+                    "target": "attr"
+                },
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "a.txt"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_36",
+        "instruction": "Create a zip archive containing two log files (1.log and 2.log) inside ~/Documents/ev033, then extract this archive to a new directory named ev033_restore using the Terminal. Finally, verify that both restored files exist in the destination using File Explorer. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "ev033_restore"
+                },
+                {
+                    "selector": "input[class*='PathInput']",
+                    "attr": "value",
+                    "value": "~/Documents/ev033_restore/ev033",
+                    "match": "exact",
+                    "target": "attr"
+                },
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "2.log"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_37",
+        "instruction": "In Terminal under Documents, create flow034/inbox and flow034/done, make note.txt in inbox, move and rename it to final_note.txt inside done, and print the directory tree. Next, open File Explorer at Documents/flow034/done and verify final_note.txt is present. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "final_note.txt"
+                },
+                {
+                    "selector": "input[class*='PathInput']",
+                    "attr": "value",
+                    "value": "~/Documents/flow034/done",
+                    "match": "exact",
+                    "target": "attr"
+                },
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "final_note.txt"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_38",
+        "instruction": "Use Terminal in Documents to create secure035.txt, change its permission to 600, and print file paths so the file appears in output. Then open File Explorer in Documents and confirm secure035.txt exists. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "secure035.txt"
+                },
+                {
+                    "selector": "input[class*='PathInput']",
+                    "attr": "value",
+                    "value": "~/Documents",
+                    "match": "exact",
+                    "target": "attr"
+                },
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "secure035.txt"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_39",
+        "instruction": "In Terminal from Documents, create ranks036.txt with values 30, 10, and 20, sort it numerically into ranks036_sorted.txt, and preview the sorted result. Then open File Explorer in Documents and verify ranks036_sorted.txt exists. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "10"
+                },
+                {
+                    "selector": "input[class*='PathInput']",
+                    "attr": "value",
+                    "value": "~/Documents",
+                    "match": "exact",
+                    "target": "attr"
+                },
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "ranks036_sorted.txt"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_40",
+        "instruction": "Using Terminal in Documents, create colors037.txt with repeated values, generate a deduplicated file colors037_unique.txt using uniq, and display count metrics for that file. Then open File Explorer in Documents and make sure colors037_unique.txt is present. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "colors037_unique.txt"
+                },
+                {
+                    "selector": "input[class*='PathInput']",
+                    "attr": "value",
+                    "value": "~/Documents",
+                    "match": "exact",
+                    "target": "attr"
+                },
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "colors037_unique.txt"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_41",
+        "instruction": "In Terminal, create a deep nested path deep038/a/b/c inside Documents, add end.txt at the deepest level, and print the tree. Then open File Explorer at Documents/deep038/a/b/c and confirm end.txt is visible. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "deep038"
+                },
+                {
+                    "selector": "input[class*='PathInput']",
+                    "attr": "value",
+                    "value": "~/Documents/deep038/a/b/c",
+                    "match": "exact",
+                    "target": "attr"
+                },
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "end.txt"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_42",
+        "instruction": "From Terminal in Documents, create clean039/tmp.txt, remove tmp.txt, and print the clean039 tree. Afterward, open File Explorer at Documents/clean039 and verify tmp.txt is no longer present. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "input[class*='PathInput']",
+                    "attr": "value",
+                    "value": "~/Documents/clean039",
+                    "match": "exact",
+                    "target": "attr"
+                },
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "match": "regex",
+                    "target": "text",
+                    "value": "(?s)^(?!.*tmp\\.txt).*$"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_43",
+        "instruction": "In Terminal, generate disk040.txt in Documents by writing disk usage info and a Documents size summary, then preview the report. Open File Explorer in Documents and confirm disk040.txt exists. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "Filesystem"
+                },
+                {
+                    "selector": "input[class*='PathInput']",
+                    "attr": "value",
+                    "value": "~/Documents",
+                    "match": "exact",
+                    "target": "attr"
+                },
+                {
+                    "selector": "[class*='DirectoryList']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "disk040.txt"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_44",
+        "instruction": "In File Explorer, create a folder named fx041 under Documents, create todo.txt inside it, and write ship-it. Then verify from Terminal by showing the folder tree and file content. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "todo.txt"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "ship-it"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_45",
+        "instruction": "In File Explorer, create fx042_source.txt in Documents with text copy-me, then create a copy named fx042_copy.txt. Verify from Terminal that both files exist and display count output for both. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "fx042_source.txt"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "fx042_copy.txt"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "total"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_46",
+        "instruction": "In File Explorer, create fx043_draft.txt in Documents and rename it to fx043_final.txt. Then use Terminal to confirm the final name can be listed and resolved. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "fx043_final.txt"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_47",
+        "instruction": "In File Explorer, create folder fx044_bin and file fx044_note.txt in Documents, then move fx044_note.txt into fx044_bin. Verify in Terminal with both tree and find output for fx044_bin. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "fx044_note.txt"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "fx044_bin"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_48",
+        "instruction": "In File Explorer, create fx045_numbers.txt in Documents with three lines: 9, 1, and 5. Then use Terminal to sort the file numerically and also show the first line. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "1"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "9"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_49",
+        "instruction": "In File Explorer, create Documents/fx046_notes with files a.txt and b.txt (any short text in each). Then in Terminal, create a zip archive from those two files, list the archive, and print the folder tree. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "fx046_notes.zip"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "a.txt"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "b.txt"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_50",
+        "instruction": "In File Explorer, create Documents/fx047 with keep.txt and drop.txt, then delete drop.txt. In Terminal, verify cleanup by showing the tree and listing keep.txt. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "keep.txt"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "fx047"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_51",
+        "instruction": "In File Explorer, create Documents/fx048_report.txt with two lines: status ok and owner ops. Then verify in Terminal by running wc on the file and printing its last line. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "fx048_report.txt"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "owner ops"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_52",
+        "instruction": "In File Explorer, set up Documents/ref049 with subfolders raw and final, create a.txt and b.txt in raw, move both files to final by drag and drop, and rename raw to archive. Then verify in Terminal with tree and find on ref049/final. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "archive"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "a.txt"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "b.txt"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "prozilla_task_B_53",
+        "instruction": "In Terminal, first try to list missing050.txt in Documents so it fails. Then create missing050.txt in Documents using File Explorer, return to Terminal, and verify it now lists correctly and has wc output. Leave the application open.",
+        "website": "http://localhost:3000",
+        "evaluation": {
+            "mode": "dom",
+            "rules": [
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "Cannot access 'missing050.txt'"
+                },
+                {
+                    "selector": "div[class*='Terminal']",
+                    "match": "contains",
+                    "target": "text",
+                    "value": "missing050.txt"
+                }
+            ]
+        }
+    }
+]

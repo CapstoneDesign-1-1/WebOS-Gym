@@ -1,0 +1,479 @@
+// Total counts: 7
+[
+  {
+    // web_sheet_prozilla_nhis_01
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 'Case' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 'Flag' 입력
+    // 8. A2 클릭
+    // 9. A2에 값 'A' 입력
+    // 10. B2 클릭
+    // 11. B2에 값 0 입력
+    // 12. A3 클릭
+    // 13. A3에 값 'B' 입력
+    // 14. B3 클릭
+    // 15. B3에 값 1 입력
+    // 16. B4 클릭
+    // 17. B4에 수식 `=SUM(B2:B3)` 입력 후 Enter
+    // 18. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 19. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_01",
+    "instruction": "Could you open NHIS overseas departure premium exemption check. Run two checks: A) departure 2026.05.12 and entry 2026.05.13, B) departure 2026.05.12 and entry 2026.11.20. In Spreadsheet, record the two case results in cells A1:B3 with A1='Case', B1='Flag', A2='A', and A3='B', placing the first case flag in B2 and the second case flag in B3, and compute B4 with '=SUM(B2:B3)'. In Prozilla OS, create ~/Documents/finance_report.txt and write the spreadsheet results in the format 'CaseA Flag: [value]', 'CaseB Flag: [value]', 'Eligible Count: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "CaseA Flag: 0",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "CaseB Flag: 1",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Eligible Count: 1",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_nhis_02
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 '사업자번호' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 '최종판정' 입력
+    // 8. C1 클릭
+    // 9. C1에 값 '판정값' 입력
+    // 10. A2 클릭
+    // 11. A2에 값 '1111111111' 입력
+    // 12. B2 클릭
+    // 13. B2에 값 '사업장 적용이 가능 합니다.' 입력
+    // 14. C2 클릭
+    // 15. C2에 값 1 입력
+    // 16. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 17. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_02",
+    "instruction": "Could you open NHIS workplace eligibility simulation and enter business registration number 1111111111. Set both employment pay status and workplace enrollment status to eligible so final result is positive. In Spreadsheet, set A1:C2 with A1='사업자번호', B1='최종판정', C1='판정값', and A2='1111111111', then record the simulator's final message in B2 and a pass flag derived from that result in C2. In Prozilla OS, create ~/Documents/finance_report.txt and write the simulator result and derived flag in the format 'Final Result: [value]', 'Pass Flag: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1GnTUHYgF1MzXnQPA4W6VYRUewj9BHApQ_2CgvPkaYFI/edit?usp=sharing"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Final Result: 사업장 적용이 가능 합니다.",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Pass Flag: 1",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_nhis_03
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 '체류자격' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 '입국일' 입력
+    // 8. C1 클릭
+    // 9. C1에 값 '가입예정일' 입력
+    // 10. D1 클릭
+    // 11. D1에 값 '일수차이' 입력
+    // 12. A2 클릭
+    // 13. A2에 값 'D-4(일반연수)' 입력
+    // 14. B2 클릭
+    // 15. B2에 값 '2026.05.29' 입력
+    // 16. C2 클릭
+    // 17. C2에 값 '2026.11.29' 입력
+    // 18. D2 클릭
+    // 19. D2에 값 '=C2-B2' 입력
+    // 20. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 21. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_03",
+    "instruction": "Could you open NHIS foreign mandatory enrollment date simulation. Use stay type D-4 and first entry date 2026.05.29, then calculate the scheduled date. In Spreadsheet, fill A1:D2 with A1='체류자격', B1='입국일', C1='가입예정일', D1='일수차이', A2='D-4(일반연수)', and B2='2026.05.29', then record the calculated scheduled date in C2 and set D2 to '=C2-B2'. In Prozilla OS, create ~/Documents/finance_report.txt and write the results in the format 'Entry: [value]', 'Scheduled: [value]', 'Gap Days: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1GnTUHYgF1MzXnQPA4W6VYRUewj9BHApQ_2CgvPkaYFI/edit?usp=sharing"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Entry: 2026.05.29",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scheduled: 2026.11.29",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Gap Days: 184",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_nhis_04
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 '항목' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 '값' 입력
+    // 8. A2 클릭
+    // 9. A2에 값 '예상지역보험료' 입력
+    // 10. B2 클릭
+    // 11. B2에 값 2273220 입력
+    // 12. A3 클릭
+    // 13. A3에 값 '검증' 입력
+    // 14. B3 클릭
+    // 15. B3에 값 'PASS' 입력
+    // 16. A4 클릭
+    // 17. A4에 값 '천원단위' 입력
+    // 18. B4 클릭
+    // 19. B4에 값 '=ROUND(B2/1000,0)' 입력
+    // 20. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 21. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_04",
+    "instruction": "Could you open NHIS regional premium simulation and set inputs: domestic selected, 사업소득 등=30000, 주택=100000, others empty/default. Calculate the displayed 예상 지역보험료. In Spreadsheet, set A1:B4 with A1='항목', B1='값', A2='예상지역보험료', A3='검증', and A4='천원단위', then record the displayed premium in B2, set B3 to a verification flag after checking that value, and set B4 to '=ROUND(B2/1000,0)'. In Prozilla OS, create ~/Documents/finance_report.txt and write the results in the format 'Expected Local Premium: [value]원' and 'Verification: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1GnTUHYgF1MzXnQPA4W6VYRUewj9BHApQ_2CgvPkaYFI/edit?usp=sharing"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Expected Local Premium: 2273220원",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Verification: PASS",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_nhis_05
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 '항목' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 '값' 입력
+    // 8. A2 클릭
+    // 9. A2에 값 '연체금' 입력
+    // 10. B2 클릭
+    // 11. B2에 값 5000 입력
+    // 12. A3 클릭
+    // 13. A3에 값 '연체일수' 입력
+    // 14. B3 클릭
+    // 15. B3에 값 210 입력
+    // 16. A4 클릭
+    // 17. A4에 값 '1일당' 입력
+    // 18. B4 클릭
+    // 19. B4에 값 '=ROUND(B2/B3,2)' 입력
+    // 20. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 21. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_05",
+    "instruction": "Could you open NHIS late fee simulation and set inputs: premium=100005, member type domestic(including workplace), insurance type health, notice month=202407, payment due date=20250424. Calculate the displayed 예상 연체금 and 연체일수. In Spreadsheet, set A1:B4 with A1='항목', B1='값', A2='연체금', A3='연체일수', and A4='1일당', then record the displayed late fee in B2 and the displayed overdue days in B3, and set B4 to '=ROUND(B2/B3,2)'. In Prozilla OS, create ~/Documents/finance_report.txt and write the results in the format 'Late Fee: [value]원', 'Days: [value]일', and 'Verification: PASS'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1GnTUHYgF1MzXnQPA4W6VYRUewj9BHApQ_2CgvPkaYFI/edit?usp=sharing"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Late Fee: 5000원",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Days: 210일",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Verification: PASS",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_nhis_06
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 '항목' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 '값' 입력
+    // 8. A2 클릭
+    // 9. A2에 값 '가구원수' 입력
+    // 10. B2 클릭
+    // 11. B2에 값 '3인' 입력
+    // 12. A3 클릭
+    // 13. A3에 값 '결과' 입력
+    // 14. B3 클릭
+    // 15. B3에 값 '상담 대상자' 입력
+    // 16. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 17. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_06",
+    "instruction": "Could you open NHIS 상병수당 소득 모의점검 and set inputs: 취업자 자격=건강보험직장가입자, 가입자 종류=직장가입자, 가구원 수=3인, 건강보험료=50000. Record the result shown after submitting the inputs. In Spreadsheet, set A1:B3 with A1='항목', B1='값', A2='가구원수', A3='결과', B2='3인', and B3 as the displayed result. In Prozilla OS, create ~/Documents/finance_report.txt and write the scenario inputs and recorded result in the format 'Applicant Type: 건강보험직장가입자', 'Household: [value]', and 'Result: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1GnTUHYgF1MzXnQPA4W6VYRUewj9BHApQ_2CgvPkaYFI/edit?usp=sharing"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Applicant Type: 건강보험직장가입자",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Household: 3인",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Result: 상담 대상자",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_nhis_08
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 '항목' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 '값' 입력
+    // 8. A2 클릭
+    // 9. A2에 값 '총액' 입력
+    // 10. B2 클릭
+    // 11. B2에 값 1014240 입력
+    // 12. A3 클릭
+    // 13. A3에 값 '근로자' 입력
+    // 14. B3 클릭
+    // 15. B3에 값 485870 입력
+    // 16. A4 클릭
+    // 17. A4에 값 '사업주' 입력
+    // 18. B4 클릭
+    // 19. B4에 값 528370 입력
+    // 20. A5 클릭
+    // 21. A5에 값 '차이' 입력
+    // 22. B5 클릭
+    // 23. B5에 값 '=B4-B3' 입력
+    // 24. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 25. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_08",
+    "instruction": "Could you open '4대사회보험료 모의계산' in NHIS. Set monthly pay=5000000 and worker count=1,000인 이상 기업, 국가지방자치단체, then calculate. Record the displayed 합계 row values for 총액, 근로자, and 사업주. In Spreadsheet, set A1:B5 with A1='항목', B1='값', A2='총액', A3='근로자', A4='사업주', and A5='차이', then record the displayed values in B2:B4 and set B5 to '=B4-B3'. In Prozilla OS, create ~/Documents/finance_report.txt and write the results in the format 'Total: [value]원', 'Worker: [value]원', 'Employer: [value]원', and 'Gap: [value]원'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1GnTUHYgF1MzXnQPA4W6VYRUewj9BHApQ_2CgvPkaYFI/edit?usp=sharing"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Total: 1014240원",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Worker: 485870원",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Employer: 528370원",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Gap: 42500원",
+          "match": "contains"
+        }
+      ]
+    }
+  }
+]

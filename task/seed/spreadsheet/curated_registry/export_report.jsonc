@@ -1,0 +1,18 @@
+{
+  "entry_count": 149,
+  "group_counts": {
+    "A": 11,
+    "B": 82,
+    "C": 56
+  },
+  "status_counts": {
+    "todo": 128,
+    "done": 11,
+    "reject": 10
+  },
+  "registry_path": "tasks\\docs\\spreadsheet_task_registry.jsonc",
+  "output_dir": "tasks\\seed\\spreadsheet\\curated_registry",
+  "seed_path": "tasks\\seed\\spreadsheet\\curated_registry\\seed.jsonc",
+  "variant_manifest_path": "tasks\\seed\\spreadsheet\\curated_registry\\variant_manifest.jsonc",
+  "exported_seed_count": 11
+}
