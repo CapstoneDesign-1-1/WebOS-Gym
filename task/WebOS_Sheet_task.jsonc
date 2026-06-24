@@ -1,0 +1,136 @@
+[
+  {
+    "instruction": "We have a loan table where column A holds the Loan Issue Date (as a day number) and column B holds the Length of Loan in Days. Add a new 'Maturity Date' column in column C for each loan by computing the issue date plus the loan length. Leave everything else unchanged.",
+    "empty_start": false,
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": "Loan Issue Date" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Length of Loan in Days" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 1000 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 120 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": 1100 }
+      ],
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C1", "property": ["cell", "v"], "value": "Maturity Date" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C2", "property": ["cell", "v"], "value": 1120 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C3", "property": ["cell", "v"], "value": 1190 }
+      ]
+    ]
+  },
+  {
+    "instruction": "We have an interest rate table with 'Annual Rate (%)' in column A and 'Periods' in column B. Add a 'Period Rate (%)' column in column C by dividing each annual rate by its corresponding number of periods, and make sure the results are stored as numbers. Leave everything else unchanged.",
+    "empty_start": false,
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": "Annual Rate (%)" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Periods" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 12 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 12 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": 24 }
+      ],
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C1", "property": ["cell", "v"], "value": "Period Rate (%)" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C2", "property": ["cell", "v"], "value": 1 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C3", "property": ["cell", "v"], "value": 2 }
+      ]
+    ]
+  },
+  {
+    "instruction": "We have survey data with respondents' sex in column A and civil status in column B, starting from row 2. In columns D and E, create a 'Sex' summary table with the header 'Sex' in D1 and 'Proportion' in E1, listing each sex with its proportion as a decimal. Leave one blank row after the Sex table, then create a 'Civil Status' summary table in the same format below. Leave everything else unchanged.",
+    "empty_start": false,
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": "Sex" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Civil Status" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": "Female" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": "Married" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": "Male" }
+      ],
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "D1", "property": ["cell", "v"], "value": "Sex" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "E1", "property": ["cell", "v"], "value": "Proportion" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "D2", "property": ["cell", "v"], "value": "Female" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "E2", "property": ["cell", "v"], "value": 0.5 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "D5", "property": ["cell", "v"], "value": "Civil Status" }
+      ]
+    ]
+  },
+  {
+    "instruction": "We have a physics experiment table with 'Mass Up (kg)' in column A, 'Accel Up' in column B, 'Mass Down (kg)' in column C, and 'Accel Down' in column D. The acceleration formulas are already filled in row 2 for columns B and D. Extend those same formulas to the remaining rows, then add a 'Combined Data' column in E that shows each row's values in the format 'Header: value' with exactly two decimal places, separated by commas. Leave everything else unchanged.",
+    "empty_start": false,
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": "Mass Up (kg)" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Accel Up" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C1", "property": ["cell", "v"], "value": "Mass Down (kg)" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "D1", "property": ["cell", "v"], "value": "Accel Down" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 1 }
+      ],
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "E1", "property": ["cell", "v"], "value": "Combined Data" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B3", "property": ["cell", "v"], "value": 4 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "D3", "property": ["cell", "v"], "value": 3 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "E2", "property": ["cell", "v"], "value": "Mass Up (kg): 1.00, Accel Up: 2.00, Mass Down (kg): 0.00, Accel Down: 0.00" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "E3", "property": ["cell", "v"], "value": "Mass Up (kg): 2.00, Accel Up: 4.00, Mass Down (kg): 1.00, Accel Down: 3.00" }
+      ]
+    ]
+  },
+  {
+    "instruction": "We have a spending log where column B holds expense amounts under the header 'Spent ($)'. Add a 'Formatted' column in column C and use a formula to display each amount with exactly two decimal places, including trailing zeros for whole numbers. Leave everything else unchanged.",
+    "empty_start": false,
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Spent ($)" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C1", "property": ["cell", "v"], "value": "Formatted" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 40 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B3", "property": ["cell", "v"], "value": 50.5 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B4", "property": ["cell", "v"], "value": 30.75 }
+      ],
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C2", "property": ["cell", "v"], "value": "40.00" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C3", "property": ["cell", "v"], "value": "50.50" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C4", "property": ["cell", "v"], "value": "30.75" }
+      ]
+    ]
+  },
+  {
+    "instruction": "We have a sales table where the columns are in the wrong order starting from column B. The current order is First Name, Order ID, Last Name, Date, Sales. Rearrange the columns so they read Date, First Name, Last Name, Order ID, Sales. Keep all data intact and leave everything else unchanged.",
+    "empty_start": false,
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "First Name" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C1", "property": ["cell", "v"], "value": "Order ID" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "D1", "property": ["cell", "v"], "value": "Last Name" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "E1", "property": ["cell", "v"], "value": "Date" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "F1", "property": ["cell", "v"], "value": "Sales" }
+      ],
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Date" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "C1", "property": ["cell", "v"], "value": "First Name" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "D1", "property": ["cell", "v"], "value": "Last Name" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "E1", "property": ["cell", "v"], "value": "Order ID" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "F1", "property": ["cell", "v"], "value": "Sales" }
+      ]
+    ]
+  },
+  {
+    "instruction": "We have a sales table with 'Date' in column A and 'Quantity' in column B. The rows are currently in a random order. Sort all data rows by column A in ascending order. Leave the header row unchanged.",
+    "empty_start": false,
+    "states": [
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": "Date" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Quantity" },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 300 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 50 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": 100 }
+      ],
+      [
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 100 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 30 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": 200 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "B3", "property": ["cell", "v"], "value": 40 },
+        { "match": "exact", "applyf": "applyCellMeta", "evalf": "getCellMeta", "param": "A4", "property": ["cell", "v"], "value": 300 }
+      ]
+    ]
+  }
+]
