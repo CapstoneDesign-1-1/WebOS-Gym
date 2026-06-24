@@ -1,0 +1,1826 @@
+[
+  {
+    "task_id": "sheet_adoptapet_stat_01__blank_construct",
+    "sheet_only_id": "sheet_adoptapet_stat_01",
+    "source_task_id": "web_sheet_adoptapet_stat_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_adoptapet_stat_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_file_prop_01__blank_construct",
+    "sheet_only_id": "sheet_file_prop_01",
+    "source_task_id": "prozilla_sheet_file_prop_01",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_file_prop_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_file_size_01__blank_construct",
+    "sheet_only_id": "sheet_file_size_01",
+    "source_task_id": "prozilla_sheet_file_size_01",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_file_size_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_file_size_01__error_correction",
+    "sheet_only_id": "sheet_file_size_01",
+    "source_task_id": "prozilla_sheet_file_size_01",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_file_size_01__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_image_count_01__blank_construct",
+    "sheet_only_id": "sheet_image_count_01",
+    "source_task_id": "prozilla_sheet_image_count_01",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_image_count_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_image_count_01__error_correction",
+    "sheet_only_id": "sheet_image_count_01",
+    "source_task_id": "prozilla_sheet_image_count_01",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_image_count_01__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_maths_calc_01__blank_construct",
+    "sheet_only_id": "sheet_maths_calc_01",
+    "source_task_id": "prozilla_sheet_maths_calc_01",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_maths_calc_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_maths_calc_01__error_correction",
+    "sheet_only_id": "sheet_maths_calc_01",
+    "source_task_id": "prozilla_sheet_maths_calc_01",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_maths_calc_01__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_maths_calc_02__blank_construct",
+    "sheet_only_id": "sheet_maths_calc_02",
+    "source_task_id": "prozilla_sheet_maths_calc_02",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_maths_calc_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_maths_calc_02__error_correction",
+    "sheet_only_id": "sheet_maths_calc_02",
+    "source_task_id": "prozilla_sheet_maths_calc_02",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_maths_calc_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_maths_calc_03__blank_construct",
+    "sheet_only_id": "sheet_maths_calc_03",
+    "source_task_id": "prozilla_sheet_maths_calc_03",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_maths_calc_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_maths_calc_03__error_correction",
+    "sheet_only_id": "sheet_maths_calc_03",
+    "source_task_id": "prozilla_sheet_maths_calc_03",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_maths_calc_03__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_maths_calc_04__blank_construct",
+    "sheet_only_id": "sheet_maths_calc_04",
+    "source_task_id": "prozilla_sheet_maths_calc_04",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_maths_calc_04__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_maths_calc_04__error_correction",
+    "sheet_only_id": "sheet_maths_calc_04",
+    "source_task_id": "prozilla_sheet_maths_calc_04",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_maths_calc_04__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_mult_sum_01__blank_construct",
+    "sheet_only_id": "sheet_mult_sum_01",
+    "source_task_id": "prozilla_mult_sum_01",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_mult_sum_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_mult_sum_01__partial_complete",
+    "sheet_only_id": "sheet_mult_sum_01",
+    "source_task_id": "prozilla_mult_sum_01",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_mult_sum_01__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_mult_sum_01__audit_verify",
+    "sheet_only_id": "sheet_mult_sum_01",
+    "source_task_id": "prozilla_mult_sum_01",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_mult_sum_01__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_mult_sum_01__error_correction",
+    "sheet_only_id": "sheet_mult_sum_01",
+    "source_task_id": "prozilla_mult_sum_01",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_mult_sum_01__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_mult_sum_and_multiply__blank_construct",
+    "sheet_only_id": "sheet_mult_sum_and_multiply",
+    "source_task_id": "prozilla_mult_sum_and_multiply",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_mult_sum_and_multiply__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_mult_sum_and_multiply__partial_complete",
+    "sheet_only_id": "sheet_mult_sum_and_multiply",
+    "source_task_id": "prozilla_mult_sum_and_multiply",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_mult_sum_and_multiply__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_mult_sum_and_multiply__audit_verify",
+    "sheet_only_id": "sheet_mult_sum_and_multiply",
+    "source_task_id": "prozilla_mult_sum_and_multiply",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_mult_sum_and_multiply__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_mult_sum_and_multiply__error_correction",
+    "sheet_only_id": "sheet_mult_sum_and_multiply",
+    "source_task_id": "prozilla_mult_sum_and_multiply",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_mult_sum_and_multiply__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_notif_status_01__blank_construct",
+    "sheet_only_id": "sheet_notif_status_01",
+    "source_task_id": "prozilla_sheet_notif_status_01",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_notif_status_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_photos_png_count_01__blank_construct",
+    "sheet_only_id": "sheet_photos_png_count_01",
+    "source_task_id": "prozilla_sheet_photos_png_count_01",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_photos_png_count_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_photos_png_count_01__error_correction",
+    "sheet_only_id": "sheet_photos_png_count_01",
+    "source_task_id": "prozilla_sheet_photos_png_count_01",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_photos_png_count_01__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_settings_theme_01__blank_construct",
+    "sheet_only_id": "sheet_settings_theme_01",
+    "source_task_id": "prozilla_sheet_settings_theme_01",
+    "source_file": "verified\\tasks_verified_3.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_settings_theme_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_spreadsheet_bgcolor_red__blank_construct",
+    "sheet_only_id": "sheet_spreadsheet_bgcolor_red",
+    "source_task_id": "spreadsheet_bgcolor_red",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_spreadsheet_bgcolor_red__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_spreadsheet_bgcolor_red__partial_complete",
+    "sheet_only_id": "sheet_spreadsheet_bgcolor_red",
+    "source_task_id": "spreadsheet_bgcolor_red",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_spreadsheet_bgcolor_red__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_bgcolor_red__audit_verify",
+    "sheet_only_id": "sheet_spreadsheet_bgcolor_red",
+    "source_task_id": "spreadsheet_bgcolor_red",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_spreadsheet_bgcolor_red__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_bgcolor_red__error_correction",
+    "sheet_only_id": "sheet_spreadsheet_bgcolor_red",
+    "source_task_id": "spreadsheet_bgcolor_red",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_spreadsheet_bgcolor_red__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_bgcolor_yellow__blank_construct",
+    "sheet_only_id": "sheet_spreadsheet_bgcolor_yellow",
+    "source_task_id": "spreadsheet_bgcolor_yellow",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_spreadsheet_bgcolor_yellow__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_spreadsheet_bgcolor_yellow__partial_complete",
+    "sheet_only_id": "sheet_spreadsheet_bgcolor_yellow",
+    "source_task_id": "spreadsheet_bgcolor_yellow",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_spreadsheet_bgcolor_yellow__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_bgcolor_yellow__audit_verify",
+    "sheet_only_id": "sheet_spreadsheet_bgcolor_yellow",
+    "source_task_id": "spreadsheet_bgcolor_yellow",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_spreadsheet_bgcolor_yellow__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_bgcolor_yellow__error_correction",
+    "sheet_only_id": "sheet_spreadsheet_bgcolor_yellow",
+    "source_task_id": "spreadsheet_bgcolor_yellow",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_spreadsheet_bgcolor_yellow__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_bold_header__blank_construct",
+    "sheet_only_id": "sheet_spreadsheet_bold_header",
+    "source_task_id": "spreadsheet_bold_header",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_spreadsheet_bold_header__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_spreadsheet_bold_header__partial_complete",
+    "sheet_only_id": "sheet_spreadsheet_bold_header",
+    "source_task_id": "spreadsheet_bold_header",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_spreadsheet_bold_header__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_bold_header__audit_verify",
+    "sheet_only_id": "sheet_spreadsheet_bold_header",
+    "source_task_id": "spreadsheet_bold_header",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_spreadsheet_bold_header__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_bold_header__error_correction",
+    "sheet_only_id": "sheet_spreadsheet_bold_header",
+    "source_task_id": "spreadsheet_bold_header",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_spreadsheet_bold_header__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_conditional_formattion__blank_construct",
+    "sheet_only_id": "sheet_spreadsheet_conditional_formattion",
+    "source_task_id": "spreadsheet_conditional_formattion",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_spreadsheet_conditional_formattion__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_spreadsheet_conditional_formattion__partial_complete",
+    "sheet_only_id": "sheet_spreadsheet_conditional_formattion",
+    "source_task_id": "spreadsheet_conditional_formattion",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_spreadsheet_conditional_formattion__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_conditional_formattion__audit_verify",
+    "sheet_only_id": "sheet_spreadsheet_conditional_formattion",
+    "source_task_id": "spreadsheet_conditional_formattion",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_spreadsheet_conditional_formattion__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_conditional_formattion__error_correction",
+    "sheet_only_id": "sheet_spreadsheet_conditional_formattion",
+    "source_task_id": "spreadsheet_conditional_formattion",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_spreadsheet_conditional_formattion__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_format_currency__blank_construct",
+    "sheet_only_id": "sheet_spreadsheet_format_currency",
+    "source_task_id": "spreadsheet_format_currency",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_spreadsheet_format_currency__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_spreadsheet_format_currency__partial_complete",
+    "sheet_only_id": "sheet_spreadsheet_format_currency",
+    "source_task_id": "spreadsheet_format_currency",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_spreadsheet_format_currency__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_format_currency__audit_verify",
+    "sheet_only_id": "sheet_spreadsheet_format_currency",
+    "source_task_id": "spreadsheet_format_currency",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_spreadsheet_format_currency__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_format_currency__error_correction",
+    "sheet_only_id": "sheet_spreadsheet_format_currency",
+    "source_task_id": "spreadsheet_format_currency",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_spreadsheet_format_currency__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_format_date__blank_construct",
+    "sheet_only_id": "sheet_spreadsheet_format_date",
+    "source_task_id": "spreadsheet_format_date",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_spreadsheet_format_date__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_spreadsheet_format_date__partial_complete",
+    "sheet_only_id": "sheet_spreadsheet_format_date",
+    "source_task_id": "spreadsheet_format_date",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_spreadsheet_format_date__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_format_date__audit_verify",
+    "sheet_only_id": "sheet_spreadsheet_format_date",
+    "source_task_id": "spreadsheet_format_date",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_spreadsheet_format_date__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_grounding__blank_construct",
+    "sheet_only_id": "sheet_spreadsheet_grounding",
+    "source_task_id": "spreadsheet_grounding",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_spreadsheet_grounding__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_spreadsheet_grounding__partial_complete",
+    "sheet_only_id": "sheet_spreadsheet_grounding",
+    "source_task_id": "spreadsheet_grounding",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_spreadsheet_grounding__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_grounding__audit_verify",
+    "sheet_only_id": "sheet_spreadsheet_grounding",
+    "source_task_id": "spreadsheet_grounding",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_spreadsheet_grounding__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_name_split__blank_construct",
+    "sheet_only_id": "sheet_spreadsheet_name_split",
+    "source_task_id": "spreadsheet_name_split",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_spreadsheet_name_split__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_spreadsheet_name_split__partial_complete",
+    "sheet_only_id": "sheet_spreadsheet_name_split",
+    "source_task_id": "spreadsheet_name_split",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_spreadsheet_name_split__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_name_split__audit_verify",
+    "sheet_only_id": "sheet_spreadsheet_name_split",
+    "source_task_id": "spreadsheet_name_split",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_spreadsheet_name_split__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_phonenumber__blank_construct",
+    "sheet_only_id": "sheet_spreadsheet_phonenumber",
+    "source_task_id": "spreadsheet_phonenumber",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_spreadsheet_phonenumber__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_spreadsheet_phonenumber__partial_complete",
+    "sheet_only_id": "sheet_spreadsheet_phonenumber",
+    "source_task_id": "spreadsheet_phonenumber",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_spreadsheet_phonenumber__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_spreadsheet_phonenumber__audit_verify",
+    "sheet_only_id": "sheet_spreadsheet_phonenumber",
+    "source_task_id": "spreadsheet_phonenumber",
+    "source_file": "seed\\spreadsheet\\seed.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_spreadsheet_phonenumber__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_arxiv_01__blank_construct",
+    "sheet_only_id": "sheet_word_arxiv_01",
+    "source_task_id": "web_sheet_word_arxiv_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_arxiv_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_arxiv_01__partial_complete",
+    "sheet_only_id": "sheet_word_arxiv_01",
+    "source_task_id": "web_sheet_word_arxiv_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_arxiv_01__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_arxiv_01__audit_verify",
+    "sheet_only_id": "sheet_word_arxiv_01",
+    "source_task_id": "web_sheet_word_arxiv_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_arxiv_01__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_arxiv_01__error_correction",
+    "sheet_only_id": "sheet_word_arxiv_01",
+    "source_task_id": "web_sheet_word_arxiv_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_arxiv_01__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_arxiv_02__blank_construct",
+    "sheet_only_id": "sheet_word_arxiv_02",
+    "source_task_id": "web_sheet_word_arxiv_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_arxiv_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_arxiv_02__partial_complete",
+    "sheet_only_id": "sheet_word_arxiv_02",
+    "source_task_id": "web_sheet_word_arxiv_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_arxiv_02__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_arxiv_02__audit_verify",
+    "sheet_only_id": "sheet_word_arxiv_02",
+    "source_task_id": "web_sheet_word_arxiv_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_arxiv_02__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_arxiv_02__error_correction",
+    "sheet_only_id": "sheet_word_arxiv_02",
+    "source_task_id": "web_sheet_word_arxiv_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_arxiv_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_arxiv_03__blank_construct",
+    "sheet_only_id": "sheet_word_arxiv_03",
+    "source_task_id": "web_sheet_word_arxiv_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_arxiv_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_arxiv_03__partial_complete",
+    "sheet_only_id": "sheet_word_arxiv_03",
+    "source_task_id": "web_sheet_word_arxiv_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_arxiv_03__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_arxiv_03__audit_verify",
+    "sheet_only_id": "sheet_word_arxiv_03",
+    "source_task_id": "web_sheet_word_arxiv_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_arxiv_03__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_arxiv_03__error_correction",
+    "sheet_only_id": "sheet_word_arxiv_03",
+    "source_task_id": "web_sheet_word_arxiv_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_arxiv_03__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_arxiv_04__blank_construct",
+    "sheet_only_id": "sheet_word_arxiv_04",
+    "source_task_id": "web_sheet_word_arxiv_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_arxiv_04__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_arxiv_04__partial_complete",
+    "sheet_only_id": "sheet_word_arxiv_04",
+    "source_task_id": "web_sheet_word_arxiv_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_arxiv_04__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_arxiv_04__audit_verify",
+    "sheet_only_id": "sheet_word_arxiv_04",
+    "source_task_id": "web_sheet_word_arxiv_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_arxiv_04__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_arxiv_04__error_correction",
+    "sheet_only_id": "sheet_word_arxiv_04",
+    "source_task_id": "web_sheet_word_arxiv_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_arxiv_04__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_01__blank_construct",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_01",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_01__partial_complete",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_01",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_01__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_01__audit_verify",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_01",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_01__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_01__error_correction",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_01",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_01__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_02__blank_construct",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_02",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_02__partial_complete",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_02",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_02__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_02__audit_verify",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_02",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_02__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_02__error_correction",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_02",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_03__blank_construct",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_03",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_03__partial_complete",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_03",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_03__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_03__audit_verify",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_03",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_03__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_03__error_correction",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_03",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_03__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_04__blank_construct",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_04",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_04__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_04__partial_complete",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_04",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_04__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_04__audit_verify",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_04",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_04__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_04__error_correction",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_04",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_04__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_05__blank_construct",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_05",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_05",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_05__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_05__partial_complete",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_05",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_05",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_05__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_05__audit_verify",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_05",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_05",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_05__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_05__error_correction",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_05",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_05",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_05__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_06__blank_construct",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_06",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_06",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_06__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_06__partial_complete",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_06",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_06",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_06__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_06__audit_verify",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_06",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_06",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_06__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_06__error_correction",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_06",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_06",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_06__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_07__blank_construct",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_07",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_07",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_07__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_07__partial_complete",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_07",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_07",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_07__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_07__audit_verify",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_07",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_07",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_07__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_07__error_correction",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_07",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_07",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_07__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_08__blank_construct",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_08",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_08",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_08__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_08__partial_complete",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_08",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_08",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_08__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_08__audit_verify",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_08",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_08",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_08__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_cdc_child_bmi_08__error_correction",
+    "sheet_only_id": "sheet_word_cdc_child_bmi_08",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_08",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_cdc_child_bmi_08__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_juso_01__blank_construct",
+    "sheet_only_id": "sheet_word_juso_01",
+    "source_task_id": "web_sheet_word_juso_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_juso_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_juso_01__partial_complete",
+    "sheet_only_id": "sheet_word_juso_01",
+    "source_task_id": "web_sheet_word_juso_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_juso_01__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_juso_01__audit_verify",
+    "sheet_only_id": "sheet_word_juso_01",
+    "source_task_id": "web_sheet_word_juso_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_juso_01__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_juso_02__blank_construct",
+    "sheet_only_id": "sheet_word_juso_02",
+    "source_task_id": "web_sheet_word_juso_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_juso_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_juso_02__partial_complete",
+    "sheet_only_id": "sheet_word_juso_02",
+    "source_task_id": "web_sheet_word_juso_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_juso_02__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_juso_02__audit_verify",
+    "sheet_only_id": "sheet_word_juso_02",
+    "source_task_id": "web_sheet_word_juso_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_juso_02__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_juso_03__blank_construct",
+    "sheet_only_id": "sheet_word_juso_03",
+    "source_task_id": "web_sheet_word_juso_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_juso_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_juso_03__partial_complete",
+    "sheet_only_id": "sheet_word_juso_03",
+    "source_task_id": "web_sheet_word_juso_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_juso_03__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_juso_03__audit_verify",
+    "sheet_only_id": "sheet_word_juso_03",
+    "source_task_id": "web_sheet_word_juso_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_juso_03__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_juso_04__blank_construct",
+    "sheet_only_id": "sheet_word_juso_04",
+    "source_task_id": "web_sheet_word_juso_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_juso_04__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_juso_04__partial_complete",
+    "sheet_only_id": "sheet_word_juso_04",
+    "source_task_id": "web_sheet_word_juso_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_juso_04__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_juso_04__audit_verify",
+    "sheet_only_id": "sheet_word_juso_04",
+    "source_task_id": "web_sheet_word_juso_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_juso_04__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_advice_02__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_advice_02",
+    "source_task_id": "web_word_sheet_adoptapet_advice_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_advice_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_advice_02__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_advice_02",
+    "source_task_id": "web_word_sheet_adoptapet_advice_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_advice_02__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_advice_02__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_advice_02",
+    "source_task_id": "web_word_sheet_adoptapet_advice_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_advice_02__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_advice_02__error_correction",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_advice_02",
+    "source_task_id": "web_word_sheet_adoptapet_advice_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_advice_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_advice_03__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_advice_03",
+    "source_task_id": "web_word_sheet_adoptapet_advice_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_advice_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_advice_03__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_advice_03",
+    "source_task_id": "web_word_sheet_adoptapet_advice_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_advice_03__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_advice_03__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_advice_03",
+    "source_task_id": "web_word_sheet_adoptapet_advice_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_advice_03__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_advice_03__error_correction",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_advice_03",
+    "source_task_id": "web_word_sheet_adoptapet_advice_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_advice_03__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_shelter_01__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_shelter_01",
+    "source_task_id": "web_word_sheet_adoptapet_shelter_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_shelter_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_shelter_01__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_shelter_01",
+    "source_task_id": "web_word_sheet_adoptapet_shelter_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_shelter_01__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_shelter_01__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_shelter_01",
+    "source_task_id": "web_word_sheet_adoptapet_shelter_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_shelter_01__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_stat_02__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_stat_02",
+    "source_task_id": "web_word_sheet_adoptapet_stat_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_stat_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_stat_03__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_stat_03",
+    "source_task_id": "web_word_sheet_adoptapet_stat_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_stat_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_stat_03__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_stat_03",
+    "source_task_id": "web_word_sheet_adoptapet_stat_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_stat_03__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_adoptapet_stat_03__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_adoptapet_stat_03",
+    "source_task_id": "web_word_sheet_adoptapet_stat_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_adoptapet_stat_03__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_nutrition_01__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_nutrition_01",
+    "source_task_id": "web_word_sheet_allrecipes_nutrition_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_nutrition_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_nutrition_01__error_correction",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_nutrition_01",
+    "source_task_id": "web_word_sheet_allrecipes_nutrition_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_nutrition_01__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_nutrition_02__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_nutrition_02",
+    "source_task_id": "web_word_sheet_allrecipes_nutrition_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_nutrition_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_nutrition_02__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_nutrition_02",
+    "source_task_id": "web_word_sheet_allrecipes_nutrition_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_nutrition_02__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_nutrition_02__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_nutrition_02",
+    "source_task_id": "web_word_sheet_allrecipes_nutrition_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_nutrition_02__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_nutrition_02__error_correction",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_nutrition_02",
+    "source_task_id": "web_word_sheet_allrecipes_nutrition_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_nutrition_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_nutrition_03__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_nutrition_03",
+    "source_task_id": "web_word_sheet_allrecipes_nutrition_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_nutrition_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_nutrition_03__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_nutrition_03",
+    "source_task_id": "web_word_sheet_allrecipes_nutrition_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_nutrition_03__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_nutrition_03__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_nutrition_03",
+    "source_task_id": "web_word_sheet_allrecipes_nutrition_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_nutrition_03__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_nutrition_03__error_correction",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_nutrition_03",
+    "source_task_id": "web_word_sheet_allrecipes_nutrition_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_nutrition_03__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_rating_01__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_rating_01",
+    "source_task_id": "web_word_sheet_allrecipes_rating_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_rating_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_rating_01__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_rating_01",
+    "source_task_id": "web_word_sheet_allrecipes_rating_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_rating_01__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_rating_01__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_rating_01",
+    "source_task_id": "web_word_sheet_allrecipes_rating_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_rating_01__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_rating_01__error_correction",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_rating_01",
+    "source_task_id": "web_word_sheet_allrecipes_rating_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_rating_01__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_search_01__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_search_01",
+    "source_task_id": "web_word_sheet_allrecipes_search_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_search_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_search_01__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_search_01",
+    "source_task_id": "web_word_sheet_allrecipes_search_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_search_01__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_search_01__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_search_01",
+    "source_task_id": "web_word_sheet_allrecipes_search_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_search_01__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_search_02__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_search_02",
+    "source_task_id": "web_word_sheet_allrecipes_search_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_search_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_search_02__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_search_02",
+    "source_task_id": "web_word_sheet_allrecipes_search_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_search_02__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_search_02__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_search_02",
+    "source_task_id": "web_word_sheet_allrecipes_search_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_search_02__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_search_02__error_correction",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_search_02",
+    "source_task_id": "web_word_sheet_allrecipes_search_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_search_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_search_03__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_search_03",
+    "source_task_id": "web_word_sheet_allrecipes_search_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_search_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_search_03__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_search_03",
+    "source_task_id": "web_word_sheet_allrecipes_search_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_search_03__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_search_03__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_search_03",
+    "source_task_id": "web_word_sheet_allrecipes_search_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_search_03__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_time_01__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_time_01",
+    "source_task_id": "web_word_sheet_allrecipes_time_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_time_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_time_01__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_time_01",
+    "source_task_id": "web_word_sheet_allrecipes_time_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_time_01__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_time_01__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_time_01",
+    "source_task_id": "web_word_sheet_allrecipes_time_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_time_01__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_time_02__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_time_02",
+    "source_task_id": "web_word_sheet_allrecipes_time_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_time_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_time_02__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_time_02",
+    "source_task_id": "web_word_sheet_allrecipes_time_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_time_02__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_time_02__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_time_02",
+    "source_task_id": "web_word_sheet_allrecipes_time_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_time_02__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_allrecipes_time_02__error_correction",
+    "sheet_only_id": "sheet_word_sheet_allrecipes_time_02",
+    "source_task_id": "web_word_sheet_allrecipes_time_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_allrecipes_time_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_ipad_01__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_ipad_01",
+    "source_task_id": "web_word_sheet_apple_ipad_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_ipad_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_ipad_01__error_correction",
+    "sheet_only_id": "sheet_word_sheet_apple_ipad_01",
+    "source_task_id": "web_word_sheet_apple_ipad_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_ipad_01__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_ipad_02__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_ipad_02",
+    "source_task_id": "web_word_sheet_apple_ipad_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_ipad_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_ipad_02__error_correction",
+    "sheet_only_id": "sheet_word_sheet_apple_ipad_02",
+    "source_task_id": "web_word_sheet_apple_ipad_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_ipad_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_ipad_03__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_ipad_03",
+    "source_task_id": "web_word_sheet_apple_ipad_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_ipad_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_ipad_03__error_correction",
+    "sheet_only_id": "sheet_word_sheet_apple_ipad_03",
+    "source_task_id": "web_word_sheet_apple_ipad_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_ipad_03__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_iphone_01__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_iphone_01",
+    "source_task_id": "web_word_sheet_apple_iphone_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_iphone_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_iphone_02__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_iphone_02",
+    "source_task_id": "web_word_sheet_apple_iphone_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_iphone_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_iphone_02__error_correction",
+    "sheet_only_id": "sheet_word_sheet_apple_iphone_02",
+    "source_task_id": "web_word_sheet_apple_iphone_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_iphone_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_mac_01__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_mac_01",
+    "source_task_id": "web_word_sheet_apple_mac_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_mac_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_mac_02__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_mac_02",
+    "source_task_id": "web_word_sheet_apple_mac_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_mac_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_mac_02__error_correction",
+    "sheet_only_id": "sheet_word_sheet_apple_mac_02",
+    "source_task_id": "web_word_sheet_apple_mac_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_mac_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_mac_03__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_mac_03",
+    "source_task_id": "web_word_sheet_apple_mac_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_mac_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_mac_03__error_correction",
+    "sheet_only_id": "sheet_word_sheet_apple_mac_03",
+    "source_task_id": "web_word_sheet_apple_mac_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_mac_03__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_other_01__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_other_01",
+    "source_task_id": "web_word_sheet_apple_other_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_other_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_other_01__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_apple_other_01",
+    "source_task_id": "web_word_sheet_apple_other_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_other_01__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_other_01__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_apple_other_01",
+    "source_task_id": "web_word_sheet_apple_other_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_other_01__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_other_01__error_correction",
+    "sheet_only_id": "sheet_word_sheet_apple_other_01",
+    "source_task_id": "web_word_sheet_apple_other_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_other_01__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_other_02__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_other_02",
+    "source_task_id": "web_word_sheet_apple_other_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_other_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_other_02__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_apple_other_02",
+    "source_task_id": "web_word_sheet_apple_other_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_other_02__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_other_02__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_apple_other_02",
+    "source_task_id": "web_word_sheet_apple_other_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_other_02__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_other_02__error_correction",
+    "sheet_only_id": "sheet_word_sheet_apple_other_02",
+    "source_task_id": "web_word_sheet_apple_other_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_other_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_other_03__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_other_03",
+    "source_task_id": "web_word_sheet_apple_other_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_other_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_other_03__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_apple_other_03",
+    "source_task_id": "web_word_sheet_apple_other_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_other_03__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_other_03__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_apple_other_03",
+    "source_task_id": "web_word_sheet_apple_other_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_other_03__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_services_01__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_services_01",
+    "source_task_id": "web_word_sheet_apple_services_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_services_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_services_01__error_correction",
+    "sheet_only_id": "sheet_word_sheet_apple_services_01",
+    "source_task_id": "web_word_sheet_apple_services_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_services_01__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_services_02__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_services_02",
+    "source_task_id": "web_word_sheet_apple_services_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_services_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_services_02__error_correction",
+    "sheet_only_id": "sheet_word_sheet_apple_services_02",
+    "source_task_id": "web_word_sheet_apple_services_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_services_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_services_03__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_apple_services_03",
+    "source_task_id": "web_word_sheet_apple_services_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_services_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_services_03__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_apple_services_03",
+    "source_task_id": "web_word_sheet_apple_services_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_services_03__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_apple_services_03__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_apple_services_03",
+    "source_task_id": "web_word_sheet_apple_services_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_apple_services_03__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_author_02__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_arxiv_author_02",
+    "source_task_id": "web_word_sheet_arxiv_author_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_author_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_author_02__error_correction",
+    "sheet_only_id": "sheet_word_sheet_arxiv_author_02",
+    "source_task_id": "web_word_sheet_arxiv_author_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_author_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_author_03__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_arxiv_author_03",
+    "source_task_id": "web_word_sheet_arxiv_author_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_author_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_author_03__error_correction",
+    "sheet_only_id": "sheet_word_sheet_arxiv_author_03",
+    "source_task_id": "web_word_sheet_arxiv_author_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_author_03__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_02__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_02",
+    "source_task_id": "web_word_sheet_arxiv_QA_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_02__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_02",
+    "source_task_id": "web_word_sheet_arxiv_QA_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_02__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_02__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_02",
+    "source_task_id": "web_word_sheet_arxiv_QA_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_02__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_02__error_correction",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_02",
+    "source_task_id": "web_word_sheet_arxiv_QA_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_03__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_03",
+    "source_task_id": "web_word_sheet_arxiv_QA_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_03__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_03",
+    "source_task_id": "web_word_sheet_arxiv_QA_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_03__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_03__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_03",
+    "source_task_id": "web_word_sheet_arxiv_QA_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_03__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_03__error_correction",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_03",
+    "source_task_id": "web_word_sheet_arxiv_QA_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_03__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_04__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_04",
+    "source_task_id": "web_word_sheet_arxiv_QA_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_04__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_04__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_04",
+    "source_task_id": "web_word_sheet_arxiv_QA_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_04__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_04__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_04",
+    "source_task_id": "web_word_sheet_arxiv_QA_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_04__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_04__error_correction",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_04",
+    "source_task_id": "web_word_sheet_arxiv_QA_04",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_04__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_05__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_05",
+    "source_task_id": "web_word_sheet_arxiv_QA_05",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_05__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_05__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_05",
+    "source_task_id": "web_word_sheet_arxiv_QA_05",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_05__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_05__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_05",
+    "source_task_id": "web_word_sheet_arxiv_QA_05",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_05__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_qa_05__error_correction",
+    "sheet_only_id": "sheet_word_sheet_arxiv_qa_05",
+    "source_task_id": "web_word_sheet_arxiv_QA_05",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_qa_05__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_table_01__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_arxiv_table_01",
+    "source_task_id": "web_word_sheet_arxiv_Table_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_table_01__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_table_01__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_arxiv_table_01",
+    "source_task_id": "web_word_sheet_arxiv_Table_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_table_01__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_table_01__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_arxiv_table_01",
+    "source_task_id": "web_word_sheet_arxiv_Table_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_table_01__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_table_01__error_correction",
+    "sheet_only_id": "sheet_word_sheet_arxiv_table_01",
+    "source_task_id": "web_word_sheet_arxiv_Table_01",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_table_01__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_table_02__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_arxiv_table_02",
+    "source_task_id": "web_word_sheet_arxiv_Table_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_table_02__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_table_02__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_arxiv_table_02",
+    "source_task_id": "web_word_sheet_arxiv_Table_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_table_02__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_table_02__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_arxiv_table_02",
+    "source_task_id": "web_word_sheet_arxiv_Table_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_table_02__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_table_02__error_correction",
+    "sheet_only_id": "sheet_word_sheet_arxiv_table_02",
+    "source_task_id": "web_word_sheet_arxiv_Table_02",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_table_02__error_correction_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_table_03__blank_construct",
+    "sheet_only_id": "sheet_word_sheet_arxiv_table_03",
+    "source_task_id": "web_word_sheet_arxiv_Table_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "blank_construct",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_table_03__blank_construct_0_1"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_table_03__partial_complete",
+    "sheet_only_id": "sheet_word_sheet_arxiv_table_03",
+    "source_task_id": "web_word_sheet_arxiv_Table_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "partial_work_complete",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_table_03__partial_complete_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_table_03__audit_verify",
+    "sheet_only_id": "sheet_word_sheet_arxiv_table_03",
+    "source_task_id": "web_word_sheet_arxiv_Table_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "audit_verify",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_table_03__audit_verify_1_2"
+  },
+  {
+    "task_id": "sheet_word_sheet_arxiv_table_03__error_correction",
+    "sheet_only_id": "sheet_word_sheet_arxiv_table_03",
+    "source_task_id": "web_word_sheet_arxiv_Table_03",
+    "source_file": "verified\\tasks_verified_4.jsonc",
+    "variant_type": "error_correction",
+    "desired_augmented_task_id": "sheet_word_sheet_arxiv_table_03__error_correction_1_2"
+  }
+]

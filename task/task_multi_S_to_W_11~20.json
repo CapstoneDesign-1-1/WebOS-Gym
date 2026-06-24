@@ -1,0 +1,262 @@
+[
+  {
+    "task_id": "task_multi_S_W_11",
+    "instruction": "In the right browser (Spreadsheet), enter the formula '=5+3' in cell A1 and verify the result. In the left browser (Word), create a 2x2 table. Enter the inputs 5 and 3 in the first row, and enter the calculated result from cell A1 in the bottom-left cell of the table.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:4173/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "target": "url",
+          "value": "word",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "task_multi_S_W_12",
+    "instruction": "In the right browser (Spreadsheet), enter the formula '=LEN(\"hello\")' in cell A1 and verify the result. In the left browser (Word), create a 2x2 table. Enter 'hello' in the top-left cell and enter the calculated result from cell A1 in the bottom-right cell of the table.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:4173/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "target": "url",
+          "value": "word",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "task_multi_S_W_13",
+    "instruction": "In the right browser (Spreadsheet), enter the formula '=AVERAGE(10,20,30)' in cell A1 and verify the result. In the left browser (Word), create a 2x3 table. Enter the inputs 10, 20, and 30 in the first row, and enter the calculated result from cell A1 in the bottom-left cell of the table.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:4173/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "target": "url",
+          "value": "word",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "task_multi_S_W_14",
+    "instruction": "In the right browser (Spreadsheet), enter the formula '=MAX(5,10,15)' in cell A1 and verify the result. In the left browser (Word), create a 3x3 table. Enter the inputs 5, 10, and 15 in the first row, and enter the calculated result from cell A1 in the bottom-left cell of the table.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:4173/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "target": "url",
+          "value": "word",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "task_multi_S_W_15",
+    "instruction": "In the right browser (Spreadsheet), enter the formula '=3*7' in cell A1 and verify the result. In the left browser (Word), create a 2x2 table. Enter the inputs 3 and 7 in the first row, and enter the calculated result from cell A1 in the bottom-left cell of the table.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:4173/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "target": "url",
+          "value": "word",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "task_multi_S_W_16",
+    "instruction": "In the right browser (Spreadsheet), enter the formula '=SUM(1,2,3,4,5)' in cell A1 and verify the result. In the left browser (Word), create a 2x5 table. Enter the inputs 1, 2, 3, 4, and 5 in the first row, and enter the calculated result from cell A1 in the bottom-left cell of the table.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:4173/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "target": "url",
+          "value": "word",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "task_multi_S_W_17",
+    "instruction": "In the right browser (Spreadsheet), enter the formula '=POWER(2,4)' in cell A1 and verify the result. In the left browser (Word), create a 2x2 table. Enter the base 2 and exponent 4 in the first row, and enter the calculated result from cell A1 in the bottom-left cell of the table.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:4173/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "target": "url",
+          "value": "word",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "task_multi_S_W_18",
+    "instruction": "In the right browser (Spreadsheet), enter the formula '=ROUND(3.7,0)' in cell A1 and verify the result. In the left browser (Word), create a 2x2 table. Enter the input value 3.7 and decimal places 0 in the first row, and enter the calculated result from cell A1 in the bottom-left cell of the table.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:4173/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "target": "url",
+          "value": "word",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "task_multi_S_W_19",
+    "instruction": "In the right browser (Spreadsheet), enter the formula '=100/4' in cell A1 and verify the result. In the left browser (Word), create a 2x2 table. Enter the inputs 100 and 4 in the first row, and enter the calculated result from cell A1 in the bottom-left cell of the table.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:4173/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "target": "url",
+          "value": "word",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "task_multi_S_W_20",
+    "instruction": "In the right browser (Spreadsheet), enter the formula '=LEN(\"surfgym\")' in cell A1 and verify the result. In the left browser (Word), create a 2x2 table. Enter 'surfgym' in the top-left cell and enter the calculated result from cell A1 in the bottom-left cell of the table.",
+    "website": [
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      },
+      {
+        "id": "spreadsheet",
+        "url": "http://localhost:4173/spreadsheet/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "word",
+          "target": "url",
+          "value": "word",
+          "match": "contains"
+        }
+      ]
+    }
+  }
+]

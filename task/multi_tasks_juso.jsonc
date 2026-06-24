@@ -1,0 +1,268 @@
+[
+  {
+    "task_id": "MULTI-JUSO-SEARCH-001",
+    "instruction": "I need to find the official address details for the National Museum of Korea (국립중앙박물관). Please search for '국립중앙박물관' on the juso.go.kr website. Extract its Road Name Address (도로명주소), Zip Code (우편번호), and English Road Name Address (영문 도로명주소). Save the results in the spreadsheet starting at A1 with headers 'Location', 'Road Name Address', 'Zip Code', and 'English Address'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "sheet",
+          "cell": "A1",
+          "value": "(?i).*Location.*|.*장소.*|.*위치.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B1",
+          "value": "(?i).*Road.*|.*도로명.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C1",
+          "value": "(?i).*Zip.*|.*우편번호.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "D1",
+          "value": "(?i).*English.*|.*영문.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A2",
+          "value": ".*국립중앙박물관.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B2",
+          "value": "(?i).*서빙고로\\s*137.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "C2",
+          "value": ".*04383.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "D2",
+          "value": "(?i).*137.*Seobinggo-ro.*",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  //1. Web에서 검색란 왼쪽 클릭
+  //2. Web에서 '국립중앙박물관' 입력
+  //3. Web에서 엔터 입력
+  //4. Sheet의 A1 왼쪽 클릭
+  //5. Sheet에서 'Location' 입력
+  //6. Sheet의 B1 왼쪽 클릭
+  //7. Sheet에서 'Road Name Address' 입력
+  //8. Sheet의 C1 왼쪽 클릭
+  //9. Sheet에서 'Zip Code' 입력
+  //10. Sheet의 D1 왼쪽 클릭
+  //11. Sheet에서 'English Address' 입력
+  //12. Sheet의 A2 왼쪽 클릭
+  //13. Sheet에서 '국립중앙박물관' 입력
+  //14. Sheet의 B2 왼쪽 클릭
+  //15. Sheet에서 '서울특별시 용산구 서빙고로 137 (용산동6가)' 입력
+  //16. Sheet의 C2 왼쪽 클릭
+  //17. Sheet에서 '04383' 입력
+  //18. Web에서 영문보기 버튼 왼쪽 클릭
+  //19. Sheet의 D2 왼쪽 클릭
+  //20. Sheet에서 '137 Seobinggo-ro, Yongsan-gu, Seoul' 입력
+  {
+    "task_id": "MULTI-JUSO-CONVERT-001",
+    "instruction": "I have two old Korean lot-number addresses (지번주소) that I need to convert to the new Road Name Addresses (도로명주소). Address 1: '서울특별시 강남구 역삼동 737'. Address 2: '서울특별시 영등포구 여의도동 1-6 국회의사당역'. Please search for these on juso.go.kr and find their new road name addresses(도로명주소). Save them in the spreadsheet starting at A1 with headers 'Old Address' and 'New Address'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "sheet",
+          "cell": "A1",
+          "value": "(?i).*Old.*|.*지번.*|.*구주소.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B1",
+          "value": "(?i).*New.*|.*Road.*|.*도로명.*|.*신주소.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A2",
+          "value": ".*역삼동.*737.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B2",
+          "value": ".*테헤란로\\s*152.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A3",
+          "value": ".*여의도동.*1-6.*국회의사당역.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B3",
+          "value": ".*국회대로\\s*758.*",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  //1. Sheet의 A1 왼쪽 클릭
+  //2. Sheet에서 'Old Address' 입력
+  //3. Sheet의 B1 왼쪽 클릭
+  //4. Sheet에서 'New Address' 입력
+  //5. Web에서 화면 중앙 검색어 입력창 왼쪽 클릭
+  //6. Web에서 '서울특별시 강남구 역삼동 737' 입력
+  //7. Web에서 검색 아이콘(돋보기 모양) 왼쪽 클릭 또는 Enter 키 입력
+  //8. Sheet의 A2 왼쪽 클릭
+  //9. Sheet에서 '서울특별시 강남구 역삼동 737' 입력
+  //10. Sheet의 B2 왼쪽 클릭
+  //11. Sheet에서 '서울특별시 강남구 테헤란로 152 (역삼동)' 입력
+  //12. Web에서 상단 검색어 입력창 내용 전체 선택 (마우스 드래그 또는 더블 클릭)
+  //13. Web에서 '서울특별시 영등포구 여의도동 1-6 국회의사당역' 입력
+  //14. Web에서 검색 아이콘(돋보기 모양) 왼쪽 클릭 또는 Enter 키 입력
+  //15. Sheet의 A3 왼쪽 클릭
+  //16. Sheet에서 '서울특별시 영등포구 여의도동 1-6 국회의사당역' 입력
+  //17. Sheet의 B3 왼쪽 클릭
+  //18. Sheet에서 '서울특별시 영등포구 국회대로 지하758 (여의도동)' 입력
+  {
+    "task_id": "MULTI-JUSO-ZIP-001",
+    "instruction": "I need to find all the road name addresses associated with a specific zip code. Please search for the zip code '05272' on the juso.go.kr website. Extract all the road name addresses (도로명주소) that appear in the search results. Save the results in the spreadsheet starting at A1 with headers 'Zip Code (우편번호)' and 'Road Name Address (도로명주소)'. Record '05272' in column A and each corresponding road name address in column B for all results.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.juso.go.kr/"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      }
+    ],
+    "evaluation": {
+      "mode": "spreadsheet",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "sheet",
+          "cell": "A1",
+          "value": "(?i).*Zip.*|.*우편번호.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B1",
+          "value": "(?i).*Road.*|.*도로명.*|.*주소.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A2",
+          "value": ".*05272.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B2",
+          "value": ".*구천면로.*476.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A3",
+          "value": ".*05272.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B3",
+          "value": ".*구천면로.*488.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A4",
+          "value": ".*05272.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B4",
+          "value": ".*상암로.*251.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "A5",
+          "value": ".*05272.*",
+          "match": "regex"
+        },
+        {
+          "website_id": "sheet",
+          "cell": "B5",
+          "value": ".*상암로.*257.*",
+          "match": "regex"
+        }
+      ]
+    }
+  }
+  //1. Sheet의 A1 왼쪽 클릭
+  //2. Sheet에서 'Zip Code (우편번호)' 입력
+  //3. Sheet의 B1 왼쪽 클릭
+  //4. Sheet에서 'Road Name Address (도로명주소)' 입력
+  //5. Web에서 메인 화면의 검색어 입력창 왼쪽 클릭
+  //6. Web에서 '05272' 입력
+  //7. Web에서 검색 아이콘(돋보기 모양) 왼쪽 클릭 또는 Enter 키 입력
+  //8. Web에서 검색 결과 목록이 로드되는 것 확인
+  //9. Sheet의 A2 왼쪽 클릭
+  //10. Sheet에서 '05272' 입력
+  //11. Sheet의 B2 왼쪽 클릭
+  //12. Sheet에서 '서울특별시 강동구 구천면로 476 (명일동)' 입력
+  //13. Sheet의 A3 왼쪽 클릭
+  //14. Sheet에서 '05272' 입력
+  //15. Sheet의 B3 왼쪽 클릭
+  //16. Sheet에서 '서울특별시 강동구 구천면로 488 (명일동)' 입력
+  //17. Sheet의 A4 왼쪽 클릭
+  //18. Sheet에서 '05272' 입력
+  //19. Sheet의 B4 왼쪽 클릭
+  //20. Sheet에서 '서울특별시 강동구 상암로 251 (명일동, 고덕주공아파트)' 입력
+  //21. Sheet의 A5 왼쪽 클릭
+  //22. Sheet에서 '05272' 입력
+  //23. Sheet의 B5 왼쪽 클릭
+  //24. Sheet에서 '서울특별시 강동구 상암로 257 (명일동)' 입력
+]

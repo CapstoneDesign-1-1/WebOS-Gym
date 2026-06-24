@@ -1,0 +1,267 @@
+[
+  {
+    "task_id": "web_task_allrecipes_01",
+    "instruction": "On the Absolutely the Best Chocolate Chip Cookies recipe page, check the calorie value listed in the Nutrition Facts (per serving) section.",
+    "website": "https://www.allrecipes.com/recipe/17209/absolutely-the-best-chocolate-chip-cookies/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "td.mm-recipes-nutrition-facts-summary__table-cell.text-body-100-prominent",
+          "target": "text",
+          "value": "241",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_allrecipes_02",
+    "instruction": "On the Alabama Fire Crackers recipe page, check the Total Time listed.",
+    "website": "https://www.allrecipes.com/recipe/214184/alabama-fire-crackers/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "text",
+          "value": "9 hrs 15 mins",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_allrecipes_03",
+    "instruction": "On the Allrecipes website, search for 'banana bread' and check the title of the first result.",
+    "website": "https://www.allrecipes.com/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "span.card__title-text",
+          "target": "text",
+          "value": "Janet's Rich Banana Bread",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_allrecipes_04",
+    "instruction": "On the Easy Chocolate Chip Pound Cake recipe page, scale the recipe to 2x and check the number of eggs listed in the ingredients.",
+    "website": "https://www.allrecipes.com/recipe/17572/easy-chocolate-chip-pound-cake/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "span[data-ingredient-quantity='true'][data-original-quantity='4']",
+          "target": "text",
+          "value": "8",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_allrecipes_05",
+    "instruction": "On the Easy Chocolate Chip Pound Cake recipe page, check the star rating displayed for the recipe.",
+    "website": "https://www.allrecipes.com/recipe/17572/easy-chocolate-chip-pound-cake/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "#mm-recipes-review-bar__rating_1-0",
+          "target": "text",
+          "value": "4.7",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_arxiv_01",
+    "instruction": "On the arXiv website, search for 'attention is all you need' and check the title of the first result.",
+    "website": "https://arxiv.org/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p.title.is-5.mathjax",
+          "target": "text",
+          "value": "Attention Is Not All You Need for Diffraction",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_arxiv_02",
+    "instruction": "On the arXiv website, search for the paper with ID '1408.4969' and check the list of authors on the paper's page.",
+    "website": "https://arxiv.org/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": ".authors",
+          "target": "text",
+          "value": "Takaaki Miyajima",
+          "match": "contains",
+          "normalize_space": true
+        },
+        {
+          "selector": ".authors",
+          "target": "text",
+          "value": "David Thomas",
+          "match": "contains",
+          "normalize_space": true
+        },
+        {
+          "selector": ".authors",
+          "target": "text",
+          "value": "Hideharu Amano",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_arxiv_03",
+    "instruction": "On the arXiv website, search for the paper with ID '2605.10702' and check the submission date on the paper's page.",
+    "website": "https://arxiv.org/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div.dateline",
+          "target": "text",
+          "value": "11 May 2026",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_arxiv_04",
+    "instruction": "On the arXiv page for paper 2605.10912, open the paper using the 'HTML (experimental)' option and verify that a 'Related Work' section exists in the paper.",
+    "website": "https://arxiv.org/abs/2605.10912",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "#S2",
+          "target": "text",
+          "value": "Related Work",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_01",
+    "instruction": "On the Apple Store iPhone 17 Pro page, configure the purchase options as follows: select the White (Silver) color, choose 1TB storage, set the payment option to Buy (not monthly installments), select AT&T as the carrier, do not add a trade-in, and do not add AppleCare. Then check the displayed price.",
+    "website": "https://www.apple.com/shop/buy-iphone/iphone-17-pro",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "span.as-price-currentprice[data-autom=\"price-MFXN4\"]",
+          "target": "text",
+          "value": "$1,599",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_02",
+    "instruction": "On the Apple Mac Studio purchase page, configure the options as follows: select the M4 Max chip with 16-core CPU and 40-core GPU, choose 64GB memory, choose 1TB storage, add a Final Cut Pro license, add a Logic Pro license, do not add a trade-in, and select Buy as the payment option. Then check the displayed total price.",
+    "website": "https://www.apple.com/shop/buy-mac/mac-studio",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div.as-price-currentprice[data-autom=\"summaryPrice\"]",
+          "target": "text",
+          "value": "$3,398.98",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_03",
+    "instruction": "On the Apple iPad 11-inch purchase page, configure the options as follows: select the White (Silver) color, choose 256GB storage, select Wi-Fi + Cellular connectivity, skip engraving, add an Apple Pencil (USB-C), add a Magic Keyboard Folio (US English), do not add a trade-in, select Buy as the payment option (no financing), and do not add AppleCare. Then check the displayed total price.",
+    "website": "https://www.apple.com/shop/buy-ipad/ipad",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div.as-price-currentprice[data-autom=\"summaryPrice\"]",
+          "target": "text",
+          "value": "$927.00",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_04",
+    "instruction": "Starting from the Apple homepage, navigate to the Apple Music page and find the monthly price of the Individual plan.",
+    "website": "https://www.apple.com/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p.tile-headline.typography-eyebrow-elevated",
+          "target": "text",
+          "value": "$10.99/month",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_apple_05",
+    "instruction": "Starting from the Apple iPad Accessories page, navigate to the Apple Pencil Pro product page and find its price.",
+    "website": "https://www.apple.com/shop/ipad/accessories",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div.rc-prices-fullprice[data-autom=\"full-price\"]",
+          "target": "text",
+          "value": "$129.00",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  }
+]

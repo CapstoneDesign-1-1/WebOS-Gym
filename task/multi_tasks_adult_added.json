@@ -1,0 +1,448 @@
+[
+    {
+        "task_id": "MULTI-ADULT-BMI-HW-METRIC-001",
+        "instruction": "Tom is 170 cm tall and weighs 70 kg. Lisa is 160 cm tall and weighs 85 kg. Ryan is 185 cm tall and weighs 75 kg. For each person, use this site to find their BMI and BMI category, then record all data in the sheet. Columns start at A1: Name, Height, Weight, BMI, BMI Category.",
+        "website": [
+            {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+            },
+            {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+            }
+        ],
+        "evaluation": {
+            "mode": "spreadsheet",
+            "operator": "and",
+            "rules": [
+                {
+                    "website_id": "sheet",
+                    "cell": "A1",
+                    "value": "Name",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B1",
+                    "value": "Height",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C1",
+                    "value": "Weight",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D1",
+                    "value": "BMI",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "E1",
+                    "value": "BMI Category",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A2",
+                    "value": "Tom",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B2",
+                    "value": "170",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C2",
+                    "value": "70",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D2",
+                    "value": "24.2",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "E2",
+                    "value": "Healthy Weight",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A3",
+                    "value": "Lisa",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B3",
+                    "value": "160",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C3",
+                    "value": "85",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D3",
+                    "value": "33.2",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "E3",
+                    "value": "Obesity",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A4",
+                    "value": "Ryan",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B4",
+                    "value": "185",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C4",
+                    "value": "75",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D4",
+                    "value": "21.9",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "E4",
+                    "value": "Healthy Weight",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "MULTI-ADULT-BMI-HW-US-001",
+        "instruction": "Here are three people's details. Please look each one up on this BMI calculator and enter Name, Height, Weight, BMI, and BMI Category into the sheet (starting at A1). 1) Tom — 5 feet 7 inches, 150 pounds. 2) Lisa — 5 feet 3 inches, 190 pounds. 3) Ryan — 6 feet 1 inch, 195 pounds.",
+        "website": [
+            {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+            },
+            {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+            }
+        ],
+        "evaluation": {
+            "mode": "spreadsheet",
+            "operator": "and",
+            "rules": [
+                {
+                    "website_id": "sheet",
+                    "cell": "A1",
+                    "value": "Name",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B1",
+                    "value": "Height",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C1",
+                    "value": "Weight",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D1",
+                    "value": "BMI",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "E1",
+                    "value": "BMI Category",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A2",
+                    "value": "Tom",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B2",
+                    "value": "5.*7",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C2",
+                    "value": "150",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D2",
+                    "value": "23.5",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "E2",
+                    "value": "Healthy Weight",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A3",
+                    "value": "Lisa",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B3",
+                    "value": "5.*3",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C3",
+                    "value": "190",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D3",
+                    "value": "33.7",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "E3",
+                    "value": "Obesity",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A4",
+                    "value": "Ryan",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B4",
+                    "value": "6.*1",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C4",
+                    "value": "195",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "D4",
+                    "value": "25.7",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "E4",
+                    "value": "Overweight",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "MULTI-ADULT-RANGE-BMI-METRIC-001",
+        "instruction": "The following people are listed with their height and weight. Use this site to calculate their BMI, then save only the people whose BMI falls in the Overweight range (25 ≤ BMI < 30) to the sheet. Columns start at A1: Name, BMI, BMI Category. Anna is 165 cm tall and weighs 75 kg. Ben is 180 cm tall and weighs 65 kg. Carl is 172 cm tall and weighs 88 kg. Dana is 160 cm tall and weighs 95 kg. Eric is 175 cm tall and weighs 70 kg.",
+        "website": [
+            {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+            },
+            {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+            }
+        ],
+        "evaluation": {
+            "mode": "spreadsheet",
+            "operator": "and",
+            "rules": [
+                {
+                    "website_id": "sheet",
+                    "cell": "A1",
+                    "value": "Name",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B1",
+                    "value": "BMI",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C1",
+                    "value": "BMI Category",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A2",
+                    "value": "Anna",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B2",
+                    "value": "27.5",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C2",
+                    "value": "Overweight",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A3",
+                    "value": "Carl",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B3",
+                    "value": "29.7",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C3",
+                    "value": "Overweight",
+                    "match": "regex"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "MULTI-ADULT-RANGE-BMI-US-001",
+        "instruction": "The following people are listed with their height and weight. Use this site to calculate their BMI, then save only the people whose BMI is greater than 22 to the sheet. Columns start at A1: Name, BMI, BMI Category. Pat is 6 feet 0 inches tall and weighs 200 pounds. Quinn is 5 feet 6 inches tall and weighs 130 pounds. Ruth is 5 feet 4 inches tall and weighs 170 pounds. Seth is 5 feet 10 inches tall and weighs 220 pounds.",
+        "website": [
+            {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/adult-calculator/index.html"
+            },
+            {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+            }
+        ],
+        "evaluation": {
+            "mode": "spreadsheet",
+            "operator": "and",
+            "rules": [
+                {
+                    "website_id": "sheet",
+                    "cell": "A1",
+                    "value": "Name",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B1",
+                    "value": "BMI",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C1",
+                    "value": "BMI Category",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A2",
+                    "value": "Pat",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B2",
+                    "value": "27.1",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C2",
+                    "value": "Overweight",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A3",
+                    "value": "Ruth",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B3",
+                    "value": "29.2",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C3",
+                    "value": "Overweight",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "A4",
+                    "value": "Seth",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "B4",
+                    "value": "31.6",
+                    "match": "regex"
+                },
+                {
+                    "website_id": "sheet",
+                    "cell": "C4",
+                    "value": "Obesity",
+                    "match": "regex"
+                }
+            ]
+        }
+    }
+]

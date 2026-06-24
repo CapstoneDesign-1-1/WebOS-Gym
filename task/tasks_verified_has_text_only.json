@@ -1,0 +1,337 @@
+[
+  {
+    "task_id": "prozilla_task_A_11",
+    "instruction": "I want to hide all my desktop icons to keep my workspace clean. Please disable the desktop icons visibility option in the system settings. Keep the Settings window open.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div[class*='Option'] button[class*='Checkbox']:not([class*='Checked'])",
+          "target": "html",
+          "value": "^(?!.*Checked).*$",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_13",
+    "instruction": "Use the system settings to configure the Minesweeper game to launch automatically upon system startup. Keep the Settings window open.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "#panel\\:rs\\:0 > div > div > button:nth-child(11) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_18",
+    "instruction": "Update my desktop wallpaper to the last option in the settings, then reveal the clean desktop so I can see it clearly. Keep the Settings window open.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "img[alt='Desktop wallpaper']",
+          "target": "attr",
+          "attr": "src",
+          "value": "abstract-wallpaper-gradient-red",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='WindowView'][class*='Minimized']",
+          "target": "html",
+          "value": "Minimized",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_19",
+    "instruction": "I use the Melodix music app all the time. Please pin it to the taskbar and configure it to launch automatically upon system startup. Keep the Settings window open.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "button[title='Melodix']:not([class*='Hidden'])",
+          "target": "html",
+          "value": "^(?!.*Hidden).*$",
+          "match": "regex"
+        },
+        {
+          "selector": "#panel\\:r3v\\:0 > div > div > button:nth-child(10) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_20",
+    "instruction": "Navigate to the Crumbling City directory under Pictures, open the properties of 'Farms.png'.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div[class*='WindowedModal'] p",
+          "target": "text",
+          "value": "Farms.png - Properties",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='react-draggable-dragged']",
+          "target": "html",
+          "value": "react-draggable-dragged",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_22",
+    "instruction": "Unpin 'Terminal' from the taskbar, then disable 'Show icons' in Desktop. Keep the Settings window open.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "button[title='Commands'][class*='Hidden']",
+          "target": "html",
+          "value": "Hidden",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='Option'] button[class*='Checkbox']:not([class*='Checked'])",
+          "target": "html",
+          "value": "^(?!.*Checked).*$",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_23",
+    "instruction": "Change the theme to 'Grape', update the wallpaper to 'Wallpaper6', and minimize all windows.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "#root > div",
+          "target": "attr",
+          "attr": "class",
+          "value": "Grape-theme",
+          "match": "contains"
+        },
+        {
+          "selector": "img[alt='Desktop wallpaper']",
+          "target": "attr",
+          "attr": "src",
+          "value": "mesh-gradient-wallpaper-red-purple",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='WindowView'][class*='Minimized']",
+          "target": "html",
+          "value": "Minimized",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_24",
+    "instruction": "Enable Wordle to launch automatically upon system startup. Keep the Settings window open.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(15) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_26",
+    "instruction": "Change the system theme to 'Aqua', update the wallpaper to 'Wallpaper4', disable the desktop icons visibility, and minimize all active windows. Keep the Settings window open.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "#root > div",
+          "target": "attr",
+          "attr": "class",
+          "value": "Aqua-theme",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='ProzillaOS-Desktop'] > img",
+          "target": "attr",
+          "attr": "src",
+          "value": "abstract-wallpaper-mesh-gradient-cyan",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='Option'] button[class*='Checkbox']:not([class*='Checked'])",
+          "target": "html",
+          "value": "^(?!.*Checked).*$",
+          "match": "regex"
+        },
+        {
+          "selector": "div[class*='WindowView'][class*='Minimized']",
+          "target": "html",
+          "value": "Minimized",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_27",
+    "instruction": "In the App Center, filter apps by the 'Photo & video' category to find the application. Then enable that app to launch automatically upon system startup. Keep the Settings window open.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(13) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_31",
+    "instruction": "Configure all applications belonging to the 'Utilities & tools' category to launch automatically upon system startup. Keep the Settings window open.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(2) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        },
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(5) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        },
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(6) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        },
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(7) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        },
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(9) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        },
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(12) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_37",
+    "instruction": "Configure all applications starting with the letters 'B', 'M', or 'W' to launch automatically upon system startup. Afterwards, open the 'apps.xml' configuration file with the Notes application to view its contents. Keep both Settings and Notes windows open.",
+    "website": "http://localhost:3100",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "#root > div > div > div.ProzillaOS-WindowsView > div:nth-child(4)",
+          "target": "text",
+          "value": "apps.xml",
+          "match": "contains"
+        },
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(3) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        },
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(4) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        },
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(5) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        },
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(9) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        },
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(10) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        },
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(11) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        },
+        {
+          "selector": "#panel\\:r7e\\:0 > div > div > button:nth-child(12) > div",
+          "target": "html",
+          "value": "Checked",
+          "match": "contains"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,162 @@
+[
+    {
+        "task_id": "ADULT-BMI-CUL-METRIC-001",
+        "instruction": "Help me calculate my BMI using metric units. My height is 180 cm and my weight is 70 kg.",
+        "website": "https://www.cdc.gov/bmi/adult-calculator/index.html",
+        "evaluation": {
+            "rules": [
+                {
+                    "selector": "#calc_results > div.section.px-0 > div > div:nth-child(1) > p.h3.m-0 > span",
+                    "target": "text",
+                    "value": "21.6",
+                    "match": "exact"
+                },
+                {
+                    "selector": "#calc_results > div.section.px-0 > div > div:nth-child(2) > p.h3.m-0 > span",
+                    "target": "text",
+                    "value": "Healthy Weight",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "ADULT-BMI-CUL-US-001",
+        "instruction": "I'd like to find out my BMI using US Customary units. I'm 6 feet 1 inch tall and my weight is 160 pounds.",
+        "website": "https://www.cdc.gov/bmi/adult-calculator/index.html",
+        "evaluation": {
+            "rules": [
+                {
+                    "selector": "#calc_results > div.section.px-0 > div > div:nth-child(1) > p.h3.m-0 > span",
+                    "target": "text",
+                    "value": "21.1",
+                    "match": "exact"
+                },
+                {
+                    "selector": "#calc_results > div.section.px-0 > div > div:nth-child(2) > p.h3.m-0 > span",
+                    "target": "text",
+                    "value": "Healthy Weight",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "CHILD-BMI-CUL-US-BOY-001",
+        "instruction": "Could you check the BMI for my son? He's a boy, 2 Years 0 Months old, 2 feet 8 inches tall, and weighs 24 pounds. Please use US Customary units.",
+        "website": "https://www.cdc.gov/bmi/child-teen-calculator/index.html",
+        "evaluation": {
+            "rules": [
+                {
+                    "selector": "#calc_results > div.section.px-0 > div > div:nth-child(1) > p.h3.m-0 > span",
+                    "target": "text",
+                    "value": "16.5",
+                    "match": "exact"
+                },
+                {
+                    "selector": "#calc_results > div.section.px-0 > div > div:nth-child(2) > p.h3.m-0 > span",
+                    "target": "text",
+                    "value": "Healthy Weight",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "CHILD-BMI-CUL-US-GIRL-001",
+        "instruction": "How do I calculate the BMI for a girl born on April 7 2018? Today is May 9 2026. She's 3 feet 11 1/2 inches tall and weighs 58 pounds. Use US Customary units.",
+        "website": "https://www.cdc.gov/bmi/child-teen-calculator/index.html",
+        "evaluation": {
+            "rules": [
+                {
+                    "selector": "#calc_results > div.section.px-0 > div > div:nth-child(1) > p.h3.m-0 > span",
+                    "target": "text",
+                    "value": "18.1",
+                    "match": "exact"
+                },
+                {
+                    "selector": "#calc_results > div.section.px-0 > div > div:nth-child(2) > p.h3.m-0 > span",
+                    "target": "text",
+                    "value": "Healthy Weight",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "CHILD-BMI-CUL-METRIC-BOY-001",
+        "instruction": "Can you tell me the BMI for a boy who is 200 months old, 172 cm tall, and weighs 77 kg? Use Metric units.",
+        "website": "https://www.cdc.gov/bmi/child-teen-calculator/index.html",
+        "evaluation": {
+            "rules": [
+                {
+                    "selector": "#calc_results > div.section.px-0 > div > div:nth-child(1) > p.h3.m-0 > span",
+                    "target": "text",
+                    "value": "26.0",
+                    "match": "exact"
+                },
+                {
+                    "selector": "#calc_results > div.section.px-0 > div > div:nth-child(2) > p.h3.m-0 > span",
+                    "target": "text",
+                    "value": "Overweight",
+                    "match": "exact"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "HIPASS-DISTANCE-001",
+        "instruction": "I want to know the distance from 동서울 to 광주, but I'm not sure how to check it. Can you help me?",
+        "website": "https://www.hipass.co.kr/board/TollPaySearchList.do",
+        "evaluation": {
+            "rules": [
+                {
+                    "selector": "#tb_route_list > tr:nth-child(4) > td:nth-child(2)",
+                    "target": "text",
+                    "value": "299.65km",
+                    "match": "exact"
+                },
+                {
+                    "target": "text",
+                    "value": "동서울",
+                    "match": "contains"
+                },
+                {
+                    "target": "text",
+                    "value": "광주",
+                    "match": "contains"
+                }
+            ]
+        }
+    },
+    {
+        "task_id": "HIPASS-TOLLCOST-001",
+        "instruction": "I want to travel from 서울 to 부산 via 대구. My car is 1종 vehicle, but I don't know how to find out the toll cost.",
+        "website": "https://www.hipass.co.kr/board/TollPaySearchList.do",
+        "evaluation": {
+            "rules": [
+                {
+                    "selector": "#tb_route_list > tr:nth-child(3) > td:nth-child(2)",
+                    "target": "text",
+                    "value": "29,400",
+                    "match": "exact"
+                },
+                {
+                    "target": "text",
+                    "value": "서울",
+                    "match": "contains"
+                },
+                {
+                    "target": "text",
+                    "value": "부산",
+                    "match": "contains"
+                },
+                {
+                    "target": "text",
+                    "value": "대구",
+                    "match": "contains"
+                }
+            ]
+        }
+    }
+]

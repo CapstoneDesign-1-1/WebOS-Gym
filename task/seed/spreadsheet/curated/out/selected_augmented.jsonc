@@ -1,0 +1,594 @@
+[
+  {
+    "task_id": "curated_bmi_outputs_flag_01_1_2",
+    "instruction": "The sheet already contains CDC BMI output for three children. Add a Rounded BMI row and a Category Flag row. Round each BMI to the nearest whole number. Map Overweight to WATCH, Obesity to HIGH, and Severe Obesity to SEVERE.",
+    "website": "http://localhost:3000/spreadsheet",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A5\", \"property\": [\"cell\", \"v\"], \"value\": \"Rounded BMI\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Rounded BMI",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B5\", \"property\": [\"cell\", \"v\"], \"value\": 23, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 23,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C5\", \"property\": [\"cell\", \"v\"], \"value\": 27, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 27,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D5\", \"property\": [\"cell\", \"v\"], \"value\": 38, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 38,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A6\", \"property\": [\"cell\", \"v\"], \"value\": \"Category Flag\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Category Flag",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B6\", \"property\": [\"cell\", \"v\"], \"value\": \"WATCH\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "WATCH",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C6\", \"property\": [\"cell\", \"v\"], \"value\": \"HIGH\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "HIGH",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D6\", \"property\": [\"cell\", \"v\"], \"value\": \"SEVERE\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "SEVERE",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        }
+      ]
+    },
+    "complexity": 1,
+    "setup": {
+      "mode": "console",
+      "script": "(() => {\n    const applySpreadsheetState = window.__applySpreadsheetState;\n    if (typeof applySpreadsheetState !== \"function\") return;\n\n    applySpreadsheetState([{\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A1\", \"property\": [\"cell\", \"v\"], \"value\": \"Metric\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B1\", \"property\": [\"cell\", \"v\"], \"value\": \"Case 1\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C1\", \"property\": [\"cell\", \"v\"], \"value\": \"Case 2\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D1\", \"property\": [\"cell\", \"v\"], \"value\": \"Case 3\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A2\", \"property\": [\"cell\", \"v\"], \"value\": \"BMI\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B2\", \"property\": [\"cell\", \"v\"], \"value\": 23.4, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C2\", \"property\": [\"cell\", \"v\"], \"value\": 26.6, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D2\", \"property\": [\"cell\", \"v\"], \"value\": 38.4, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A3\", \"property\": [\"cell\", \"v\"], \"value\": \"BMI Percentile\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B3\", \"property\": [\"cell\", \"v\"], \"value\": \"91st\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C3\", \"property\": [\"cell\", \"v\"], \"value\": \"96th\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D3\", \"property\": [\"cell\", \"v\"], \"value\": \"99.8th\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A4\", \"property\": [\"cell\", \"v\"], \"value\": \"Category\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B4\", \"property\": [\"cell\", \"v\"], \"value\": \"Overweight\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C4\", \"property\": [\"cell\", \"v\"], \"value\": \"Obesity\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D4\", \"property\": [\"cell\", \"v\"], \"value\": \"Severe Obesity\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}]);\n})();"
+    }
+  },
+  {
+    "task_id": "curated_bmi_outputs_derived_01_1_2",
+    "instruction": "The sheet already contains CDC BMI outputs. Add the requested derived values: distance from 20 for Case 1, category length for Case 2, and category-plus-threshold summary for Case 3.",
+    "website": "http://localhost:3000/spreadsheet",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A5\", \"property\": [\"cell\", \"v\"], \"value\": \"Derived Value\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Derived Value",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B5\", \"property\": [\"cell\", \"v\"], \"value\": 3.4, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 3.4,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C5\", \"property\": [\"cell\", \"v\"], \"value\": 15, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 15,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D5\", \"property\": [\"cell\", \"v\"], \"value\": \"Severe Obesity-35PLUS\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Severe Obesity-35PLUS",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        }
+      ]
+    },
+    "complexity": 1,
+    "setup": {
+      "mode": "console",
+      "script": "(() => {\n    const applySpreadsheetState = window.__applySpreadsheetState;\n    if (typeof applySpreadsheetState !== \"function\") return;\n\n    applySpreadsheetState([{\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A1\", \"property\": [\"cell\", \"v\"], \"value\": \"Metric\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B1\", \"property\": [\"cell\", \"v\"], \"value\": \"Case 1\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C1\", \"property\": [\"cell\", \"v\"], \"value\": \"Case 2\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D1\", \"property\": [\"cell\", \"v\"], \"value\": \"Case 3\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A2\", \"property\": [\"cell\", \"v\"], \"value\": \"BMI\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B2\", \"property\": [\"cell\", \"v\"], \"value\": 23.4, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C2\", \"property\": [\"cell\", \"v\"], \"value\": 37.1, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D2\", \"property\": [\"cell\", \"v\"], \"value\": 38.4, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A3\", \"property\": [\"cell\", \"v\"], \"value\": \"Percentile\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B3\", \"property\": [\"cell\", \"v\"], \"value\": \"91st\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C3\", \"property\": [\"cell\", \"v\"], \"value\": \"99.5th\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D3\", \"property\": [\"cell\", \"v\"], \"value\": \"99.8th\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A4\", \"property\": [\"cell\", \"v\"], \"value\": \"Category\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B4\", \"property\": [\"cell\", \"v\"], \"value\": \"Overweight\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C4\", \"property\": [\"cell\", \"v\"], \"value\": \"Severe Obesity\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D4\", \"property\": [\"cell\", \"v\"], \"value\": \"Severe Obesity\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}]);\n})();"
+    }
+  },
+  {
+    "task_id": "curated_invoice_error_fix_01_1_2",
+    "instruction": "The invoice table is already filled, but the Tax Amount and Final Amount columns contain mistakes. Correct Tax Amount as Amount times Tax Rate, then correct Final Amount as Amount plus Tax Amount.",
+    "website": "http://localhost:3000/spreadsheet",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D2\", \"property\": [\"cell\", \"v\"], \"value\": 16, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 16,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D3\", \"property\": [\"cell\", \"v\"], \"value\": 6, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 6,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D4\", \"property\": [\"cell\", \"v\"], \"value\": 2, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 2,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"E2\", \"property\": [\"cell\", \"v\"], \"value\": 216, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 216,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"E3\", \"property\": [\"cell\", \"v\"], \"value\": 81, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 81,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"E4\", \"property\": [\"cell\", \"v\"], \"value\": 42, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 42,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        }
+      ]
+    },
+    "complexity": 1,
+    "setup": {
+      "mode": "console",
+      "script": "(() => {\n    const applySpreadsheetState = window.__applySpreadsheetState;\n    if (typeof applySpreadsheetState !== \"function\") return;\n\n    applySpreadsheetState([{\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A1\", \"property\": [\"cell\", \"v\"], \"value\": \"Item\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A2\", \"property\": [\"cell\", \"v\"], \"value\": \"Desk\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A3\", \"property\": [\"cell\", \"v\"], \"value\": \"Chair\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A4\", \"property\": [\"cell\", \"v\"], \"value\": \"Lamp\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B1\", \"property\": [\"cell\", \"v\"], \"value\": \"Amount\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B2\", \"property\": [\"cell\", \"v\"], \"value\": 200, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B3\", \"property\": [\"cell\", \"v\"], \"value\": 75, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B4\", \"property\": [\"cell\", \"v\"], \"value\": 40, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C1\", \"property\": [\"cell\", \"v\"], \"value\": \"Tax Rate\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C2\", \"property\": [\"cell\", \"v\"], \"value\": 0.08, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C3\", \"property\": [\"cell\", \"v\"], \"value\": 0.08, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C4\", \"property\": [\"cell\", \"v\"], \"value\": 0.05, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D1\", \"property\": [\"cell\", \"v\"], \"value\": \"Tax Amount\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D2\", \"property\": [\"cell\", \"v\"], \"value\": 17, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D3\", \"property\": [\"cell\", \"v\"], \"value\": 7, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D4\", \"property\": [\"cell\", \"v\"], \"value\": 3, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"E1\", \"property\": [\"cell\", \"v\"], \"value\": \"Final Amount\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"E2\", \"property\": [\"cell\", \"v\"], \"value\": 217, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"E3\", \"property\": [\"cell\", \"v\"], \"value\": 82, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"E4\", \"property\": [\"cell\", \"v\"], \"value\": 43, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}]);\n})();"
+    }
+  },
+  {
+    "task_id": "curated_sales_line_total_complete_01_1_2",
+    "instruction": "The sales table is partially completed and row 2 shows the intended line-total calculation. Fill the remaining Line Total cells and add the grand total in D6.",
+    "website": "http://localhost:3000/spreadsheet",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D3\", \"property\": [\"cell\", \"v\"], \"value\": 12.75, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 12.75,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D4\", \"property\": [\"cell\", \"v\"], \"value\": 12.6, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 12.6,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D5\", \"property\": [\"cell\", \"v\"], \"value\": 7.5, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 7.5,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D6\", \"property\": [\"cell\", \"v\"], \"value\": 38.85, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 38.85,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        }
+      ]
+    },
+    "complexity": 1,
+    "setup": {
+      "mode": "console",
+      "script": "(() => {\n    const applySpreadsheetState = window.__applySpreadsheetState;\n    if (typeof applySpreadsheetState !== \"function\") return;\n\n    applySpreadsheetState([{\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A1\", \"property\": [\"cell\", \"v\"], \"value\": \"Product\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A2\", \"property\": [\"cell\", \"v\"], \"value\": \"Pen\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A3\", \"property\": [\"cell\", \"v\"], \"value\": \"Notebook\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A4\", \"property\": [\"cell\", \"v\"], \"value\": \"Folder\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A5\", \"property\": [\"cell\", \"v\"], \"value\": \"Tape\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B1\", \"property\": [\"cell\", \"v\"], \"value\": \"Quantity\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B2\", \"property\": [\"cell\", \"v\"], \"value\": 4, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B3\", \"property\": [\"cell\", \"v\"], \"value\": 3, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B4\", \"property\": [\"cell\", \"v\"], \"value\": 6, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B5\", \"property\": [\"cell\", \"v\"], \"value\": 2, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C1\", \"property\": [\"cell\", \"v\"], \"value\": \"Unit Price\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C2\", \"property\": [\"cell\", \"v\"], \"value\": 1.5, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C3\", \"property\": [\"cell\", \"v\"], \"value\": 4.25, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C4\", \"property\": [\"cell\", \"v\"], \"value\": 2.1, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C5\", \"property\": [\"cell\", \"v\"], \"value\": 3.75, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D1\", \"property\": [\"cell\", \"v\"], \"value\": \"Line Total\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D2\", \"property\": [\"cell\", \"v\"], \"value\": 6, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}]);\n})();"
+    }
+  },
+  {
+    "task_id": "curated_inventory_conditional_style_01_1_2",
+    "instruction": "The inventory table is already filled. Bold the header row and highlight every product row where Inventory is less than Reorder Level using yellow background.",
+    "website": "http://localhost:3000/spreadsheet",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A1\", \"property\": [\"style\", \"bl\"], \"value\": 1, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 1,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B1\", \"property\": [\"style\", \"bl\"], \"value\": 1, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 1,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C1\", \"property\": [\"style\", \"bl\"], \"value\": 1, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": 1,
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A3\", \"property\": [\"style\", \"bg\", \"rgb\"], \"value\": \"rgb(250, 200, 21)\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "rgb(250, 200, 21)",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B3\", \"property\": [\"style\", \"bg\", \"rgb\"], \"value\": \"rgb(250, 200, 21)\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "rgb(250, 200, 21)",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C3\", \"property\": [\"style\", \"bg\", \"rgb\"], \"value\": \"rgb(250, 200, 21)\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "rgb(250, 200, 21)",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A5\", \"property\": [\"style\", \"bg\", \"rgb\"], \"value\": \"rgb(250, 200, 21)\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "rgb(250, 200, 21)",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B5\", \"property\": [\"style\", \"bg\", \"rgb\"], \"value\": \"rgb(250, 200, 21)\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "rgb(250, 200, 21)",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C5\", \"property\": [\"style\", \"bg\", \"rgb\"], \"value\": \"rgb(250, 200, 21)\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "rgb(250, 200, 21)",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        }
+      ]
+    },
+    "complexity": 1,
+    "setup": {
+      "mode": "console",
+      "script": "(() => {\n    const applySpreadsheetState = window.__applySpreadsheetState;\n    if (typeof applySpreadsheetState !== \"function\") return;\n\n    applySpreadsheetState([{\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A1\", \"property\": [\"cell\", \"v\"], \"value\": \"Product\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B1\", \"property\": [\"cell\", \"v\"], \"value\": \"Inventory\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C1\", \"property\": [\"cell\", \"v\"], \"value\": \"Reorder Level\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A2\", \"property\": [\"cell\", \"v\"], \"value\": \"Pencil\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B2\", \"property\": [\"cell\", \"v\"], \"value\": 25, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C2\", \"property\": [\"cell\", \"v\"], \"value\": 20, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A3\", \"property\": [\"cell\", \"v\"], \"value\": \"Marker\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B3\", \"property\": [\"cell\", \"v\"], \"value\": 8, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C3\", \"property\": [\"cell\", \"v\"], \"value\": 15, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A4\", \"property\": [\"cell\", \"v\"], \"value\": \"Notebook\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B4\", \"property\": [\"cell\", \"v\"], \"value\": 12, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C4\", \"property\": [\"cell\", \"v\"], \"value\": 10, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A5\", \"property\": [\"cell\", \"v\"], \"value\": \"Eraser\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B5\", \"property\": [\"cell\", \"v\"], \"value\": 4, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C5\", \"property\": [\"cell\", \"v\"], \"value\": 8, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A6\", \"property\": [\"cell\", \"v\"], \"value\": \"Folder\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B6\", \"property\": [\"cell\", \"v\"], \"value\": 30, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C6\", \"property\": [\"cell\", \"v\"], \"value\": 25, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}]);\n})();"
+    }
+  },
+  {
+    "task_id": "curated_expense_currency_format_01_1_2",
+    "instruction": "The expense table values are already entered. Format all Amount values as currency with exactly two decimal places.",
+    "website": "http://localhost:3000/spreadsheet",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B2\", \"property\": [\"style\", \"n\", \"pattern\"], \"value\": \"0,##0.00\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "0,##0.00",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B3\", \"property\": [\"style\", \"n\", \"pattern\"], \"value\": \"0,##0.00\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "0,##0.00",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B4\", \"property\": [\"style\", \"n\", \"pattern\"], \"value\": \"0,##0.00\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "0,##0.00",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B5\", \"property\": [\"style\", \"n\", \"pattern\"], \"value\": \"0,##0.00\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "0,##0.00",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        }
+      ]
+    },
+    "complexity": 1,
+    "setup": {
+      "mode": "console",
+      "script": "(() => {\n    const applySpreadsheetState = window.__applySpreadsheetState;\n    if (typeof applySpreadsheetState !== \"function\") return;\n\n    applySpreadsheetState([{\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A1\", \"property\": [\"cell\", \"v\"], \"value\": \"Category\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A2\", \"property\": [\"cell\", \"v\"], \"value\": \"Rent\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A3\", \"property\": [\"cell\", \"v\"], \"value\": \"Meals\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A4\", \"property\": [\"cell\", \"v\"], \"value\": \"Transport\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A5\", \"property\": [\"cell\", \"v\"], \"value\": \"Supplies\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B1\", \"property\": [\"cell\", \"v\"], \"value\": \"Amount\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B2\", \"property\": [\"cell\", \"v\"], \"value\": 1200.123, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B3\", \"property\": [\"cell\", \"v\"], \"value\": 45.789, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B4\", \"property\": [\"cell\", \"v\"], \"value\": 32.323, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B5\", \"property\": [\"cell\", \"v\"], \"value\": 89.999, \"return_type\": \"obj\", \"f\": \"getCellMeta\"}]);\n})();"
+    }
+  },
+  {
+    "task_id": "curated_phone_normalize_audit_01_1_2",
+    "instruction": "The sheet contains names and phone numbers in mixed formats. Normalize each phone number to ###-###-#### in column C and mark each normalized row as MATCH in column D.",
+    "website": "http://localhost:3000/spreadsheet",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C1\", \"property\": [\"cell\", \"v\"], \"value\": \"Normalized Phone\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Normalized Phone",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C2\", \"property\": [\"cell\", \"v\"], \"value\": \"415-555-0182\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "415-555-0182",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C3\", \"property\": [\"cell\", \"v\"], \"value\": \"212-555-0198\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "212-555-0198",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C4\", \"property\": [\"cell\", \"v\"], \"value\": \"617-555-0134\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "617-555-0134",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C5\", \"property\": [\"cell\", \"v\"], \"value\": \"305-555-0177\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "305-555-0177",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D1\", \"property\": [\"cell\", \"v\"], \"value\": \"Audit\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Audit",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D2\", \"property\": [\"cell\", \"v\"], \"value\": \"MATCH\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "MATCH",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D3\", \"property\": [\"cell\", \"v\"], \"value\": \"MATCH\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "MATCH",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D4\", \"property\": [\"cell\", \"v\"], \"value\": \"MATCH\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "MATCH",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D5\", \"property\": [\"cell\", \"v\"], \"value\": \"MATCH\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "MATCH",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        }
+      ]
+    },
+    "complexity": 1,
+    "setup": {
+      "mode": "console",
+      "script": "(() => {\n    const applySpreadsheetState = window.__applySpreadsheetState;\n    if (typeof applySpreadsheetState !== \"function\") return;\n\n    applySpreadsheetState([{\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A1\", \"property\": [\"cell\", \"v\"], \"value\": \"Name\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A2\", \"property\": [\"cell\", \"v\"], \"value\": \"Alice\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A3\", \"property\": [\"cell\", \"v\"], \"value\": \"Brian\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A4\", \"property\": [\"cell\", \"v\"], \"value\": \"Chloe\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A5\", \"property\": [\"cell\", \"v\"], \"value\": \"Daniel\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B1\", \"property\": [\"cell\", \"v\"], \"value\": \"Phone Number\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B2\", \"property\": [\"cell\", \"v\"], \"value\": \"(415) 555 0182\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B3\", \"property\": [\"cell\", \"v\"], \"value\": \"212.555.0198\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B4\", \"property\": [\"cell\", \"v\"], \"value\": \"6175550134\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B5\", \"property\": [\"cell\", \"v\"], \"value\": \"305-555-0177\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}]);\n})();"
+    }
+  },
+  {
+    "task_id": "curated_name_split_complete_01_1_2",
+    "instruction": "The sheet contains full names. Split each full name into First Name, Middle Initial, and Last Name columns.",
+    "website": "http://localhost:3000/spreadsheet",
+    "evaluation": {
+      "rules": [
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B1\", \"property\": [\"cell\", \"v\"], \"value\": \"First Name\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "First Name",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B2\", \"property\": [\"cell\", \"v\"], \"value\": \"Alice\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Alice",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B3\", \"property\": [\"cell\", \"v\"], \"value\": \"Brian\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Brian",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B4\", \"property\": [\"cell\", \"v\"], \"value\": \"Chloe\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Chloe",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"B5\", \"property\": [\"cell\", \"v\"], \"value\": \"David\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "David",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C1\", \"property\": [\"cell\", \"v\"], \"value\": \"Middle Initial\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Middle Initial",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C2\", \"property\": [\"cell\", \"v\"], \"value\": \"M\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "M",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C3\", \"property\": [\"cell\", \"v\"], \"value\": \"T\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "T",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C4\", \"property\": [\"cell\", \"v\"], \"value\": \"R\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "R",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"C5\", \"property\": [\"cell\", \"v\"], \"value\": \"P\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "P",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D1\", \"property\": [\"cell\", \"v\"], \"value\": \"Last Name\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Last Name",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D2\", \"property\": [\"cell\", \"v\"], \"value\": \"Carter\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Carter",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D3\", \"property\": [\"cell\", \"v\"], \"value\": \"Lee\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Lee",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D4\", \"property\": [\"cell\", \"v\"], \"value\": \"Kim\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Kim",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        },
+        {
+          "mode": "console",
+          "script": "\n(() => {\n    const getSpreadsheetStateAtom = window.__getSpreadsheetStateAtom;\n    if (typeof getSpreadsheetStateAtom !== \"function\") return \"\";\n\n    return getSpreadsheetStateAtom({\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"D5\", \"property\": [\"cell\", \"v\"], \"value\": \"Jones\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}) ?? \"\";\n})();\n",
+          "value": "Jones",
+          "match": "exact",
+          "normalize_space": false,
+          "case_sensitive": true
+        }
+      ]
+    },
+    "complexity": 1,
+    "setup": {
+      "mode": "console",
+      "script": "(() => {\n    const applySpreadsheetState = window.__applySpreadsheetState;\n    if (typeof applySpreadsheetState !== \"function\") return;\n\n    applySpreadsheetState([{\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A1\", \"property\": [\"cell\", \"v\"], \"value\": \"Full Name\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A2\", \"property\": [\"cell\", \"v\"], \"value\": \"Alice M Carter\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A3\", \"property\": [\"cell\", \"v\"], \"value\": \"Brian T Lee\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A4\", \"property\": [\"cell\", \"v\"], \"value\": \"Chloe R Kim\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}, {\"match\": \"exact\", \"normalize_space\": false, \"case_sensitive\": true, \"param\": \"A5\", \"property\": [\"cell\", \"v\"], \"value\": \"David P Jones\", \"return_type\": \"obj\", \"f\": \"getCellMeta\"}]);\n})();"
+    }
+  }
+]

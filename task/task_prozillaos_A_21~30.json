@@ -1,0 +1,254 @@
+[
+  {
+    "task_id": "prozilla_task_A_21",
+    "instruction": "Open the App Center, browse apps with the 'Personalization' filter. And change the content of text.txt file to 'Presonalization' filtered app name and save the file.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "(?i)Maths",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_22",
+    "instruction": "Unpin 'Terminal' from the taskbar, then disable 'Show icons' in Desktop.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "button[title='Terminal']",
+          "target": "class",
+          "value": "Hidden",
+          "match": "contains"
+        },
+        {
+          "selector": "div:has(p:has-text('Show icons')) button[class*='Checkbox']",
+          "target": "class",
+          "value": "^(?!.*Checked).*$",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_23",
+    "instruction": "Change the theme to 'Grape', update the wallpaper to 'Wallpaper6', and minimize all windows.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "select[aria-label='theme']",
+          "target": "attr",
+          "attr": "value",
+          "value": "Grape",
+          "match": "exact"
+        },
+        {
+          "selector": "img[alt='Desktop wallpaper']",
+          "target": "attr",
+          "attr": "src",
+          "value": "mesh-gradient-wallpaper-red-purple",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='WindowView']:has(p:has-text('Settings'))",
+          "target": "class",
+          "value": "Minimized",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_24",
+    "instruction": "Pin 'Wordle' to the taskbar, and enable it to launch automatically upon system startup.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "button[title='Wordle']",
+          "target": "class",
+          "value": "^(?!.*Hidden).*$",
+          "match": "regex"
+        },
+        {
+          "selector": "button:has-text('Wordle') div[class*='Checkbox']",
+          "target": "class",
+          "value": "Checked",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_25",
+    "instruction": "Check the currently used virtual drive space size (in KB) in Storage. Overwrite '~/Documents/text.txt' with this numeric value and save it.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "^\\d+(\\.\\d+)?$",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_26",
+    "instruction": "Change the system theme to 'Aqua', update the wallpaper to 'Wallpaper4', disable the desktop icons visibility, and minimize all active windows.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "select[aria-label='theme']",
+          "target": "attr",
+          "attr": "value",
+          "value": "Aqua",
+          "match": "exact"
+        },
+        {
+          "selector": "img[alt='Desktop wallpaper']",
+          "target": "attr",
+          "attr": "src",
+          "value": "abstract-mesh-gradient-orange-red-purple",
+          "match": "contains"
+        },
+        {
+          "selector": "div:has(p:has-text('Show icons')) button[class*='Checkbox']",
+          "target": "class",
+          "value": "^(?!.*Checked).*$",
+          "match": "regex"
+        },
+        {
+          "selector": "div[class*='WindowView']:has(p:has-text('Settings'))",
+          "target": "class",
+          "value": "Minimized",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_27",
+    "instruction": "In the App Center, filter apps by the 'Photo & video' category to find the application. Then enable that app to launch automatically upon system startup.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "button:has-text('Weezer') div[class*='Checkbox']",
+          "target": "class",
+          "value": "Checked",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_28",
+    "instruction": "Filter applications in the App Center by 'Utilities & tools', and note all displayed application names. Write these names joined by a comma and a space into '~/Documents/text.txt' and save the file.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Notes|Maths|Files|Commands|Browser|Apps",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_29",
+    "instruction": "Filter applications in the App Center by 'Utilities & tools', sort all displayed app names in reverse alphabetical order, then write them joined by a comma and a space into '~/Documents/text.txt' and save.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Notes, Maths, Files, Commands, Browser, Apps",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_30",
+    "instruction": "Open the Properties window of 'City Center.png' in Pictures Folder. Overwrite '~/Documents/text.txt' with the file size (in bytes) and its full path, and save.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "79",
+          "match": "contains"
+        },
+        {
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "City Center.png",
+          "match": "contains"
+        }
+      ]
+    }
+  }
+]

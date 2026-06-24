@@ -1,0 +1,224 @@
+[
+  {
+    "task_id": "prozilla_task_A_01",
+    "instruction": "Find and open the desktop configuration file 'desktop.xml' inside the config folder, then view its content in a maximized full-screen window.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "pre[class*='_Code_']",
+          "target": "text",
+          "value": "/assets/wallpapers/abstract-mesh-gradient-orange-red-purple.png",
+          "match": "contains"
+        },
+        {
+          "selector": "svg[data-icon='window-restore']",
+          "target": "html",
+          "value": "window-restore",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_02",
+    "instruction": "Open and view the wallpaper file 'Wallpaper10.png' inside the Pictures/Wallpapers folder.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "rules": [
+        {
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "Wallpaper10.png",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_03",
+    "instruction": "Copy the entire content of 'apps.xml' inside the config folder into a new Note document.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "rules": [
+        {
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "<options>\n<startup></startup>\n</options>",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_04",
+    "instruction": "Read 'Prozilla.md' inside the Documents folder to find the VR game created by Sieben De Beule, then save its name inside 'text.txt'.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Crumbling City",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_05",
+    "instruction": "Read 'Prozilla.md' inside the Documents folder, find the final sentence under the 'About me' section, and save it inside 'text.txt'.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "If you have any suggestions, bug reports on ProzillaOS or if you've made your own version of ProzillaOS, don't hesitate to contact me!",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_06",
+    "instruction": "Read 'info.md' inside the Documents folder to find the donation link, then save it inside 'text.txt'.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "ko-fi.com/prozilla",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_07",
+    "instruction": "Read 'info.md' inside the Documents folder to find the technologies used to build the website, then save that sentence inside 'text.txt'.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "text.txt",
+          "match": "contains"
+        },
+        {
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "This website was made using React, Vite and TypeScript.",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_08",
+    "instruction": "Delete 'ProzillaOS.png' inside the Pictures folder.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "Pictures",
+          "match": "contains"
+        },
+        {
+          "selector": "div[class*='_DirectoryList_']",
+          "target": "text",
+          "value": "^(?!.*ProzillaOS\\.png).*$",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_09",
+    "instruction": "Modify 'fizzbuzz.sh' inside the Scripts folder so that 'Buzz' is output when 'i' is divisible by 7.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p[class*='ProzillaOS-WindowTitle']",
+          "target": "text",
+          "value": "fizzbuzz.sh",
+          "match": "contains"
+        },
+        {
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "i % 7 == 0",
+          "match": "contains"
+        },
+        {
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "OUTPUT+=\"Buzz\"",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozilla_task_A_10",
+    "instruction": "Open the properties window of 'City Center.png' inside the Pictures/Crumbling City folder.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p",
+          "target": "text",
+          "value": "City Center.png - Properties",
+          "match": "contains"
+        },
+        {
+          "selector": "p",
+          "target": "text",
+          "value": "Location: ~/Pictures/Crumbling City/City Center.png",
+          "match": "contains"
+        }
+      ]
+    }
+  }
+]

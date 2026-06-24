@@ -1,0 +1,443 @@
+[
+  // =====================================================================
+  // Spreadsheet-Only Tasks (Draft)
+  // URL: http://localhost:3000/spreadsheet
+  // Conditions:
+  //   - Single website (spreadsheet only)
+  //   - No pre-injected data (agent enters all values)
+  //   - Each task uses 6 cells or fewer
+  //   - Evaluation uses getCellMeta states format (matches seed.jsonc schema)
+  // =====================================================================
+
+  {
+    // Cells used: A1, A2, A3, A4, B1, B2 → 6 cells
+    // Functions: SUM, AVERAGE
+    "task_id": "sheet_only_01",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. You will record 4 days of sales figures and calculate the total and daily average.\n\n1. Enter the following sales values going down column A:\n   - A1: 100\n   - A2: 200\n   - A3: 150\n   - A4: 250\n2. In cell B1, use the SUM function to calculate the total of A1:A4.\n3. In cell B2, use the AVERAGE function to calculate the daily average of A1:A4.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 100 },
+        { "match": "exact", "f": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 200 },
+        { "match": "exact", "f": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": 150 },
+        { "match": "exact", "f": "getCellMeta", "param": "A4", "property": ["cell", "v"], "value": 250 }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": 700 },
+        { "match": "exact", "f": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 175 }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('100')     - 값 입력 후 hotkey(enter)
+    // 3. type('200')     - A2 입력 후 hotkey(enter)
+    // 4. type('150')     - A3 입력 후 hotkey(enter)
+    // 5. type('250')     - A4 입력 후 hotkey(enter)
+    // 6. click(x,y)      - 셀 B1 클릭
+    // 7. type('=SUM(A1:A4)') - SUM 수식 입력 후 hotkey(enter)
+    // 8. click(x,y)      - 셀 B2 클릭
+    // 9. type('=AVERAGE(A1:A4)') - AVERAGE 수식 입력 후 hotkey(enter)
+    // 10. done()
+  },
+  {
+    // Cells used: A1, A2, A3, B1, B2, B3 → 6 cells
+    // Functions: MAX, MIN, COUNT
+    "task_id": "sheet_only_02",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. You will enter 3 exam scores and find the highest score, lowest score, and total count.\n\n1. Enter the following scores going down column A:\n   - A1: 88\n   - A2: 72\n   - A3: 95\n2. In cell B1, use the MAX function to find the highest score in A1:A3.\n3. In cell B2, use the MIN function to find the lowest score in A1:A3.\n4. In cell B3, use the COUNT function to count how many scores are recorded in A1:A3.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 88 },
+        { "match": "exact", "f": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 72 },
+        { "match": "exact", "f": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": 95 }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": 95 },
+        { "match": "exact", "f": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 72 },
+        { "match": "exact", "f": "getCellMeta", "param": "B3", "property": ["cell", "v"], "value": 3 }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('88')      - 값 입력 후 hotkey(enter)
+    // 3. type('72')      - A2 입력 후 hotkey(enter)
+    // 4. type('95')      - A3 입력 후 hotkey(enter)
+    // 5. click(x,y)      - 셀 B1 클릭
+    // 6. type('=MAX(A1:A3)') - 최댓값 수식 입력 후 hotkey(enter)
+    // 7. click(x,y)      - 셀 B2 클릭
+    // 8. type('=MIN(A1:A3)') - 최솟값 수식 입력 후 hotkey(enter)
+    // 9. click(x,y)      - 셀 B3 클릭
+    // 10. type('=COUNT(A1:A3)') - COUNT 수식 입력 후 hotkey(enter)
+    // 11. done()
+  },
+  {
+    // Cells used: A1, B1 → 2 cells
+    // Functions: IF
+    "task_id": "sheet_only_03",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. You will use an IF function to determine whether a student passed or failed.\n\n1. In cell A1, enter the score: 75.\n2. In cell B1, use the IF function to display 'Pass' if the score in A1 is 70 or above, and 'Fail' otherwise.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 75 }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Pass" }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('75')      - 점수 입력 후 hotkey(enter)
+    // 3. click(x,y)      - 셀 B1 클릭
+    // 4. type('=IF(A1>=70,"Pass","Fail")') - IF 수식 입력 후 hotkey(enter)
+    // 5. done()
+  },
+  {
+    // Cells used: A1, A2, B1, B2 → 4 cells
+    // Functions: CONCATENATE, LEN
+    "task_id": "sheet_only_04",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. You will combine two words and measure the total character length.\n\n1. In cell A1, enter: Hello.\n2. In cell A2, enter: World.\n3. In cell B1, use the CONCATENATE function to join A1 and A2 with a space in between.\n4. In cell B2, use the LEN function to count the total number of characters in cell B1.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": "Hello" },
+        { "match": "exact", "f": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": "World" }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Hello World" },
+        { "match": "exact", "f": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 11 }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('Hello')   - 텍스트 입력 후 hotkey(enter)
+    // 3. click(x,y)      - 셀 A2 클릭
+    // 4. type('World')   - 텍스트 입력 후 hotkey(enter)
+    // 5. click(x,y)      - 셀 B1 클릭
+    // 6. type('=CONCATENATE(A1," ",A2)') - CONCATENATE 수식 입력 후 hotkey(enter)
+    // 7. click(x,y)      - 셀 B2 클릭
+    // 8. type('=LEN(B1)') - LEN 수식 입력 후 hotkey(enter)
+    // 9. done()
+  },
+  {
+    // Cells used: A1, A2, B1, B2 → 4 cells
+    // Functions: POWER, ROUND
+    "task_id": "sheet_only_05",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. You will calculate a power and round the result to 2 decimal places.\n\n1. In cell A1, enter the base number: 3.\n2. In cell A2, enter the exponent: 4.\n3. In cell B1, use the POWER function to raise A1 to the power of A2.\n4. In cell B2, use the ROUND function to round the result of B1 divided by 7, to 2 decimal places.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 3 },
+        { "match": "exact", "f": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 4 }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": 81 },
+        { "match": "exact", "f": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 11.57 }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('3')       - base 입력 후 hotkey(enter)
+    // 3. click(x,y)      - 셀 A2 클릭
+    // 4. type('4')       - 지수 입력 후 hotkey(enter)
+    // 5. click(x,y)      - 셀 B1 클릭
+    // 6. type('=POWER(A1,A2)') - POWER 수식 입력 후 hotkey(enter)
+    // 7. click(x,y)      - 셀 B2 클릭
+    // 8. type('=ROUND(B1/7,2)') - ROUND 수식 입력 후 hotkey(enter)
+    // 9. done()
+  },
+  {
+    // Cells used: A1, A2, A3, A4, A5, B1 → 6 cells
+    // Functions: COUNTIF
+    "task_id": "sheet_only_06",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. You will record letter grades and count how many students received an 'A'.\n\n1. Enter the following letter grades going down column A:\n   - A1: A\n   - A2: B\n   - A3: A\n   - A4: C\n   - A5: A\n2. In cell B1, use the COUNTIF function to count the number of cells in A1:A5 that contain the letter 'A'.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": "A" },
+        { "match": "exact", "f": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": "B" },
+        { "match": "exact", "f": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": "A" },
+        { "match": "exact", "f": "getCellMeta", "param": "A4", "property": ["cell", "v"], "value": "C" },
+        { "match": "exact", "f": "getCellMeta", "param": "A5", "property": ["cell", "v"], "value": "A" }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": 3 }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('A')       - 학점 입력 후 hotkey(enter)
+    // 3. type('B')       - A2 입력 후 hotkey(enter)
+    // 4. type('A')       - A3 입력 후 hotkey(enter)
+    // 5. type('C')       - A4 입력 후 hotkey(enter)
+    // 6. type('A')       - A5 입력 후 hotkey(enter)
+    // 7. click(x,y)      - 셀 B1 클릭
+    // 8. type('=COUNTIF(A1:A5,"A")') - COUNTIF 수식 입력 후 hotkey(enter)
+    // 9. done()
+  },
+  {
+    // Cells used: A1, A2, A3, A4, B1, B2 → 6 cells
+    // Functions: SUMIF, AVERAGEIF
+    "task_id": "sheet_only_07",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. You have 4 test scores and want to analyze only the passing ones (60 or above).\n\n1. Enter the following scores going down column A:\n   - A1: 75\n   - A2: 45\n   - A3: 80\n   - A4: 50\n2. In cell B1, use the SUMIF function to sum only the scores in A1:A4 that are 60 or above.\n3. In cell B2, use the AVERAGEIF function to calculate the average of only the scores in A1:A4 that are 60 or above.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 75 },
+        { "match": "exact", "f": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 45 },
+        { "match": "exact", "f": "getCellMeta", "param": "A3", "property": ["cell", "v"], "value": 80 },
+        { "match": "exact", "f": "getCellMeta", "param": "A4", "property": ["cell", "v"], "value": 50 }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": 155 },
+        { "match": "exact", "f": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 77.5 }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('75')      - 값 입력 후 hotkey(enter)
+    // 3. type('45')      - A2 입력 후 hotkey(enter)
+    // 4. type('80')      - A3 입력 후 hotkey(enter)
+    // 5. type('50')      - A4 입력 후 hotkey(enter)
+    // 6. click(x,y)      - 셀 B1 클릭
+    // 7. type('=SUMIF(A1:A4,">=60")') - SUMIF 수식 입력 후 hotkey(enter)
+    // 8. click(x,y)      - 셀 B2 클릭
+    // 9. type('=AVERAGEIF(A1:A4,">=60")') - AVERAGEIF 수식 입력 후 hotkey(enter)
+    // 10. done()
+  },
+  {
+    // Cells used: A1, A2, B1, B2 → 4 cells
+    // Functions: UPPER, LOWER
+    "task_id": "sheet_only_08",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. You will convert text to uppercase and lowercase.\n\n1. In cell A1, enter the text: spreadsheet.\n2. In cell A2, enter the text: FORMULA.\n3. In cell B1, use the UPPER function to convert the text in A1 to all uppercase.\n4. In cell B2, use the LOWER function to convert the text in A2 to all lowercase.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": "spreadsheet" },
+        { "match": "exact", "f": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": "FORMULA" }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "SPREADSHEET" },
+        { "match": "exact", "f": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": "formula" }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('spreadsheet') - 텍스트 입력 후 hotkey(enter)
+    // 3. click(x,y)      - 셀 A2 클릭
+    // 4. type('FORMULA') - 텍스트 입력 후 hotkey(enter)
+    // 5. click(x,y)      - 셀 B1 클릭
+    // 6. type('=UPPER(A1)') - UPPER 수식 입력 후 hotkey(enter)
+    // 7. click(x,y)      - 셀 B2 클릭
+    // 8. type('=LOWER(A2)') - LOWER 수식 입력 후 hotkey(enter)
+    // 9. done()
+  },
+  {
+    // Cells used: A1, B1, B2 → 3 cells
+    // Functions: LEFT, RIGHT
+    "task_id": "sheet_only_09",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. You will extract characters from the beginning and end of a word.\n\n1. In cell A1, enter the text: Spreadsheet.\n2. In cell B1, use the LEFT function to extract the first 6 characters from A1.\n3. In cell B2, use the RIGHT function to extract the last 5 characters from A1.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": "Spreadsheet" }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Spread" },
+        { "match": "exact", "f": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": "sheet" }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('Spreadsheet') - 텍스트 입력 후 hotkey(enter)
+    // 3. click(x,y)      - 셀 B1 클릭
+    // 4. type('=LEFT(A1,6)') - LEFT 수식 입력 후 hotkey(enter)
+    // 5. click(x,y)      - 셀 B2 클릭
+    // 6. type('=RIGHT(A1,5)') - RIGHT 수식 입력 후 hotkey(enter)
+    // 7. done()
+  },
+  {
+    // Cells used: A1, A2, B1 → 3 cells
+    // Functions: IF + AND
+    "task_id": "sheet_only_10",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. You will check whether a student passed both subjects using the AND function inside an IF.\n\n1. In cell A1, enter the math score: 85.\n2. In cell A2, enter the English score: 78.\n3. In cell B1, use an IF function combined with AND to display 'Both Pass' only if both A1 and A2 are 70 or above. Otherwise display 'Not Both'.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 85 },
+        { "match": "exact", "f": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": 78 }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Both Pass" }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('85')      - 수학 점수 입력 후 hotkey(enter)
+    // 3. click(x,y)      - 셀 A2 클릭
+    // 4. type('78')      - 영어 점수 입력 후 hotkey(enter)
+    // 5. click(x,y)      - 셀 B1 클릭
+    // 6. type('=IF(AND(A1>=70,A2>=70),"Both Pass","Not Both")') - IF+AND 수식 입력 후 hotkey(enter)
+    // 7. done()
+  },
+  {
+    // Cells used: A1, B1 → 2 cells
+    // Functions: CHOOSE
+    "task_id": "sheet_only_11",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. You will use the CHOOSE function to return a medal name based on a rank number.\n\n1. In cell A1, enter the rank: 3.\n2. In cell B1, use the CHOOSE function so that rank 1 returns 'Bronze', rank 2 returns 'Silver', and rank 3 returns 'Gold'.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 3 }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Gold" }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('3')       - 순위 입력 후 hotkey(enter)
+    // 3. click(x,y)      - 셀 B1 클릭
+    // 4. type('=CHOOSE(A1,"Bronze","Silver","Gold")') - CHOOSE 수식 입력 후 hotkey(enter)
+    // 5. done()
+  },
+  {
+    // Cells used: A1, B1, B2 → 3 cells
+    // Functions: MID
+    "task_id": "sheet_only_12",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. You will extract a word from the middle of a sentence using the MID function.\n\n1. In cell A1, enter the text: Hello World.\n2. In cell B1, use the MID function to extract 5 characters starting from position 1 (to get 'Hello').\n3. In cell B2, use the MID function to extract 5 characters starting from position 7 (to get 'World').",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": "Hello World" }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Hello" },
+        { "match": "exact", "f": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": "World" }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('Hello World') - 텍스트 입력 후 hotkey(enter)
+    // 3. click(x,y)      - 셀 B1 클릭
+    // 4. type('=MID(A1,1,5)') - MID 수식 입력 후 hotkey(enter)
+    // 5. click(x,y)      - 셀 B2 클릭
+    // 6. type('=MID(A1,7,5)') - MID 수식 입력 후 hotkey(enter)
+    // 7. done()
+  },
+  {
+    // Cells used: A1, A2, B1 → 3 cells
+    // Functions: IF + OR
+    "task_id": "sheet_only_13",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. A student can pass either by scoring 60 or above, or by having extra credit. Use the OR function inside an IF to check this.\n\n1. In cell A1, enter the score: 45.\n2. In cell A2, enter the extra credit flag: Y.\n3. In cell B1, use an IF function combined with OR to display 'Pass' if A1 is 60 or above OR A2 equals 'Y'. Otherwise display 'Fail'.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": 45 },
+        { "match": "exact", "f": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": "Y" }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Pass" }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('45')      - 점수 입력 후 hotkey(enter)
+    // 3. click(x,y)      - 셀 A2 클릭
+    // 4. type('Y')       - 추가 점수 플래그 입력 후 hotkey(enter)
+    // 5. click(x,y)      - 셀 B1 클릭
+    // 6. type('=IF(OR(A1>=60,A2="Y"),"Pass","Fail")') - IF+OR 수식 입력 후 hotkey(enter)
+    // 7. done()
+  },
+  {
+    // Cells used: A1, B2, B1, A2 → 4 cells
+    // Functions: cell reference swap (=A1, =B2)
+    //
+    // Visual layout of the swap:
+    //     A              B
+    // 1  "Apple"(input)  =A1 → "Apple"   ← A1's value appears at B1
+    // 2  =B2 → "Orange"  "Orange"(input) ← B2's value appears at A2
+    "task_id": "sheet_only_14",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. You will enter two values at opposite corners of a 2x2 grid and then swap them using cell reference formulas.\n\n1. In cell A1, enter the text: Apple.\n2. In cell B2, enter the text: Orange.\n3. In cell B1, enter a formula that references A1 so that B1 displays the value from A1.\n4. In cell A2, enter a formula that references B2 so that A2 displays the value from B2.\n\nAfter this, the 2x2 grid will show the two values swapped across the diagonal: A1 and B1 both show 'Apple', while A2 and B2 both show 'Orange'.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": "Apple" },
+        { "match": "exact", "f": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": "Orange" }
+      ],
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Apple" },
+        { "match": "exact", "f": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": "Orange" }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('Apple')   - 텍스트 입력 후 hotkey(enter)
+    // 3. click(x,y)      - 셀 B2 클릭
+    // 4. type('Orange')  - 텍스트 입력 후 hotkey(enter)
+    // 5. click(x,y)      - 셀 B1 클릭
+    // 6. type('=A1')     - A1 참조 수식 입력 후 hotkey(enter) → "Apple" 표시
+    // 7. click(x,y)      - 셀 A2 클릭
+    // 8. type('=B2')     - B2 참조 수식 입력 후 hotkey(enter) → "Orange" 표시
+    // 9. done()
+  },
+  {
+    // Cells used: A1, A2, B2, C2 → 4 cells
+    // Functions/Helpers: getSheetRangeMeta (merge), getCellMeta (value/style)
+    // Non-overlap type: layout/format task (not simple formula substitution)
+    "task_id": "sheet_only_15",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. Create a compact report header section with merge and formatting.\\n\\n1. Enter 'Weekly Report' in cell A1.\\n2. Select range A1:C1 and merge the cells into a single header cell.\\n3. Make the merged header bold.\\n4. Enter the following labels in row 2:\\n   - A2: Item\\n   - B2: Qty\\n   - C2: Price",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["cell", "v"], "value": "Weekly Report" },
+        { "match": "exact", "f": "getCellMeta", "param": "A2", "property": ["cell", "v"], "value": "Item" },
+        { "match": "exact", "f": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": "Qty" },
+        { "match": "exact", "f": "getCellMeta", "param": "C2", "property": ["cell", "v"], "value": "Price" }
+      ],
+      [
+        { "match": "exact", "f": "getSheetRangeMeta", "param": "A1:C1", "property": ["merge"], "value": true },
+        { "match": "exact", "f": "getCellMeta", "param": "A1", "property": ["style", "bl"], "value": 1 }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 셀 A1 클릭
+    // 2. type('Weekly Report') - 텍스트 입력 후 hotkey(enter)
+    // 3. drag(A1:C1)     - A1:C1 범위 선택
+    // 4. click(x,y)      - Merge Cells 기능 클릭
+    // 5. click(x,y)      - Bold 기능 클릭
+    // 6. click(x,y)      - 셀 A2 클릭
+    // 7. type('Item')    - 입력 후 hotkey(tab)
+    // 8. type('Qty')     - B2 입력 후 hotkey(tab)
+    // 9. type('Price')   - C2 입력
+    // 10. done()
+  },
+  {
+    // Cells used: B1, B2 → 2 cells
+    // Functions/Helpers: getSheetRowMeta, getSheetColumnMeta
+    // Non-overlap type: sheet layout task (row/column metadata)
+    "task_id": "sheet_only_16",
+    "instruction": "Open the spreadsheet at http://localhost:3000/spreadsheet. Configure a simple layout setting and enter two values.\\n\\n1. Set row 1 height to 36.\\n2. Set column B width to 140.\\n3. Enter 'Layout Check' in B1.\\n4. Enter 999 in B2.",
+    "website": "http://localhost:3000/spreadsheet",
+    "states": [
+      [
+        { "match": "exact", "f": "getCellMeta", "param": "B1", "property": ["cell", "v"], "value": "Layout Check" },
+        { "match": "exact", "f": "getCellMeta", "param": "B2", "property": ["cell", "v"], "value": 999 }
+      ],
+      [
+        { "match": "exact", "f": "getSheetRowMeta", "param": "1", "property": ["height"], "value": 36 },
+        { "match": "exact", "f": "getSheetColumnMeta", "param": "B", "property": ["width"], "value": 140 }
+      ]
+    ]
+    // [Steps]
+    // 1. click(x,y)      - 행 1 헤더 선택
+    // 2. type('36')      - 행 높이 설정값 입력 후 확정
+    // 3. click(x,y)      - 열 B 헤더 선택
+    // 4. type('140')     - 열 너비 설정값 입력 후 확정
+    // 5. click(x,y)      - 셀 B1 클릭
+    // 6. type('Layout Check') - 텍스트 입력 후 hotkey(enter)
+    // 7. click(x,y)      - 셀 B2 클릭
+    // 8. type('999')     - 숫자 입력
+    // 9. done()
+  }
+]
+//지금까지 했던것들을 합쳐서 2번시키게 하기는 별론가

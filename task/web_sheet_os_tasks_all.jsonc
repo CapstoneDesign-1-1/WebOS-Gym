@@ -1,0 +1,3980 @@
+// Total counts: 54
+[
+  {
+    // web_sheet_prozilla_nhis_01
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 'Case' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 'Flag' 입력
+    // 8. A2 클릭
+    // 9. A2에 값 'A' 입력
+    // 10. B2 클릭
+    // 11. B2에 값 0 입력
+    // 12. A3 클릭
+    // 13. A3에 값 'B' 입력
+    // 14. B3 클릭
+    // 15. B3에 값 1 입력
+    // 16. B4 클릭
+    // 17. B4에 수식 `=SUM(B2:B3)` 입력 후 Enter
+    // 18. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 19. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_01",
+    "instruction": "Could you open NHIS overseas departure premium exemption check. Run two checks: A) departure 2026.05.12 and entry 2026.05.13, B) departure 2026.05.12 and entry 2026.11.20. In Spreadsheet, record the two case results in cells A1:B3 with A1='Case', B1='Flag', A2='A', and A3='B', placing the first case flag in B2 and the second case flag in B3, and compute B4 with '=SUM(B2:B3)'. In Prozilla OS, create ~/Documents/finance_report.txt and write the spreadsheet results in the format 'CaseA Flag: [value]', 'CaseB Flag: [value]', 'Eligible Count: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "CaseA Flag: 0",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "CaseB Flag: 1",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Eligible Count: 1",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_nhis_02
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 '사업자번호' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 '최종판정' 입력
+    // 8. C1 클릭
+    // 9. C1에 값 '판정값' 입력
+    // 10. A2 클릭
+    // 11. A2에 값 '1111111111' 입력
+    // 12. B2 클릭
+    // 13. B2에 값 '사업장 적용이 가능 합니다.' 입력
+    // 14. C2 클릭
+    // 15. C2에 값 1 입력
+    // 16. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 17. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_02",
+    "instruction": "Could you open NHIS workplace eligibility simulation and enter business registration number 1111111111. Set both employment pay status and workplace enrollment status to eligible so final result is positive. In Spreadsheet, set A1:C2 with A1='사업자번호', B1='최종판정', C1='판정값', and A2='1111111111', then record the simulator's final message in B2 and a pass flag derived from that result in C2. In Prozilla OS, create ~/Documents/finance_report.txt and write the simulator result and derived flag in the format 'Final Result: [value]', 'Pass Flag: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1GnTUHYgF1MzXnQPA4W6VYRUewj9BHApQ_2CgvPkaYFI/edit?usp=sharing"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Final Result: 사업장 적용이 가능 합니다.",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Pass Flag: 1",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_nhis_03
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 '체류자격' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 '입국일' 입력
+    // 8. C1 클릭
+    // 9. C1에 값 '가입예정일' 입력
+    // 10. D1 클릭
+    // 11. D1에 값 '일수차이' 입력
+    // 12. A2 클릭
+    // 13. A2에 값 'D-4(일반연수)' 입력
+    // 14. B2 클릭
+    // 15. B2에 값 '2026.05.29' 입력
+    // 16. C2 클릭
+    // 17. C2에 값 '2026.11.29' 입력
+    // 18. D2 클릭
+    // 19. D2에 값 '=C2-B2' 입력
+    // 20. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 21. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_03",
+    "instruction": "Could you open NHIS foreign mandatory enrollment date simulation. Use stay type D-4 and first entry date 2026.05.29, then calculate the scheduled date. In Spreadsheet, fill A1:D2 with A1='체류자격', B1='입국일', C1='가입예정일', D1='일수차이', A2='D-4(일반연수)', and B2='2026.05.29', then record the calculated scheduled date in C2 and set D2 to '=C2-B2'. In Prozilla OS, create ~/Documents/finance_report.txt and write the results in the format 'Entry: [value]', 'Scheduled: [value]', 'Gap Days: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1GnTUHYgF1MzXnQPA4W6VYRUewj9BHApQ_2CgvPkaYFI/edit?usp=sharing"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Entry: 2026.05.29",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scheduled: 2026.11.29",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Gap Days: 184",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_nhis_04
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 '항목' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 '값' 입력
+    // 8. A2 클릭
+    // 9. A2에 값 '예상지역보험료' 입력
+    // 10. B2 클릭
+    // 11. B2에 값 2273220 입력
+    // 12. A3 클릭
+    // 13. A3에 값 '검증' 입력
+    // 14. B3 클릭
+    // 15. B3에 값 'PASS' 입력
+    // 16. A4 클릭
+    // 17. A4에 값 '천원단위' 입력
+    // 18. B4 클릭
+    // 19. B4에 값 '=ROUND(B2/1000,0)' 입력
+    // 20. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 21. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_04",
+    "instruction": "Could you open NHIS regional premium simulation and set inputs: domestic selected, 사업소득 등=30000, 주택=100000, others empty/default. Calculate the displayed 예상 지역보험료. In Spreadsheet, set A1:B4 with A1='항목', B1='값', A2='예상지역보험료', A3='검증', and A4='천원단위', then record the displayed premium in B2, set B3 to a verification flag after checking that value, and set B4 to '=ROUND(B2/1000,0)'. In Prozilla OS, create ~/Documents/finance_report.txt and write the results in the format 'Expected Local Premium: [value]원' and 'Verification: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1GnTUHYgF1MzXnQPA4W6VYRUewj9BHApQ_2CgvPkaYFI/edit?usp=sharing"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Expected Local Premium: 2273220원",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Verification: PASS",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_nhis_05
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 '항목' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 '값' 입력
+    // 8. A2 클릭
+    // 9. A2에 값 '연체금' 입력
+    // 10. B2 클릭
+    // 11. B2에 값 5000 입력
+    // 12. A3 클릭
+    // 13. A3에 값 '연체일수' 입력
+    // 14. B3 클릭
+    // 15. B3에 값 210 입력
+    // 16. A4 클릭
+    // 17. A4에 값 '1일당' 입력
+    // 18. B4 클릭
+    // 19. B4에 값 '=ROUND(B2/B3,2)' 입력
+    // 20. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 21. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_05",
+    "instruction": "Could you open NHIS late fee simulation and set inputs: premium=100005, member type domestic(including workplace), insurance type health, notice month=202407, payment due date=20250424. Calculate the displayed 예상 연체금 and 연체일수. In Spreadsheet, set A1:B4 with A1='항목', B1='값', A2='연체금', A3='연체일수', and A4='1일당', then record the displayed late fee in B2 and the displayed overdue days in B3, and set B4 to '=ROUND(B2/B3,2)'. In Prozilla OS, create ~/Documents/finance_report.txt and write the results in the format 'Late Fee: [value]원', 'Days: [value]일', and 'Verification: PASS'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1GnTUHYgF1MzXnQPA4W6VYRUewj9BHApQ_2CgvPkaYFI/edit?usp=sharing"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Late Fee: 5000원",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Days: 210일",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Verification: PASS",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_nhis_06
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 '항목' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 '값' 입력
+    // 8. A2 클릭
+    // 9. A2에 값 '가구원수' 입력
+    // 10. B2 클릭
+    // 11. B2에 값 '3인' 입력
+    // 12. A3 클릭
+    // 13. A3에 값 '결과' 입력
+    // 14. B3 클릭
+    // 15. B3에 값 '상담 대상자' 입력
+    // 16. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 17. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_06",
+    "instruction": "Could you open NHIS 상병수당 소득 모의점검 and set inputs: 취업자 자격=건강보험직장가입자, 가입자 종류=직장가입자, 가구원 수=3인, 건강보험료=50000. Record the result shown after submitting the inputs. In Spreadsheet, set A1:B3 with A1='항목', B1='값', A2='가구원수', A3='결과', B2='3인', and B3 as the displayed result. In Prozilla OS, create ~/Documents/finance_report.txt and write the scenario inputs and recorded result in the format 'Applicant Type: 건강보험직장가입자', 'Household: [value]', and 'Result: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1GnTUHYgF1MzXnQPA4W6VYRUewj9BHApQ_2CgvPkaYFI/edit?usp=sharing"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Applicant Type: 건강보험직장가입자",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Household: 3인",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Result: 상담 대상자",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_nhis_08
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. A1 클릭
+    // 5. A1에 값 '항목' 입력
+    // 6. B1 클릭
+    // 7. B1에 값 '값' 입력
+    // 8. A2 클릭
+    // 9. A2에 값 '총액' 입력
+    // 10. B2 클릭
+    // 11. B2에 값 1014240 입력
+    // 12. A3 클릭
+    // 13. A3에 값 '근로자' 입력
+    // 14. B3 클릭
+    // 15. B3에 값 485870 입력
+    // 16. A4 클릭
+    // 17. A4에 값 '사업주' 입력
+    // 18. B4 클릭
+    // 19. B4에 값 528370 입력
+    // 20. A5 클릭
+    // 21. A5에 값 '차이' 입력
+    // 22. B5 클릭
+    // 23. B5에 값 '=B4-B3' 입력
+    // 24. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 25. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_nhis_08",
+    "instruction": "Could you open '4대사회보험료 모의계산' in NHIS. Set monthly pay=5000000 and worker count=1,000인 이상 기업, 국가지방자치단체, then calculate. Record the displayed 합계 row values for 총액, 근로자, and 사업주. In Spreadsheet, set A1:B5 with A1='항목', B1='값', A2='총액', A3='근로자', A4='사업주', and A5='차이', then record the displayed values in B2:B4 and set B5 to '=B4-B3'. In Prozilla OS, create ~/Documents/finance_report.txt and write the results in the format 'Total: [value]원', 'Worker: [value]원', 'Employer: [value]원', and 'Gap: [value]원'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1GnTUHYgF1MzXnQPA4W6VYRUewj9BHApQ_2CgvPkaYFI/edit?usp=sharing"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Total: 1014240원",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Worker: 485870원",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Employer: 528370원",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Gap: 42500원",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_arxiv_01
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_arxiv_01",
+    "instruction": "Could you open arXiv abstract page `https://arxiv.org/abs/1706.03762`. Record arXiv ID, title, first author, submitted year, primary category, and full subjects in Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` to `=LEFT(A2,4)` and `Area Flag` to `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_001.txt` in the format 'ArXiv ID: 1706.03762 | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'.",
+    "website": {
+      "web": "https://arxiv.org/abs/1706.03762",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/arxiv_paper_001.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_001.txt",
+          "text": "ArXiv ID: 1706.03762",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_001.txt",
+          "text": "Title: Attention Is All You Need",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_001.txt",
+          "text": "First Author: Ashish Vaswani",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_001.txt",
+          "text": "Submitted Year: 2017",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_001.txt",
+          "text": "Primary Category: cs.CL",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_001.txt",
+          "text": "Subjects: Computation and Language (cs.CL); Machine Learning (cs.LG)",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_001.txt",
+          "text": "ID Prefix: 1706",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_001.txt",
+          "text": "Area Flag: NLP",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_arxiv_02
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_arxiv_02",
+    "instruction": "Could you open arXiv abstract page `https://arxiv.org/abs/1810.04805`. Record arXiv ID, title, first author, submitted year, primary category, and full subjects in Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` to `=LEFT(A2,4)` and `Area Flag` to `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_002.txt` in the format 'ArXiv ID: 1810.04805 | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'.",
+    "website": {
+      "web": "https://arxiv.org/abs/1810.04805",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/arxiv_paper_002.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_002.txt",
+          "text": "ArXiv ID: 1810.04805",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_002.txt",
+          "text": "Title: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_002.txt",
+          "text": "First Author: Jacob Devlin",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_002.txt",
+          "text": "Submitted Year: 2018",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_002.txt",
+          "text": "Primary Category: cs.CL",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_002.txt",
+          "text": "Subjects: Computation and Language (cs.CL)",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_002.txt",
+          "text": "ID Prefix: 1810",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_002.txt",
+          "text": "Area Flag: NLP",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_arxiv_03
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_arxiv_03",
+    "instruction": "Could you open arXiv abstract page `https://arxiv.org/abs/2005.14165`. Record arXiv ID, title, first author, submitted year, primary category, and full subjects in Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` to `=LEFT(A2,4)` and `Area Flag` to `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_003.txt` in the format 'ArXiv ID: 2005.14165 | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'.",
+    "website": {
+      "web": "https://arxiv.org/abs/2005.14165",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/arxiv_paper_003.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_003.txt",
+          "text": "ArXiv ID: 2005.14165",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_003.txt",
+          "text": "Title: Language Models are Few-Shot Learners",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_003.txt",
+          "text": "First Author: Tom B. Brown",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_003.txt",
+          "text": "Submitted Year: 2020",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_003.txt",
+          "text": "Primary Category: cs.CL",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_003.txt",
+          "text": "Subjects: Computation and Language (cs.CL)",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_003.txt",
+          "text": "ID Prefix: 2005",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_003.txt",
+          "text": "Area Flag: NLP",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_arxiv_04
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_arxiv_04",
+    "instruction": "Could you open arXiv abstract page `https://arxiv.org/abs/1512.03385`. Record arXiv ID, title, first author, submitted year, primary category, and full subjects in Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` to `=LEFT(A2,4)` and `Area Flag` to `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_004.txt` in the format 'ArXiv ID: 1512.03385 | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'.",
+    "website": {
+      "web": "https://arxiv.org/abs/1512.03385",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/arxiv_paper_004.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_004.txt",
+          "text": "ArXiv ID: 1512.03385",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_004.txt",
+          "text": "Title: Deep Residual Learning for Image Recognition",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_004.txt",
+          "text": "First Author: Kaiming He",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_004.txt",
+          "text": "Submitted Year: 2015",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_004.txt",
+          "text": "Primary Category: cs.CV",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_004.txt",
+          "text": "Subjects: Computer Vision and Pattern Recognition (cs.CV)",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_004.txt",
+          "text": "ID Prefix: 1512",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_004.txt",
+          "text": "Area Flag: VISION",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_arxiv_05
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_arxiv_05",
+    "instruction": "Could you open arXiv abstract page `https://arxiv.org/abs/1506.02640`. Record arXiv ID, title, first author, submitted year, primary category, and full subjects in Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` to `=LEFT(A2,4)` and `Area Flag` to `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_005.txt` in the format 'ArXiv ID: 1506.02640 | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'.",
+    "website": {
+      "web": "https://arxiv.org/abs/1506.02640",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/arxiv_paper_005.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_005.txt",
+          "text": "ArXiv ID: 1506.02640",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_005.txt",
+          "text": "Title: You Only Look Once: Unified, Real-Time Object Detection",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_005.txt",
+          "text": "First Author: Joseph Redmon",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_005.txt",
+          "text": "Submitted Year: 2015",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_005.txt",
+          "text": "Primary Category: cs.CV",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_005.txt",
+          "text": "Subjects: Computer Vision and Pattern Recognition (cs.CV)",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_005.txt",
+          "text": "ID Prefix: 1506",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_005.txt",
+          "text": "Area Flag: VISION",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_arxiv_06
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_arxiv_06",
+    "instruction": "Could you open arXiv abstract page `https://arxiv.org/abs/1409.0473`. Record arXiv ID, title, first author, submitted year, primary category, and full subjects in Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` to `=LEFT(A2,4)` and `Area Flag` to `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_006.txt` in the format 'ArXiv ID: 1409.0473 | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'.",
+    "website": {
+      "web": "https://arxiv.org/abs/1409.0473",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/arxiv_paper_006.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_006.txt",
+          "text": "ArXiv ID: 1409.0473",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_006.txt",
+          "text": "Title: Neural Machine Translation by Jointly Learning to Align and Translate",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_006.txt",
+          "text": "First Author: Dzmitry Bahdanau",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_006.txt",
+          "text": "Submitted Year: 2014",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_006.txt",
+          "text": "Primary Category: cs.CL",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_006.txt",
+          "text": "Subjects: Computation and Language (cs.CL); Machine Learning (cs.LG); Neural and Evolutionary Computing (cs.NE); Machine Learning (stat.ML)",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_006.txt",
+          "text": "ID Prefix: 1409",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_006.txt",
+          "text": "Area Flag: NLP",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_arxiv_07
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_arxiv_07",
+    "instruction": "Could you open arXiv abstract page `https://arxiv.org/abs/1412.6980`. Record arXiv ID, title, first author, submitted year, primary category, and full subjects in Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` to `=LEFT(A2,4)` and `Area Flag` to `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_007.txt` in the format 'ArXiv ID: 1412.6980 | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'.",
+    "website": {
+      "web": "https://arxiv.org/abs/1412.6980",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/arxiv_paper_007.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_007.txt",
+          "text": "ArXiv ID: 1412.6980",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_007.txt",
+          "text": "Title: Adam: A Method for Stochastic Optimization",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_007.txt",
+          "text": "First Author: Diederik P. Kingma",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_007.txt",
+          "text": "Submitted Year: 2014",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_007.txt",
+          "text": "Primary Category: cs.LG",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_007.txt",
+          "text": "Subjects: Machine Learning (cs.LG)",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_007.txt",
+          "text": "ID Prefix: 1412",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_007.txt",
+          "text": "Area Flag: ML",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_arxiv_08
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_arxiv_08",
+    "instruction": "Could you open arXiv abstract page `https://arxiv.org/abs/1609.03499`. Record arXiv ID, title, first author, submitted year, primary category, and full subjects in Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` to `=LEFT(A2,4)` and `Area Flag` to `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_008.txt` in the format 'ArXiv ID: 1609.03499 | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'.",
+    "website": {
+      "web": "https://arxiv.org/abs/1609.03499",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/arxiv_paper_008.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_008.txt",
+          "text": "ArXiv ID: 1609.03499",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_008.txt",
+          "text": "Title: WaveNet: A Generative Model for Raw Audio",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_008.txt",
+          "text": "First Author: Aaron van den Oord",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_008.txt",
+          "text": "Submitted Year: 2016",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_008.txt",
+          "text": "Primary Category: cs.SD",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_008.txt",
+          "text": "Subjects: Sound (cs.SD); Machine Learning (cs.LG)",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_008.txt",
+          "text": "ID Prefix: 1609",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_008.txt",
+          "text": "Area Flag: SOUND",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_arxiv_09
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_arxiv_09",
+    "instruction": "Could you open arXiv abstract page `https://arxiv.org/abs/1905.11946`. Record arXiv ID, title, first author, submitted year, primary category, and full subjects in Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` to `=LEFT(A2,4)` and `Area Flag` to `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_009.txt` in the format 'ArXiv ID: 1905.11946 | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'.",
+    "website": {
+      "web": "https://arxiv.org/abs/1905.11946",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/arxiv_paper_009.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_009.txt",
+          "text": "ArXiv ID: 1905.11946",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_009.txt",
+          "text": "Title: EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_009.txt",
+          "text": "First Author: Mingxing Tan",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_009.txt",
+          "text": "Submitted Year: 2019",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_009.txt",
+          "text": "Primary Category: cs.LG",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_009.txt",
+          "text": "Subjects: Machine Learning (cs.LG); Computer Vision and Pattern Recognition (cs.CV); Machine Learning (stat.ML)",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_009.txt",
+          "text": "ID Prefix: 1905",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_009.txt",
+          "text": "Area Flag: ML",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_arxiv_10
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_arxiv_10",
+    "instruction": "Could you open arXiv abstract page `https://arxiv.org/abs/1802.01561`. Record arXiv ID, title, first author, submitted year, primary category, and full subjects in Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` to `=LEFT(A2,4)` and `Area Flag` to `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_010.txt` in the format 'ArXiv ID: 1802.01561 | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'.",
+    "website": {
+      "web": "https://arxiv.org/abs/1802.01561",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/arxiv_paper_010.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_010.txt",
+          "text": "ArXiv ID: 1802.01561",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_010.txt",
+          "text": "Title: IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_010.txt",
+          "text": "First Author: Lasse Espeholt",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_010.txt",
+          "text": "Submitted Year: 2018",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_010.txt",
+          "text": "Primary Category: cs.LG",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_010.txt",
+          "text": "Subjects: Machine Learning (cs.LG); Artificial Intelligence (cs.AI)",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_010.txt",
+          "text": "ID Prefix: 1802",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/arxiv_paper_010.txt",
+          "text": "Area Flag: ML",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_cdc_child_bmi_01
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. C2 클릭
+    // 5. C2에 값 "Underweight" 입력
+    // 6. C2에 값 "Healthy Weight" 입력
+    // 7. C2에 값 "Overweight" 입력
+    // 8. C2에 값 "Obesity" 입력
+    // 9. E2 클릭
+    // 10. E2에 수식 `=ROUND(B2,0)` 입력 후 Enter
+    // 11. F2 클릭
+    // 12. F2에 수식 `=IF(C2="Underweight","LOW",IF(C2="Healthy Weight","OK",IF(C2="Overweight","WATCH",IF(C2="Obesity","HIGH","SEVERE"))))` 입력 후 Enter
+    // 13. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_cdc_child_bmi_01",
+    "instruction": "Could you open the CDC Child and Teen BMI Calculator. Use US Customary Units, enter Boy age 8 years 0 months, 4 ft 4 in, 48 lbs, then calculate. Copy results to Spreadsheet: B2=<BMI>, C2=<BMI Category>, D2=<BMI Percentile>. Set E2 to `=ROUND(B2,0)` and F2 to `=IF(C2=\"Underweight\",\"LOW\",IF(C2=\"Healthy Weight\",\"OK\",IF(C2=\"Overweight\",\"WATCH\",IF(C2=\"Obesity\",\"HIGH\",\"SEVERE\"))))`. Use E2 as `Rounded BMI` and F2 as `Category Flag`. In Prozilla OS, create the target text file and write sheet values in the format 'Scenario: Boy age 8 years 0 months, 4 ft 4 in, 48 lbs | BMI: <from sheet> | BMI Percentile: <from sheet> | Category: <from sheet> | Rounded BMI: <from sheet> | Category Flag: <from sheet>'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Boy age 8 years 0 months, 4 ft 4 in, 48 lbs",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI:\\s*\\d+(?:\\.\\d+)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI Percentile:\\s*(?:<\\s*)?[0-9]{1,3}(?:\\.[0-9]+)?(?:st|nd|rd|th)?(?:\\s*percentile|\\s*%)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Category Flag:\\s*(LOW|OK|WATCH|HIGH|SEVERE)",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Rounded BMI:\\s*\\d+",
+          "match": "regex"
+        },
+        {
+          "mode": "console",
+          "website_id": "os",
+          "script": "(() => {\n  const text = document.querySelector('textarea')?.value || '';\n  const mB = text.match(/BMI:\\s*([0-9]+(?:\\.[0-9]+)?)/);\n  const mP = text.match(/BMI Percentile:\\s*(?:<\\s*)?([0-9]+(?:\\.[0-9]+)?)/i);\n  const mC = text.match(/Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)/);\n  const mR = text.match(/Rounded BMI:\\s*([0-9]+)/);\n  const mF = text.match(/Category Flag:\\s*(LOW|OK|WATCH|HIGH|SEVERE)/);\n  if (!mB || !mP || !mC || !mR || !mF) return 'FAIL';\n  const bmi = parseFloat(mB[1]);\n  const pct = parseFloat(mP[1]);\n  const category = mC[1].trim();\n  const rounded = parseInt(mR[1], 10);\n  const flag = mF[1];\n  if (Math.abs(bmi - 12.48) > 0.12) return 'FAIL';\n  if (!Number.isFinite(pct) || pct < 0 || pct > 100) return 'FAIL';\n  const expectedFlag = category === 'Underweight' ? 'LOW' : category === 'Healthy Weight' ? 'OK' : category === 'Overweight' ? 'WATCH' : category === 'Obesity' ? 'HIGH' : 'SEVERE';\n  if (!Number.isFinite(rounded) || Math.round(bmi) !== rounded || flag !== expectedFlag) return 'FAIL';\n  return 'PASS';\n})();",
+          "value": "PASS",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_cdc_child_bmi_05
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. E2 클릭
+    // 5. E2에 수식 `=INT(B2)` 입력 후 Enter
+    // 6. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_cdc_child_bmi_05",
+    "instruction": "Could you open the CDC Child and Teen BMI Calculator. Use US Customary Units, enter Boy age 7 years 0 months, 4 ft 0 in, 50 lbs, then calculate. Copy results to Spreadsheet: B2=<BMI>, C2=<BMI Category>, D2=<BMI Percentile>. Set E2 to `=INT(B2)`; use E2 as `BMI Integer`. In Prozilla OS, create the target text file and write sheet values in the format 'Scenario: Boy age 7 years 0 months, 4 ft 0 in, 50 lbs | BMI: <from sheet> | BMI Percentile: <from sheet> | Category: <from sheet> | BMI Integer: <from sheet>'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Boy age 7 years 0 months, 4 ft 0 in, 50 lbs",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI:\\s*\\d+(?:\\.\\d+)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI Percentile:\\s*(?:<\\s*)?[0-9]{1,3}(?:\\.[0-9]+)?(?:st|nd|rd|th)?(?:\\s*percentile|\\s*%)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI Integer:\\s*\\d+",
+          "match": "regex"
+        },
+        {
+          "mode": "console",
+          "website_id": "os",
+          "script": "(() => {\n  const text = document.querySelector('textarea')?.value || '';\n  const mB = text.match(/BMI:\\s*([0-9]+(?:\\.[0-9]+)?)/);\n  const mP = text.match(/BMI Percentile:\\s*(?:<\\s*)?([0-9]+(?:\\.[0-9]+)?)/i);\n  const mC = text.match(/Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)/);\n  if (!mB || !mP || !mC) return 'FAIL';\n  const bmi = parseFloat(mB[1]);\n  const pct = parseFloat(mP[1]);\n  const category = mC[1].trim();\n  if (Math.abs(bmi - 15.26) > 0.12) return 'FAIL';\n  if (!Number.isFinite(pct) || pct < 0 || pct > 100) return 'FAIL';\n  const mI = text.match(/BMI Integer:\\s*([0-9]+)/); if (!mI || Math.floor(bmi) !== parseInt(mI[1], 10)) return 'FAIL';\n  return 'PASS';\n})();",
+          "value": "PASS",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_cdc_child_bmi_10
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. E2 클릭
+    // 5. E2에 수식 `=ABS(B2-20)` 입력 후 Enter
+    // 6. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_cdc_child_bmi_10",
+    "instruction": "Could you open the CDC Child and Teen BMI Calculator. Use US Customary Units, enter Girl age 12 years 0 months, 5 ft 0 in, 120 lbs, then calculate. Copy results to Spreadsheet: B2=<BMI>, C2=<BMI Category>, D2=<BMI Percentile>. Set E2 to `=ABS(B2-20)`; use E2 as `Distance from 20`. In Prozilla OS, create the target text file and write sheet values in the format 'Scenario: Girl age 12 years 0 months, 5 ft 0 in, 120 lbs | BMI: <from sheet> | BMI Percentile: <from sheet> | Category: <from sheet> | Distance from 20: <from sheet>'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Girl age 12 years 0 months, 5 ft 0 in, 120 lbs",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI:\\s*\\d+(?:\\.\\d+)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI Percentile:\\s*(?:<\\s*)?[0-9]{1,3}(?:\\.[0-9]+)?(?:st|nd|rd|th)?(?:\\s*percentile|\\s*%)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Distance from 20:\\s*\\d+(?:\\.\\d+)?",
+          "match": "regex"
+        },
+        {
+          "mode": "console",
+          "website_id": "os",
+          "script": "(() => {\n  const text = document.querySelector('textarea')?.value || '';\n  const mB = text.match(/BMI:\\s*([0-9]+(?:\\.[0-9]+)?)/);\n  const mP = text.match(/BMI Percentile:\\s*(?:<\\s*)?([0-9]+(?:\\.[0-9]+)?)/i);\n  const mC = text.match(/Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)/);\n  if (!mB || !mP || !mC) return 'FAIL';\n  const bmi = parseFloat(mB[1]);\n  const pct = parseFloat(mP[1]);\n  const category = mC[1].trim();\n  if (Math.abs(bmi - 23.43) > 0.12) return 'FAIL';\n  if (!Number.isFinite(pct) || pct < 0 || pct > 100) return 'FAIL';\n  const mD = text.match(/Distance from 20:\\s*([0-9]+(?:\\.[0-9]+)?)/); if (!mD) return 'FAIL'; const expected = Math.abs(bmi - 20); if (Math.abs(expected - parseFloat(mD[1])) >= 0.11) return 'FAIL';\n  return 'PASS';\n})();",
+          "value": "PASS",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_cdc_child_bmi_14
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. E2 클릭
+    // 5. E2에 수식 `=MAX(0,B2-25)` 입력 후 Enter
+    // 6. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_cdc_child_bmi_14",
+    "instruction": "Could you open the CDC Child and Teen BMI Calculator. Use US Customary Units, enter Girl age 12 years 0 months, 5 ft 0 in, 136 lbs, then calculate. Copy results to Spreadsheet: B2=<BMI>, C2=<BMI Category>, D2=<BMI Percentile>. Set E2 to `=MAX(0,B2-25)`; use E2 as `Over 25`. In Prozilla OS, create the target text file and write sheet values in the format 'Scenario: Girl age 12 years 0 months, 5 ft 0 in, 136 lbs | BMI: <from sheet> | BMI Percentile: <from sheet> | Category: <from sheet> | Over 25: <from sheet>'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Girl age 12 years 0 months, 5 ft 0 in, 136 lbs",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI:\\s*\\d+(?:\\.\\d+)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI Percentile:\\s*(?:<\\s*)?[0-9]{1,3}(?:\\.[0-9]+)?(?:st|nd|rd|th)?(?:\\s*percentile|\\s*%)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Over 25:\\s*\\d+(?:\\.\\d+)?",
+          "match": "regex"
+        },
+        {
+          "mode": "console",
+          "website_id": "os",
+          "script": "(() => {\n  const text = document.querySelector('textarea')?.value || '';\n  const mB = text.match(/BMI:\\s*([0-9]+(?:\\.[0-9]+)?)/);\n  const mP = text.match(/BMI Percentile:\\s*(?:<\\s*)?([0-9]+(?:\\.[0-9]+)?)/i);\n  const mC = text.match(/Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)/);\n  if (!mB || !mP || !mC) return 'FAIL';\n  const bmi = parseFloat(mB[1]);\n  const pct = parseFloat(mP[1]);\n  const category = mC[1].trim();\n  if (Math.abs(bmi - 26.56) > 0.12) return 'FAIL';\n  if (!Number.isFinite(pct) || pct < 0 || pct > 100) return 'FAIL';\n  const mO = text.match(/Over 25:\\s*([0-9]+(?:\\.[0-9]+)?)/); if (!mO) return 'FAIL'; const expected = Math.max(0, bmi - 25); if (Math.abs(expected - parseFloat(mO[1])) >= 0.11) return 'FAIL';\n  return 'PASS';\n})();",
+          "value": "PASS",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_cdc_child_bmi_18
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. E2 클릭
+    // 5. E2에 수식 `=IF(B2>=35,"SEVERE","NOT_SEVERE")` 입력 후 Enter
+    // 6. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_cdc_child_bmi_18",
+    "instruction": "Could you open the CDC Child and Teen BMI Calculator. Use US Customary Units, enter Girl age 13 years 0 months, 5 ft 2 in, 210 lbs, then calculate. Copy results to Spreadsheet: B2=<BMI>, C2=<BMI Category>, D2=<BMI Percentile>. Set E2 to `=IF(B2>=35,\"SEVERE\",\"NOT_SEVERE\")`; use E2 as `Severity Flag`. In Prozilla OS, create the target text file and write sheet values in the format 'Scenario: Girl age 13 years 0 months, 5 ft 2 in, 210 lbs | BMI: <from sheet> | BMI Percentile: <from sheet> | Category: <from sheet> | Severity Flag: <from sheet>'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Girl age 13 years 0 months, 5 ft 2 in, 210 lbs",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI:\\s*\\d+(?:\\.\\d+)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI Percentile:\\s*(?:<\\s*)?[0-9]{1,3}(?:\\.[0-9]+)?(?:st|nd|rd|th)?(?:\\s*percentile|\\s*%)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Severity Flag:\\s*(SEVERE|NOT_SEVERE)",
+          "match": "regex"
+        },
+        {
+          "mode": "console",
+          "website_id": "os",
+          "script": "(() => {\n  const text = document.querySelector('textarea')?.value || '';\n  const mB = text.match(/BMI:\\s*([0-9]+(?:\\.[0-9]+)?)/);\n  const mP = text.match(/BMI Percentile:\\s*(?:<\\s*)?([0-9]+(?:\\.[0-9]+)?)/i);\n  const mC = text.match(/Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)/);\n  if (!mB || !mP || !mC) return 'FAIL';\n  const bmi = parseFloat(mB[1]);\n  const pct = parseFloat(mP[1]);\n  const category = mC[1].trim();\n  if (Math.abs(bmi - 38.41) > 0.12) return 'FAIL';\n  if (!Number.isFinite(pct) || pct < 0 || pct > 100) return 'FAIL';\n  const mS = text.match(/Severity Flag:\\s*(SEVERE|NOT_SEVERE)/); if (!mS) return 'FAIL'; const expected = bmi >= 35 ? 'SEVERE' : 'NOT_SEVERE'; if (expected !== mS[1]) return 'FAIL';\n  return 'PASS';\n})();",
+          "value": "PASS",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_cdc_child_bmi_21
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. E2 클릭
+    // 5. E2에 수식 `=IF(B2<18.5,"LT18.5","GTE18.5")` 입력 후 Enter
+    // 6. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_cdc_child_bmi_21",
+    "instruction": "Could you open the CDC Child and Teen BMI Calculator. Use US Customary Units, enter Boy age 7 years 0 months, 4 ft 0 in, 50 lbs, then calculate. Copy results to Spreadsheet: B2=<BMI>, C2=<BMI Category>, D2=<BMI Percentile>. Set E2 to `=IF(B2<18.5,\"LT18.5\",\"GTE18.5\")`; use E2 as `Status Flag`. In Prozilla OS, create the target text file and write sheet values in the format 'Scenario: Boy age 7 years 0 months, 4 ft 0 in, 50 lbs | BMI: <from sheet> | BMI Percentile: <from sheet> | Category: <from sheet> | Status Flag: <from sheet>'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Boy age 7 years 0 months, 4 ft 0 in, 50 lbs",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI:\\s*\\d+(?:\\.\\d+)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI Percentile:\\s*(?:<\\s*)?[0-9]{1,3}(?:\\.[0-9]+)?(?:st|nd|rd|th)?(?:\\s*percentile|\\s*%)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Status Flag:\\s*(LT18\\.5|GTE18\\.5)",
+          "match": "regex"
+        },
+        {
+          "mode": "console",
+          "website_id": "os",
+          "script": "(() => {\n  const text = document.querySelector('textarea')?.value || '';\n  const mB = text.match(/BMI:\\s*([0-9]+(?:\\.[0-9]+)?)/);\n  const mP = text.match(/BMI Percentile:\\s*(?:<\\s*)?([0-9]+(?:\\.[0-9]+)?)/i);\n  const mC = text.match(/Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)/);\n  if (!mB || !mP || !mC) return 'FAIL';\n  const bmi = parseFloat(mB[1]);\n  const pct = parseFloat(mP[1]);\n  const category = mC[1].trim();\n  if (Math.abs(bmi - 15.26) > 0.12) return 'FAIL';\n  if (!Number.isFinite(pct) || pct < 0 || pct > 100) return 'FAIL';\n  const mS = text.match(/Status Flag:\\s*(LT18\\.5|GTE18\\.5)/); if (!mS) return 'FAIL'; const expected = bmi < 18.5 ? 'LT18.5' : 'GTE18.5'; if (expected !== mS[1]) return 'FAIL';\n  return 'PASS';\n})();",
+          "value": "PASS",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_cdc_child_bmi_22
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. E2 클릭
+    // 5. E2에 수식 `=ROUNDUP(B2,0)` 입력 후 Enter
+    // 6. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_cdc_child_bmi_22",
+    "instruction": "Could you open the CDC Child and Teen BMI Calculator. Use US Customary Units, enter Girl age 12 years 0 months, 5 ft 0 in, 120 lbs, then calculate. Copy results to Spreadsheet: B2=<BMI>, C2=<BMI Category>, D2=<BMI Percentile>. Set E2 to `=ROUNDUP(B2,0)`; use E2 as `Rounded Up BMI`. In Prozilla OS, create the target text file and write sheet values in the format 'Scenario: Girl age 12 years 0 months, 5 ft 0 in, 120 lbs | BMI: <from sheet> | BMI Percentile: <from sheet> | Category: <from sheet> | Rounded Up BMI: <from sheet>'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Girl age 12 years 0 months, 5 ft 0 in, 120 lbs",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI:\\s*\\d+(?:\\.\\d+)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI Percentile:\\s*(?:<\\s*)?[0-9]{1,3}(?:\\.[0-9]+)?(?:st|nd|rd|th)?(?:\\s*percentile|\\s*%)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Rounded Up BMI:\\s*\\d+",
+          "match": "regex"
+        },
+        {
+          "mode": "console",
+          "website_id": "os",
+          "script": "(() => {\n  const text = document.querySelector('textarea')?.value || '';\n  const mB = text.match(/BMI:\\s*([0-9]+(?:\\.[0-9]+)?)/);\n  const mP = text.match(/BMI Percentile:\\s*(?:<\\s*)?([0-9]+(?:\\.[0-9]+)?)/i);\n  const mC = text.match(/Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)/);\n  if (!mB || !mP || !mC) return 'FAIL';\n  const bmi = parseFloat(mB[1]);\n  const pct = parseFloat(mP[1]);\n  const category = mC[1].trim();\n  if (Math.abs(bmi - 23.43) > 0.12) return 'FAIL';\n  if (!Number.isFinite(pct) || pct < 0 || pct > 100) return 'FAIL';\n  const mR = text.match(/Rounded Up BMI:\\s*([0-9]+)/); if (!mR || Math.ceil(bmi) !== parseInt(mR[1], 10)) return 'FAIL';\n  return 'PASS';\n})();",
+          "value": "PASS",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_cdc_child_bmi_25
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. E2 클릭
+    // 5. E2에 수식 `=LEN(C2)` 입력 후 Enter
+    // 6. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_cdc_child_bmi_25",
+    "instruction": "Could you open the CDC Child and Teen BMI Calculator. Use US Customary Units, enter Boy age 15 years 0 months, 5 ft 6 in, 230 lbs, then calculate. Copy results to Spreadsheet: B2=<BMI>, C2=<BMI Category>, D2=<BMI Percentile>. Set E2 to `=LEN(C2)`; use E2 as `Category Length`. In Prozilla OS, create the target text file and write sheet values in the format 'Scenario: Boy age 15 years 0 months, 5 ft 6 in, 230 lbs | BMI: <from sheet> | BMI Percentile: <from sheet> | Category: <from sheet> | Category Length: <from sheet>'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Boy age 15 years 0 months, 5 ft 6 in, 230 lbs",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI:\\s*\\d+(?:\\.\\d+)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI Percentile:\\s*(?:<\\s*)?[0-9]{1,3}(?:\\.[0-9]+)?(?:st|nd|rd|th)?(?:\\s*percentile|\\s*%)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Category Length:\\s*\\d+",
+          "match": "regex"
+        },
+        {
+          "mode": "console",
+          "website_id": "os",
+          "script": "(() => {\n  const text = document.querySelector('textarea')?.value || '';\n  const mB = text.match(/BMI:\\s*([0-9]+(?:\\.[0-9]+)?)/);\n  const mP = text.match(/BMI Percentile:\\s*(?:<\\s*)?([0-9]+(?:\\.[0-9]+)?)/i);\n  const mC = text.match(/Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)/);\n  if (!mB || !mP || !mC) return 'FAIL';\n  const bmi = parseFloat(mB[1]);\n  const pct = parseFloat(mP[1]);\n  const category = mC[1].trim();\n  if (Math.abs(bmi - 37.12) > 0.12) return 'FAIL';\n  if (!Number.isFinite(pct) || pct < 0 || pct > 100) return 'FAIL';\n  const mL = text.match(/Category Length:\\s*([0-9]+)/); if (!mL || category.length !== parseInt(mL[1], 10)) return 'FAIL';\n  return 'PASS';\n})();",
+          "value": "PASS",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_cdc_child_bmi_28
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. E2 클릭
+    // 5. E2에 수식 `=CONCAT(C2,"-",IF(B2>=35,"35PLUS","UNDER35"))` 입력 후 Enter
+    // 6. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_cdc_child_bmi_28",
+    "instruction": "Could you open the CDC Child and Teen BMI Calculator. Use US Customary Units, enter Girl age 13 years 0 months, 5 ft 2 in, 210 lbs, then calculate. Copy results to Spreadsheet: B2=<BMI>, C2=<BMI Category>, D2=<BMI Percentile>. Set E2 to `=CONCAT(C2,\"-\",IF(B2>=35,\"35PLUS\",\"UNDER35\"))`; use E2 as `Summary`. In Prozilla OS, create the target text file and write sheet values in the format 'Scenario: Girl age 13 years 0 months, 5 ft 2 in, 210 lbs | BMI: <from sheet> | BMI Percentile: <from sheet> | Category: <from sheet> | Summary: <from sheet>'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Girl age 13 years 0 months, 5 ft 2 in, 210 lbs",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI:\\s*\\d+(?:\\.\\d+)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI Percentile:\\s*(?:<\\s*)?[0-9]{1,3}(?:\\.[0-9]+)?(?:st|nd|rd|th)?(?:\\s*percentile|\\s*%)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Summary:\\s*.+",
+          "match": "regex"
+        },
+        {
+          "mode": "console",
+          "website_id": "os",
+          "script": "(() => {\n  const text = document.querySelector('textarea')?.value || '';\n  const mB = text.match(/BMI:\\s*([0-9]+(?:\\.[0-9]+)?)/);\n  const mP = text.match(/BMI Percentile:\\s*(?:<\\s*)?([0-9]+(?:\\.[0-9]+)?)/i);\n  const mC = text.match(/Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)/);\n  if (!mB || !mP || !mC) return 'FAIL';\n  const bmi = parseFloat(mB[1]);\n  const pct = parseFloat(mP[1]);\n  const category = mC[1].trim();\n  if (Math.abs(bmi - 38.41) > 0.12) return 'FAIL';\n  if (!Number.isFinite(pct) || pct < 0 || pct > 100) return 'FAIL';\n  const mS = text.match(/Summary:\\s*([^|\\n]+)/); if (!mS) return 'FAIL'; const expected = `${category}-${bmi >= 35 ? '35PLUS' : 'UNDER35'}`; if (expected !== mS[1].trim()) return 'FAIL';\n  return 'PASS';\n})();",
+          "value": "PASS",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_cdc_child_bmi_30
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. E2 클릭
+    // 5. E2에 수식 `=UPPER(C2)` 입력 후 Enter
+    // 6. 요구된 출력 포맷을 순서대로 입력
+    "task_id": "web_sheet_prozilla_cdc_child_bmi_30",
+    "instruction": "Could you open the CDC Child and Teen BMI Calculator. Use US Customary Units, enter Girl age 18 years 0 months, 5 ft 5 in, 235 lbs, then calculate. Copy results to Spreadsheet: B2=<BMI>, C2=<BMI Category>, D2=<BMI Percentile>. Set E2 to `=UPPER(C2)`; use E2 as `Upper Category`. In Prozilla OS, create the target text file and write sheet values in the format 'Scenario: Girl age 18 years 0 months, 5 ft 5 in, 235 lbs | BMI: <from sheet> | BMI Percentile: <from sheet> | Category: <from sheet> | Upper Category: <from sheet>'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Girl age 18 years 0 months, 5 ft 5 in, 235 lbs",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI:\\s*\\d+(?:\\.\\d+)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "BMI Percentile:\\s*(?:<\\s*)?[0-9]{1,3}(?:\\.[0-9]+)?(?:st|nd|rd|th)?(?:\\s*percentile|\\s*%)?",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Upper Category:\\s*[A-Z ]+",
+          "match": "regex"
+        },
+        {
+          "mode": "console",
+          "website_id": "os",
+          "script": "(() => {\n  const text = document.querySelector('textarea')?.value || '';\n  const mB = text.match(/BMI:\\s*([0-9]+(?:\\.[0-9]+)?)/);\n  const mP = text.match(/BMI Percentile:\\s*(?:<\\s*)?([0-9]+(?:\\.[0-9]+)?)/i);\n  const mC = text.match(/Category:\\s*(Underweight|Healthy Weight|Overweight|Obesity)/);\n  if (!mB || !mP || !mC) return 'FAIL';\n  const bmi = parseFloat(mB[1]);\n  const pct = parseFloat(mP[1]);\n  const category = mC[1].trim();\n  if (Math.abs(bmi - 39.10) > 0.12) return 'FAIL';\n  if (!Number.isFinite(pct) || pct < 0 || pct > 100) return 'FAIL';\n  const mU = text.match(/Upper Category:\\s*([^|\\n]+)/); if (!mU || category.toUpperCase() !== mU[1].trim()) return 'FAIL';\n  return 'PASS';\n})();",
+          "value": "PASS",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_dol_overtime_01
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_dol_overtime_01",
+    "instruction": "Could you open the DOL FLSA Overtime Calculator Advisor. Enter a nonexempt employee with hourly rate $20.00, 45.00 hours, and no bonuses, commissions, or shift differentials. Copy the regular rate and overtime result into Spreadsheet. Set `Overtime Hours` to `=MAX(B2-40,0)`, `Overtime Pay` to `=B4*B3*1.5`, and `Total FLSA Pay` to `=(40*B3)+B5`. Save `~/Documents/dol_overtime_001.txt` using the calculator and spreadsheet results in the format 'Scenario: Single hourly rate $20.00 for 45.00 hours | Regular Rate: [value] | Overtime Hours: [value] | Overtime Pay: [value] | Total FLSA Pay: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Single hourly rate $20.00 for 45.00 hours",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Regular Rate: $20.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Overtime Hours: 5.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Overtime Pay: $150.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Total FLSA Pay: $950.00",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_dol_overtime_04
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_dol_overtime_04",
+    "instruction": "Could you open the DOL FLSA Overtime Calculator Advisor. Enter a nonexempt employee with hourly rate $22.25, 47.50 hours, and no bonuses, commissions, or shift differentials. Copy the regular rate and overtime result into Spreadsheet. Set `Overtime Hours` to `=MAX(B2-40,0)`, `Overtime Pay` to `=B4*B3*1.5`, and `Total FLSA Pay` to `=(40*B3)+B5`. Save `~/Documents/dol_overtime_004.txt` using the calculator and spreadsheet results in the format 'Scenario: Single hourly rate $22.25 for 47.50 hours | Regular Rate: [value] | Overtime Hours: [value] | Overtime Pay: [value] | Total FLSA Pay: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Single hourly rate $22.25 for 47.50 hours",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Regular Rate: $22.25",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Overtime Hours: 7.50",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Overtime Pay: $250.31",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Total FLSA Pay: $1,140.31",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_dol_overtime_09
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_dol_overtime_09",
+    "instruction": "Could you open the DOL FLSA Overtime Calculator Advisor. Enter a nonexempt employee with hourly rate $16.00, 45.00 hours, and a $90.00 nondiscretionary bonus. Copy the regular rate and overtime calculation into Spreadsheet. Set `Regular Rate` to `=(HourlyRate*Hours+Bonus)/Hours`, `Overtime Hours` to `=MAX(Hours-40,0)`, `Additional Overtime Premium` to `=ROUND(RegularRate*0.5*OvertimeHours,2)`, and `Total FLSA Pay` to `=ROUND(HourlyRate*Hours+Bonus+AdditionalOvertimePremium,2)`. Save `~/Documents/dol_overtime_009.txt` using the calculator and spreadsheet results in the format 'Scenario: Hourly rate $16.00, 45.00 hours, nondiscretionary bonus $90.00 | Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Hourly rate $16.00, 45.00 hours, nondiscretionary bonus $90.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Regular Rate: $18.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Overtime Hours: 5.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Additional Overtime Premium: $45.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Total FLSA Pay: $855.00",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_dol_overtime_12
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_dol_overtime_12",
+    "instruction": "Could you open the DOL FLSA Overtime Calculator Advisor. Enter a nonexempt employee with hourly rate $19.25, 52.00 hours, and a $200.00 nondiscretionary bonus. Copy the regular rate and overtime calculation into Spreadsheet. Set `Regular Rate` to `=(HourlyRate*Hours+Bonus)/Hours`, `Overtime Hours` to `=MAX(Hours-40,0)`, `Additional Overtime Premium` to `=ROUND(RegularRate*0.5*OvertimeHours,2)`, and `Total FLSA Pay` to `=ROUND(HourlyRate*Hours+Bonus+AdditionalOvertimePremium,2)`. Save `~/Documents/dol_overtime_012.txt` using the calculator and spreadsheet results in the format 'Scenario: Hourly rate $19.25, 52.00 hours, nondiscretionary bonus $200.00 | Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Hourly rate $19.25, 52.00 hours, nondiscretionary bonus $200.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Regular Rate: $23.10",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Overtime Hours: 12.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Additional Overtime Premium: $138.58",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Total FLSA Pay: $1,339.58",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_dol_overtime_14
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_dol_overtime_14",
+    "instruction": "Could you open the DOL FLSA Overtime Calculator Advisor. Enter a nonexempt employee with weekly salary $405.00 covering 45.00 hours. Copy the regular rate and overtime calculation into Spreadsheet. Set `Regular Rate` to `=Salary/Hours`, `Overtime Hours` to `=MAX(Hours-40,0)`, `Additional Overtime Premium` to `=ROUND(RegularRate*0.5*OvertimeHours,2)`, and `Total FLSA Pay` to `=ROUND(Salary+AdditionalOvertimePremium,2)`. Save `~/Documents/dol_overtime_014.txt` using the calculator and spreadsheet results in the format 'Scenario: Fixed weekly salary $405.00 covering 45.00 hours | Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Fixed weekly salary $405.00 covering 45.00 hours",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Regular Rate: $9.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Overtime Hours: 5.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Additional Overtime Premium: $22.50",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Total FLSA Pay: $427.50",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_dol_overtime_17
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_dol_overtime_17",
+    "instruction": "Could you open the DOL FLSA Overtime Calculator Advisor. Enter a nonexempt employee with weekly salary $900.00 covering 46.00 hours. Copy the regular rate and overtime calculation into Spreadsheet. Set `Regular Rate` to `=Salary/Hours`, `Overtime Hours` to `=MAX(Hours-40,0)`, `Additional Overtime Premium` to `=ROUND(RegularRate*0.5*OvertimeHours,2)`, and `Total FLSA Pay` to `=ROUND(Salary+AdditionalOvertimePremium,2)`. Save `~/Documents/dol_overtime_017.txt` using the calculator and spreadsheet results in the format 'Scenario: Fixed weekly salary $900.00 covering 46.00 hours | Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Fixed weekly salary $900.00 covering 46.00 hours",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Regular Rate: $19.57",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Overtime Hours: 6.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Additional Overtime Premium: $58.70",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Total FLSA Pay: $958.70",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_dol_overtime_18
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_dol_overtime_18",
+    "instruction": "Could you open the DOL FLSA Overtime Calculator Advisor. Enter a nonexempt employee with 30.00 hours at $18.00 and 15.00 hours at $24.00. Copy the weighted regular rate and overtime calculation into Spreadsheet. Set `Weighted Regular Rate` to `=((Hours1*Rate1)+(Hours2*Rate2))/(Hours1+Hours2)`, `Overtime Hours` to `=MAX(Hours1+Hours2-40,0)`, `Additional Overtime Premium` to `=ROUND(WeightedRegularRate*0.5*OvertimeHours,2)`, and `Total FLSA Pay` to `=ROUND((Hours1*Rate1)+(Hours2*Rate2)+AdditionalOvertimePremium,2)`. Save `~/Documents/dol_overtime_018.txt` using the calculator and spreadsheet results in the format 'Scenario: Multiple rates 30.00 hours at $18.00 and 15.00 hours at $24.00 | Weighted Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Multiple rates 30.00 hours at $18.00 and 15.00 hours at $24.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Weighted Regular Rate: $20.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Overtime Hours: 5.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Additional Overtime Premium: $50.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Total FLSA Pay: $950.00",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_dol_overtime_20
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_dol_overtime_20",
+    "instruction": "Could you open the DOL FLSA Overtime Calculator Advisor. Enter a nonexempt employee with 32.00 hours at $17.50 and 14.00 hours at $26.00. Copy the weighted regular rate and overtime calculation into Spreadsheet. Set `Weighted Regular Rate` to `=((Hours1*Rate1)+(Hours2*Rate2))/(Hours1+Hours2)`, `Overtime Hours` to `=MAX(Hours1+Hours2-40,0)`, `Additional Overtime Premium` to `=ROUND(WeightedRegularRate*0.5*OvertimeHours,2)`, and `Total FLSA Pay` to `=ROUND((Hours1*Rate1)+(Hours2*Rate2)+AdditionalOvertimePremium,2)`. Save `~/Documents/dol_overtime_020.txt` using the calculator and spreadsheet results in the format 'Scenario: Multiple rates 32.00 hours at $17.50 and 14.00 hours at $26.00 | Weighted Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: Multiple rates 32.00 hours at $17.50 and 14.00 hours at $26.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Weighted Regular Rate: $20.09",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Overtime Hours: 6.00",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Additional Overtime Premium: $60.26",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Total FLSA Pay: $984.26",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_hipass_toll_01
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_hipass_toll_01",
+    "instruction": "Could you open the Hi-Pass 통행요금 조회 page. In 요금조회, enter 출발지 서울 and 도착지 부산. Leave 경유지 blank. If the site shows autocomplete suggestions, select the exact matching tollgate names. Copy the first route row shown in the toll results into a spreadsheet, including 경로 구분 and the fees for 1종, 2종, 3종, 4종, 5종, and 1종(경차). In the spreadsheet, convert fee text to numbers by removing commas and 원, then calculate `Light Car Difference` with `=B2-G2` where B2 is 1종 and G2 is 1종(경차). Also calculate `Highest Toll` with `=MAX(B2:F2)` and `Light Car Ratio` with `=ROUND(G2/B2,2)`. Save `~/Documents/hipass_toll_001.txt` in the format 'Scenario: 서울 to 부산 | Via: None | Route: [value] | Class 1 Toll: [value] | Class 2 Toll: [value] | Class 3 Toll: [value] | Class 4 Toll: [value] | Class 5 Toll: [value] | Light Car Toll: [value] | Light Car Difference: [value] | Highest Toll: [value] | Light Car Ratio: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: 서울 to 부산",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Via: None",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Route:\\s*.+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class 1 Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class 2 Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class 3 Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class 4 Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class 5 Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Light Car Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Light Car Difference:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Highest Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Light Car Ratio:\\s*0?\\.\\d+|Light Car Ratio:\\s*1\\.00",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_hipass_toll_11
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_hipass_toll_11",
+    "instruction": "Could you open the Hi-Pass 통행요금 조회 page. In 요금조회, enter 출발지 서울 and 도착지 부산. Enter 경유지 대전 before searching. If the site shows autocomplete suggestions, select the exact matching tollgate names. Copy the first route row shown in the toll results into a spreadsheet, including 경로 구분 and the fees for 1종, 2종, 3종, 4종, 5종, and 1종(경차). In the spreadsheet, convert fee text to numbers by removing commas and 원, then calculate `Light Car Difference` with `=B2-G2` where B2 is 1종 and G2 is 1종(경차). Also calculate `Highest Toll` with `=MAX(B2:F2)` and `Light Car Ratio` with `=ROUND(G2/B2,2)`. Save `~/Documents/hipass_toll_011.txt` in the format 'Scenario: 서울 to 부산 via 대전 | Via: 대전 | Route: [value] | Class 1 Toll: [value] | Class 2 Toll: [value] | Class 3 Toll: [value] | Class 4 Toll: [value] | Class 5 Toll: [value] | Light Car Toll: [value] | Light Car Difference: [value] | Highest Toll: [value] | Light Car Ratio: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Scenario: 서울 to 부산 via 대전",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Via: 대전",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Route:\\s*.+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class 1 Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class 2 Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class 3 Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class 4 Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class 5 Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Light Car Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Light Car Difference:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Highest Toll:\\s*[0-9,]+",
+          "match": "regex"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Light Car Ratio:\\s*0?\\.\\d+|Light Car Ratio:\\s*1\\.00",
+          "match": "regex"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_hipass_toll_13
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_hipass_toll_13",
+    "instruction": "Could you open the Hi-Pass 통행요금 조회 page and scroll to the 차종구분 table. Find the row for 1종(소형차). Copy the row text into a spreadsheet. In the spreadsheet, split the row into `Class`, `Classification Criteria`, and `Examples`, then create a three-line normalized summary. Save `~/Documents/hipass_toll_013.txt` using the copied row text and spreadsheet results in the format 'Class: [value] | Source Criteria A: [value] | Source Criteria B: [value] | Source Examples: [value] | Axis Count: [value] | Width Rule: [value] | Example Vehicles: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class: 1종(소형차)",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Source Criteria A: 2축 차량",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Source Criteria B: 윤폭 279.4mm 이하",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Source Examples: 승용차, 소형승합차, 소형화물차",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Axis Count: 2",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Width Rule: 윤폭 279.4mm 이하",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Example Vehicles: 승용차, 소형승합차, 소형화물차",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_hipass_toll_15
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_hipass_toll_15",
+    "instruction": "Could you open the Hi-Pass 통행요금 조회 page and scroll to the 차종구분 table. Find the row for 3종(대형차). Copy the row text into a spreadsheet. In the spreadsheet, split the row into `Class`, `Classification Criteria`, and `Examples`, then create a three-line normalized summary. Save `~/Documents/hipass_toll_015.txt` using the copied row text and spreadsheet results in the format 'Class: [value] | Source Criteria A: [value] | Source Criteria B: [value] | Source Examples: [value] | Axis Count: [value] | Width Rule: [value] | Example Vehicles: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class: 3종(대형차)",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Source Criteria A: 2축 차량",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Source Criteria B: 윤폭 279.4mm 초과, 윤거 1,800mm 초과",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Source Examples: 대형승합차, 2축 대형화물차",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Axis Count: 2",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Width Rule: 윤폭 279.4mm 초과, 윤거 1,800mm 초과",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Example Vehicles: 대형승합차, 2축 대형화물차",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_hipass_toll_18
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_hipass_toll_18",
+    "instruction": "Could you open the Hi-Pass 통행요금 조회 page and scroll to the 차종구분 table. Find the row for 6종(경형자동차). Copy the row text into a spreadsheet. In the spreadsheet, split the row into `Class`, `Classification Criteria`, and `Examples`, then create a three-line normalized summary. Save `~/Documents/hipass_toll_018.txt` using the copied row text and spreadsheet results in the format 'Class: [value] | Source Criteria A: [value] | Source Criteria B: [value] | Source Examples: [value] | Displacement Rule: [value] | Size Rule: [value] | Category Flag: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class: 6종(경형자동차)",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Source Criteria A: 배기량 1,000cc 미만",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Source Criteria B: 길이 3.6m, 너비 1.6m, 높이 2.0m 이하",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Source Examples: 경형자동차",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Displacement Rule: 배기량 1,000cc 미만",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Size Rule: 길이 3.6m, 너비 1.6m, 높이 2.0m 이하",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Category Flag: LIGHT_CAR",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_hipass_toll_19
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_hipass_toll_19",
+    "instruction": "Could you open the Hi-Pass 통행요금 조회 page. Compare 1종(소형차) and 6종(경형자동차) in the 차종구분 table. Copy the relevant table text into a spreadsheet. Use spreadsheet formulas such as `COUNTA` or simple text concatenation to create the requested normalized output. Save `~/Documents/hipass_toll_019.txt` using the copied table text and spreadsheet results in the format 'Comparison: 1종(소형차) vs 6종(경형자동차) | Class 1 Key Rule: [value] | Light Car Key Rule: [value] | Light Car Size Rule: [value] | Sheet Flag: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Comparison: 1종(소형차) vs 6종(경형자동차)",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class 1 Key Rule: 2축 차량, 윤폭 279.4mm 이하",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Light Car Key Rule: 배기량 1,000cc 미만",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Light Car Size Rule: 길이 3.6m, 너비 1.6m, 높이 2.0m 이하",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Sheet Flag: LIGHT_CAR_HAS_SIZE_LIMIT",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_hipass_toll_20
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_hipass_toll_20",
+    "instruction": "Could you open the Hi-Pass 통행요금 조회 page. Use the toll result table header and vehicle class table to count the toll columns. Copy the relevant table text into a spreadsheet. Use spreadsheet formulas such as `COUNTA` or simple text concatenation to create the requested normalized output. Save `~/Documents/hipass_toll_020.txt` using the copied table text and spreadsheet results in the format 'Header Columns: [value] | Vehicle Toll Column Count: [value] | Classification Rows: [value] | Sheet Check: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Header Columns: 1종, 2종, 3종, 4종, 5종, 1종(경차)",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Vehicle Toll Column Count: 6",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Classification Rows: 6",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Sheet Check: PASS",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_hipass_toll_29
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. 스프레드시트 앱 열기
+    // 3. Prozilla OS 앱 열기
+    // 4. 웹 결과 확인
+    // 5. 스프레드시트 값 반영
+    // 6. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_hipass_toll_29",
+    "instruction": "Could you open the Hi-Pass 통행요금 조회 page and scroll to the 차종구분 table. Copy the six class names into a spreadsheet. In the spreadsheet, calculate `Has Light Car` with `=IF(COUNTIF(A2:A7,\"*경형자동차*\")>0,\"YES\",\"NO\")`. Save `~/Documents/hipass_toll_029.txt` using the copied class names and spreadsheet result in the format 'Class Names: [value] | Has Light Car: [value]'.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3100/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Class Names: 1종(소형차), 2종(중형차), 3종(대형차), 4종(대형화물차), 5종(특수화물차), 6종(경형자동차)",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Has Light Car: YES",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_juso_01
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_juso_01",
+    "instruction": "Could you open Juso address search at https://www.juso.go.kr/. Search for `서울특별시 중구 세종대로 110`. Select the first result whose road address contains `서울특별시` and \"중구\", `세종대로`, and building number `110`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` to `=LEFT(B2,2)` and `Road Keyword` to `세종대로`, and `Address Check` to `=IF(AND(ISNUMBER(SEARCH(\"서울특별시\",C2)),ISNUMBER(SEARCH(\"세종대로\",C2)),ISNUMBER(SEARCH(\"110\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_001.txt` in the format 'Scenario: 서울시청 address lookup | Search Query: 서울특별시 중구 세종대로 110 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: 세종대로 | Address Check: [value]'.",
+    "website": {
+      "web": "https://www.juso.go.kr/",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/juso_address_001.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_001.txt",
+          "text": "Scenario: 서울시청 address lookup",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_001.txt",
+          "text": "Search Query: 서울특별시 중구 세종대로 110",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_001.txt",
+          "text_regex": "Postal Code:\\s*\\d{5}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_001.txt",
+          "text_regex": "Road Address:\\s*.*서울특별시.*세종대로.*110",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_001.txt",
+          "text_regex": "Road Address:\\s*.*중구.*",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_001.txt",
+          "text_regex": "Jibun Address:\\s*.+",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_001.txt",
+          "text_regex": "Zip Prefix:\\s*\\d{2}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_001.txt",
+          "text": "Road Keyword: 세종대로",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_001.txt",
+          "text": "Address Check: MATCH",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_juso_02
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_juso_02",
+    "instruction": "Could you open Juso address search at https://www.juso.go.kr/. Search for `세종특별자치시 도움6로 42`. Select the first result whose road address contains `세종특별자치시`, `도움6로`, and building number `42`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` to `=LEFT(B2,2)` and `Road Keyword` to `도움6로`, and `Address Check` to `=IF(AND(ISNUMBER(SEARCH(\"세종특별자치시\",C2)),ISNUMBER(SEARCH(\"도움6로\",C2)),ISNUMBER(SEARCH(\"42\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_002.txt` in the format 'Scenario: 행정안전부 주소정보 도움센터 address lookup | Search Query: 세종특별자치시 도움6로 42 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: 도움6로 | Address Check: [value]'.",
+    "website": {
+      "web": "https://www.juso.go.kr/",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/juso_address_002.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_002.txt",
+          "text": "Scenario: 행정안전부 주소정보 도움센터 address lookup",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_002.txt",
+          "text": "Search Query: 세종특별자치시 도움6로 42",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_002.txt",
+          "text_regex": "Postal Code:\\s*\\d{5}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_002.txt",
+          "text_regex": "Road Address:\\s*.*세종특별자치시.*도움6로.*42",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_002.txt",
+          "text_regex": "Jibun Address:\\s*.+",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_002.txt",
+          "text_regex": "Zip Prefix:\\s*\\d{2}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_002.txt",
+          "text": "Road Keyword: 도움6로",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_002.txt",
+          "text": "Address Check: MATCH",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_juso_03
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_juso_03",
+    "instruction": "Could you open Juso address search at https://www.juso.go.kr/. Search for `서울특별시 종로구 사직로 161`. Select the first result whose road address contains `서울특별시` and \"종로구\", `사직로`, and building number `161`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` to `=LEFT(B2,2)` and `Road Keyword` to `사직로`, and `Address Check` to `=IF(AND(ISNUMBER(SEARCH(\"서울특별시\",C2)),ISNUMBER(SEARCH(\"사직로\",C2)),ISNUMBER(SEARCH(\"161\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_003.txt` in the format 'Scenario: 경복궁 address lookup | Search Query: 서울특별시 종로구 사직로 161 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: 사직로 | Address Check: [value]'.",
+    "website": {
+      "web": "https://www.juso.go.kr/",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/juso_address_003.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_003.txt",
+          "text": "Scenario: 경복궁 address lookup",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_003.txt",
+          "text": "Search Query: 서울특별시 종로구 사직로 161",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_003.txt",
+          "text_regex": "Postal Code:\\s*\\d{5}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_003.txt",
+          "text_regex": "Road Address:\\s*.*서울특별시.*사직로.*161",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_003.txt",
+          "text_regex": "Road Address:\\s*.*종로구.*",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_003.txt",
+          "text_regex": "Jibun Address:\\s*.+",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_003.txt",
+          "text_regex": "Zip Prefix:\\s*\\d{2}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_003.txt",
+          "text": "Road Keyword: 사직로",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_003.txt",
+          "text": "Address Check: MATCH",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_juso_04
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_juso_04",
+    "instruction": "Could you open Juso address search at https://www.juso.go.kr/. Search for `부산광역시 연제구 중앙대로 1001`. Select the first result whose road address contains `부산광역시` and \"연제구\", `중앙대로`, and building number `1001`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` to `=LEFT(B2,2)` and `Road Keyword` to `중앙대로`, and `Address Check` to `=IF(AND(ISNUMBER(SEARCH(\"부산광역시\",C2)),ISNUMBER(SEARCH(\"중앙대로\",C2)),ISNUMBER(SEARCH(\"1001\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_004.txt` in the format 'Scenario: 부산광역시청 address lookup | Search Query: 부산광역시 연제구 중앙대로 1001 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: 중앙대로 | Address Check: [value]'.",
+    "website": {
+      "web": "https://www.juso.go.kr/",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/juso_address_004.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_004.txt",
+          "text": "Scenario: 부산광역시청 address lookup",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_004.txt",
+          "text": "Search Query: 부산광역시 연제구 중앙대로 1001",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_004.txt",
+          "text_regex": "Postal Code:\\s*\\d{5}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_004.txt",
+          "text_regex": "Road Address:\\s*.*부산광역시.*중앙대로.*1001",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_004.txt",
+          "text_regex": "Road Address:\\s*.*연제구.*",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_004.txt",
+          "text_regex": "Jibun Address:\\s*.+",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_004.txt",
+          "text_regex": "Zip Prefix:\\s*\\d{2}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_004.txt",
+          "text": "Road Keyword: 중앙대로",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_004.txt",
+          "text": "Address Check: MATCH",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_juso_05
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_juso_05",
+    "instruction": "Could you open Juso address search at https://www.juso.go.kr/. Search for `대전광역시 서구 둔산로 100`. Select the first result whose road address contains `대전광역시` and \"서구\", `둔산로`, and building number `100`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` to `=LEFT(B2,2)` and `Road Keyword` to `둔산로`, and `Address Check` to `=IF(AND(ISNUMBER(SEARCH(\"대전광역시\",C2)),ISNUMBER(SEARCH(\"둔산로\",C2)),ISNUMBER(SEARCH(\"100\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_005.txt` in the format 'Scenario: 대전광역시청 address lookup | Search Query: 대전광역시 서구 둔산로 100 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: 둔산로 | Address Check: [value]'.",
+    "website": {
+      "web": "https://www.juso.go.kr/",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/juso_address_005.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_005.txt",
+          "text": "Scenario: 대전광역시청 address lookup",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_005.txt",
+          "text": "Search Query: 대전광역시 서구 둔산로 100",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_005.txt",
+          "text_regex": "Postal Code:\\s*\\d{5}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_005.txt",
+          "text_regex": "Road Address:\\s*.*대전광역시.*둔산로.*100",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_005.txt",
+          "text_regex": "Road Address:\\s*.*서구.*",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_005.txt",
+          "text_regex": "Jibun Address:\\s*.+",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_005.txt",
+          "text_regex": "Zip Prefix:\\s*\\d{2}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_005.txt",
+          "text": "Road Keyword: 둔산로",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_005.txt",
+          "text": "Address Check: MATCH",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_juso_06
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_juso_06",
+    "instruction": "Could you open Juso address search at https://www.juso.go.kr/. Search for `대구광역시 중구 공평로 88`. Select the first result whose road address contains `대구광역시` and \"중구\", `공평로`, and building number `88`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` to `=LEFT(B2,2)` and `Road Keyword` to `공평로`, and `Address Check` to `=IF(AND(ISNUMBER(SEARCH(\"대구광역시\",C2)),ISNUMBER(SEARCH(\"공평로\",C2)),ISNUMBER(SEARCH(\"88\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_006.txt` in the format 'Scenario: 대구광역시청 address lookup | Search Query: 대구광역시 중구 공평로 88 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: 공평로 | Address Check: [value]'.",
+    "website": {
+      "web": "https://www.juso.go.kr/",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/juso_address_006.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_006.txt",
+          "text": "Scenario: 대구광역시청 address lookup",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_006.txt",
+          "text": "Search Query: 대구광역시 중구 공평로 88",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_006.txt",
+          "text_regex": "Postal Code:\\s*\\d{5}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_006.txt",
+          "text_regex": "Road Address:\\s*.*대구광역시.*공평로.*88",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_006.txt",
+          "text_regex": "Road Address:\\s*.*중구.*",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_006.txt",
+          "text_regex": "Jibun Address:\\s*.+",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_006.txt",
+          "text_regex": "Zip Prefix:\\s*\\d{2}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_006.txt",
+          "text": "Road Keyword: 공평로",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_006.txt",
+          "text": "Address Check: MATCH",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_juso_07
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_juso_07",
+    "instruction": "Could you open Juso address search at https://www.juso.go.kr/. Search for `광주광역시 서구 내방로 111`. Select the first result whose road address contains `광주광역시` and \"서구\", `내방로`, and building number `111`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` to `=LEFT(B2,2)` and `Road Keyword` to `내방로`, and `Address Check` to `=IF(AND(ISNUMBER(SEARCH(\"광주광역시\",C2)),ISNUMBER(SEARCH(\"내방로\",C2)),ISNUMBER(SEARCH(\"111\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_007.txt` in the format 'Scenario: 광주광역시청 address lookup | Search Query: 광주광역시 서구 내방로 111 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: 내방로 | Address Check: [value]'.",
+    "website": {
+      "web": "https://www.juso.go.kr/",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/juso_address_007.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_007.txt",
+          "text": "Scenario: 광주광역시청 address lookup",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_007.txt",
+          "text": "Search Query: 광주광역시 서구 내방로 111",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_007.txt",
+          "text_regex": "Postal Code:\\s*\\d{5}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_007.txt",
+          "text_regex": "Road Address:\\s*.*광주광역시.*내방로.*111",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_007.txt",
+          "text_regex": "Road Address:\\s*.*서구.*",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_007.txt",
+          "text_regex": "Jibun Address:\\s*.+",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_007.txt",
+          "text_regex": "Zip Prefix:\\s*\\d{2}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_007.txt",
+          "text": "Road Keyword: 내방로",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_007.txt",
+          "text": "Address Check: MATCH",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_juso_08
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_juso_08",
+    "instruction": "Could you open Juso address search at https://www.juso.go.kr/. Search for `인천광역시 남동구 정각로 29`. Select the first result whose road address contains `인천광역시` and \"남동구\", `정각로`, and building number `29`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` to `=LEFT(B2,2)` and `Road Keyword` to `정각로`, and `Address Check` to `=IF(AND(ISNUMBER(SEARCH(\"인천광역시\",C2)),ISNUMBER(SEARCH(\"정각로\",C2)),ISNUMBER(SEARCH(\"29\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_008.txt` in the format 'Scenario: 인천광역시청 address lookup | Search Query: 인천광역시 남동구 정각로 29 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: 정각로 | Address Check: [value]'.",
+    "website": {
+      "web": "https://www.juso.go.kr/",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/juso_address_008.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_008.txt",
+          "text": "Scenario: 인천광역시청 address lookup",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_008.txt",
+          "text": "Search Query: 인천광역시 남동구 정각로 29",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_008.txt",
+          "text_regex": "Postal Code:\\s*\\d{5}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_008.txt",
+          "text_regex": "Road Address:\\s*.*인천광역시.*정각로.*29",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_008.txt",
+          "text_regex": "Road Address:\\s*.*남동구.*",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_008.txt",
+          "text_regex": "Jibun Address:\\s*.+",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_008.txt",
+          "text_regex": "Zip Prefix:\\s*\\d{2}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_008.txt",
+          "text": "Road Keyword: 정각로",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_008.txt",
+          "text": "Address Check: MATCH",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_juso_09
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_juso_09",
+    "instruction": "Could you open Juso address search at https://www.juso.go.kr/. Search for `울산광역시 남구 중앙로 201`. Select the first result whose road address contains `울산광역시` and \"남구\", `중앙로`, and building number `201`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` to `=LEFT(B2,2)` and `Road Keyword` to `중앙로`, and `Address Check` to `=IF(AND(ISNUMBER(SEARCH(\"울산광역시\",C2)),ISNUMBER(SEARCH(\"중앙로\",C2)),ISNUMBER(SEARCH(\"201\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_009.txt` in the format 'Scenario: 울산광역시청 address lookup | Search Query: 울산광역시 남구 중앙로 201 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: 중앙로 | Address Check: [value]'.",
+    "website": {
+      "web": "https://www.juso.go.kr/",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/juso_address_009.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_009.txt",
+          "text": "Scenario: 울산광역시청 address lookup",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_009.txt",
+          "text": "Search Query: 울산광역시 남구 중앙로 201",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_009.txt",
+          "text_regex": "Postal Code:\\s*\\d{5}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_009.txt",
+          "text_regex": "Road Address:\\s*.*울산광역시.*중앙로.*201",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_009.txt",
+          "text_regex": "Road Address:\\s*.*남구.*",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_009.txt",
+          "text_regex": "Jibun Address:\\s*.+",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_009.txt",
+          "text_regex": "Zip Prefix:\\s*\\d{2}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_009.txt",
+          "text": "Road Keyword: 중앙로",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_009.txt",
+          "text": "Address Check: MATCH",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_sheet_prozilla_juso_10
+    // 1. 웹 결과 확인
+    // 2. 스프레드시트 값 반영
+    // 3. 최종 내용 검토
+    "task_id": "web_sheet_prozilla_juso_10",
+    "instruction": "Could you open Juso address search at https://www.juso.go.kr/. Search for `제주특별자치도 제주시 문연로 6`. Select the first result whose road address contains `제주특별자치도` and \"제주시\", `문연로`, and building number `6`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` to `=LEFT(B2,2)` and `Road Keyword` to `문연로`, and `Address Check` to `=IF(AND(ISNUMBER(SEARCH(\"제주특별자치도\",C2)),ISNUMBER(SEARCH(\"문연로\",C2)),ISNUMBER(SEARCH(\"6\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_010.txt` in the format 'Scenario: 제주특별자치도청 address lookup | Search Query: 제주특별자치도 제주시 문연로 6 | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: 문연로 | Address Check: [value]'.",
+    "website": {
+      "web": "https://www.juso.go.kr/",
+      "sheet": "local spreadsheet application",
+      "os": "~/Documents/juso_address_010.txt"
+    },
+    "evaluation": {
+      "mode": "all",
+      "operator": "and",
+      "rules": [
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_010.txt",
+          "text": "Scenario: 제주특별자치도청 address lookup",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_010.txt",
+          "text": "Search Query: 제주특별자치도 제주시 문연로 6",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_010.txt",
+          "text_regex": "Postal Code:\\s*\\d{5}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_010.txt",
+          "text_regex": "Road Address:\\s*.*제주특별자치도.*문연로.*6",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_010.txt",
+          "text_regex": "Road Address:\\s*.*제주시.*",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_010.txt",
+          "text_regex": "Jibun Address:\\s*.+",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_010.txt",
+          "text_regex": "Zip Prefix:\\s*\\d{2}",
+          "match": "regex"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_010.txt",
+          "text": "Road Keyword: 문연로",
+          "match": "contains"
+        },
+        {
+          "target": "os_file",
+          "path": "~/Documents/juso_address_010.txt",
+          "text": "Address Check: MATCH",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    // web_prozilla_nhis_word_01
+    // 1. 웹 브라우저에서 대상 사이트 열기
+    // 2. Prozilla OS 앱 열기
+    // 3. 파일 `~/Documents/finance_report.txt` 생성 또는 열기
+    // 4. 요구된 출력 포맷을 순서대로 입력
+    // 5. 웹 결과 확인
+    // 6. 스프레드시트 값 반영
+    // 7. 최종 내용 검토
+    "task_id": "web_prozilla_nhis_word_01",
+    "instruction": "Could you open NHIS premium calculator and check the final premium value. In Word, write a short note using the two-line format 'Service: NHIS Premium Check' and 'Result: [value]'; use PASS after you verify the premium value. In Prozilla OS, create ~/Documents/finance_report.txt and copy the Word note in the same two-line format.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do"
+      },
+      {
+        "id": "word",
+        "url": "http://localhost:3000/word"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000/"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Service: NHIS Premium Check",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea",
+          "target": "attr",
+          "attr": "value",
+          "value": "Result: PASS",
+          "match": "contains"
+        }
+      ]
+    }
+  }
+]

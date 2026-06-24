@@ -1,0 +1,2555 @@
+// Total counts: 30
+[
+  {
+    // web_sheet_word_arxiv_summary_01
+    // 1. 브라우저 주소창 클릭
+    // 2. URL `https://arxiv.org/abs/1706.03762` 입력 후 접속
+    // 3. 스프레드시트 앱으로 이동
+    // 4. A1 클릭
+    // 5. A1에 `ArXiv ID` 입력
+    // 6. B1에 `Title` 입력
+    // 7. C1에 `First Author` 입력
+    // 8. D1에 `Submitted Year` 입력
+    // 9. E1에 `Primary Category` 입력
+    // 10. F1에 `Subjects` 입력
+    // 11. 웹 페이지에서 원본 데이터 확인
+    // 12. A2에 `ArXiv ID` 값 입력
+    // 13. B2에 `Title` 값 입력
+    // 14. C2에 `First Author` 값 입력
+    // 15. D2에 `Submitted Year` 값 입력
+    // 16. E2에 `Primary Category` 값 입력
+    // 17. F2에 `Subjects` 값 입력
+    // 18. G1에 `ID Prefix` 입력
+    // 19. G2 클릭
+    // 20. G2에 `=LEFT(A2,4)` 입력 후 Enter
+    // 21. H1에 `Area Flag` 입력
+    // 22. H2 클릭
+    // 23. H2에 `=IF(E2="cs.CL","NLP",IF(E2="cs.CV","VISION",IF(E2="cs.LG","ML",IF(E2="cs.SD","SOUND",IF(E2="cs.NE","NEURAL","OTHER")))))` 입력 후 Enter
+    // 24. 워드 앱으로 이동
+    // 25. 새 문서 생성
+    // 26. 요구된 라벨/값을 순서대로 입력
+    // 27. 파일 저장 대화상자 열기
+    // 28. 파일명을 `arxiv_paper_001.docx`로 입력하고 저장
+    // 29. 워드 서식 적용: line 1 title bold+underlined 16pt; body 12pt regular.
+    "task_id": "web_sheet_word_arxiv_summary_01",
+    "instruction": "Could you check arXiv page `https://arxiv.org/abs/1706.03762`. Copy the arXiv ID, title, first author, submitted year, primary category, and full subjects into Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` with `=LEFT(A2,4)` and set `Area Flag` with `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_001.docx` in the format 'ArXiv ID: [value] | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'. Word format: line 1 title bold+underlined 16pt; body 12pt regular.",
+    "website": {
+          "web": "https://arxiv.org/abs/1706.03762",
+          "sheet": "local spreadsheet application",
+          "word": "local word application"
+    },
+    "evaluation": {
+          "mode": "all",
+          "operator": "and",
+          "rules": [
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_001.docx",
+                      "text": "ArXiv ID: 1706.03762",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_001.docx",
+                      "text": "Title: Attention Is All You Need",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_001.docx",
+                      "text": "First Author: Ashish Vaswani",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_001.docx",
+                      "text": "Submitted Year: 2017",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_001.docx",
+                      "text": "Primary Category: cs.CL",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_001.docx",
+                      "text": "Subjects: Computation and Language (cs.CL); Machine Learning (cs.LG)",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_001.docx",
+                      "text": "ID Prefix: 1706",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_001.docx",
+                      "text": "Area Flag: NLP",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_arxiv_summary_02
+    // 1. 브라우저 주소창 클릭
+    // 2. URL `https://arxiv.org/abs/1512.03385` 입력 후 접속
+    // 3. 스프레드시트 앱으로 이동
+    // 4. A1 클릭
+    // 5. A1에 `ArXiv ID` 입력
+    // 6. B1에 `Title` 입력
+    // 7. C1에 `First Author` 입력
+    // 8. D1에 `Submitted Year` 입력
+    // 9. E1에 `Primary Category` 입력
+    // 10. F1에 `Subjects` 입력
+    // 11. 웹 페이지에서 원본 데이터 확인
+    // 12. A2에 `ArXiv ID` 값 입력
+    // 13. B2에 `Title` 값 입력
+    // 14. C2에 `First Author` 값 입력
+    // 15. D2에 `Submitted Year` 값 입력
+    // 16. E2에 `Primary Category` 값 입력
+    // 17. F2에 `Subjects` 값 입력
+    // 18. G1에 `ID Prefix` 입력
+    // 19. G2 클릭
+    // 20. G2에 `=LEFT(A2,4)` 입력 후 Enter
+    // 21. H1에 `Area Flag` 입력
+    // 22. H2 클릭
+    // 23. H2에 `=IF(E2="cs.CL","NLP",IF(E2="cs.CV","VISION",IF(E2="cs.LG","ML",IF(E2="cs.SD","SOUND",IF(E2="cs.NE","NEURAL","OTHER")))))` 입력 후 Enter
+    // 24. 워드 앱으로 이동
+    // 25. 새 문서 생성
+    // 26. 요구된 라벨/값을 순서대로 입력
+    // 27. 파일 저장 대화상자 열기
+    // 28. 파일명을 `arxiv_paper_004.docx`로 입력하고 저장
+    // 29. 워드 서식 적용: line 1 title bold 18pt (no underline); body 11pt regular.
+    "task_id": "web_sheet_word_arxiv_summary_02",
+    "instruction": "Could you check arXiv page `https://arxiv.org/abs/1512.03385`. Copy the arXiv ID, title, first author, submitted year, primary category, and full subjects into Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` with `=LEFT(A2,4)` and set `Area Flag` with `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_004.docx` in the format 'ArXiv ID: [value] | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'. Word format: line 1 title bold 18pt (no underline); body 11pt regular.",
+    "website": {
+          "web": "https://arxiv.org/abs/1512.03385",
+          "sheet": "local spreadsheet application",
+          "word": "local word application"
+    },
+    "evaluation": {
+          "mode": "all",
+          "operator": "and",
+          "rules": [
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_004.docx",
+                      "text": "ArXiv ID: 1512.03385",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_004.docx",
+                      "text": "Title: Deep Residual Learning for Image Recognition",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_004.docx",
+                      "text": "First Author: Kaiming He",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_004.docx",
+                      "text": "Submitted Year: 2015",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_004.docx",
+                      "text": "Primary Category: cs.CV",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_004.docx",
+                      "text": "Subjects: Computer Vision and Pattern Recognition (cs.CV)",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_004.docx",
+                      "text": "ID Prefix: 1512",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_004.docx",
+                      "text": "Area Flag: VISION",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_arxiv_summary_03
+    // 1. 브라우저 주소창 클릭
+    // 2. URL `https://arxiv.org/abs/1412.6980` 입력 후 접속
+    // 3. 스프레드시트 앱으로 이동
+    // 4. A1 클릭
+    // 5. A1에 `ArXiv ID` 입력
+    // 6. B1에 `Title` 입력
+    // 7. C1에 `First Author` 입력
+    // 8. D1에 `Submitted Year` 입력
+    // 9. E1에 `Primary Category` 입력
+    // 10. F1에 `Subjects` 입력
+    // 11. 웹 페이지에서 원본 데이터 확인
+    // 12. A2에 `ArXiv ID` 값 입력
+    // 13. B2에 `Title` 값 입력
+    // 14. C2에 `First Author` 값 입력
+    // 15. D2에 `Submitted Year` 값 입력
+    // 16. E2에 `Primary Category` 값 입력
+    // 17. F2에 `Subjects` 값 입력
+    // 18. G1에 `ID Prefix` 입력
+    // 19. G2 클릭
+    // 20. G2에 `=LEFT(A2,4)` 입력 후 Enter
+    // 21. H1에 `Area Flag` 입력
+    // 22. H2 클릭
+    // 23. H2에 `=IF(E2="cs.CL","NLP",IF(E2="cs.CV","VISION",IF(E2="cs.LG","ML",IF(E2="cs.SD","SOUND",IF(E2="cs.NE","NEURAL","OTHER")))))` 입력 후 Enter
+    // 24. 워드 앱으로 이동
+    // 25. 새 문서 생성
+    // 26. 요구된 라벨/값을 순서대로 입력
+    // 27. 파일 저장 대화상자 열기
+    // 28. 파일명을 `arxiv_paper_007.docx`로 입력하고 저장
+    // 29. 워드 서식 적용: line 1 title underlined 16pt (not bold); body 12pt regular.
+    "task_id": "web_sheet_word_arxiv_summary_03",
+    "instruction": "Could you check arXiv page `https://arxiv.org/abs/1412.6980`. Copy the arXiv ID, title, first author, submitted year, primary category, and full subjects into Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` with `=LEFT(A2,4)` and set `Area Flag` with `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_007.docx` in the format 'ArXiv ID: [value] | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'. Word format: line 1 title underlined 16pt (not bold); body 12pt regular.",
+    "website": {
+          "web": "https://arxiv.org/abs/1412.6980",
+          "sheet": "local spreadsheet application",
+          "word": "local word application"
+    },
+    "evaluation": {
+          "mode": "all",
+          "operator": "and",
+          "rules": [
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_007.docx",
+                      "text": "ArXiv ID: 1412.6980",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_007.docx",
+                      "text": "Title: Adam: A Method for Stochastic Optimization",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_007.docx",
+                      "text": "First Author: Diederik P. Kingma",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_007.docx",
+                      "text": "Submitted Year: 2014",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_007.docx",
+                      "text": "Primary Category: cs.LG",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_007.docx",
+                      "text": "Subjects: Machine Learning (cs.LG)",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_007.docx",
+                      "text": "ID Prefix: 1412",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_007.docx",
+                      "text": "Area Flag: ML",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_arxiv_summary_04
+    // 1. 브라우저 주소창 클릭
+    // 2. URL `https://arxiv.org/abs/1802.01561` 입력 후 접속
+    // 3. 스프레드시트 앱으로 이동
+    // 4. A1 클릭
+    // 5. A1에 `ArXiv ID` 입력
+    // 6. B1에 `Title` 입력
+    // 7. C1에 `First Author` 입력
+    // 8. D1에 `Submitted Year` 입력
+    // 9. E1에 `Primary Category` 입력
+    // 10. F1에 `Subjects` 입력
+    // 11. 웹 페이지에서 원본 데이터 확인
+    // 12. A2에 `ArXiv ID` 값 입력
+    // 13. B2에 `Title` 값 입력
+    // 14. C2에 `First Author` 값 입력
+    // 15. D2에 `Submitted Year` 값 입력
+    // 16. E2에 `Primary Category` 값 입력
+    // 17. F2에 `Subjects` 값 입력
+    // 18. G1에 `ID Prefix` 입력
+    // 19. G2 클릭
+    // 20. G2에 `=LEFT(A2,4)` 입력 후 Enter
+    // 21. H1에 `Area Flag` 입력
+    // 22. H2 클릭
+    // 23. H2에 `=IF(E2="cs.CL","NLP",IF(E2="cs.CV","VISION",IF(E2="cs.LG","ML",IF(E2="cs.SD","SOUND",IF(E2="cs.NE","NEURAL","OTHER")))))` 입력 후 Enter
+    // 24. 워드 앱으로 이동
+    // 25. 새 문서 생성
+    // 26. 요구된 라벨/값을 순서대로 입력
+    // 27. 파일 저장 대화상자 열기
+    // 28. 파일명을 `arxiv_paper_010.docx`로 입력하고 저장
+    // 29. 워드 서식 적용: line 1 title bold 16pt; body 12pt; last line bold.
+    "task_id": "web_sheet_word_arxiv_summary_04",
+    "instruction": "Could you check arXiv page `https://arxiv.org/abs/1802.01561`. Copy the arXiv ID, title, first author, submitted year, primary category, and full subjects into Spreadsheet columns ArXiv ID, Title, First Author, Submitted Year, Primary Category, Subjects. Set `ID Prefix` with `=LEFT(A2,4)` and set `Area Flag` with `=IF(E2=\"cs.CL\",\"NLP\",IF(E2=\"cs.CV\",\"VISION\",IF(E2=\"cs.LG\",\"ML\",IF(E2=\"cs.SD\",\"SOUND\",IF(E2=\"cs.NE\",\"NEURAL\",\"OTHER\")))))`. Save `~/Documents/arxiv_paper_010.docx` in the format 'ArXiv ID: [value] | Title: [value] | First Author: [value] | Submitted Year: [value] | Primary Category: [value] | Subjects: [value] | ID Prefix: [value] | Area Flag: [value]'. Word format: line 1 title bold 16pt; body 12pt; last line bold.",
+    "website": {
+          "web": "https://arxiv.org/abs/1802.01561",
+          "sheet": "local spreadsheet application",
+          "word": "local word application"
+    },
+    "evaluation": {
+          "mode": "all",
+          "operator": "and",
+          "rules": [
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_010.docx",
+                      "text": "ArXiv ID: 1802.01561",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_010.docx",
+                      "text": "Title: IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_010.docx",
+                      "text": "First Author: Lasse Espeholt",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_010.docx",
+                      "text": "Submitted Year: 2018",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_010.docx",
+                      "text": "Primary Category: cs.LG",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_010.docx",
+                      "text": "Subjects: Machine Learning (cs.LG); Artificial Intelligence (cs.AI)",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_010.docx",
+                      "text": "ID Prefix: 1802",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/arxiv_paper_010.docx",
+                      "text": "Area Flag: ML",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_cdc_child_bmi_01
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: Girl age 12 years 0 months, 5 ft 0 in, 120 lbs
+    // 3. Calculate 버튼 클릭
+    // 4. 스프레드시트 앱으로 이동
+    // 5. A1 클릭
+    // 6. A1에 'Field' 입력
+    // 7. B1 클릭
+    // 8. B1에 'Value' 입력
+    // 9. A2 클릭
+    // 10. A2에 'BMI' 입력
+    // 11. B2 클릭
+    // 12. B2에 23.4 입력
+    // 13. A3 클릭
+    // 14. A3에 'BMI Percentile' 입력
+    // 15. B3 클릭
+    // 16. B3에 <copy displayed percentile exactly> 입력
+    // 17. A4 클릭
+    // 18. A4에 'Category' 입력
+    // 19. B4 클릭
+    // 20. B4에 'Overweight' 입력
+    // 21. A5 클릭
+    // 22. A5에 'Rounded BMI' 입력
+    // 23. B5 클릭
+    // 24. B5에 '=ROUND(B2,0)' 입력
+    // 25. A6 클릭
+    // 26. A6에 'Category Flag' 입력
+    // 27. B6 클릭
+    // 28. B6에 '=IF(B4="Underweight","LOW",IF(B4="Healthy Weight","OK",IF(B4="Overweight","WATCH",IF(B4="Obesity","HIGH","SEVERE"))))' 입력
+    // 29. 계산 결과 확인: B5=23 and B6=WATCH
+    // 30. 워드 앱으로 이동
+    // 31. 새 문서 생성
+    // 32. 요구된 라벨/값을 순서대로 입력
+    // 33. 파일 저장 대화상자 열기
+    // 34. 파일명을 `cdc_child_teen_bmi_010.docx`로 입력하고 저장
+    // 35. 워드 서식 적용: line 1 title bold+underlined 15pt; body 11pt regular.
+    "task_id": "web_sheet_word_cdc_child_bmi_01",
+    "instruction": "Could you use the CDC Child and Teen BMI Calculator? Use US Customary Units; enter Girl age 12 years 0 months, 5 ft 0 in, 120 lbs. Calculate. In Spreadsheet set: A1='Field', B1='Value', A2='BMI', B2=<copy displayed BMI>, A3='BMI Percentile', B3=<copy displayed percentile exactly>, A4='Category', B4=<copy displayed category>, A5='Rounded BMI', B5='=ROUND(B2,0)', A6='Category Flag', B6='=IF(B4=\"Underweight\",\"LOW\",IF(B4=\"Healthy Weight\",\"OK\",IF(B4=\"Overweight\",\"WATCH\",IF(B4=\"Obesity\",\"HIGH\",\"SEVERE\"))))'. Check B5 and B6. Save `~/Documents/cdc_child_teen_bmi_010.docx` in the format 'Scenario: [value] | BMI: [value] | BMI Percentile: [value] | Category: [value] | Rounded BMI: [value] | Category Flag: [value]'. Word format: line 1 title bold+underlined 16pt; body 12pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Girl age 12 years 0 months, 5 ft 0 in, 120 lbs",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI: 23.4",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI Percentile:\\s*.+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Category: Overweight",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Rounded BMI: 23",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Category Flag: WATCH",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_cdc_child_bmi_02
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: Girl age 12 years 0 months, 5 ft 0 in, 136 lbs
+    // 3. Calculate 버튼 클릭
+    // 4. 스프레드시트 앱으로 이동
+    // 5. A1 클릭
+    // 6. A1에 'Field' 입력
+    // 7. B1 클릭
+    // 8. B1에 'Value' 입력
+    // 9. A2 클릭
+    // 10. A2에 'BMI' 입력
+    // 11. B2 클릭
+    // 12. B2에 26.6 입력
+    // 13. A3 클릭
+    // 14. A3에 'BMI Percentile' 입력
+    // 15. B3 클릭
+    // 16. B3에 96th 입력
+    // 17. A4 클릭
+    // 18. A4에 'Category' 입력
+    // 19. B4 클릭
+    // 20. B4에 'Obesity' 입력
+    // 21. A5 클릭
+    // 22. A5에 'Rounded BMI' 입력
+    // 23. B5 클릭
+    // 24. B5에 '=ROUND(B2,0)' 입력
+    // 25. A6 클릭
+    // 26. A6에 'Category Flag' 입력
+    // 27. B6 클릭
+    // 28. B6에 '=IF(B4="Underweight","LOW",IF(B4="Healthy Weight","OK",IF(B4="Overweight","WATCH",IF(B4="Obesity","HIGH","SEVERE"))))' 입력
+    // 29. 계산 결과 확인: B5=27 and B6=HIGH
+    // 30. 워드 앱으로 이동
+    // 31. 새 문서 생성
+    // 32. 요구된 라벨/값을 순서대로 입력
+    // 33. 파일 저장 대화상자 열기
+    // 34. 파일명을 `cdc_child_teen_bmi_014.docx`로 입력하고 저장
+    // 35. 워드 서식 적용: line 1 title bold+underlined 16pt; body 12pt regular.
+    "task_id": "web_sheet_word_cdc_child_bmi_02",
+    "instruction": "Could you use the CDC Child and Teen BMI Calculator? Use US Customary Units; enter Girl age 12 years 0 months, 5 ft 0 in, 136 lbs. Calculate. In Spreadsheet set: A1='Field', B1='Value', A2='BMI', B2=<copy displayed BMI>, A3='BMI Percentile', B3=<copy displayed percentile exactly>, A4='Category', B4=<copy displayed category>, A5='Rounded BMI', B5='=ROUND(B2,0)', A6='Category Flag', B6='=IF(B4=\"Underweight\",\"LOW\",IF(B4=\"Healthy Weight\",\"OK\",IF(B4=\"Overweight\",\"WATCH\",IF(B4=\"Obesity\",\"HIGH\",\"SEVERE\"))))'. Check B5 and B6. Save `~/Documents/cdc_child_teen_bmi_014.docx` in the format 'Scenario: [value] | BMI: [value] | BMI Percentile: [value] | Category: [value] | Rounded BMI: [value] | Category Flag: [value]'. Word format: line 1 title bold 18pt (no underline); body 11pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Girl age 12 years 0 months, 5 ft 0 in, 136 lbs",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI: 26.6",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI Percentile: 96th",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Category: Obesity",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Rounded BMI: 27",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Category Flag: HIGH",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_cdc_child_bmi_03
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: Girl age 13 years 0 months, 5 ft 2 in, 210 lbs
+    // 3. Calculate 버튼 클릭
+    // 4. 스프레드시트 앱으로 이동
+    // 5. A1 클릭
+    // 6. A1에 'Field' 입력
+    // 7. B1 클릭
+    // 8. B1에 'Value' 입력
+    // 9. A2 클릭
+    // 10. A2에 'BMI' 입력
+    // 11. B2 클릭
+    // 12. B2에 38.4 입력
+    // 13. A3 클릭
+    // 14. A3에 'BMI Percentile' 입력
+    // 15. B3 클릭
+    // 16. B3에 <copy displayed percentile exactly> 입력
+    // 17. A4 클릭
+    // 18. A4에 'Category' 입력
+    // 19. B4 클릭
+    // 20. B4에 'Severe Obesity' 입력
+    // 21. A5 클릭
+    // 22. A5에 'Rounded BMI' 입력
+    // 23. B5 클릭
+    // 24. B5에 '=ROUND(B2,0)' 입력
+    // 25. A6 클릭
+    // 26. A6에 'Category Flag' 입력
+    // 27. B6 클릭
+    // 28. B6에 '=IF(B4="Underweight","LOW",IF(B4="Healthy Weight","OK",IF(B4="Overweight","WATCH",IF(B4="Obesity","HIGH","SEVERE"))))' 입력
+    // 29. 계산 결과 확인: B5=38 and B6=SEVERE
+    // 30. 워드 앱으로 이동
+    // 31. 새 문서 생성
+    // 32. 요구된 라벨/값을 순서대로 입력
+    // 33. 파일 저장 대화상자 열기
+    // 34. 파일명을 `cdc_child_teen_bmi_018.docx`로 입력하고 저장
+    // 35. 워드 서식 적용: line 1 title bold 18pt (no underline); body 11pt regular.
+    "task_id": "web_sheet_word_cdc_child_bmi_03",
+    "instruction": "Could you use the CDC Child and Teen BMI Calculator? Use US Customary Units; enter Girl age 13 years 0 months, 5 ft 2 in, 210 lbs. Calculate. In Spreadsheet set: A1='Field', B1='Value', A2='BMI', B2=<copy displayed BMI>, A3='BMI Percentile', B3=<copy displayed percentile exactly>, A4='Category', B4=<copy displayed category>, A5='Rounded BMI', B5='=ROUND(B2,0)', A6='Category Flag', B6='=IF(B4=\"Underweight\",\"LOW\",IF(B4=\"Healthy Weight\",\"OK\",IF(B4=\"Overweight\",\"WATCH\",IF(B4=\"Obesity\",\"HIGH\",\"SEVERE\"))))'. Check B5 and B6. Save `~/Documents/cdc_child_teen_bmi_018.docx` in the format 'Scenario: [value] | BMI: [value] | BMI Percentile: [value] | Category: [value] | Rounded BMI: [value] | Category Flag: [value]'. Word format: line 1 title underlined 16pt (not bold); body 12pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Girl age 13 years 0 months, 5 ft 2 in, 210 lbs",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI: 38.4",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI Percentile:\\s*.+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Category: Severe Obesity",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Rounded BMI: 38",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Category Flag: SEVERE",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_cdc_child_bmi_04
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: Boy age 7 years 0 months, 4 ft 0 in, 50 lbs
+    // 3. Calculate 버튼 클릭
+    // 4. 스프레드시트 앱으로 이동
+    // 5. A1 클릭
+    // 6. A1에 'Field' 입력
+    // 7. B1 클릭
+    // 8. B1에 'Value' 입력
+    // 9. A2 클릭
+    // 10. A2에 'BMI' 입력
+    // 11. B2 클릭
+    // 12. B2에 15.3 입력
+    // 13. A3 클릭
+    // 14. A3에 'BMI Percentile' 입력
+    // 15. B3 클릭
+    // 16. B3에 <copy displayed percentile exactly> 입력
+    // 17. A4 클릭
+    // 18. A4에 'Category' 입력
+    // 19. B4 클릭
+    // 20. B4에 'Healthy Weight' 입력
+    // 21. A5 클릭
+    // 22. A5에 'Status Flag' 입력
+    // 23. B5 클릭
+    // 24. B5에 '=IF(B2<18.5,"LT18.5","GTE18.5")' 입력
+    // 25. 계산 결과 확인: B5=LT18
+    // 26. 워드 앱으로 이동
+    // 27. 새 문서 생성
+    // 28. 요구된 라벨/값을 순서대로 입력
+    // 29. 파일 저장 대화상자 열기
+    // 30. 파일명을 `cdc_child_teen_bmi_021.docx`로 입력하고 저장
+    // 31. 워드 서식 적용: line 1 title underlined 16pt (not bold); body 12pt regular.
+    "task_id": "web_sheet_word_cdc_child_bmi_04",
+    "instruction": "Could you use the CDC Child and Teen BMI Calculator? Use US Customary Units; enter Boy age 7 years 0 months, 4 ft 0 in, 50 lbs. Calculate. In Spreadsheet set: A1='Field', B1='Value', A2='BMI', B2=<copy displayed BMI>, A3='BMI Percentile', B3=<copy displayed percentile exactly>, A4='Category', B4=<copy displayed category>, A5='Status Flag', B5='=IF(B2<18.5,\"LT18.5\",\"GTE18.5\")'. Check B5. Save `~/Documents/cdc_child_teen_bmi_021.docx` in the format 'Scenario: [value] | BMI: [value] | BMI Percentile: [value] | Category: [value] | Status Flag: [value]'. Word format: line 1 title bold 16pt; body 12pt; last line bold.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Boy age 7 years 0 months, 4 ft 0 in, 50 lbs",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI: 15.3",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI Percentile:\\s*.+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Category: Healthy Weight",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Status Flag: LT18.5",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_cdc_child_bmi_05
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: Girl age 12 years 0 months, 5 ft 0 in, 120 lbs
+    // 3. Calculate 버튼 클릭
+    // 4. 스프레드시트 앱으로 이동
+    // 5. A1 클릭
+    // 6. A1에 'Field' 입력
+    // 7. B1 클릭
+    // 8. B1에 'Value' 입력
+    // 9. A2 클릭
+    // 10. A2에 'BMI' 입력
+    // 11. B2 클릭
+    // 12. B2에 23.4 입력
+    // 13. A3 클릭
+    // 14. A3에 'BMI Percentile' 입력
+    // 15. B3 클릭
+    // 16. B3에 <copy displayed percentile exactly> 입력
+    // 17. A4 클릭
+    // 18. A4에 'Category' 입력
+    // 19. B4 클릭
+    // 20. B4에 'Overweight' 입력
+    // 21. A5 클릭
+    // 22. A5에 'Distance from 20' 입력
+    // 23. B5 클릭
+    // 24. B5에 '=ABS(B2-20)' 입력
+    // 25. 계산 결과 확인: B5=3
+    // 26. 워드 앱으로 이동
+    // 27. 새 문서 생성
+    // 28. 요구된 라벨/값을 순서대로 입력
+    // 29. 파일 저장 대화상자 열기
+    // 30. 파일명을 `cdc_child_teen_bmi_022.docx`로 입력하고 저장
+    // 31. 워드 서식 적용: line 1 title bold 16pt; body 12pt; last line bold.
+    "task_id": "web_sheet_word_cdc_child_bmi_05",
+    "instruction": "Could you use the CDC Child and Teen BMI Calculator? Use US Customary Units; enter Girl age 12 years 0 months, 5 ft 0 in, 120 lbs. Calculate. In Spreadsheet set: A1='Field', B1='Value', A2='BMI', B2=<copy displayed BMI>, A3='BMI Percentile', B3=<copy displayed percentile exactly>, A4='Category', B4=<copy displayed category>, A5='Distance from 20', B5='=ABS(B2-20)'. Check B5. Save `~/Documents/cdc_child_teen_bmi_022.docx` in the format 'Scenario: [value] | BMI: [value] | BMI Percentile: [value] | Category: [value] | Distance from 20: [value]'. Word format: line 1 title bold+underlined 15pt; body 11pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Girl age 12 years 0 months, 5 ft 0 in, 120 lbs",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI: 23.4",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI Percentile:\\s*.+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Category: Overweight",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Distance from 20: 3.4",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_cdc_child_bmi_06
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: Boy age 15 years 0 months, 5 ft 6 in, 230 lbs
+    // 3. Calculate 버튼 클릭
+    // 4. 스프레드시트 앱으로 이동
+    // 5. A1 클릭
+    // 6. A1에 'Field' 입력
+    // 7. B1 클릭
+    // 8. B1에 'Value' 입력
+    // 9. A2 클릭
+    // 10. A2에 'BMI' 입력
+    // 11. B2 클릭
+    // 12. B2에 37.1 입력
+    // 13. A3 클릭
+    // 14. A3에 'BMI Percentile' 입력
+    // 15. B3 클릭
+    // 16. B3에 <copy displayed percentile exactly> 입력
+    // 17. A4 클릭
+    // 18. A4에 'Category' 입력
+    // 19. B4 클릭
+    // 20. B4에 'Severe Obesity' 입력
+    // 21. A5 클릭
+    // 22. A5에 'Category Length' 입력
+    // 23. B5 클릭
+    // 24. B5에 '=LEN(B4)' 입력
+    // 25. 계산 결과 확인: B5=15
+    // 26. 워드 앱으로 이동
+    // 27. 새 문서 생성
+    // 28. 요구된 라벨/값을 순서대로 입력
+    // 29. 파일 저장 대화상자 열기
+    // 30. 파일명을 `cdc_child_teen_bmi_025.docx`로 입력하고 저장
+    // 31. 워드 서식 적용: line 1 title bold+underlined 15pt; body 11pt regular.
+    "task_id": "web_sheet_word_cdc_child_bmi_06",
+    "instruction": "Could you use the CDC Child and Teen BMI Calculator? Use US Customary Units; enter Boy age 15 years 0 months, 5 ft 6 in, 230 lbs. Calculate. In Spreadsheet set: A1='Field', B1='Value', A2='BMI', B2=<copy displayed BMI>, A3='BMI Percentile', B3=<copy displayed percentile exactly>, A4='Category', B4=<copy displayed category>, A5='Category Length', B5='=LEN(B4)'. Check B5. Save `~/Documents/cdc_child_teen_bmi_025.docx` in the format 'Scenario: [value] | BMI: [value] | BMI Percentile: [value] | Category: [value] | Category Length: [value]'. Word format: line 1 title bold+underlined 16pt; body 12pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Boy age 15 years 0 months, 5 ft 6 in, 230 lbs",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI: 37.1",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI Percentile:\\s*.+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Category: Severe Obesity",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Category Length: 15",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_cdc_child_bmi_07
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: Girl age 13 years 0 months, 5 ft 2 in, 210 lbs
+    // 3. Calculate 버튼 클릭
+    // 4. 스프레드시트 앱으로 이동
+    // 5. A1 클릭
+    // 6. A1에 'Field' 입력
+    // 7. B1 클릭
+    // 8. B1에 'Value' 입력
+    // 9. A2 클릭
+    // 10. A2에 'BMI' 입력
+    // 11. B2 클릭
+    // 12. B2에 38.4 입력
+    // 13. A3 클릭
+    // 14. A3에 'BMI Percentile' 입력
+    // 15. B3 클릭
+    // 16. B3에 <copy displayed percentile exactly> 입력
+    // 17. A4 클릭
+    // 18. A4에 'Category' 입력
+    // 19. B4 클릭
+    // 20. B4에 'Severe Obesity' 입력
+    // 21. A5 클릭
+    // 22. A5에 'Summary' 입력
+    // 23. B5 클릭
+    // 24. B5에 '=CONCAT(B4,"-",IF(B2>=35,"35PLUS","UNDER35"))' 입력
+    // 25. 계산 결과 확인: B5=Severe Obesity-35PLUS
+    // 26. 워드 앱으로 이동
+    // 27. 새 문서 생성
+    // 28. 요구된 라벨/값을 순서대로 입력
+    // 29. 파일 저장 대화상자 열기
+    // 30. 파일명을 `cdc_child_teen_bmi_028.docx`로 입력하고 저장
+    // 31. 워드 서식 적용: line 1 title bold+underlined 16pt; body 12pt regular.
+    "task_id": "web_sheet_word_cdc_child_bmi_07",
+    "instruction": "Could you use the CDC Child and Teen BMI Calculator? Use US Customary Units; enter Girl age 13 years 0 months, 5 ft 2 in, 210 lbs. Calculate. In Spreadsheet set: A1='Field', B1='Value', A2='BMI', B2=<copy displayed BMI>, A3='BMI Percentile', B3=<copy displayed percentile exactly>, A4='Category', B4=<copy displayed category>, A5='Summary', B5='=CONCAT(B4,\"-\",IF(B2>=35,\"35PLUS\",\"UNDER35\"))'. Check B5. Save `~/Documents/cdc_child_teen_bmi_028.docx` in the format 'Scenario: [value] | BMI: [value] | BMI Percentile: [value] | Category: [value] | Summary: [value]'. Word format: line 1 title bold 18pt (no underline); body 11pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Girl age 13 years 0 months, 5 ft 2 in, 210 lbs",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI: 38.4",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI Percentile:\\s*.+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Category: Severe Obesity",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Summary: Severe Obesity-35PLUS",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_cdc_child_bmi_08
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: Girl age 18 years 0 months, 5 ft 5 in, 235 lbs
+    // 3. Calculate 버튼 클릭
+    // 4. 스프레드시트 앱으로 이동
+    // 5. A1 클릭
+    // 6. A1에 'Field' 입력
+    // 7. B1 클릭
+    // 8. B1에 'Value' 입력
+    // 9. A2 클릭
+    // 10. A2에 'BMI' 입력
+    // 11. B2 클릭
+    // 12. B2에 39.1 입력
+    // 13. A3 클릭
+    // 14. A3에 'BMI Percentile' 입력
+    // 15. B3 클릭
+    // 16. B3에 <copy displayed percentile exactly> 입력
+    // 17. A4 클릭
+    // 18. A4에 'Category' 입력
+    // 19. B4 클릭
+    // 20. B4에 'Severe Obesity' 입력
+    // 21. A5 클릭
+    // 22. A5에 'Upper Category' 입력
+    // 23. B5 클릭
+    // 24. B5에 '=UPPER(B4)' 입력
+    // 25. 계산 결과 확인: B5=SEVERE OBESITY
+    // 26. 워드 앱으로 이동
+    // 27. 새 문서 생성
+    // 28. 요구된 라벨/값을 순서대로 입력
+    // 29. 파일 저장 대화상자 열기
+    // 30. 파일명을 `cdc_child_teen_bmi_030.docx`로 입력하고 저장
+    // 31. 워드 서식 적용: line 1 title bold 18pt (no underline); body 11pt regular.
+    "task_id": "web_sheet_word_cdc_child_bmi_08",
+    "instruction": "Could you use the CDC Child and Teen BMI Calculator? Use US Customary Units; enter Girl age 18 years 0 months, 5 ft 5 in, 235 lbs. Calculate. In Spreadsheet set: A1='Field', B1='Value', A2='BMI', B2=<copy displayed BMI>, A3='BMI Percentile', B3=<copy displayed percentile exactly>, A4='Category', B4=<copy displayed category>, A5='Upper Category', B5='=UPPER(B4)'. Check B5. Save `~/Documents/cdc_child_teen_bmi_030.docx` in the format 'Scenario: [value] | BMI: [value] | BMI Percentile: [value] | Category: [value] | Upper Category: [value]'. Word format: line 1 title underlined 16pt (not bold); body 12pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Girl age 18 years 0 months, 5 ft 5 in, 235 lbs",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI: 39.1",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "BMI Percentile:\\s*.+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Category: Severe Obesity",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Upper Category: SEVERE OBESITY",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_dol_overtime_01
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: a nonexempt employee paid a single hourly rate of $20
+    // 3. Calculate 버튼 클릭
+    // 4. 워드 서식 적용: line 1 title underlined 16pt (not bold); body 12pt regular.
+    "task_id": "web_sheet_word_dol_overtime_01",
+    "instruction": "Could you use the DOL FLSA Overtime Calculator Advisor? Enter a nonexempt employee paid a single hourly rate of $20.00 who worked 45.00 hours in one workweek with no bonuses, commissions, or shift differentials. Copy the displayed regular rate and overtime result into Spreadsheet. In Spreadsheet, calculate `Overtime Hours`, `Overtime Pay`, and `Total FLSA Pay`. Save `~/Documents/dol_overtime_001.txt` in the format 'Scenario: [value] | Regular Rate: [value] | Overtime Hours: [value] | Overtime Pay: [value] | Total FLSA Pay: [value]'. Word format: line 1 title bold+underlined 16pt; body 12pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Single hourly rate $20.00 for 45.00 hours",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Regular Rate: $20.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Overtime Hours: 5.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Overtime Pay: $150.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Total FLSA Pay: $950.00",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_dol_overtime_02
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: a nonexempt employee paid a single hourly rate of $22
+    // 3. Calculate 버튼 클릭
+    // 4. 워드 서식 적용: line 1 title bold 16pt; body 12pt; last line bold.
+    "task_id": "web_sheet_word_dol_overtime_02",
+    "instruction": "Could you use the DOL FLSA Overtime Calculator Advisor? Enter a nonexempt employee paid a single hourly rate of $22.25 who worked 47.50 hours in one workweek with no bonuses, commissions, or shift differentials. Copy the displayed regular rate and overtime result into Spreadsheet. In Spreadsheet, calculate `Overtime Hours`, `Overtime Pay`, and `Total FLSA Pay`. Save `~/Documents/dol_overtime_004.txt` in the format 'Scenario: [value] | Regular Rate: [value] | Overtime Hours: [value] | Overtime Pay: [value] | Total FLSA Pay: [value]'. Word format: line 1 title bold 18pt (no underline); body 11pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Single hourly rate $22.25 for 47.50 hours",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Regular Rate: $22.25",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Overtime Hours: 7.50",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Overtime Pay: $250.31",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Total FLSA Pay: $1,140.31",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_dol_overtime_03
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: a nonexempt employee paid $16
+    // 3. Calculate 버튼 클릭
+    // 4. 워드 서식 적용: line 1 title bold+underlined 15pt; body 11pt regular.
+    "task_id": "web_sheet_word_dol_overtime_03",
+    "instruction": "Could you use the DOL FLSA Overtime Calculator Advisor? Enter a nonexempt employee paid $16.00 per hour, worked 45.00 hours in one workweek, and received a nondiscretionary bonus of $90.00 for the same workweek. Copy the displayed regular rate and overtime calculation into Spreadsheet. In Spreadsheet, calculate `Regular Rate`, `Overtime Hours`, `Additional Overtime Premium`, and `Total FLSA Pay`. Save `~/Documents/dol_overtime_009.txt` in the format 'Scenario: [value] | Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'. Word format: line 1 title underlined 16pt (not bold); body 12pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Hourly rate $16.00, 45.00 hours, nondiscretionary bonus $90.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Regular Rate: $18.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Overtime Hours: 5.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Additional Overtime Premium: $45.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Total FLSA Pay: $855.00",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_dol_overtime_04
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: a nonexempt employee with a fixed weekly salary of $405
+    // 3. Calculate 버튼 클릭
+    // 4. 워드 서식 적용: line 1 title bold+underlined 16pt; body 12pt regular.
+    "task_id": "web_sheet_word_dol_overtime_04",
+    "instruction": "Could you use the DOL FLSA Overtime Calculator Advisor? Enter a nonexempt employee with a fixed weekly salary of $405.00 where the salary is intended to cover all 45.00 hours worked in the workweek. Copy the displayed regular rate and overtime calculation into Spreadsheet. In Spreadsheet, calculate `Regular Rate`, `Overtime Hours`, `Additional Overtime Premium`, and `Total FLSA Pay`. Save `~/Documents/dol_overtime_014.txt` in the format 'Scenario: [value] | Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'. Word format: line 1 title bold 16pt; body 12pt; last line bold.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Fixed weekly salary $405.00 covering 45.00 hours",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Regular Rate: $9.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Overtime Hours: 5.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Additional Overtime Premium: $22.50",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Total FLSA Pay: $427.50",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_dol_overtime_05
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: a nonexempt employee who worked 30
+    // 3. Calculate 버튼 클릭
+    // 4. 워드 서식 적용: line 1 title bold 18pt (no underline); body 11pt regular.
+    "task_id": "web_sheet_word_dol_overtime_05",
+    "instruction": "Could you use the DOL FLSA Overtime Calculator Advisor? Enter a nonexempt employee who worked 30.00 hours at $18.00 and 15.00 hours at $24.00 in the same workweek. Copy the displayed weighted regular rate and overtime calculation into Spreadsheet. In Spreadsheet, calculate `Weighted Regular Rate`, `Overtime Hours`, `Additional Overtime Premium`, and `Total FLSA Pay`. Save `~/Documents/dol_overtime_018.txt` in the format 'Scenario: [value] | Weighted Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'. Word format: line 1 title bold+underlined 15pt; body 11pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Multiple rates 30.00 hours at $18.00 and 15.00 hours at $24.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Weighted Regular Rate: $20.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Overtime Hours: 5.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Additional Overtime Premium: $50.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Total FLSA Pay: $950.00",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_dol_overtime_06
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: a nonexempt employee who worked 32
+    // 3. Calculate 버튼 클릭
+    // 4. 워드 서식 적용: line 1 title underlined 16pt (not bold); body 12pt regular.
+    "task_id": "web_sheet_word_dol_overtime_06",
+    "instruction": "Could you use the DOL FLSA Overtime Calculator Advisor? Enter a nonexempt employee who worked 32.00 hours at $17.50 and 14.00 hours at $26.00 in the same workweek. Copy the displayed weighted regular rate and overtime calculation into Spreadsheet. In Spreadsheet, calculate `Weighted Regular Rate`, `Overtime Hours`, `Additional Overtime Premium`, and `Total FLSA Pay`. Save `~/Documents/dol_overtime_020.txt` in the format 'Scenario: [value] | Weighted Regular Rate: [value] | Overtime Hours: [value] | Additional Overtime Premium: [value] | Total FLSA Pay: [value]'. Word format: line 1 title bold+underlined 16pt; body 12pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: Multiple rates 32.00 hours at $17.50 and 14.00 hours at $26.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Weighted Regular Rate: $20.09",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Overtime Hours: 6.00",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Additional Overtime Premium: $60.26",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Total FLSA Pay: $984.26",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_hipass_toll_01
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: 출발지 서울 and 도착지 부산
+    // 3. Calculate 버튼 클릭
+    // 4. 계산 결과 확인: final values
+    // 5. 워드 서식 적용: line 1 title bold 16pt; body 12pt; last line bold.
+    "task_id": "web_sheet_word_hipass_toll_01",
+    "instruction": "Could you use the Hi-Pass 통행요금 조회 page? In 요금조회, enter 출발지 서울 and 도착지 부산. Leave 경유지 blank. If the site shows autocomplete suggestions, select the exact matching tollgate names. Run 조회. Copy the first route row into Spreadsheet, including 경로 구분 and fees for 1종, 2종, 3종, 4종, 5종, and 1종(경차). In Spreadsheet, remove commas and 원 from fee text, then calculate the requested metrics. Save `~/Documents/hipass_toll_001.docx` in the format 'Scenario: [value] | Via: [value] | Route: [value] | Class 1 Toll: [value] | Class 2 Toll: [value] | Class 3 Toll: [value] | Class 4 Toll: [value] | Class 5 Toll: [value] | Light Car Toll: [value] | Light Car Difference: [value] | Highest Toll: [value] | Light Car Ratio: [value]'. Word format: line 1 title bold+underlined 16pt; body 12pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: 서울 to 부산",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Via: None",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Route:\\s*.+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class 1 Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class 2 Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class 3 Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class 4 Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class 5 Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Light Car Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Light Car Difference:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Highest Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Light Car Ratio:\\s*0?\\.\\d+|Light Car Ratio:\\s*1\\.00",
+                      "match": "regex"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_hipass_toll_02
+    // 1. 페이지의 입력 폼 영역으로 이동
+    // 2. 요구된 입력값 설정: 출발지 서울 and 도착지 부산
+    // 3. Calculate 버튼 클릭
+    // 4. 계산 결과 확인: final values
+    // 5. 워드 서식 적용: line 1 title bold+underlined 15pt; body 11pt regular.
+    "task_id": "web_sheet_word_hipass_toll_02",
+    "instruction": "Could you use the Hi-Pass 통행요금 조회 page? In 요금조회, enter 출발지 서울 and 도착지 부산. Enter 경유지 대전 before searching. If the site shows autocomplete suggestions, select the exact matching tollgate names. Run 조회. Copy the first route row into Spreadsheet, including 경로 구분 and fees for 1종, 2종, 3종, 4종, 5종, and 1종(경차). In Spreadsheet, remove commas and 원 from fee text, then calculate the requested metrics. Save `~/Documents/hipass_toll_011.docx` in the format 'Scenario: [value] | Via: [value] | Route: [value] | Class 1 Toll: [value] | Class 2 Toll: [value] | Class 3 Toll: [value] | Class 4 Toll: [value] | Class 5 Toll: [value] | Light Car Toll: [value] | Light Car Difference: [value] | Highest Toll: [value] | Light Car Ratio: [value]'. Word format: line 1 title bold 18pt (no underline); body 11pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Scenario: 서울 to 부산 via 대전",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Via: 대전",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Route:\\s*.+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class 1 Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class 2 Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class 3 Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class 4 Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class 5 Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Light Car Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Light Car Difference:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Highest Toll:\\s*[0-9,]+",
+                      "match": "regex"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Light Car Ratio:\\s*0?\\.\\d+|Light Car Ratio:\\s*1\\.00",
+                      "match": "regex"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_hipass_toll_03
+    // 1. 워드 서식 적용: line 1 title bold+underlined 16pt; body 12pt regular.
+    "task_id": "web_sheet_word_hipass_toll_03",
+    "instruction": "Could you open the Hi-Pass 통행요금 조회 page and scroll to the 차종구분 table. Find the row for 1종(소형차). Copy the row text into Spreadsheet. In Spreadsheet, split the row into `Class`, `Classification Criteria`, and `Examples`, then create the normalized summary. Save `~/Documents/hipass_toll_013.txt` in the format 'Class: [value] | Source Criteria A: [value] | Source Criteria B: [value] | Source Examples: [value] | Axis Count: [value] | Width Rule: [value] | Example Vehicles: [value]'. Word format: line 1 title underlined 16pt (not bold); body 12pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class: 1종(소형차)",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Source Criteria A: 2축 차량",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Source Criteria B: 윤폭 279.4mm 이하",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Source Examples: 승용차, 소형승합차, 소형화물차",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Axis Count: 2",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Width Rule: 윤폭 279.4mm 이하",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Example Vehicles: 승용차, 소형승합차, 소형화물차",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_hipass_toll_04
+    // 1. 워드 서식 적용: line 1 title bold 18pt (no underline); body 11pt regular.
+    "task_id": "web_sheet_word_hipass_toll_04",
+    "instruction": "Could you open the Hi-Pass 통행요금 조회 page and scroll to the 차종구분 table. Find the row for 3종(대형차). Copy the row text into Spreadsheet. In Spreadsheet, split the row into `Class`, `Classification Criteria`, and `Examples`, then create the normalized summary. Save `~/Documents/hipass_toll_015.txt` in the format 'Class: [value] | Source Criteria A: [value] | Source Criteria B: [value] | Source Examples: [value] | Axis Count: [value] | Width Rule: [value] | Example Vehicles: [value]'. Word format: line 1 title bold 16pt; body 12pt; last line bold.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class: 3종(대형차)",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Source Criteria A: 2축 차량",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Source Criteria B: 윤폭 279.4mm 초과, 윤거 1,800mm 초과",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Source Examples: 대형승합차, 2축 대형화물차",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Axis Count: 2",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Width Rule: 윤폭 279.4mm 초과, 윤거 1,800mm 초과",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Example Vehicles: 대형승합차, 2축 대형화물차",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_hipass_toll_05
+    // 1. 워드 서식 적용: line 1 title underlined 16pt (not bold); body 12pt regular.
+    "task_id": "web_sheet_word_hipass_toll_05",
+    "instruction": "Could you open the Hi-Pass 통행요금 조회 page and scroll to the 차종구분 table. Find the row for 6종(경형자동차). Copy the row text into Spreadsheet. In Spreadsheet, split the row into `Class`, `Classification Criteria`, and `Examples`, then create the normalized summary. Save `~/Documents/hipass_toll_018.txt` in the format 'Class: [value] | Source Criteria A: [value] | Source Criteria B: [value] | Source Examples: [value] | Displacement Rule: [value] | Size Rule: [value] | Category Flag: [value]'. Word format: line 1 title bold+underlined 15pt; body 11pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class: 6종(경형자동차)",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Source Criteria A: 배기량 1,000cc 미만",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Source Criteria B: 길이 3.6m, 너비 1.6m, 높이 2.0m 이하",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Source Examples: 경형자동차",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Displacement Rule: 배기량 1,000cc 미만",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Size Rule: 길이 3.6m, 너비 1.6m, 높이 2.0m 이하",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Category Flag: LIGHT_CAR",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_hipass_toll_06
+    // 1. 워드 서식 적용: line 1 title bold 16pt; body 12pt; last line bold.
+    "task_id": "web_sheet_word_hipass_toll_06",
+    "instruction": "Could you use the Hi-Pass 통행요금 조회 page? Compare 1종(소형차) and 6종(경형자동차) in the 차종구분 table. Copy the relevant table text into Spreadsheet. Calculate the requested normalized output. Save `~/Documents/hipass_toll_019.txt` in the format 'Comparison: [value] | Class 1 Key Rule: [value] | Light Car Key Rule: [value] | Light Car Size Rule: [value] | Word Flag: [value]'. Word format: line 1 title bold+underlined 16pt; body 12pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Comparison: 1종(소형차) vs 6종(경형자동차)",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class 1 Key Rule: 2축 차량, 윤폭 279.4mm 이하",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Light Car Key Rule: 배기량 1,000cc 미만",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Light Car Size Rule: 길이 3.6m, 너비 1.6m, 높이 2.0m 이하",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Word Flag: LIGHT_CAR_HAS_SIZE_LIMIT",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_hipass_toll_07
+    // 1. 워드 서식 적용: line 1 title bold+underlined 15pt; body 11pt regular.
+    "task_id": "web_sheet_word_hipass_toll_07",
+    "instruction": "Could you use the Hi-Pass 통행요금 조회 page? Use the toll result header and vehicle class table to count toll columns. Copy the relevant table text into Spreadsheet. Calculate the requested normalized output. Save `~/Documents/hipass_toll_020.txt` in the format 'Header Columns: [value] | Vehicle Toll Column Count: [value] | Classification Rows: [value] | Word Check: [value]'. Word format: line 1 title bold 18pt (no underline); body 11pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Header Columns: 1종, 2종, 3종, 4종, 5종, 1종(경차)",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Vehicle Toll Column Count: 6",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Classification Rows: 6",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Word Check: PASS",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_hipass_toll_08
+    // 1. 워드 서식 적용: line 1 title bold+underlined 16pt; body 12pt regular.
+    "task_id": "web_sheet_word_hipass_toll_08",
+    "instruction": "Could you open the Hi-Pass 통행요금 조회 page and scroll to the 차종구분 table. Copy the six class names into Spreadsheet. In Spreadsheet, calculate `Has Light Car`. Save `~/Documents/hipass_toll_029.txt` in the format 'Class Names: [value] | Has Light Car: [value]'. Word format: line 1 title underlined 16pt (not bold); body 12pt regular.",
+    "website": [
+          {
+                "id": "web",
+                "url": "https://www.hipass.co.kr/board/TollPaySearchList.do"
+          },
+          {
+                "id": "sheet",
+                "url": "http://localhost:3000/spreadsheet"
+          },
+          {
+                "id": "word",
+                "url": "http://localhost:3000/word"
+          }
+    ],
+    "evaluation": {
+          "mode": "dom",
+          "operator": "and",
+          "rules": [
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Class Names: 1종(소형차), 2종(중형차), 3종(대형차), 4종(대형화물차), 5종(특수화물차), 6종(경형자동차)",
+                      "match": "contains"
+                },
+                {
+                      "website_id": "word",
+                      "selector": "textarea",
+                      "target": "attr",
+                      "attr": "value",
+                      "value": "Has Light Car: YES",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_juso_address_01
+    // 1. 워드 앱으로 이동
+    // 2. 새 문서 생성
+    // 3. 요구된 라벨/값을 순서대로 입력
+    // 4. 파일 저장 대화상자 열기
+    // 5. 파일명을 `juso_address_001.docx`로 입력하고 저장
+    // 6. 워드 서식 적용: line 1 title bold 18pt (no underline); body 11pt regular.
+    "task_id": "web_sheet_word_juso_address_01",
+    "instruction": "Could you use Juso address search at https://www.juso.go.kr/? Search for `서울특별시 중구 세종대로 110`. Select the first result whose road address contains `서울특별시` and \"중구\", `세종대로`, and building number `110`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` with `=LEFT(B2,2)`, set `Road Keyword` to `세종대로`, and set `Address Check` with `=IF(AND(ISNUMBER(SEARCH(\"서울특별시\",C2)),ISNUMBER(SEARCH(\"세종대로\",C2)),ISNUMBER(SEARCH(\"110\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_001.docx` in the format 'Scenario: [value] | Search Query: [value] | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: [value] | Address Check: [value]'. Word format: line 1 title bold+underlined 16pt; body 12pt regular.",
+    "website": {
+          "web": "https://www.juso.go.kr/",
+          "sheet": "local spreadsheet application",
+          "word": "local word application"
+    },
+    "evaluation": {
+          "mode": "all",
+          "operator": "and",
+          "rules": [
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_001.docx",
+                      "text": "Scenario: 서울시청 address lookup",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_001.docx",
+                      "text": "Search Query: 서울특별시 중구 세종대로 110",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_001.docx",
+                      "text_regex": "Postal Code:\\s*\\d{5}",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_001.docx",
+                      "text_regex": "Road Address:\\s*.*서울특별시.*세종대로.*110",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_001.docx",
+                      "text_regex": "Road Address:\\s*.*중구.*",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_001.docx",
+                      "text_regex": "Jibun Address:\\s*.+",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_001.docx",
+                      "text_regex": "Zip Prefix:\\s*\\d{2}",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_001.docx",
+                      "text": "Road Keyword: 세종대로",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_001.docx",
+                      "text": "Address Check: MATCH",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_juso_address_02
+    // 1. 워드 앱으로 이동
+    // 2. 새 문서 생성
+    // 3. 요구된 라벨/값을 순서대로 입력
+    // 4. 파일 저장 대화상자 열기
+    // 5. 파일명을 `juso_address_002.docx`로 입력하고 저장
+    // 6. 워드 서식 적용: line 1 title underlined 16pt (not bold); body 12pt regular.
+    "task_id": "web_sheet_word_juso_address_02",
+    "instruction": "Could you use Juso address search at https://www.juso.go.kr/? Search for `세종특별자치시 도움6로 42`. Select the first result whose road address contains `세종특별자치시`, `도움6로`, and building number `42`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` with `=LEFT(B2,2)`, set `Road Keyword` to `도움6로`, and set `Address Check` with `=IF(AND(ISNUMBER(SEARCH(\"세종특별자치시\",C2)),ISNUMBER(SEARCH(\"도움6로\",C2)),ISNUMBER(SEARCH(\"42\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_002.docx` in the format 'Scenario: [value] | Search Query: [value] | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: [value] | Address Check: [value]'. Word format: line 1 title bold 18pt (no underline); body 11pt regular.",
+    "website": {
+          "web": "https://www.juso.go.kr/",
+          "sheet": "local spreadsheet application",
+          "word": "local word application"
+    },
+    "evaluation": {
+          "mode": "all",
+          "operator": "and",
+          "rules": [
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_002.docx",
+                      "text": "Scenario: 행정안전부 주소정보 도움센터 address lookup",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_002.docx",
+                      "text": "Search Query: 세종특별자치시 도움6로 42",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_002.docx",
+                      "text_regex": "Postal Code:\\s*\\d{5}",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_002.docx",
+                      "text_regex": "Road Address:\\s*.*세종특별자치시.*도움6로.*42",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_002.docx",
+                      "text_regex": "Jibun Address:\\s*.+",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_002.docx",
+                      "text_regex": "Zip Prefix:\\s*\\d{2}",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_002.docx",
+                      "text": "Road Keyword: 도움6로",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_002.docx",
+                      "text": "Address Check: MATCH",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_juso_address_03
+    // 1. 워드 앱으로 이동
+    // 2. 새 문서 생성
+    // 3. 요구된 라벨/값을 순서대로 입력
+    // 4. 파일 저장 대화상자 열기
+    // 5. 파일명을 `juso_address_006.docx`로 입력하고 저장
+    // 6. 워드 서식 적용: line 1 title bold 16pt; body 12pt; last line bold.
+    "task_id": "web_sheet_word_juso_address_03",
+    "instruction": "Could you use Juso address search at https://www.juso.go.kr/? Search for `대구광역시 중구 공평로 88`. Select the first result whose road address contains `대구광역시` and \"중구\", `공평로`, and building number `88`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` with `=LEFT(B2,2)`, set `Road Keyword` to `공평로`, and set `Address Check` with `=IF(AND(ISNUMBER(SEARCH(\"대구광역시\",C2)),ISNUMBER(SEARCH(\"공평로\",C2)),ISNUMBER(SEARCH(\"88\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_006.docx` in the format 'Scenario: [value] | Search Query: [value] | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: [value] | Address Check: [value]'. Word format: line 1 title underlined 16pt (not bold); body 12pt regular.",
+    "website": {
+          "web": "https://www.juso.go.kr/",
+          "sheet": "local spreadsheet application",
+          "word": "local word application"
+    },
+    "evaluation": {
+          "mode": "all",
+          "operator": "and",
+          "rules": [
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_006.docx",
+                      "text": "Scenario: 대구광역시청 address lookup",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_006.docx",
+                      "text": "Search Query: 대구광역시 중구 공평로 88",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_006.docx",
+                      "text_regex": "Postal Code:\\s*\\d{5}",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_006.docx",
+                      "text_regex": "Road Address:\\s*.*대구광역시.*공평로.*88",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_006.docx",
+                      "text_regex": "Road Address:\\s*.*중구.*",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_006.docx",
+                      "text_regex": "Jibun Address:\\s*.+",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_006.docx",
+                      "text_regex": "Zip Prefix:\\s*\\d{2}",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_006.docx",
+                      "text": "Road Keyword: 공평로",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_006.docx",
+                      "text": "Address Check: MATCH",
+                      "match": "contains"
+                }
+          ]
+    }
+  },
+  {
+    // web_sheet_word_juso_address_04
+    // 1. 워드 앱으로 이동
+    // 2. 새 문서 생성
+    // 3. 요구된 라벨/값을 순서대로 입력
+    // 4. 파일 저장 대화상자 열기
+    // 5. 파일명을 `juso_address_009.docx`로 입력하고 저장
+    // 6. 워드 서식 적용: line 1 title bold+underlined 15pt; body 11pt regular.
+    "task_id": "web_sheet_word_juso_address_04",
+    "instruction": "Could you use Juso address search at https://www.juso.go.kr/? Search for `울산광역시 남구 중앙로 201`. Select the first result whose road address contains `울산광역시` and \"남구\", `중앙로`, and building number `201`. Copy the postal code, road address, and jibun address if shown. Record them in Spreadsheet columns Search Query, Postal Code, Road Address, and Jibun Address. Set `Zip Prefix` with `=LEFT(B2,2)`, set `Road Keyword` to `중앙로`, and set `Address Check` with `=IF(AND(ISNUMBER(SEARCH(\"울산광역시\",C2)),ISNUMBER(SEARCH(\"중앙로\",C2)),ISNUMBER(SEARCH(\"201\",C2))),\"MATCH\",\"CHECK\")`. Save `~/Documents/juso_address_009.docx` in the format 'Scenario: [value] | Search Query: [value] | Postal Code: [value] | Road Address: [value] | Jibun Address: [value] | Zip Prefix: [value] | Road Keyword: [value] | Address Check: [value]'. Word format: line 1 title bold 16pt; body 12pt; last line bold.",
+    "website": {
+          "web": "https://www.juso.go.kr/",
+          "sheet": "local spreadsheet application",
+          "word": "local word application"
+    },
+    "evaluation": {
+          "mode": "all",
+          "operator": "and",
+          "rules": [
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_009.docx",
+                      "text": "Scenario: 울산광역시청 address lookup",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_009.docx",
+                      "text": "Search Query: 울산광역시 남구 중앙로 201",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_009.docx",
+                      "text_regex": "Postal Code:\\s*\\d{5}",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_009.docx",
+                      "text_regex": "Road Address:\\s*.*울산광역시.*중앙로.*201",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_009.docx",
+                      "text_regex": "Road Address:\\s*.*남구.*",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_009.docx",
+                      "text_regex": "Jibun Address:\\s*.+",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_009.docx",
+                      "text_regex": "Zip Prefix:\\s*\\d{2}",
+                      "match": "regex"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_009.docx",
+                      "text": "Road Keyword: 중앙로",
+                      "match": "contains"
+                },
+                {
+                      "target": "word_document",
+                      "path": "~/Documents/juso_address_009.docx",
+                      "text": "Address Check: MATCH",
+                      "match": "contains"
+                }
+          ]
+    }
+  }
+]

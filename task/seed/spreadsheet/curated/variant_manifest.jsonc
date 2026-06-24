@@ -1,0 +1,50 @@
+[
+  {
+    "task_id": "curated_bmi_outputs_flag_01",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_01_02_03",
+    "variant_type": "raw_data_compute",
+    "curation": "manual_hybrid"
+  },
+  {
+    "task_id": "curated_bmi_outputs_derived_01",
+    "source_task_id": "web_sheet_word_cdc_child_bmi_05_06_07",
+    "variant_type": "raw_data_compute",
+    "curation": "manual_hybrid"
+  },
+  {
+    "task_id": "curated_invoice_error_fix_01",
+    "source_task_id": "prozilla_mult_sum_01",
+    "variant_type": "error_correction",
+    "curation": "manual_hybrid"
+  },
+  {
+    "task_id": "curated_sales_line_total_complete_01",
+    "source_task_id": "prozilla_mult_sum_and_multiply",
+    "variant_type": "helper_formula_apply",
+    "curation": "manual_hybrid"
+  },
+  {
+    "task_id": "curated_inventory_conditional_style_01",
+    "source_task_id": "spreadsheet_bgcolor_yellow",
+    "variant_type": "format_only",
+    "curation": "manual_hybrid"
+  },
+  {
+    "task_id": "curated_expense_currency_format_01",
+    "source_task_id": "spreadsheet_format_currency",
+    "variant_type": "format_only",
+    "curation": "manual_hybrid"
+  },
+  {
+    "task_id": "curated_phone_normalize_audit_01",
+    "source_task_id": "spreadsheet_phonenumber",
+    "variant_type": "raw_data_compute",
+    "curation": "manual_hybrid"
+  },
+  {
+    "task_id": "curated_name_split_complete_01",
+    "source_task_id": "spreadsheet_name_split",
+    "variant_type": "raw_data_compute",
+    "curation": "manual_hybrid"
+  }
+]

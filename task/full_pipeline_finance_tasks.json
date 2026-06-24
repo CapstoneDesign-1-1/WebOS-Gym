@@ -1,0 +1,629 @@
+[
+  {
+    "task_id": "fp_finance_01",
+    "instruction": "Calculate overtime pay on the DOL website for 45 hours at $20/hr (Standard result: $950). Input this into Spreadsheet cell A1. Multiply by exchange rate 1400 in cell B1 to get 1330000. Finally, open Prozilla OS Notes app and save the text '1330000'. Leave the applications open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "sheet",
+          "selector": "div[data-cell='B1']",
+          "target": "text",
+          "value": "1330000",
+          "match": "contains"
+        },
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "1330000",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_02",
+    "instruction": "Calculate DOL overtime pay for 48 hours at $25/hr. Input the result ($1300) into Spreadsheet A2. Create a folder named 'Payroll_1300' on the Prozilla OS Desktop. Leave the applications open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "div[class*='FileIcon'] p:has-text('Payroll_1300')",
+          "target": "text",
+          "value": "Payroll_1300",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_03",
+    "instruction": "Determine DOL overtime pay for 42 hours at $30/hr. Put the output ($1290) in Spreadsheet C1. Open Prozilla Terminal and run echo command with this value to display '1290'. Leave the applications open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "div[class*='Terminal']",
+          "target": "text",
+          "value": "1290",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_04",
+    "instruction": "Calculate DOL pay for 50 hours at $20/hr ($1100). Write to Spreadsheet A1. Deduct 10% tax ($110) in cell B1 resulting in 990. Create a text file named 'net_990.txt' inside the Prozilla Documents folder. Leave the applications open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "div[class*='_DirectoryList_']",
+          "target": "text",
+          "value": "net_990.txt",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_05",
+    "instruction": "Calculate weekly pay for Worker A (45h, $20 = $950) and Worker B (40h, $30 = $1200) on DOL. Put values in Spreadsheet cells A1 and A2. Compute sum (2150) in A3. Write 'Total Sum: 2150' in Prozilla OS Notes app. Keep applications open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "Total Sum: 2150",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_06",
+    "instruction": "Calculate DOL pay for 44 hours at $50/hr ($2300). Insert 2300 into Spreadsheet A1. If it is over 2000, set the Prozilla OS Theme to 'Aqua' in Settings. Leave the applications open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "select[class*='ThemeSelect'] option:checked, select:has(option:checked[value='aqua'])",
+          "target": "text",
+          "value": "Aqua",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_07",
+    "instruction": "Calculate DOL pay for 46 hours at $15/hr ($735). Write 735 in Spreadsheet D1. Convert to KRW in D2 (Rate: 1400) which yields 1029000. Create a folder named '1029000' in Prozilla OS Desktop. Keep applications open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "div[class*='FileIcon'] p:has-text('1029000')",
+          "target": "text",
+          "value": "1029000",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_08",
+    "instruction": "Determine DOL overtime for 41 hours at $40/hr ($1660). Put value into Spreadsheet A10. In Prozilla Terminal, type 'mkdir proj_1660' to create a directory. Keep open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "div[class*='_DirectoryList_']",
+          "target": "text",
+          "value": "proj_1660",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_09",
+    "instruction": "Calculate DOL pay for 52 hours at $10/hr ($580). Copy into Spreadsheet E1. Write this value '580' inside a text file 'wallet.txt' using Prozilla Notes. Leave applications open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "580",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_10",
+    "instruction": "Calculate DOL pay for 43 hours at $30/hr ($1335). Log 1335 in Spreadsheet A1. Open Prozilla File Explorer and rename 'New Folder' on Desktop to 'Final_1335'. Leave open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "div[class*='FileIcon'] p:has-text('Final_1335')",
+          "target": "text",
+          "value": "Final_1335",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_11",
+    "instruction": "Calculate Korean retirement pay on MoEL website. Dates: 2022-01-01 to 2023-01-01. Monthly salary: 3,000,000 KRW. (Web result: 2,934,782). Write '2,934,782' in Spreadsheet A1. Save the text 'Pay: 2,934,782' in Prozilla OS Notes. Keep applications open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "2,934,782",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_12",
+    "instruction": "Calculate MoEL retirement pay for 3 years (2020-01-01 to 2023-01-01) with 4,000,000 KRW monthly salary. Output is 11,749,856. Put this in Spreadsheet A1. Divide by 1400 in B1 to convert to USD resulting in 8392. Create a folder 'Retire_8392' in Prozilla Desktop. Leave open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "div[class*='FileIcon'] p:has-text('Retire_8392')",
+          "target": "text",
+          "value": "Retire_8392",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_13",
+    "instruction": "Retrieve MoEL retirement pay for 3 years (2020-01-01 to 2023-01-01) with 5,000,000 KRW monthly salary. Output is 14,687,312. Type 14687312 in Spreadsheet C3. Open Prozilla Terminal and output 'Final 14687312' using echo. Keep open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "div[class*='Terminal']",
+          "target": "text",
+          "value": "14687312",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_14",
+    "instruction": "Calculate MoEL retirement pay for 1 year (2022-01-01 to 2023-01-01) with 3,000,000 KRW monthly (2,934,782). In Spreadsheet, compute a 10% bonus (293478) to get a total of 3228260 in cell D1. Save '3228260' in a Prozilla OS text file. Leave open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "3228260",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_15",
+    "instruction": "Query MoEL retirement pay for 3 years at 4,000,000 KRW monthly (11,749,856). Put in Spreadsheet A1. Since it is above 10,000,000, go to Prozilla OS Settings and change the background theme to 'Rose'. Keep open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "select[class*='ThemeSelect'] option:checked, select:has(option:checked[value='rose'])",
+          "target": "text",
+          "value": "Rose",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_16",
+    "instruction": "Calculate MoEL retirement for 3 years at 5,000,000 KRW (14,687,312). Store in Spreadsheet A1. Calculate average monthly amount by dividing by 36 months resulting in 407980 in B1. Create a file named 'monthly_407980.txt' in Prozilla OS Documents. Keep open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "div[class*='_DirectoryList_']",
+          "target": "text",
+          "value": "monthly_407980.txt",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_17",
+    "instruction": "Query two different MoEL settings. Case 1: 1 year at 3M (2,934,782), Case 2: 3 years at 4M (11,749,856). In Spreadsheet, calculate the difference (8,815,074) in A3. Write this difference '8815074' in Prozilla Notes app. Leave open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "8815074",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_18",
+    "instruction": "Calculate MoEL retirement for 1 year at 3,000,000 monthly (2,934,782). Put in Spreadsheet A1. Create a desktop folder named 'Fund_2934782' in Prozilla OS. Leave open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "div[class*='FileIcon'] p:has-text('Fund_2934782')",
+          "target": "text",
+          "value": "Fund_2934782",
+          "match": "exact"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_19",
+    "instruction": "Calculate MoEL retirement for 3 years at 4,000,000 monthly (11,749,856). Place in Spreadsheet E1. Open Prozilla Terminal and make directory 'archive_11749856'. Keep open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://labor.moel.go.kr/cmmt/calRtrmnt.do"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "div[class*='_DirectoryList_']",
+          "target": "text",
+          "value": "archive_11749856",
+          "match": "contains"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "fp_finance_20",
+    "instruction": "Hybrid Task: Calculate DOL pay (45h at $20 = $950) and MoEL retirement (1yr at 3M = 2,934,782 KRW). Convert DOL to KRW in Spreadsheet (950*1400 = 1,330,000). Sum both in Spreadsheet resulting in 4,264,782. Save 'Total: 4264782' in a Prozilla note. Keep open.",
+    "website": [
+      {
+        "id": "web",
+        "url": "https://webapps.dol.gov/elaws/otcalculator.htm"
+      },
+      {
+        "id": "sheet",
+        "url": "http://localhost:3000/spreadsheet"
+      },
+      {
+        "id": "os",
+        "url": "http://localhost:3000"
+      }
+    ],
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "website_id": "os",
+          "selector": "textarea[class*='_View_']",
+          "target": "text",
+          "value": "4264782",
+          "match": "contains"
+        }
+      ]
+    }
+  }
+]

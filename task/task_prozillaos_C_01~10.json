@@ -1,0 +1,152 @@
+[
+  {
+    "task_id": "prozillaos_C_01",
+    "instruction": "Open the Maths app and calculate 42 + 18. Write the result in Documents/text.txt.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "rules": [
+        {
+          "selector": "textarea[class*='View']",
+          "match": "regex",
+          "value": "60"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozillaos_C_02",
+    "instruction": "Use the Maths app to calculate 25 * 4. Write the result in Documents/text.txt.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "rules": [
+        {
+          "selector": "textarea[class*='View']",
+          "match": "regex",
+          "value": "100"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozillaos_C_03",
+    "instruction": "Open the Maths app and calculate 256 / 16. Write the result in Documents/text.txt.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "rules": [
+        {
+          "selector": "textarea[class*='View']",
+          "match": "regex",
+          "value": "16"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozillaos_C_04",
+    "instruction": "Open Photos app and navigate to Pictures/Crumbling City. Open Japan.png, view its file properties, and copy the location path to Documents/text.txt.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "rules": [
+        {
+          "selector": "textarea[class*='View']",
+          "match": "regex",
+          "value": "Pictures.*Crumbling City.*Japan"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozillaos_C_05",
+    "instruction": "Find the Weezer_Buddy-Holly video in the Videos folder using Photos app. View its file properties and write the file type in Documents/text.txt.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "rules": [
+        {
+          "selector": "textarea[class*='View']",
+          "match": "regex",
+          "value": "(?i)yt"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozillaos_C_06",
+    "instruction": "Open Photos app and navigate to Pictures/Crumbling City. Open Japan.png, view its file properties, and copy the file size to Documents/text.txt.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "rules": [
+        {
+          "selector": "textarea[class*='View']",
+          "match": "regex",
+          "value": "76"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozillaos_C_07",
+    "instruction": "Open Photos app and find Andrew-Applepie_Im-So.ogg file. View its properties and write the file type in Documents/text.txt.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "rules": [
+        {
+          "selector": "textarea[class*='View']",
+          "match": "regex",
+          "value": "(?i)ogg"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozillaos_C_08",
+    "instruction": "Open Logic Sim app and create an AND gate with both inputs connected to HIGH. Connect the output to an indicator. If the light is on, write 'on' in Documents/text.txt. If the light is off, write 'off'.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "rules": [
+        {
+          "selector": "textarea[class*='View']",
+          "match": "regex",
+          "value": "(?i)on"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozillaos_C_09",
+    "instruction": "Open Logic Sim app and create an OR gate with one input connected to HIGH and one to LOW. Connect the output to an indicator. If the light is on, write 'on' in Documents/text.txt. If the light is off, write 'off'.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "rules": [
+        {
+          "selector": "textarea[class*='View']",
+          "match": "regex",
+          "value": "(?i)on"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "prozillaos_C_10",
+    "instruction": "Open Logic Sim app and create a NOT gate with input connected to HIGH. Connect the output to an indicator. If the light is on, write 'on' in Documents/text.txt. If the light is off, write 'off'.",
+    "website": "http://localhost:3000",
+    "evaluation": {
+      "mode": "dom",
+      "rules": [
+        {
+          "selector": "textarea[class*='View']",
+          "match": "regex",
+          "value": "(?i)off"
+        }
+      ]
+    }
+  }
+]

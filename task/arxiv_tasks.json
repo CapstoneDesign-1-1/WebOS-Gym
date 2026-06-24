@@ -1,0 +1,88 @@
+[
+  {
+    "task_id": "web_task_arxiv_01",
+    "instruction": "On the arXiv website, search for 'attention is all you need' and check the title of the first result.",
+    "website": "https://arxiv.org/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "p.title.is-5.mathjax",
+          "target": "text",
+          "value": "Attention Is Not All You Need for Diffraction",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_arxiv_02",
+    "instruction": "On the arXiv website, search for the paper with ID '1408.4969' and check the list of authors on the paper's page.",
+    "website": "https://arxiv.org/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": ".authors",
+          "target": "text",
+          "value": "Takaaki Miyajima",
+          "match": "contains",
+          "normalize_space": true
+        },
+        {
+          "selector": ".authors",
+          "target": "text",
+          "value": "David Thomas",
+          "match": "contains",
+          "normalize_space": true
+        },
+        {
+          "selector": ".authors",
+          "target": "text",
+          "value": "Hideharu Amano",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_arxiv_03",
+    "instruction": "On the arXiv website, search for the paper with ID '2605.10702' and check the submission date on the paper's page.",
+    "website": "https://arxiv.org/",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "div.dateline",
+          "target": "text",
+          "value": "11 May 2026",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "web_task_arxiv_04",
+    "instruction": "On the arXiv page for paper 2605.10912, open the paper using the 'HTML (experimental)' option and verify that a 'Related Work' section exists in the paper.",
+    "website": "https://arxiv.org/abs/2605.10912",
+    "evaluation": {
+      "mode": "dom",
+      "operator": "and",
+      "rules": [
+        {
+          "selector": "#S2",
+          "target": "text",
+          "value": "Related Work",
+          "match": "contains",
+          "normalize_space": true
+        }
+      ]
+    }
+  }
+]
