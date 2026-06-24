@@ -20,7 +20,8 @@
 ## 한눈에 보기
 
 **WebOS-Gym**은 computer-use agent를 **저비용으로 반복 학습·평가**할 수 있는 **웹 OS 기반 병렬 실행 환경**입니다.
-실제 OS나 VM을 직접 구동하지 않고, 웹 브라우저에서 동작하는 [ProzillaOS](https://github.com/prozilla-os/ProzillaOS) 위에
+실제 OS나 VM을 직접 구동하지 않고, 웹 브라우저에서 동작하는 [ProzillaOS](https://github.com/prozilla-os/ProzillaOS)와
+스프레드시트 라이브러리 [Univer](https://github.com/dream-num/univer) 위에
 **task 정의 ↔ 성공 판정(평가)을 분리**한 구조를 올려, 코드 수정 없이 데이터 수준에서 task를 추가·검증할 수 있습니다.
 
 > 본 저장소는 KCC 2026 논문 *"웹 OS 기반 저비용 병렬 실행 환경에서의 Computer-Use Agent 학습"* 의 구현 및 task 모음입니다.
@@ -72,16 +73,18 @@ WebOS-Gym은 무거운 VM 인프라 없이 **OS 수준의 다양한 UI 상호작
 외부 agent는 환경과 **`start` / `action` / `observation`** 세 가지 요청으로 상호작용하며,
 환경은 task별 평가 규칙에 따라 **reward**를 반환합니다.
 
-```
-              ┌──────────── Task (instruction + evaluation rule) ────────────┐
-              │                          │ task load                         │
-              ▼                          ▼                                    │
-   ┌─────────────┐  start / action  ┌──────────────────────┐  result   ┌──────────────┐
-   │             │ ───────────────► │                       │ ───────► │              │
-   │    Agent    │                  │  ProzillaOS (Web OS)   │          │   Evaluator   │
-   │             │ ◄─────────────── │  + Univer 스프레드시트    │ ◄─────── │  (rule-based) │
-   └─────────────┘   screenshot +   └──────────────────────┘  reward   └──────────────┘
-                     a11y tree
+```mermaid
+flowchart LR
+    Task["Task<br/>(instruction + evaluation rule)"]
+    Agent["Agent"]
+    Env["Environment<br/>ProzillaOS (Web OS)<br/>+ Univer 스프레드시트"]
+    Eval["Evaluator<br/>(rule-based)"]
+
+    Task -- task load --> Env
+    Agent -- "start / action" --> Env
+    Env -- "screenshot + a11y tree" --> Agent
+    Env -- result --> Eval
+    Eval -- reward --> Agent
 ```
 
 | 요청 | 동작 |
